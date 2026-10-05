@@ -16,3 +16,5 @@ services:
         sync: false
       - key: WEATHER_PROVIDER_URL
         value: https://api.open-meteo.com/v1/forecast
+      - key: GOOGLE_SEARCH_ENABLED
+        value: "true"

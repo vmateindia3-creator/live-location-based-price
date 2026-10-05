@@ -121,7 +121,7 @@ class _HomeState extends State<Home> {
                         child: Row(children: [
                           Icon(data.source == 'demo-fallback' ? Icons.info_outline : Icons.verified, size: 15, color: data.source == 'demo-fallback' ? Colors.orange.shade800 : const Color(0xff075e54)),
                           const SizedBox(width: 6),
-                          Expanded(child: Text(data.source == 'demo-fallback' ? 'Demo rates • provider pending' : 'Live provider rates', style: TextStyle(fontSize: 12, color: data.source == 'demo-fallback' ? Colors.orange.shade800 : const Color(0xff075e54)))),
+                          Expanded(child: Text(data.source == 'google-search-indicative' ? 'Google Search estimate • verify before use' : data.source == 'demo-fallback' ? 'Demo rates • provider pending' : 'Live provider rates', style: TextStyle(fontSize: 12, color: data.source == 'demo-fallback' || data.source == 'google-search-indicative' ? Colors.orange.shade800 : const Color(0xff075e54)))),
                           Text('Updated ${_time(data.updatedAt)}', style: const TextStyle(fontSize: 11, color: Colors.black54)),
                         ]),
                       ),

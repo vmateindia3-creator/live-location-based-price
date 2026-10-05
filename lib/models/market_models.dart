@@ -1,10 +1,11 @@
 class MarketData {
-  const MarketData({required this.updatedAt, required this.prices, required this.weather, required this.source, required this.currency});
+  const MarketData({required this.updatedAt, required this.prices, required this.weather, required this.source, required this.currency, this.warning});
   final DateTime updatedAt;
   final Map<String, double> prices;
   final WeatherData weather;
   final String source;
   final String currency;
+  final String? warning;
 
   factory MarketData.fromJson(Map<String, dynamic> json) {
     final raw = Map<String, dynamic>.from(json['prices'] as Map? ?? {});
@@ -15,6 +16,7 @@ class MarketData {
       weather: WeatherData.fromJson(weather),
       source: json['source']?.toString() ?? 'unknown',
       currency: json['currency']?.toString() ?? 'INR',
+      warning: json['warning']?.toString(),
     );
   }
 }

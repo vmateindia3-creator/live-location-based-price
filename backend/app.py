@@ -4,6 +4,7 @@ from datetime import datetime, timezone
 from threading import Lock
 
 import requests
+import re
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request
 from flask_cors import CORS
@@ -55,22 +56,51 @@ def fetch_weather(lat, lng):
 
 def fetch_prices(city):
     provider = os.getenv("PRICE_PROVIDER_URL", "").strip()
-    if not provider:
-        return DEMO_PRICES.copy(), "demo-fallback"
-    headers = {"Accept": "application/json"}
-    api_key = os.getenv("PRICE_PROVIDER_API_KEY", "").strip()
-    if api_key:
-        headers["Authorization"] = f"Bearer {api_key}"
-    try:
-        response = requests.get(provider, params={"city": city or "India"}, headers=headers, timeout=7)
-        response.raise_for_status()
-        prices = response.json().get("prices", {})
-        normalized = {key: float(prices[key]) for key in DEMO_PRICES if key in prices}
-        if len(normalized) == len(DEMO_PRICES):
-            return normalized, "configured-provider"
-    except (requests.RequestException, ValueError, TypeError, KeyError):
-        pass
+    if provider:
+        headers = {"Accept": "application/json"}
+        api_key = os.getenv("PRICE_PROVIDER_API_KEY", "").strip()
+        if api_key:
+            headers["Authorization"] = f"Bearer {api_key}"
+        try:
+            response = requests.get(provider, params={"city": city or "India"}, headers=headers, timeout=7)
+            response.raise_for_status()
+            prices = response.json().get("prices", {})
+            normalized = {key: float(prices[key]) for key in DEMO_PRICES if key in prices}
+            if len(normalized) == len(DEMO_PRICES):
+                return normalized, "configured-provider"
+        except (requests.RequestException, ValueError, TypeError, KeyError):
+            pass
+    if os.getenv("GOOGLE_SEARCH_ENABLED", "false").lower() == "true":
+        search_prices = fetch_google_indicative_prices(city)
+        if search_prices:
+            return search_prices, "google-search-indicative"
     return DEMO_PRICES.copy(), "demo-fallback"
+
+
+def fetch_google_indicative_prices(city):
+    """Best-effort snippets only. Google Search is not an official price feed."""
+    queries = {
+        "petrol": f"petrol price in {city} today India",
+        "diesel": f"diesel price in {city} today India",
+        "lpg": f"LPG cylinder price in {city} today India",
+        "cng": f"CNG price in {city} today India",
+        "gold": f"gold rate in {city} today India 24 carat 10 gram",
+        "silver": f"silver rate in {city} today India per kg",
+    }
+    headers = {"User-Agent": "Mozilla/5.0 (compatible; LiveLocationPrice/1.0; +https://github.com/vmateindia3-creator/live-location-based-price)"}
+    result = {}
+    for key, query in queries.items():
+        try:
+            html = requests.get("https://www.google.com/search", params={"q": query, "hl": "en", "gl": "in"}, headers=headers, timeout=4).text
+            text = re.sub(r"<[^>]+>", " ", html)
+            text = re.sub(r"\s+", " ", text)
+            amounts = re.findall(r"(?:₹|Rs\.?|INR)\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)", text, flags=re.I)
+            values = [float(value.replace(",", "")) for value in amounts if float(value.replace(",", "")) > 10]
+            if values:
+                result[key] = values[0]
+        except (requests.RequestException, ValueError, TypeError):
+            continue
+    return result if len(result) >= 4 else None
 
 
 @app.get("/health")
@@ -91,7 +121,7 @@ def market():
     if cached:
         return jsonify(cached)
     prices, source = fetch_prices(city)
-    response = {"updatedAt": now_iso(), "currency": "INR", "city": city, "source": source, "prices": prices, "weather": fetch_weather(lat, lng)}
+    response = {"updatedAt": now_iso(), "currency": "INR", "city": city, "source": source, "warning": "Indicative Google Search result; verify before use" if source == "google-search-indicative" else None, "prices": prices, "weather": fetch_weather(lat, lng)}
     cache_put(cache_key, response)
     return jsonify(response)
 

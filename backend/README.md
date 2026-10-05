@@ -39,3 +39,7 @@ The API does not scrape Google Search. Weather uses Open-Meteo by default. Set `
 ```
 
 For a long-running deployment, put this behind HTTPS, add a real database/Redis cache, scheduled refresh jobs, request authentication/rate limits, source attribution and monitoring.
+
+## Google Search indicative mode
+
+Render enables `GOOGLE_SEARCH_ENABLED=true` through `render.yaml`. The backend makes India-specific search queries and only uses extracted values when at least four categories are found. Results are labeled `google-search-indicative` with a `warning`; otherwise the API keeps the safe demo fallback. Google may block automated requests or change markup, so these values must be verified before use.
