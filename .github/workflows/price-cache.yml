@@ -1,0 +1,32 @@
+name: Scheduled Price Cache
+
+on:
+  schedule:
+    # 00:30 UTC = 06:00 IST. GitHub may start cron jobs a few minutes late.
+    - cron: '30 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-price-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r backend/requirements.txt
+      - name: Fetch Google indicative prices
+        env:
+          GOOGLE_SEARCH_ENABLED: 'true'
+          PRICE_CACHE_CITIES: Delhi,Mumbai,Kolkata,Bengaluru,Chennai,Hyderabad,Pune,Ahmedabad,Jaipur,Lucknow,Patna,Bhopal
+        run: python backend/refresh_cache.py
+      - name: Commit refreshed cache
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add backend/data/price_cache.json
+          git diff --cached --quiet || git commit -m 'chore: refresh scheduled price cache [skip ci]'
+          git push

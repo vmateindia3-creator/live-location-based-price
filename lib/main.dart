@@ -130,7 +130,7 @@ class _HomeState extends State<Home> {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
                         child: Row(children: [
-                          Icon(data.source == 'demo-fallback' ? Icons.info_outline : Icons.verified, size: 15, color: data.source == 'demo-fallback' ? Colors.orange.shade800 : const Color(0xff075e54)),
+                          Icon(data.source == 'demo-fallback' || data.source.startsWith('google-') ? Icons.info_outline : Icons.verified, size: 15, color: data.source == 'demo-fallback' || data.source.startsWith('google-') ? Colors.orange.shade800 : const Color(0xff075e54)),
                           const SizedBox(width: 6),
                           Expanded(child: Text(_sourceText(data.source, s.language), style: TextStyle(fontSize: 12, color: data.source == 'demo-fallback' || data.source.startsWith('google-search') ? Colors.orange.shade800 : const Color(0xff075e54)))),
                           Text('${s.language == 'hi' ? 'अपडेट' : 'Updated'} ${_time(data.updatedAt)}', style: const TextStyle(fontSize: 11, color: Colors.black54)),
@@ -221,6 +221,9 @@ class _HomeState extends State<Home> {
 
   String _sourceText(String source, String language) {
     if (language == 'hi') {
+      if (source == 'google-scheduled-cache') {
+        return 'सुबह 6 बजे का Google cache • जाँचें';
+      }
       if (source == 'google-search-partial') {
         return 'Google Search data + fallback • जाँचें';
       }
@@ -231,6 +234,9 @@ class _HomeState extends State<Home> {
         return 'रेट उपलब्ध नहीं • provider जोड़ें';
       }
       return 'Live provider rates';
+    }
+    if (source == 'google-scheduled-cache') {
+      return '6am Google cache • verify';
     }
     if (source == 'google-search-partial') {
       return 'Google Search data + fallback • verify';

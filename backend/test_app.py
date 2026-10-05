@@ -2,7 +2,7 @@ import os
 import unittest
 
 os.environ['GOOGLE_SEARCH_ENABLED'] = 'false'
-from app import app
+from app import PRICE_RANGES, app
 
 
 class ApiTests(unittest.TestCase):
@@ -38,6 +38,11 @@ class ApiTests(unittest.TestCase):
 
     def test_invalid_coordinates(self):
         self.assertEqual(self.client.get('/v1/market?lat=nope').status_code, 400)
+
+    def test_price_ranges_reject_obviously_wrong_search_values(self):
+        self.assertFalse(PRICE_RANGES['petrol'][0] <= 47 <= PRICE_RANGES['petrol'][1])
+        self.assertFalse(PRICE_RANGES['gold'][0] <= 20 <= PRICE_RANGES['gold'][1])
+        self.assertFalse(PRICE_RANGES['silver'][0] <= 861 <= PRICE_RANGES['silver'][1])
 
 
 if __name__ == '__main__':

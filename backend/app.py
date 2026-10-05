@@ -5,6 +5,8 @@ from threading import Lock
 
 import requests
 import re
+import json
+from pathlib import Path
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request
 from flask_cors import CORS
@@ -19,6 +21,15 @@ cache = {}
 cache_lock = Lock()
 
 DEMO_PRICES = {"petrol": 94.72, "diesel": 87.62, "lpg": 803.0, "cng": 75.09, "gold": 75250.0, "silver": 92500.0}
+CACHE_FILE = Path(__file__).resolve().parent / "data" / "price_cache.json"
+PRICE_RANGES = {
+    "petrol": (80.0, 150.0),
+    "diesel": (70.0, 150.0),
+    "lpg": (700.0, 1200.0),
+    "cng": (20.0, 200.0),
+    "gold": (50000.0, 200000.0),
+    "silver": (50000.0, 300000.0),
+}
 
 
 def now_iso():
@@ -55,6 +66,9 @@ def fetch_weather(lat, lng):
 
 
 def fetch_prices(city):
+    scheduled = load_scheduled_prices(city)
+    if scheduled:
+        return scheduled, "google-scheduled-cache", set(scheduled)
     provider = os.getenv("PRICE_PROVIDER_URL", "").strip()
     if provider:
         headers = {"Accept": "application/json"}
@@ -80,6 +94,16 @@ def fetch_prices(city):
     return DEMO_PRICES.copy(), "demo-fallback", set()
 
 
+def load_scheduled_prices(city):
+    try:
+        cache = json.loads(CACHE_FILE.read_text())
+        item = cache.get((city or "").strip().lower(), {})
+        prices = item.get("prices", {})
+        return {key: float(value) for key, value in prices.items() if key in DEMO_PRICES}
+    except (FileNotFoundError, json.JSONDecodeError, TypeError, ValueError):
+        return {}
+
+
 def fetch_google_indicative_prices(city):
     """Best-effort snippets only. Google Search is not an official price feed."""
     queries = {
@@ -98,9 +122,11 @@ def fetch_google_indicative_prices(city):
             text = re.sub(r"<[^>]+>", " ", html)
             text = re.sub(r"\s+", " ", text)
             amounts = re.findall(r"(?:₹|Rs\.?|INR)\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)", text, flags=re.I)
-            values = [float(value.replace(",", "")) for value in amounts if float(value.replace(",", "")) > 10]
-            if values:
-                result[key] = values[0]
+            values = [float(value.replace(",", "")) for value in amounts]
+            low, high = PRICE_RANGES[key]
+            valid = [value for value in values if low <= value <= high]
+            if valid:
+                result[key] = valid[0]
         except (requests.RequestException, ValueError, TypeError):
             continue
     return result or None
@@ -124,7 +150,7 @@ def market():
     if cached:
         return jsonify(cached)
     prices, source, observed_keys = fetch_prices(city)
-    response = {"updatedAt": now_iso(), "currency": "INR", "city": city, "source": source, "warning": "Indicative Google Search result; verify before use" if source.startswith("google-search") else None, "prices": prices, "observedKeys": sorted(observed_keys), "weather": fetch_weather(lat, lng)}
+    response = {"updatedAt": now_iso(), "currency": "INR", "city": city, "source": source, "warning": "Indicative Google Search result; verify before use" if source.startswith("google-") else None, "prices": prices, "observedKeys": sorted(observed_keys), "weather": fetch_weather(lat, lng)}
     cache_put(cache_key, response)
     return jsonify(response)
 
