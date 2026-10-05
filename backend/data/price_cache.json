@@ -1,1 +1,22 @@
-{}
+{
+  "bhopal": {
+    "city": "Bhopal",
+    "observedKeys": [
+      "cng"
+    ],
+    "prices": {
+      "cng": 51.0
+    },
+    "updatedAt": "2026-10-05T18:23:45.515278+00:00"
+  },
+  "kolkata": {
+    "city": "Kolkata",
+    "observedKeys": [
+      "cng"
+    ],
+    "prices": {
+      "cng": 49.0
+    },
+    "updatedAt": "2026-10-05T18:23:45.515278+00:00"
+  }
+}
