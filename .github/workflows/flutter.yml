@@ -18,6 +18,8 @@ jobs:
           cache: true
       - name: Generate platform folders for CI
         run: flutter create --platforms=android,ios --project-name live_location_based_price .
+      - name: Remove generated placeholder test
+        run: rm -f test/widget_test.dart
       - run: flutter pub get
       - run: dart format lib test
       - run: flutter analyze
