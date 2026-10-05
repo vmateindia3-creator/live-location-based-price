@@ -24,3 +24,20 @@ jobs:
       - run: dart format lib test
       - run: flutter analyze
       - run: flutter test
+      - name: Add Android location permission
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          manifest = Path('android/app/src/main/AndroidManifest.xml')
+          text = manifest.read_text()
+          permission = '<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />'
+          if permission not in text:
+              end = text.find('>')
+              text = text[:end + 1] + '\n    ' + permission + text[end + 1:]
+              manifest.write_text(text)
+          PY
+      - run: flutter build apk --debug
+      - uses: actions/upload-artifact@v4
+        with:
+          name: live-location-based-price-debug-apk
+          path: build/app/outputs/flutter-apk/app-debug.apk
