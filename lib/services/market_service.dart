@@ -38,7 +38,9 @@ class MarketService {
         'lat': latitude.toString(), 'lng': longitude.toString(), if (city != null) 'city': city,
       });
       final response = await _client.get(uri).timeout(const Duration(seconds: 8));
-      if (response.statusCode == 200) return MarketData.fromJson(jsonDecode(response.body) as Map<String, dynamic>);
+      if (response.statusCode == 200) {
+        return MarketData.fromJson(jsonDecode(response.body) as Map<String, dynamic>);
+      }
     } catch (_) {}
     return _demo();
   }
