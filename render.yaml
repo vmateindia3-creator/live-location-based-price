@@ -4,6 +4,7 @@ services:
     runtime: docker
     plan: free
     rootDir: backend
+    autoDeploy: true
     healthCheckPath: /health
     envVars:
       - key: CACHE_TTL_SECONDS
