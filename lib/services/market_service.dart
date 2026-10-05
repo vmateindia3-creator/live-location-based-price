@@ -30,7 +30,9 @@ class MarketService {
   }
 
   Future<MarketData> fetch({required double latitude, required double longitude, String? city}) async {
-    if (baseUrl.isEmpty) return _demo();
+    if (baseUrl.isEmpty) {
+      return _demo();
+    }
     try {
       final uri = Uri.parse('$baseUrl/v1/market').replace(queryParameters: {
         'lat': latitude.toString(), 'lng': longitude.toString(), if (city != null) 'city': city,
