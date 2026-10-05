@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
+import 'models/market_models.dart';
 import 'providers/app_state.dart';
 import 'services/ad_service.dart';
 
@@ -220,14 +221,26 @@ class _HomeState extends State<Home> {
 
   String _sourceText(String source, String language) {
     if (language == 'hi') {
-      if (source == 'google-search-partial') return 'Google Search data + fallback • जाँचें';
-      if (source == 'google-search-indicative') return 'Google Search अनुमान • जाँचें';
-      if (source == 'demo-fallback') return 'रेट उपलब्ध नहीं • provider जोड़ें';
+      if (source == 'google-search-partial') {
+        return 'Google Search data + fallback • जाँचें';
+      }
+      if (source == 'google-search-indicative') {
+        return 'Google Search अनुमान • जाँचें';
+      }
+      if (source == 'demo-fallback') {
+        return 'रेट उपलब्ध नहीं • provider जोड़ें';
+      }
       return 'Live provider rates';
     }
-    if (source == 'google-search-partial') return 'Google Search data + fallback • verify';
-    if (source == 'google-search-indicative') return 'Google Search estimate • verify';
-    if (source == 'demo-fallback') return 'Rates unavailable • add provider';
+    if (source == 'google-search-partial') {
+      return 'Google Search data + fallback • verify';
+    }
+    if (source == 'google-search-indicative') {
+      return 'Google Search estimate • verify';
+    }
+    if (source == 'demo-fallback') {
+      return 'Rates unavailable • add provider';
+    }
     return 'Live provider rates';
   }
 }
