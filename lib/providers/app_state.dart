@@ -16,8 +16,14 @@ class AppState extends ChangeNotifier {
     loading = false; notifyListeners();
   }
   Future<void> searchCity(String query) async {
-    if (query.trim().isEmpty) return load();
-    await load(target: await _market.search(query));
+    if (query.trim().isEmpty) { await load(); return; }
+    try {
+      await load(target: await _market.search(query));
+    } catch (_) {
+      error = language == 'hi' ? 'शहर नहीं मिला' : 'City not found';
+      loading = false;
+      notifyListeners();
+    }
   }
   void toggleLanguage() { language = language == 'hi' ? 'en' : 'hi'; notifyListeners(); }
 }

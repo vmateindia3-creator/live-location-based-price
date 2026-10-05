@@ -67,7 +67,7 @@ def fetch_prices(city):
             prices = response.json().get("prices", {})
             normalized = {key: float(prices[key]) for key in DEMO_PRICES if key in prices}
             if len(normalized) == len(DEMO_PRICES):
-                return normalized, "configured-provider"
+                return normalized, "configured-provider", set(normalized)
         except (requests.RequestException, ValueError, TypeError, KeyError):
             pass
     if os.getenv("GOOGLE_SEARCH_ENABLED", "false").lower() == "true":
@@ -76,8 +76,8 @@ def fetch_prices(city):
             merged = DEMO_PRICES.copy()
             merged.update(search_prices)
             source = "google-search-indicative" if len(search_prices) == len(DEMO_PRICES) else "google-search-partial"
-            return merged, source
-    return DEMO_PRICES.copy(), "demo-fallback"
+            return merged, source, set(search_prices)
+    return DEMO_PRICES.copy(), "demo-fallback", set()
 
 
 def fetch_google_indicative_prices(city):
@@ -123,8 +123,8 @@ def market():
     cached = cache_get(cache_key)
     if cached:
         return jsonify(cached)
-    prices, source = fetch_prices(city)
-    response = {"updatedAt": now_iso(), "currency": "INR", "city": city, "source": source, "warning": "Indicative Google Search result; verify before use" if source.startswith("google-search") else None, "prices": prices, "weather": fetch_weather(lat, lng)}
+    prices, source, observed_keys = fetch_prices(city)
+    response = {"updatedAt": now_iso(), "currency": "INR", "city": city, "source": source, "warning": "Indicative Google Search result; verify before use" if source.startswith("google-search") else None, "prices": prices, "observedKeys": sorted(observed_keys), "weather": fetch_weather(lat, lng)}
     cache_put(cache_key, response)
     return jsonify(response)
 
@@ -148,6 +148,17 @@ def places_search():
                 return jsonify({"results": results})
         except (requests.RequestException, ValueError, TypeError):
             pass
+    try:
+        geo = requests.get("https://geocoding-api.open-meteo.com/v1/search", params={"name": query, "count": 5, "language": "en", "format": "json"}, timeout=6).json()
+        results = []
+        for item in geo.get("results", []):
+            country = item.get("country_code") or item.get("country", "")
+            if str(country).upper() in {"IN", "INDIA"}:
+                results.append({"name": item.get("name", query), "latitude": item["latitude"], "longitude": item["longitude"]})
+        if results:
+            return jsonify({"results": results})
+    except (requests.RequestException, ValueError, TypeError, KeyError):
+        pass
     known = {"delhi": (28.6139, 77.2090), "mumbai": (19.0760, 72.8777), "kolkata": (22.5726, 88.3639), "bengaluru": (12.9716, 77.5946), "chennai": (13.0827, 80.2707)}
     lat, lng = known.get(query.lower(), (20.5937, 78.9629))
     return jsonify({"results": [{"name": query, "latitude": lat, "longitude": lng}]})

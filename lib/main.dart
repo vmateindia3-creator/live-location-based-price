@@ -73,6 +73,13 @@ class _HomeState extends State<Home> {
   final names = const {'petrol': 'Petrol', 'diesel': 'Diesel', 'lpg': 'LPG', 'cng': 'CNG', 'gold': 'Gold', 'silver': 'Silver'};
 
   @override
+  void dispose() {
+    search.dispose();
+    amount.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final s = widget.state;
     final data = s.data;
@@ -87,16 +94,19 @@ class _HomeState extends State<Home> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 18, 20, 12),
                 child: Row(children: [
-                  const Expanded(child: Text('Live Price', style: TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w800))),
+                  Expanded(child: Text(s.language == 'hi' ? 'लाइव रेट' : 'Live Price', style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w800))),
                   TextButton(onPressed: s.toggleLanguage, child: Text(s.language == 'hi' ? 'EN' : 'हि', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
-                  IconButton(onPressed: s.load, icon: const Icon(Icons.my_location, color: Colors.white)),
+                  IconButton(onPressed: () async { await s.load(); if (mounted) search.clear(); }, icon: const Icon(Icons.my_location, color: Colors.white)),
                 ]),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: TextField(
                   controller: search,
-                  onSubmitted: s.searchCity,
+                  onSubmitted: (value) async {
+                    await s.searchCity(value);
+                    if (mounted) search.text = s.place.name;
+                  },
                   style: const TextStyle(color: Colors.white),
                   decoration: InputDecoration(
                     hintText: s.language == 'hi' ? 'शहर खोजें…' : 'Search city in India…',
@@ -114,7 +124,7 @@ class _HomeState extends State<Home> {
                 child: Container(
                   decoration: const BoxDecoration(color: Color(0xfff4faf7), borderRadius: BorderRadius.vertical(top: Radius.circular(28))),
                   child: Column(children: [
-                    Padding(padding: const EdgeInsets.fromLTRB(18, 16, 18, 4), child: Row(children: [_tab('Fuel', 0), _tab('Wealth', 1)])),
+                    Padding(padding: const EdgeInsets.fromLTRB(18, 16, 18, 4), child: Row(children: [_tab(s.language == 'hi' ? 'ईंधन' : 'Fuel', 0), _tab(s.language == 'hi' ? 'धातु' : 'Wealth', 1)])),
                     if (data != null)
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
@@ -122,7 +132,7 @@ class _HomeState extends State<Home> {
                           Icon(data.source == 'demo-fallback' ? Icons.info_outline : Icons.verified, size: 15, color: data.source == 'demo-fallback' ? Colors.orange.shade800 : const Color(0xff075e54)),
                           const SizedBox(width: 6),
                           Expanded(child: Text(data.source == 'google-search-partial' ? 'Google Search data + fallback • verify before use' : data.source == 'google-search-indicative' ? 'Google Search estimate • verify before use' : data.source == 'demo-fallback' ? 'Demo rates • provider pending' : 'Live provider rates', style: TextStyle(fontSize: 12, color: data.source == 'demo-fallback' || data.source.startsWith('google-search') ? Colors.orange.shade800 : const Color(0xff075e54)))),
-                          Text('Updated ${_time(data.updatedAt)}', style: const TextStyle(fontSize: 11, color: Colors.black54)),
+                          Text('${s.language == 'hi' ? 'अपडेट' : 'Updated'} ${_time(data.updatedAt)}', style: const TextStyle(fontSize: 11, color: Colors.black54)),
                         ]),
                       ),
                     Expanded(
@@ -130,7 +140,7 @@ class _HomeState extends State<Home> {
                           ? const Center(child: CircularProgressIndicator())
                           : ListView(
                               padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
-                              children: [...keys.map((key) => _priceCard(key, data?.prices[key] ?? 0)), Text(s.error ?? '', style: const TextStyle(color: Colors.red))],
+                              children: [...keys.map((key) => _priceCard(key, data?.prices[key] ?? 0, data, s)), if (s.error != null) Text(s.error!, style: const TextStyle(color: Colors.red))],
                             ),
                     ),
                   ]),
@@ -162,8 +172,8 @@ class _HomeState extends State<Home> {
           const Icon(Icons.cloud_queue, color: Colors.white, size: 38),
           const SizedBox(width: 10),
           Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text('${weather?.temperatureC.toStringAsFixed(0) ?? '--'}°C  ${weather?.condition ?? 'Loading weather'}', style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
-            Text('${s.place.name}  •  Humidity ${weather?.humidity ?? '--'}%', style: const TextStyle(color: Colors.white70)),
+            Text('${weather?.temperatureC.toStringAsFixed(0) ?? '--'}°C  ${weather?.condition ?? (s.language == 'hi' ? 'मौसम लोड हो रहा है' : 'Loading weather')}', style: const TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
+            Text('${s.place.name}  •  ${s.language == 'hi' ? 'नमी' : 'Humidity'} ${weather?.humidity ?? '--'}%', style: const TextStyle(color: Colors.white70)),
           ])),
           const Icon(Icons.wifi, color: Colors.white70),
         ]),
@@ -171,9 +181,10 @@ class _HomeState extends State<Home> {
 
   String _time(DateTime value) => '${value.hour.toString().padLeft(2, '0')}:${value.minute.toString().padLeft(2, '0')}';
 
-  Widget _priceCard(String key, double price) {
+  Widget _priceCard(String key, double price, MarketData? data, AppState s) {
     final value = double.tryParse(amount.text) ?? 0;
-    final quantity = price == 0 ? 0 : value / price;
+    final available = data != null && (data.source == 'configured-provider' || data.observedKeys.contains(key));
+    final quantity = !available || price == 0 ? 0 : value / price;
     final premium = key == 'gold' || key == 'silver';
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 6),
@@ -186,17 +197,24 @@ class _HomeState extends State<Home> {
           Row(children: [
             CircleAvatar(backgroundColor: const Color(0xffd9fdd3), child: Icon(premium ? Icons.workspace_premium : Icons.local_gas_station, color: const Color(0xff075e54))),
             const SizedBox(width: 12),
-            Expanded(child: Text(names[key]!, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800))),
-            Text('₹${price.toStringAsFixed(2)}', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xff075e54))),
+            Expanded(child: Text(_name(key, s.language), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800))),
+            Text(available ? '₹${price.toStringAsFixed(2)}' : '--', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xff075e54))),
           ]),
           const SizedBox(height: 12),
           Row(children: [
-            Expanded(child: TextField(controller: amount, onChanged: (_) => setState(() {}), keyboardType: TextInputType.number, decoration: InputDecoration(prefixText: '₹ ', labelText: 'Amount', filled: true, fillColor: const Color(0xfff0f5f2), border: OutlineInputBorder(borderRadius: BorderRadius.circular(14), borderSide: BorderSide.none)))),
+            Expanded(child: TextField(controller: amount, onChanged: (_) => setState(() {}), keyboardType: TextInputType.number, decoration: InputDecoration(prefixText: '₹ ', labelText: s.language == 'hi' ? 'राशि' : 'Amount', filled: true, fillColor: const Color(0xfff0f5f2), border: OutlineInputBorder(borderRadius: BorderRadius.circular(14), borderSide: BorderSide.none)))),
             const SizedBox(width: 12),
-            Text(premium ? '${quantity.toStringAsFixed(3)} g' : '${quantity.toStringAsFixed(2)} units', style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xff075e54))),
+            Text(available ? (premium ? '${quantity.toStringAsFixed(3)} g' : '${quantity.toStringAsFixed(2)} units') : (s.language == 'hi' ? 'रेट उपलब्ध नहीं' : 'Rate unavailable'), style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xff075e54))),
           ]),
         ]),
       ),
     );
+  }
+
+  String _name(String key, String language) {
+    if (language == 'hi') {
+      return const {'petrol': 'पेट्रोल', 'diesel': 'डीज़ल', 'lpg': 'एलपीजी', 'cng': 'सीएनजी', 'gold': 'सोना', 'silver': 'चाँदी'}[key]!;
+    }
+    return names[key]!;
   }
 }
