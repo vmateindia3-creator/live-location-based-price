@@ -73,7 +73,10 @@ def fetch_prices(city):
     if os.getenv("GOOGLE_SEARCH_ENABLED", "false").lower() == "true":
         search_prices = fetch_google_indicative_prices(city)
         if search_prices:
-            return search_prices, "google-search-indicative"
+            merged = DEMO_PRICES.copy()
+            merged.update(search_prices)
+            source = "google-search-indicative" if len(search_prices) == len(DEMO_PRICES) else "google-search-partial"
+            return merged, source
     return DEMO_PRICES.copy(), "demo-fallback"
 
 
@@ -100,7 +103,7 @@ def fetch_google_indicative_prices(city):
                 result[key] = values[0]
         except (requests.RequestException, ValueError, TypeError):
             continue
-    return result if len(result) >= 4 else None
+    return result or None
 
 
 @app.get("/health")
@@ -121,7 +124,7 @@ def market():
     if cached:
         return jsonify(cached)
     prices, source = fetch_prices(city)
-    response = {"updatedAt": now_iso(), "currency": "INR", "city": city, "source": source, "warning": "Indicative Google Search result; verify before use" if source == "google-search-indicative" else None, "prices": prices, "weather": fetch_weather(lat, lng)}
+    response = {"updatedAt": now_iso(), "currency": "INR", "city": city, "source": source, "warning": "Indicative Google Search result; verify before use" if source.startswith("google-search") else None, "prices": prices, "weather": fetch_weather(lat, lng)}
     cache_put(cache_key, response)
     return jsonify(response)
 
