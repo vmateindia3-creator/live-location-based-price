@@ -13,6 +13,17 @@ cp .env.example .env
 python app.py
 ```
 
+## Deploy on Render
+
+1. Open Render and choose **New → Blueprint**.
+2. Connect the GitHub repository `vmateindia3-creator/live-location-based-price`.
+3. Render detects the root `render.yaml` and creates `live-location-based-price-api`.
+4. Add secret values in the Render environment settings; never commit `.env`.
+5. Wait for `/health` to become healthy.
+6. Use the generated HTTPS URL as Flutter's `PRICE_API_BASE_URL`.
+
+The repository also contains `backend/Dockerfile` for Railway, Fly.io or any Docker host.
+
 ## Endpoints
 
 - `GET /health`

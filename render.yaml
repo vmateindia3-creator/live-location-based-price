@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: live-location-based-price-api
+    runtime: docker
+    plan: free
+    rootDir: backend
+    healthCheckPath: /health
+    envVars:
+      - key: CACHE_TTL_SECONDS
+        value: "300"
+      - key: PRICE_PROVIDER_URL
+        sync: false
+      - key: PRICE_PROVIDER_API_KEY
+        sync: false
+      - key: GOOGLE_PLACES_API_KEY
+        sync: false
+      - key: WEATHER_PROVIDER_URL
+        value: https://api.open-meteo.com/v1/forecast
