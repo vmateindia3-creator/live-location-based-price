@@ -13,3 +13,5 @@ backend/.venv/
 backend/__pycache__/
 __pycache__/
 *.pyc
+artifacts/
+artifacts-crash-fix/
