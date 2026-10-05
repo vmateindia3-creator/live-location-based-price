@@ -5,6 +5,7 @@
 - [x] Google Search indicative and partial-result mode
 - [x] Fallback/source labels in Flutter UI
 - [x] Backend smoke tests and GitHub Actions CI
+- [x] Debug APK build with test AdMob application ID and location permission
 - [x] Privacy policy draft
 - [ ] Choose and configure a real licensed price provider
 - [ ] Add Android/iOS location permissions

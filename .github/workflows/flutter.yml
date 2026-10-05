@@ -36,6 +36,19 @@ jobs:
               text = text[:end + 1] + '\n    ' + permission + text[end + 1:]
               manifest.write_text(text)
           PY
+      - name: Add test AdMob application ID
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          manifest = Path('android/app/src/main/AndroidManifest.xml')
+          text = manifest.read_text()
+          meta = '<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713" />'
+          if meta not in text:
+              start = text.find('<application')
+              end = text.find('>', start)
+              text = text[:end + 1] + '\n        ' + meta + text[end + 1:]
+              manifest.write_text(text)
+          PY
       - run: flutter build apk --debug
       - uses: actions/upload-artifact@v4
         with:
