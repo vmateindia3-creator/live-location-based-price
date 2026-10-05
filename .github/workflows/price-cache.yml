@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: daily-price-cache
+  cancel-in-progress: false
+
 jobs:
   refresh-price-cache:
     runs-on: ubuntu-latest

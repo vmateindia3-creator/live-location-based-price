@@ -1,6 +1,8 @@
 # Scheduled price cache
 
-The repository now has a GitHub Actions workflow at `.github/workflows/price-cache.yml`. It runs at **06:00 IST** (`00:30 UTC`) and can also be started manually. It fetches best-effort Google Search values for the configured India city list and commits `backend/data/price_cache.json`.
+The repository now has a GitHub Actions workflow at `.github/workflows/price-cache.yml`. It runs daily at **06:00 IST** (`00:30 UTC`; GitHub can start cron jobs a few minutes late) and can also be started manually. It fetches best-effort Google Search values for the configured India city list and commits `backend/data/price_cache.json`.
+
+Render is configured with `autoDeploy: true`. When the cache commit changes, Render rebuilds the backend Docker image automatically; the image includes `backend/data/price_cache.json`. A concurrency guard prevents overlapping refresh runs.
 
 The backend uses a saved city cache first and returns `source: google-scheduled-cache` with `observedKeys`. Values outside conservative Indian retail ranges are discarded. The Flutter app shows only observed keys; it does not present fallback demo values as real rates.
 
