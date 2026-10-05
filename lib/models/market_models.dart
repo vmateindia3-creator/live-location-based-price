@@ -1,8 +1,10 @@
 class MarketData {
-  const MarketData({required this.updatedAt, required this.prices, required this.weather});
+  const MarketData({required this.updatedAt, required this.prices, required this.weather, required this.source, required this.currency});
   final DateTime updatedAt;
   final Map<String, double> prices;
   final WeatherData weather;
+  final String source;
+  final String currency;
 
   factory MarketData.fromJson(Map<String, dynamic> json) {
     final raw = Map<String, dynamic>.from(json['prices'] as Map? ?? {});
@@ -11,6 +13,8 @@ class MarketData {
       updatedAt: DateTime.tryParse(json['updatedAt']?.toString() ?? '')?.toLocal() ?? DateTime.now(),
       prices: raw.map((key, value) => MapEntry(key, (value as num).toDouble())),
       weather: WeatherData.fromJson(weather),
+      source: json['source']?.toString() ?? 'unknown',
+      currency: json['currency']?.toString() ?? 'INR',
     );
   }
 }

@@ -115,6 +115,16 @@ class _HomeState extends State<Home> {
                   decoration: const BoxDecoration(color: Color(0xfff4faf7), borderRadius: BorderRadius.vertical(top: Radius.circular(28))),
                   child: Column(children: [
                     Padding(padding: const EdgeInsets.fromLTRB(18, 16, 18, 4), child: Row(children: [_tab('Fuel', 0), _tab('Wealth', 1)])),
+                    if (data != null)
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
+                        child: Row(children: [
+                          Icon(data.source == 'demo-fallback' ? Icons.info_outline : Icons.verified, size: 15, color: data.source == 'demo-fallback' ? Colors.orange.shade800 : const Color(0xff075e54)),
+                          const SizedBox(width: 6),
+                          Expanded(child: Text(data.source == 'demo-fallback' ? 'Demo rates • provider pending' : 'Live provider rates', style: TextStyle(fontSize: 12, color: data.source == 'demo-fallback' ? Colors.orange.shade800 : const Color(0xff075e54)))),
+                          Text('Updated ${_time(data.updatedAt)}', style: const TextStyle(fontSize: 11, color: Colors.black54)),
+                        ]),
+                      ),
                     Expanded(
                       child: s.loading
                           ? const Center(child: CircularProgressIndicator())
@@ -158,6 +168,8 @@ class _HomeState extends State<Home> {
           const Icon(Icons.wifi, color: Colors.white70),
         ]),
       );
+
+  String _time(DateTime value) => '${value.hour.toString().padLeft(2, '0')}:${value.minute.toString().padLeft(2, '0')}';
 
   Widget _priceCard(String key, double price) {
     final value = double.tryParse(amount.text) ?? 0;
