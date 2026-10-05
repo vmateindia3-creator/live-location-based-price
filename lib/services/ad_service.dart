@@ -13,10 +13,15 @@ class AdService {
 
   void maybeShow() {
     final now = DateTime.now();
-    if (_lastShown != null && now.difference(_lastShown!) < const Duration(minutes: 3)) return;
+    if (_lastShown != null && now.difference(_lastShown!) < const Duration(minutes: 3)) {
+      return;
+    }
     final ad = _ad;
-    if (ad == null) return;
-    _ad = null; _lastShown = now;
+    if (ad == null) {
+      return;
+    }
+    _ad = null;
+    _lastShown = now;
     ad.fullScreenContentCallback = FullScreenContentCallback(onAdDismissedFullScreenContent: (_) => preload());
     ad.show();
   }
