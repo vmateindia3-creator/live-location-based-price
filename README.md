@@ -6,10 +6,10 @@ Flutter app for India: location-aware petrol, diesel, LPG, CNG, gold, silver and
 
 ```bash
 flutter pub get
-flutter run --dart-define=PRICE_API_BASE_URL=http://10.0.2.2:8080
+flutter run
 ```
 
-Use the deployed HTTPS backend URL in production. The app runs with a safe demo fallback when the backend is unavailable. **Do not put provider keys in Flutter.** Keep Google Places, weather, fuel and bullion credentials on your server.
+The app now defaults to the deployed HTTPS backend at `https://live-location-based-price-api.onrender.com`. You can override it for local development with `--dart-define=PRICE_API_BASE_URL=http://10.0.2.2:8080`. The app runs with a safe demo fallback when the backend is unavailable. **Do not put provider keys in Flutter.** Keep Google Places, weather, fuel and bullion credentials on your server.
 
 ## Backend
 

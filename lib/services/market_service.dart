@@ -5,7 +5,10 @@ import '../models/market_models.dart';
 class MarketService {
   MarketService({http.Client? client}) : _client = client ?? http.Client();
   final http.Client _client;
-  static const baseUrl = String.fromEnvironment('PRICE_API_BASE_URL');
+  static const baseUrl = String.fromEnvironment(
+    'PRICE_API_BASE_URL',
+    defaultValue: 'https://live-location-based-price-api.onrender.com',
+  );
 
   Future<PlaceResult> search(String query) async {
     if (baseUrl.isNotEmpty) {
