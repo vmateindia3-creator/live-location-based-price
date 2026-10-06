@@ -30,11 +30,26 @@ jobs:
           from pathlib import Path
           manifest = Path('android/app/src/main/AndroidManifest.xml')
           text = manifest.read_text()
-          permission = '<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />'
-          if permission not in text:
-              end = text.find('>')
-              text = text[:end + 1] + '\n    ' + permission + text[end + 1:]
-              manifest.write_text(text)
+          permissions = [
+              '<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />',
+              '<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />',
+          ]
+          end = text.find('>')
+          additions = ''.join(f'\n    {permission}' for permission in permissions if permission not in text)
+          if additions:
+              manifest.write_text(text[:end + 1] + additions + text[end + 1:])
+          PY
+      - name: Add iOS location usage description
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          plist = Path('ios/Runner/Info.plist')
+          text = plist.read_text()
+          key = '<key>NSLocationWhenInUseUsageDescription</key>'
+          if key not in text:
+              marker = '</dict>'
+              entry = '    <key>NSLocationWhenInUseUsageDescription</key>\n    <string>LocaRate uses your location to show local weather and prices.</string>\n'
+              plist.write_text(text.replace(marker, entry + marker, 1))
           PY
       - name: Add test AdMob application ID
         run: |

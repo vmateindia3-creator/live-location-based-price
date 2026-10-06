@@ -53,9 +53,57 @@ class _LivePriceAppState extends State<LivePriceApp> {
             colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xff075e54)),
             scaffoldBackgroundColor: const Color(0xfff4faf7),
           ),
-          home: Home(state: state, ads: ads, colors: colors),
+          home: SplashGate(state: state, ads: ads, colors: colors),
         );
       },
+    );
+  }
+}
+
+class SplashGate extends StatefulWidget {
+  const SplashGate({super.key, required this.state, required this.ads, required this.colors});
+  final AppState state;
+  final AdService ads;
+  final List<Color> colors;
+
+  @override
+  State<SplashGate> createState() => _SplashGateState();
+}
+
+class _SplashGateState extends State<SplashGate> {
+  bool ready = false;
+
+  @override
+  void initState() {
+    super.initState();
+    Future<void>.delayed(const Duration(milliseconds: 1400), () {
+      if (mounted) setState(() => ready = true);
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (ready) return Home(state: widget.state, ads: widget.ads, colors: widget.colors);
+    return Scaffold(
+      body: DecoratedBox(
+        decoration: BoxDecoration(gradient: LinearGradient(colors: widget.colors, begin: Alignment.topLeft, end: Alignment.bottomRight)),
+        child: Center(
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            Container(
+              width: 92,
+              height: 92,
+              decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(28), boxShadow: const [BoxShadow(color: Colors.black26, blurRadius: 18, offset: Offset(0, 8))]),
+              child: const Icon(Icons.location_on_rounded, color: Color(0xff075e54), size: 54),
+            ),
+            const SizedBox(height: 22),
+            const Text('LocaRate', style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.w800, letterSpacing: .4)),
+            const SizedBox(height: 6),
+            const Text('Location based rates', style: TextStyle(color: Colors.white70, fontSize: 15, letterSpacing: .3)),
+            const SizedBox(height: 28),
+            const SizedBox(width: 24, height: 24, child: CircularProgressIndicator(strokeWidth: 2.5, color: Colors.white)),
+          ]),
+        ),
+      ),
     );
   }
 }
@@ -258,7 +306,7 @@ class _HomeState extends State<Home> {
   void _showSourceViewer(String key, MarketData? data, AppState s) {
     final url = _sourceUrl(key, data, s.place.name);
     final controller = WebViewController()
-      ..setJavaScriptMode(JavaScriptMode.disabled)
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setNavigationDelegate(NavigationDelegate(onNavigationRequest: (request) => _allowedSource(request.url) ? NavigationDecision.navigate : NavigationDecision.prevent))
       ..loadRequest(Uri.parse(url));
     showModalBottomSheet<void>(
