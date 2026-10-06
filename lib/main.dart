@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
@@ -78,7 +79,7 @@ class _SplashGateState extends State<SplashGate> {
   @override
   void initState() {
     super.initState();
-    Future<void>.delayed(const Duration(milliseconds: 1400), () {
+    Future<void>.delayed(const Duration(milliseconds: 2200), () {
       if (mounted) {
         setState(() => ready = true);
       }
@@ -285,11 +286,12 @@ class _HomeState extends State<Home> {
             Text(displayAvailable ? '₹${effectivePrice.toStringAsFixed(2)}' : '--', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xff075e54))),
           ]),
           const SizedBox(height: 12),
-          Row(children: [
-            Expanded(child: TextField(controller: amount, onChanged: (_) => setState(() {}), keyboardType: TextInputType.number, decoration: InputDecoration(prefixText: '₹ ', labelText: s.language == 'hi' ? 'राशि' : 'Amount', filled: true, fillColor: const Color(0xfff0f5f2), border: OutlineInputBorder(borderRadius: BorderRadius.circular(14), borderSide: BorderSide.none)))),
-            const SizedBox(width: 12),
-            Text(officialRate != null ? (premium ? '${quantity.toStringAsFixed(3)} g' : '${quantity.toStringAsFixed(2)} units') : (s.language == 'hi' ? 'पहले official page check करें' : 'Check official page first'), style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xff075e54))),
-          ]),
+          TextField(controller: amount, onChanged: (_) => setState(() {}), keyboardType: TextInputType.number, decoration: InputDecoration(prefixText: '₹ ', labelText: s.language == 'hi' ? 'राशि' : 'Amount', filled: true, fillColor: const Color(0xfff0f5f2), border: OutlineInputBorder(borderRadius: BorderRadius.circular(14), borderSide: BorderSide.none))),
+          const SizedBox(height: 8),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Text(officialRate != null ? (premium ? '${quantity.toStringAsFixed(3)} g' : '${quantity.toStringAsFixed(2)} units') : (s.language == 'hi' ? 'पहले official page check करें' : 'Check official page first'), maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xff075e54))),
+          ),
           const SizedBox(height: 8),
           Align(
             alignment: Alignment.centerLeft,
@@ -320,6 +322,7 @@ class _HomeState extends State<Home> {
     showModalBottomSheet<void>(
       context: context,
       isScrollControlled: true,
+      enableDrag: false,
       backgroundColor: Colors.white,
       builder: (_) => SizedBox(
         height: MediaQuery.sizeOf(context).height * .94,
@@ -344,7 +347,14 @@ class _HomeState extends State<Home> {
             ),
           ),
           const Divider(height: 12),
-          Expanded(child: WebViewWidget(controller: controller)),
+          Expanded(
+            child: WebViewWidget(
+              controller: controller,
+              gestureRecognizers: <Factory<OneSequenceGestureRecognizer>>{
+                Factory<OneSequenceGestureRecognizer>(() => EagerGestureRecognizer()),
+              },
+            ),
+          ),
         ]),
       ),
     );
