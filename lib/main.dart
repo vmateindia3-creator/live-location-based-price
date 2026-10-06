@@ -83,7 +83,9 @@ class _SplashGateState extends State<SplashGate> {
 
   @override
   Widget build(BuildContext context) {
-    if (ready) return Home(state: widget.state, ads: widget.ads, colors: widget.colors);
+    if (ready) {
+      return Home(state: widget.state, ads: widget.ads, colors: widget.colors);
+    }
     return Scaffold(
       body: DecoratedBox(
         decoration: BoxDecoration(gradient: LinearGradient(colors: widget.colors, begin: Alignment.topLeft, end: Alignment.bottomRight)),
