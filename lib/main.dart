@@ -258,20 +258,32 @@ class _HomeState extends State<Home> {
   }
 
   String _sourceButtonLabel(String key, String language) {
-    if (language == 'hi') return key == 'gold' || key == 'silver' ? 'विश्वसनीय source देखें' : 'Official source देखें';
+    if (language == 'hi') {
+      return key == 'gold' || key == 'silver' ? 'विश्वसनीय source देखें' : 'Official source देखें';
+    }
     return key == 'gold' || key == 'silver' ? 'View trusted source' : 'View official source';
   }
 
   String _sourceName(String key) {
-    if (key == 'petrol' || key == 'diesel' || key == 'lpg' || key == 'cng') return 'IndianOil / PPAC';
+    if (key == 'petrol' || key == 'diesel' || key == 'lpg' || key == 'cng') {
+      return 'IndianOil / PPAC';
+    }
     return 'IBJA / GoodReturns';
   }
 
   String _sourceUrl(String key, MarketData? data, String city) {
-    if (key == 'petrol' || key == 'diesel') return 'https://iocl.com/petrol-diesel-price';
-    if (key == 'lpg') return 'https://cx.indianoil.in/webcenter/portal/Customer/pages_productprice';
-    if (key == 'cng') return 'https://iocl.com/prices-of-petroleum-products';
-    if (key == 'gold') return 'https://www.goodreturns.in/gold-rates/';
+    if (key == 'petrol' || key == 'diesel') {
+      return 'https://iocl.com/petrol-diesel-price';
+    }
+    if (key == 'lpg') {
+      return 'https://cx.indianoil.in/webcenter/portal/Customer/pages_productprice';
+    }
+    if (key == 'cng') {
+      return 'https://iocl.com/prices-of-petroleum-products';
+    }
+    if (key == 'gold') {
+      return 'https://www.goodreturns.in/gold-rates/';
+    }
     return 'https://www.goodreturns.in/silver-rates/';
   }
 
