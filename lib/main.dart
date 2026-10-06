@@ -79,7 +79,9 @@ class _SplashGateState extends State<SplashGate> {
   void initState() {
     super.initState();
     Future<void>.delayed(const Duration(milliseconds: 1400), () {
-      if (mounted) setState(() => ready = true);
+      if (mounted) {
+        setState(() => ready = true);
+      }
     });
   }
 
@@ -164,7 +166,9 @@ class _HomeState extends State<Home> {
                   controller: search,
                   onSubmitted: (value) async {
                     await s.searchCity(value);
-                    if (mounted) search.text = s.place.name;
+                    if (mounted) {
+                      search.text = s.place.name;
+                    }
                   },
                   style: const TextStyle(color: Colors.white),
                   decoration: InputDecoration(
@@ -407,8 +411,12 @@ class _HomeState extends State<Home> {
   }
 
   bool _validRate(String key, double value) {
-    if (key == 'petrol' || key == 'diesel' || key == 'cng') return value >= 20 && value <= 250;
-    if (key == 'lpg') return value >= 300 && value <= 2500;
+    if (key == 'petrol' || key == 'diesel' || key == 'cng') {
+      return value >= 20 && value <= 250;
+    }
+    if (key == 'lpg') {
+      return value >= 300 && value <= 2500;
+    }
     return value >= 1000 && value <= 250000;
   }
 
