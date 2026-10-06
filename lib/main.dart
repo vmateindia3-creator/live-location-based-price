@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
@@ -122,6 +124,7 @@ class _HomeState extends State<Home> {
   int tab = 0;
   final search = TextEditingController();
   final amount = TextEditingController(text: '1000');
+  final Map<String, double> temporaryRates = {};
   final names = const {'petrol': 'Petrol', 'diesel': 'Diesel', 'lpg': 'LPG', 'cng': 'CNG', 'gold': 'Gold', 'silver': 'Silver'};
 
   @override
@@ -197,10 +200,7 @@ class _HomeState extends State<Home> {
                           : ListView(
                               padding: EdgeInsets.fromLTRB(horizontal, 4, horizontal, 24),
                               children: [
-                                if (isTablet)
-                                  _responsiveGrid(keys, data, s)
-                                else
-                                  ...keys.map((key) => _priceCard(key, data?.prices[key] ?? 0, data, s)),
+                                _responsiveGrid(keys, data, s),
                                 if (s.error != null) Text(s.error!, style: const TextStyle(color: Colors.red)),
                               ],
                             ),
@@ -222,7 +222,7 @@ class _HomeState extends State<Home> {
       crossAxisCount: 2,
       crossAxisSpacing: 12,
       mainAxisSpacing: 2,
-      childAspectRatio: 1.18,
+      childAspectRatio: .72,
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       children: [
@@ -261,8 +261,10 @@ class _HomeState extends State<Home> {
 
   Widget _priceCard(String key, double price, MarketData? data, AppState s) {
     final value = double.tryParse(amount.text) ?? 0;
-    final available = data != null && (data.source == 'configured-provider' || data.observedKeys.contains(key));
-    final quantity = !available || price == 0 ? 0 : value / price;
+    final officialRate = temporaryRates[key];
+    final displayAvailable = officialRate != null || (data != null && (data.source == 'configured-provider' || data.observedKeys.contains(key)));
+    final effectivePrice = officialRate ?? price;
+    final quantity = officialRate == null || effectivePrice == 0 ? 0 : value / effectivePrice;
     final premium = key == 'gold' || key == 'silver';
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 6),
@@ -276,13 +278,13 @@ class _HomeState extends State<Home> {
             CircleAvatar(backgroundColor: const Color(0xffd9fdd3), child: Icon(premium ? Icons.workspace_premium : Icons.local_gas_station, color: const Color(0xff075e54))),
             const SizedBox(width: 12),
             Expanded(child: Text(_name(key, s.language), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800))),
-            Text(available ? '₹${price.toStringAsFixed(2)}' : '--', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xff075e54))),
+            Text(displayAvailable ? '₹${effectivePrice.toStringAsFixed(2)}' : '--', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xff075e54))),
           ]),
           const SizedBox(height: 12),
           Row(children: [
             Expanded(child: TextField(controller: amount, onChanged: (_) => setState(() {}), keyboardType: TextInputType.number, decoration: InputDecoration(prefixText: '₹ ', labelText: s.language == 'hi' ? 'राशि' : 'Amount', filled: true, fillColor: const Color(0xfff0f5f2), border: OutlineInputBorder(borderRadius: BorderRadius.circular(14), borderSide: BorderSide.none)))),
             const SizedBox(width: 12),
-            Text(available ? (premium ? '${quantity.toStringAsFixed(3)} g' : '${quantity.toStringAsFixed(2)} units') : (s.language == 'hi' ? 'रेट उपलब्ध नहीं' : 'Rate unavailable'), style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xff075e54))),
+            Text(officialRate != null ? (premium ? '${quantity.toStringAsFixed(3)} g' : '${quantity.toStringAsFixed(2)} units') : (s.language == 'hi' ? 'पहले official page check करें' : 'Check official page first'), style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xff075e54))),
           ]),
           const SizedBox(height: 8),
           Align(
@@ -316,7 +318,7 @@ class _HomeState extends State<Home> {
       isScrollControlled: true,
       backgroundColor: Colors.white,
       builder: (_) => SizedBox(
-        height: MediaQuery.sizeOf(context).height * .82,
+        height: MediaQuery.sizeOf(context).height * .94,
         child: Column(children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(18, 12, 8, 8),
@@ -325,7 +327,18 @@ class _HomeState extends State<Home> {
               IconButton(onPressed: () => Navigator.pop(context), icon: const Icon(Icons.close)),
             ]),
           ),
-          Padding(padding: const EdgeInsets.symmetric(horizontal: 18), child: Text(s.language == 'hi' ? 'Selected city source • rate को official page पर verify करें' : 'Selected city source • verify the rate on the official page', style: const TextStyle(fontSize: 12, color: Colors.orange))),
+          Padding(padding: const EdgeInsets.symmetric(horizontal: 18), child: Text(s.language == 'hi' ? 'Official page को नीचे पूरे area में scroll करें' : 'Scroll the official page in the full area below', style: const TextStyle(fontSize: 12, color: Colors.orange))),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(18, 6, 18, 4),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: FilledButton.icon(
+                onPressed: () => _captureOfficialRate(controller, key, s),
+                icon: const Icon(Icons.download_done, size: 17),
+                label: Text(s.language == 'hi' ? 'इसी page का rate इस्तेमाल करें' : 'Use rate from this page'),
+              ),
+            ),
+          ),
           const Divider(height: 12),
           Expanded(child: WebViewWidget(controller: controller)),
         ]),
@@ -349,7 +362,7 @@ class _HomeState extends State<Home> {
 
   String _sourceUrl(String key, MarketData? data, String city) {
     if (key == 'petrol' || key == 'diesel') {
-      return 'https://iocl.com/petrol-diesel-price';
+      return 'https://ppac.gov.in/retail-selling-price-rsp-of-petrol-diesel-and-domestic-lpg/price-build-up-of-petrol-and-diesel';
     }
     if (key == 'lpg') {
       return 'https://cx.indianoil.in/webcenter/portal/Customer/pages_productprice';
@@ -365,7 +378,47 @@ class _HomeState extends State<Home> {
 
   bool _allowedSource(String rawUrl) {
     final host = Uri.tryParse(rawUrl)?.host ?? '';
-    return host == 'iocl.com' || host.endsWith('.iocl.com') || host == 'indianoil.in' || host.endsWith('.indianoil.in') || host == 'goodreturns.in' || host.endsWith('.goodreturns.in') || host == 'ibjarates.com' || host.endsWith('.ibjarates.com');
+    return host == 'ppac.gov.in' || host.endsWith('.ppac.gov.in') || host == 'iocl.com' || host.endsWith('.iocl.com') || host == 'indianoil.in' || host.endsWith('.indianoil.in') || host == 'goodreturns.in' || host.endsWith('.goodreturns.in') || host == 'ibjarates.com' || host.endsWith('.ibjarates.com');
+  }
+
+  Future<void> _captureOfficialRate(WebViewController controller, String key, AppState s) async {
+    try {
+      final result = await controller.runJavaScriptReturningResult('document.body ? document.body.innerText : ""');
+      final raw = result.toString();
+      final text = _javaScriptText(raw);
+      final numbers = RegExp(r'(?:₹|Rs\.?|INR)?\s*([0-9]{1,3}(?:,[0-9]{2,3})*(?:\.[0-9]{1,2})?)')
+          .allMatches(text)
+          .map((match) => double.tryParse(match.group(1)!.replaceAll(',', '')))
+          .whereType<double>()
+          .where((value) => _validRate(key, value))
+          .toList();
+      if (numbers.isEmpty) {
+        throw const FormatException('No visible rate found');
+      }
+      setState(() => temporaryRates[key] = numbers.first);
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(s.language == 'hi' ? 'Official page का ₹${numbers.first.toStringAsFixed(2)} rate अस्थायी रूप से इस्तेमाल हो रहा है' : '₹${numbers.first.toStringAsFixed(2)} from the official page is active temporarily')));
+      }
+    } catch (_) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(s.language == 'hi' ? 'इस page पर rate text नहीं मिला; page scroll करके फिर कोशिश करें' : 'No readable rate found on this page; scroll and try again')));
+      }
+    }
+  }
+
+  bool _validRate(String key, double value) {
+    if (key == 'petrol' || key == 'diesel' || key == 'cng') return value >= 20 && value <= 250;
+    if (key == 'lpg') return value >= 300 && value <= 2500;
+    return value >= 1000 && value <= 250000;
+  }
+
+  String _javaScriptText(String raw) {
+    try {
+      final decoded = jsonDecode(raw);
+      return decoded is String ? decoded : raw;
+    } catch (_) {
+      return raw;
+    }
   }
 
   String _sourceText(String source, String language) {
