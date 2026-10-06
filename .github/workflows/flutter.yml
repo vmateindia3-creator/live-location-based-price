@@ -49,9 +49,11 @@ jobs:
               text = text[:end + 1] + '\n        ' + meta + text[end + 1:]
               manifest.write_text(text)
           PY
-      - name: Build arm64 debug APK
-        run: flutter build apk --debug --target-platform android-arm64
+      - name: Build universal debug APK for all Android ABIs
+        run: flutter build apk --debug
+      - name: Build split APKs for direct device matching
+        run: flutter build apk --debug --split-per-abi
       - uses: actions/upload-artifact@v4
         with:
-          name: live-location-based-price-debug-apk
-          path: build/app/outputs/flutter-apk/app-debug.apk
+          name: live-location-based-price-android-apks
+          path: build/app/outputs/flutter-apk/*.apk

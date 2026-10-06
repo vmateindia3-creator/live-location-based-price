@@ -91,18 +91,22 @@ class _HomeState extends State<Home> {
         duration: const Duration(milliseconds: 900),
         decoration: BoxDecoration(gradient: LinearGradient(colors: widget.colors, begin: Alignment.topLeft, end: Alignment.bottomRight)),
         child: SafeArea(
-          child: Column(
-            children: [
+          child: LayoutBuilder(
+            builder: (context, constraints) {
+              final isTablet = constraints.maxWidth >= 700;
+              final horizontal = isTablet ? 32.0 : 16.0;
+              return Column(
+                children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(20, 18, 20, 12),
+                padding: EdgeInsets.fromLTRB(isTablet ? 32 : 20, 18, isTablet ? 32 : 20, 12),
                 child: Row(children: [
-                  Expanded(child: Text(s.language == 'hi' ? 'लाइव रेट' : 'Live Price', style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w800))),
+                  Expanded(child: FittedBox(alignment: Alignment.centerLeft, fit: BoxFit.scaleDown, child: Text(s.language == 'hi' ? 'लाइव रेट' : 'Live Price', style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w800)))),
                   TextButton(onPressed: s.toggleLanguage, child: Text(s.language == 'hi' ? 'EN' : 'हि', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
                   IconButton(onPressed: () async { await s.load(); if (mounted) search.clear(); }, icon: const Icon(Icons.my_location, color: Colors.white)),
                 ]),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
+                padding: EdgeInsets.symmetric(horizontal: horizontal),
                 child: TextField(
                   controller: search,
                   onSubmitted: (value) async {
@@ -141,17 +145,39 @@ class _HomeState extends State<Home> {
                       child: s.loading
                           ? const Center(child: CircularProgressIndicator())
                           : ListView(
-                              padding: const EdgeInsets.fromLTRB(16, 4, 16, 24),
-                              children: [...keys.map((key) => _priceCard(key, data?.prices[key] ?? 0, data, s)), if (s.error != null) Text(s.error!, style: const TextStyle(color: Colors.red))],
+                              padding: EdgeInsets.fromLTRB(horizontal, 4, horizontal, 24),
+                              children: [
+                                if (isTablet)
+                                  _responsiveGrid(keys, data, s)
+                                else
+                                  ...keys.map((key) => _priceCard(key, data?.prices[key] ?? 0, data, s)),
+                                if (s.error != null) Text(s.error!, style: const TextStyle(color: Colors.red)),
+                              ],
                             ),
                     ),
                   ]),
                 ),
               ),
-            ],
+                ],
+              );
+            },
           ),
         ),
       ),
+    );
+  }
+
+  Widget _responsiveGrid(List<String> keys, MarketData? data, AppState s) {
+    return GridView.count(
+      crossAxisCount: 2,
+      crossAxisSpacing: 12,
+      mainAxisSpacing: 2,
+      childAspectRatio: 1.18,
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      children: [
+        ...keys.map((key) => _priceCard(key, data?.prices[key] ?? 0, data, s)),
+      ],
     );
   }
 
