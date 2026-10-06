@@ -127,14 +127,16 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int tab = 0;
   final search = TextEditingController();
-  final amount = TextEditingController(text: '1000');
+  final Map<String, TextEditingController> amountControllers = {};
   final Map<String, double> temporaryRates = {};
   final names = const {'petrol': 'Petrol', 'diesel': 'Diesel', 'lpg': 'LPG', 'cng': 'CNG', 'gold': 'Gold', 'silver': 'Silver'};
 
   @override
   void dispose() {
     search.dispose();
-    amount.dispose();
+    for (final controller in amountControllers.values) {
+      controller.dispose();
+    }
     super.dispose();
   }
 
@@ -190,16 +192,6 @@ class _HomeState extends State<Home> {
                   decoration: const BoxDecoration(color: Color(0xfff4faf7), borderRadius: BorderRadius.vertical(top: Radius.circular(28))),
                   child: Column(children: [
                     Padding(padding: const EdgeInsets.fromLTRB(18, 16, 18, 4), child: Row(children: [_tab(s.language == 'hi' ? 'ईंधन' : 'Fuel', 0), _tab(s.language == 'hi' ? 'धातु' : 'Wealth', 1)])),
-                    if (data != null)
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 4),
-                        child: Row(children: [
-                          Icon(data.source == 'demo-fallback' || data.source.startsWith('google-') ? Icons.info_outline : Icons.verified, size: 15, color: data.source == 'demo-fallback' || data.source.startsWith('google-') ? Colors.orange.shade800 : const Color(0xff075e54)),
-                          const SizedBox(width: 6),
-                          Expanded(child: Text(_sourceText(data.source, s.language), style: TextStyle(fontSize: 12, color: data.source == 'demo-fallback' || data.source.startsWith('google-search') ? Colors.orange.shade800 : const Color(0xff075e54)))),
-                          Text('${s.language == 'hi' ? 'अपडेट' : 'Updated'} ${_time(data.updatedAt)}', style: const TextStyle(fontSize: 11, color: Colors.black54)),
-                        ]),
-                      ),
                     Expanded(
                       child: s.loading
                           ? const Center(child: CircularProgressIndicator())
@@ -224,16 +216,19 @@ class _HomeState extends State<Home> {
   }
 
   Widget _responsiveGrid(List<String> keys, MarketData? data, AppState s) {
-    return GridView.count(
-      crossAxisCount: 2,
-      crossAxisSpacing: 12,
-      mainAxisSpacing: 2,
-      childAspectRatio: .72,
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      children: [
-        ...keys.map((key) => _priceCard(key, data?.prices[key] ?? 0, data, s)),
-      ],
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final columns = constraints.maxWidth >= 900 ? 3 : 2;
+        const gap = 12.0;
+        final width = (constraints.maxWidth - (columns - 1) * gap) / columns;
+        return Wrap(
+          spacing: gap,
+          runSpacing: 4,
+          children: [
+            ...keys.map((key) => SizedBox(width: width, child: _priceCard(key, data?.prices[key] ?? 0, data, s))),
+          ],
+        );
+      },
     );
   }
 
@@ -263,10 +258,13 @@ class _HomeState extends State<Home> {
         ]),
       );
 
-  String _time(DateTime value) => '${value.hour.toString().padLeft(2, '0')}:${value.minute.toString().padLeft(2, '0')}';
+  TextEditingController _amountController(String key) {
+    return amountControllers.putIfAbsent(key, () => TextEditingController(text: '1000'));
+  }
 
   Widget _priceCard(String key, double price, MarketData? data, AppState s) {
-    final value = double.tryParse(amount.text) ?? 0;
+    final amountController = _amountController(key);
+    final value = double.tryParse(amountController.text) ?? 0;
     final officialRate = temporaryRates[key];
     final displayAvailable = officialRate != null || (data != null && (data.source == 'configured-provider' || data.observedKeys.contains(key)));
     final effectivePrice = officialRate ?? price;
@@ -278,16 +276,17 @@ class _HomeState extends State<Home> {
       color: Colors.white,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       child: Padding(
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(12),
         child: Column(children: [
           Row(children: [
-            CircleAvatar(backgroundColor: const Color(0xffd9fdd3), child: Icon(premium ? Icons.workspace_premium : Icons.local_gas_station, color: const Color(0xff075e54))),
-            const SizedBox(width: 12),
-            Expanded(child: Text(_name(key, s.language), style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800))),
-            Text(displayAvailable ? '₹${effectivePrice.toStringAsFixed(2)}' : '--', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xff075e54))),
+            CircleAvatar(radius: 20, backgroundColor: const Color(0xffd9fdd3), child: Icon(premium ? Icons.workspace_premium : Icons.local_gas_station, color: const Color(0xff075e54), size: 22)),
+            const SizedBox(width: 8),
+            Expanded(child: Text(_name(key, s.language), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800))),
+            const SizedBox(width: 4),
+            FittedBox(fit: BoxFit.scaleDown, child: Text(displayAvailable ? '₹${effectivePrice.toStringAsFixed(2)}' : '--', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xff075e54)))),
           ]),
           const SizedBox(height: 12),
-          TextField(controller: amount, onChanged: (_) => setState(() {}), keyboardType: TextInputType.number, decoration: InputDecoration(prefixText: '₹ ', labelText: s.language == 'hi' ? 'राशि' : 'Amount', filled: true, fillColor: const Color(0xfff0f5f2), border: OutlineInputBorder(borderRadius: BorderRadius.circular(14), borderSide: BorderSide.none))),
+          TextField(controller: amountController, onChanged: (_) => setState(() {}), keyboardType: TextInputType.number, decoration: InputDecoration(prefixText: '₹ ', labelText: s.language == 'hi' ? 'राशि' : 'Amount', filled: true, fillColor: const Color(0xfff0f5f2), border: OutlineInputBorder(borderRadius: BorderRadius.circular(14), borderSide: BorderSide.none))),
           const SizedBox(height: 8),
           Align(
             alignment: Alignment.centerLeft,
@@ -299,7 +298,7 @@ class _HomeState extends State<Home> {
             child: TextButton.icon(
               onPressed: () => _showSourceViewer(key, data, s),
               icon: const Icon(Icons.open_in_new, size: 17),
-              label: Text(_sourceButtonLabel(key, s.language)),
+              label: Text(_sourceButtonLabel(key, s.language), maxLines: 1, overflow: TextOverflow.ellipsis),
             ),
           ),
         ]),
@@ -440,34 +439,4 @@ class _HomeState extends State<Home> {
     }
   }
 
-  String _sourceText(String source, String language) {
-    if (language == 'hi') {
-      if (source == 'google-scheduled-cache') {
-        return 'सुबह 6 बजे का Google cache • जाँचें';
-      }
-      if (source == 'google-search-partial') {
-        return 'Google Search data + fallback • जाँचें';
-      }
-      if (source == 'google-search-indicative') {
-        return 'Google Search अनुमान • जाँचें';
-      }
-      if (source == 'demo-fallback') {
-        return 'रेट उपलब्ध नहीं • provider जोड़ें';
-      }
-      return 'Live provider rates';
-    }
-    if (source == 'google-scheduled-cache') {
-      return '6am Google cache • verify';
-    }
-    if (source == 'google-search-partial') {
-      return 'Google Search data + fallback • verify';
-    }
-    if (source == 'google-search-indicative') {
-      return 'Google Search estimate • verify';
-    }
-    if (source == 'demo-fallback') {
-      return 'Rates unavailable • add provider';
-    }
-    return 'Live provider rates';
-  }
 }
