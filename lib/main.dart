@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
+import 'package:webview_flutter/webview_flutter.dart';
 import 'models/market_models.dart';
 import 'providers/app_state.dart';
 import 'services/ad_service.dart';
@@ -207,6 +208,15 @@ class _HomeState extends State<Home> {
             const SizedBox(width: 12),
             Text(available ? (premium ? '${quantity.toStringAsFixed(3)} g' : '${quantity.toStringAsFixed(2)} units') : (s.language == 'hi' ? 'रेट उपलब्ध नहीं' : 'Rate unavailable'), style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xff075e54))),
           ]),
+          const SizedBox(height: 8),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: TextButton.icon(
+              onPressed: () => _showSourceViewer(key, data, s),
+              icon: const Icon(Icons.open_in_new, size: 17),
+              label: Text(s.language == 'hi' ? 'Google source देखें' : 'View Google source'),
+            ),
+          ),
         ]),
       ),
     );
@@ -217,6 +227,38 @@ class _HomeState extends State<Home> {
       return const {'petrol': 'पेट्रोल', 'diesel': 'डीज़ल', 'lpg': 'एलपीजी', 'cng': 'सीएनजी', 'gold': 'सोना', 'silver': 'चाँदी'}[key]!;
     }
     return names[key]!;
+  }
+
+  void _showSourceViewer(String key, MarketData? data, AppState s) {
+    final url = data?.sourceUrls[key];
+    if (url == null) {
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(s.language == 'hi' ? 'इस शहर का Google source उपलब्ध नहीं है' : 'Google source is unavailable for this city')));
+      return;
+    }
+    final controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.disabled)
+      ..setNavigationDelegate(NavigationDelegate(onNavigationRequest: (request) => request.url.contains('google.com') ? NavigationDecision.navigate : NavigationDecision.prevent))
+      ..loadRequest(Uri.parse(url));
+    showModalBottomSheet<void>(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.white,
+      builder: (_) => SizedBox(
+        height: MediaQuery.sizeOf(context).height * .82,
+        child: Column(children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(18, 12, 8, 8),
+            child: Row(children: [
+              Expanded(child: Text('${_name(key, s.language)} • ${s.place.name}', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16))),
+              IconButton(onPressed: () => Navigator.pop(context), icon: const Icon(Icons.close)),
+            ]),
+          ),
+          Padding(padding: const EdgeInsets.symmetric(horizontal: 18), child: Text(s.language == 'hi' ? 'Google का indicative result • official price से verify करें' : 'Indicative Google result • verify with the official source', style: const TextStyle(fontSize: 12, color: Colors.orange))),
+          const Divider(height: 12),
+          Expanded(child: WebViewWidget(controller: controller)),
+        ]),
+      ),
+    );
   }
 
   String _sourceText(String source, String language) {

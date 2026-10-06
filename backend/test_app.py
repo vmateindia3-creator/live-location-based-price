@@ -22,6 +22,8 @@ class ApiTests(unittest.TestCase):
         self.assertEqual(set(payload['prices']), {'petrol', 'diesel', 'lpg', 'cng', 'gold', 'silver'})
         self.assertIn('weather', payload)
         self.assertIn('observedKeys', payload)
+        self.assertIn('sourceUrls', payload)
+        self.assertIn('petrol', payload['sourceUrls'])
 
     def test_places_search(self):
         response = self.client.get('/v1/places/search?q=Mumbai')

@@ -1,5 +1,5 @@
 class MarketData {
-  const MarketData({required this.updatedAt, required this.prices, required this.weather, required this.source, required this.currency, this.warning, this.observedKeys = const {}});
+  const MarketData({required this.updatedAt, required this.prices, required this.weather, required this.source, required this.currency, this.warning, this.observedKeys = const {}, this.sourceUrls = const {}});
   final DateTime updatedAt;
   final Map<String, double> prices;
   final WeatherData weather;
@@ -7,6 +7,7 @@ class MarketData {
   final String currency;
   final String? warning;
   final Set<String> observedKeys;
+  final Map<String, String> sourceUrls;
 
   factory MarketData.fromJson(Map<String, dynamic> json) {
     final raw = Map<String, dynamic>.from(json['prices'] as Map? ?? {});
@@ -19,6 +20,7 @@ class MarketData {
       currency: json['currency']?.toString() ?? 'INR',
       warning: json['warning']?.toString(),
       observedKeys: ((json['observedKeys'] as List?) ?? const []).map((e) => e.toString()).toSet(),
+      sourceUrls: Map<String, String>.from((json['sourceUrls'] as Map?) ?? const {}),
     );
   }
 }

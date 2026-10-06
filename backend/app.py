@@ -7,6 +7,7 @@ import requests
 import re
 import json
 from pathlib import Path
+from urllib.parse import quote_plus
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request
 from flask_cors import CORS
@@ -106,14 +107,7 @@ def load_scheduled_prices(city):
 
 def fetch_google_indicative_prices(city):
     """Best-effort snippets only. Google Search is not an official price feed."""
-    queries = {
-        "petrol": f"petrol price in {city} today India",
-        "diesel": f"diesel price in {city} today India",
-        "lpg": f"LPG cylinder price in {city} today India",
-        "cng": f"CNG price in {city} today India",
-        "gold": f"gold rate in {city} today India 24 carat 10 gram",
-        "silver": f"silver rate in {city} today India per kg",
-    }
+    queries = google_price_queries(city)
     headers = {"User-Agent": "Mozilla/5.0 (compatible; LiveLocationPrice/1.0; +https://github.com/vmateindia3-creator/live-location-based-price)"}
     result = {}
     for key, query in queries.items():
@@ -130,6 +124,21 @@ def fetch_google_indicative_prices(city):
         except (requests.RequestException, ValueError, TypeError):
             continue
     return result or None
+
+
+def google_price_queries(city):
+    return {
+        "petrol": f"petrol price in {city} today India",
+        "diesel": f"diesel price in {city} today India",
+        "lpg": f"LPG cylinder price in {city} today India",
+        "cng": f"CNG price in {city} today India",
+        "gold": f"gold rate in {city} today India 24 carat 10 gram",
+        "silver": f"silver rate in {city} today India per kg",
+    }
+
+
+def google_source_urls(city):
+    return {key: f"https://www.google.com/search?q={quote_plus(query)}&hl=en&gl=in" for key, query in google_price_queries(city).items()}
 
 
 @app.get("/health")
@@ -150,7 +159,7 @@ def market():
     if cached:
         return jsonify(cached)
     prices, source, observed_keys = fetch_prices(city)
-    response = {"updatedAt": now_iso(), "currency": "INR", "city": city, "source": source, "warning": "Indicative Google Search result; verify before use" if source.startswith("google-") else None, "prices": prices, "observedKeys": sorted(observed_keys), "weather": fetch_weather(lat, lng)}
+    response = {"updatedAt": now_iso(), "currency": "INR", "city": city, "source": source, "warning": "Indicative Google Search result; verify before use" if source.startswith("google-") else None, "prices": prices, "observedKeys": sorted(observed_keys), "sourceUrls": google_source_urls(city), "weather": fetch_weather(lat, lng)}
     cache_put(cache_key, response)
     return jsonify(response)
 
