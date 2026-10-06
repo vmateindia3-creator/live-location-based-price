@@ -66,8 +66,6 @@ jobs:
           PY
       - name: Build universal debug APK for all Android ABIs
         run: flutter build apk --debug
-      - name: Build split APKs for direct device matching
-        run: flutter build apk --debug --split-per-abi
       - uses: actions/upload-artifact@v4
         with:
           name: locarate-universal-apk
