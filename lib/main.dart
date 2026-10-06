@@ -214,7 +214,7 @@ class _HomeState extends State<Home> {
             child: TextButton.icon(
               onPressed: () => _showSourceViewer(key, data, s),
               icon: const Icon(Icons.open_in_new, size: 17),
-              label: Text(s.language == 'hi' ? 'Google source देखें' : 'View Google source'),
+              label: Text(_sourceButtonLabel(key, s.language)),
             ),
           ),
         ]),
@@ -230,14 +230,10 @@ class _HomeState extends State<Home> {
   }
 
   void _showSourceViewer(String key, MarketData? data, AppState s) {
-    final url = data?.sourceUrls[key];
-    if (url == null) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(s.language == 'hi' ? 'इस शहर का Google source उपलब्ध नहीं है' : 'Google source is unavailable for this city')));
-      return;
-    }
+    final url = _sourceUrl(key, data, s.place.name);
     final controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.disabled)
-      ..setNavigationDelegate(NavigationDelegate(onNavigationRequest: (request) => request.url.contains('google.com') ? NavigationDecision.navigate : NavigationDecision.prevent))
+      ..setNavigationDelegate(NavigationDelegate(onNavigationRequest: (request) => _allowedSource(request.url) ? NavigationDecision.navigate : NavigationDecision.prevent))
       ..loadRequest(Uri.parse(url));
     showModalBottomSheet<void>(
       context: context,
@@ -249,16 +245,39 @@ class _HomeState extends State<Home> {
           Padding(
             padding: const EdgeInsets.fromLTRB(18, 12, 8, 8),
             child: Row(children: [
-              Expanded(child: Text('${_name(key, s.language)} • ${s.place.name}', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16))),
+              Expanded(child: Text('${_sourceName(key)} • ${s.place.name}', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16))),
               IconButton(onPressed: () => Navigator.pop(context), icon: const Icon(Icons.close)),
             ]),
           ),
-          Padding(padding: const EdgeInsets.symmetric(horizontal: 18), child: Text(s.language == 'hi' ? 'Google का indicative result • official price से verify करें' : 'Indicative Google result • verify with the official source', style: const TextStyle(fontSize: 12, color: Colors.orange))),
+          Padding(padding: const EdgeInsets.symmetric(horizontal: 18), child: Text(s.language == 'hi' ? 'Selected city source • rate को official page पर verify करें' : 'Selected city source • verify the rate on the official page', style: const TextStyle(fontSize: 12, color: Colors.orange))),
           const Divider(height: 12),
           Expanded(child: WebViewWidget(controller: controller)),
         ]),
       ),
     );
+  }
+
+  String _sourceButtonLabel(String key, String language) {
+    if (language == 'hi') return key == 'gold' || key == 'silver' ? 'विश्वसनीय source देखें' : 'Official source देखें';
+    return key == 'gold' || key == 'silver' ? 'View trusted source' : 'View official source';
+  }
+
+  String _sourceName(String key) {
+    if (key == 'petrol' || key == 'diesel' || key == 'lpg' || key == 'cng') return 'IndianOil / PPAC';
+    return 'IBJA / GoodReturns';
+  }
+
+  String _sourceUrl(String key, MarketData? data, String city) {
+    if (key == 'petrol' || key == 'diesel') return 'https://iocl.com/petrol-diesel-price';
+    if (key == 'lpg') return 'https://cx.indianoil.in/webcenter/portal/Customer/pages_productprice';
+    if (key == 'cng') return 'https://iocl.com/prices-of-petroleum-products';
+    if (key == 'gold') return 'https://www.goodreturns.in/gold-rates/';
+    return 'https://www.goodreturns.in/silver-rates/';
+  }
+
+  bool _allowedSource(String rawUrl) {
+    final host = Uri.tryParse(rawUrl)?.host ?? '';
+    return host == 'iocl.com' || host.endsWith('.iocl.com') || host == 'indianoil.in' || host.endsWith('.indianoil.in') || host == 'goodreturns.in' || host.endsWith('.goodreturns.in') || host == 'ibjarates.com' || host.endsWith('.ibjarates.com');
   }
 
   String _sourceText(String source, String language) {
