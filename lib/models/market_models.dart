@@ -1,5 +1,44 @@
+/// Shared, conservative Indian retail ranges (INR). Kept in one place so the
+/// model, the UI and the backend all agree. Anything outside is treated as a
+/// parse error and dropped rather than shown.
+const Map<String, List<double>> kPriceRanges = {
+  'petrol': [50, 150],
+  'diesel': [50, 150],
+  'lpg': [300, 2500],
+  'cng': [20, 200],
+  'gold': [5000, 30000],
+  'silver': [50, 1000],
+};
+
+/// Display unit suffix for each key.
+const Map<String, String> kPriceUnits = {
+  'petrol': '/L',
+  'diesel': '/L',
+  'lpg': '/cyl',
+  'cng': '/kg',
+  'gold': '/g',
+  'silver': '/g',
+};
+
+bool isPlausiblePrice(String key, double value) {
+  final range = kPriceRanges[key];
+  return range != null && value >= range[0] && value <= range[1];
+}
+
 class MarketData {
-  const MarketData({required this.updatedAt, required this.prices, required this.weather, required this.source, required this.currency, this.city = 'India', this.warning, this.observedKeys = const {}, this.sourceUrls = const {}});
+  const MarketData({
+    required this.updatedAt,
+    required this.prices,
+    required this.weather,
+    required this.source,
+    required this.currency,
+    this.city = 'India',
+    this.warning,
+    this.observedKeys = const {},
+    this.sourceUrls = const {},
+    this.units = const {},
+  });
+
   final DateTime updatedAt;
   final Map<String, double> prices;
   final WeatherData weather;
@@ -9,6 +48,7 @@ class MarketData {
   final String? warning;
   final Set<String> observedKeys;
   final Map<String, String> sourceUrls;
+  final Map<String, String> units;
 
   factory MarketData.fromJson(Map<String, dynamic> json) {
     final raw = Map<String, dynamic>.from(json['prices'] as Map? ?? {});
@@ -16,7 +56,7 @@ class MarketData {
     final safePrices = <String, double>{};
     for (final entry in raw.entries) {
       final value = entry.value is num ? (entry.value as num).toDouble() : null;
-      if (value != null && _isPlausible(entry.key, value)) {
+      if (value != null && isPlausiblePrice(entry.key, value)) {
         safePrices[entry.key] = value;
       }
     }
@@ -30,19 +70,8 @@ class MarketData {
       warning: json['warning']?.toString(),
       observedKeys: ((json['observedKeys'] as List?) ?? const []).map((e) => e.toString()).toSet(),
       sourceUrls: Map<String, String>.from((json['sourceUrls'] as Map?) ?? const {}),
+      units: Map<String, String>.from((json['units'] as Map?) ?? const {}),
     );
-  }
-
-  static bool _isPlausible(String key, double value) {
-    final range = <String, List<double>>{
-      'petrol': [50, 150],
-      'diesel': [50, 150],
-      'lpg': [300, 2500],
-      'cng': [20, 200],
-      'gold': [5000, 30000],
-      'silver': [50, 1000],
-    }[key];
-    return range != null && value >= range[0] && value <= range[1];
   }
 }
 
@@ -54,11 +83,11 @@ class WeatherData {
   final double windKph;
 
   factory WeatherData.fromJson(Map<String, dynamic> json) => WeatherData(
-    temperatureC: (json['temperatureC'] as num? ?? 28).toDouble(),
-    condition: json['condition']?.toString() ?? 'Clear',
-    humidity: (json['humidity'] as num? ?? 45).toInt(),
-    windKph: (json['windKph'] as num? ?? 10).toDouble(),
-  );
+        temperatureC: (json['temperatureC'] as num? ?? 28).toDouble(),
+        condition: json['condition']?.toString() ?? 'Clear',
+        humidity: (json['humidity'] as num? ?? 45).toInt(),
+        windKph: (json['windKph'] as num? ?? 10).toDouble(),
+      );
 }
 
 class PlaceResult {
