@@ -30,7 +30,7 @@ const Map<String, Color> kItemColors = {
 const Map<String, String> kItemUnitLabel = {
   'petrol': 'per litre',
   'diesel': 'per litre',
-  'lpg': 'per cylinder',
+  'lpg': 'per domestic 14.2 kg',
   'cng': 'per kg',
   'gold': 'per gram',
   'silver': 'per gram',
@@ -38,13 +38,15 @@ const Map<String, String> kItemUnitLabel = {
 const Map<String, String> kItemUnitLabelHi = {
   'petrol': 'प्रति लीटर',
   'diesel': 'प्रति लीटर',
-  'lpg': 'प्रति सिलेंडर',
+  'lpg': 'प्रति घरेलू 14.2 किग्रा',
   'cng': 'प्रति किलो',
   'gold': 'प्रति ग्राम',
   'silver': 'प्रति ग्राम',
 };
 
 const Color kBrand = Color(0xff075e54);
+const Color kTextDark = Color(0xff111827);
+const Color kTextSoft = Color(0xff6b7280);
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -467,7 +469,7 @@ class _HomeState extends State<Home> {
             crossAxisCount: columns,
             mainAxisSpacing: 12,
             crossAxisSpacing: 12,
-            mainAxisExtent: 190,
+            mainAxisExtent: 200,
           ),
           itemBuilder: (context, index) => _priceCard(keys[index], s),
         );
@@ -490,81 +492,89 @@ class _HomeState extends State<Home> {
     final premium = key == 'gold' || key == 'silver';
     final quantity = (hasRate && amount > 0) ? amount / rate : 0;
 
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(22),
-        border: Border.all(color: hasRate ? color.withAlpha(90) : const Color(0xffe6efe9), width: hasRate ? 1.4 : 1),
-        boxShadow: const [BoxShadow(color: Color(0x11000000), blurRadius: 10, offset: Offset(0, 4))],
-      ),
-      padding: const EdgeInsets.all(14),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Row(children: [
-          Container(
-            width: 46,
-            height: 46,
-            decoration: BoxDecoration(color: color.withAlpha(36), borderRadius: BorderRadius.circular(15)),
-            child: Icon(icon, color: color, size: 25),
-          ),
-          const SizedBox(width: 10),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Container(
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          boxShadow: [BoxShadow(color: Color(0x14000000), blurRadius: 12, offset: Offset(0, 5))],
+        ),
+        child: Column(children: [
+          Container(height: 5, color: color),
           Expanded(
-            child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(_name(key, s.language), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
-              const SizedBox(height: 2),
-              Text(s.language == 'hi' ? (kItemUnitLabelHi[key] ?? '') : (kItemUnitLabel[key] ?? ''), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11.5, color: Colors.grey.shade600)),
-            ]),
-          ),
-          if (hasRate)
-            ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 96),
-              child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
-                FittedBox(fit: BoxFit.scaleDown, child: Text('₹${rate.toStringAsFixed(2)}', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: color))),
-                Text(s.language == 'hi' ? 'आज का रेट' : 'today', style: TextStyle(fontSize: 10, color: Colors.grey.shade600)),
+            child: Padding(
+              padding: const EdgeInsets.all(14),
+              child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                Row(children: [
+                  Container(
+                    width: 46,
+                    height: 46,
+                    decoration: BoxDecoration(color: color.withAlpha(36), borderRadius: BorderRadius.circular(15)),
+                    child: Icon(icon, color: color, size: 25),
+                  ),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Text(_name(key, s.language), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 16.5, fontWeight: FontWeight.w800, color: kTextDark)),
+                      const SizedBox(height: 2),
+                      Text(s.language == 'hi' ? (kItemUnitLabelHi[key] ?? '') : (kItemUnitLabel[key] ?? ''), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w500, color: kTextSoft)),
+                    ]),
+                  ),
+                  const SizedBox(width: 6),
+                  ConstrainedBox(
+                    constraints: const BoxConstraints(maxWidth: 104),
+                    child: hasRate
+                        ? Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+                            FittedBox(fit: BoxFit.scaleDown, child: Text('₹${rate.toStringAsFixed(2)}', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: color))),
+                            Text(s.language == 'hi' ? 'आज का रेट' : 'today', style: const TextStyle(fontSize: 10, color: kTextSoft)),
+                          ])
+                        : Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                            decoration: BoxDecoration(color: const Color(0xfff1f5f3), borderRadius: BorderRadius.circular(10)),
+                            child: Text(s.language == 'hi' ? 'अपडेट करें' : 'Update', style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: kTextSoft)),
+                          ),
+                  ),
+                ]),
+                const SizedBox(height: 14),
+                TextField(
+                  controller: controller,
+                  enabled: hasRate,
+                  onChanged: (_) => setState(() {}),
+                  keyboardType: const TextInputType.numberWithOptions(decimal: true),
+                  style: const TextStyle(fontWeight: FontWeight.w700, color: kTextDark),
+                  decoration: InputDecoration(
+                    prefixText: '₹ ',
+                    hintText: s.language == 'hi' ? 'राशि लिखें' : 'Enter amount',
+                    isDense: true,
+                    filled: true,
+                    fillColor: const Color(0xfff0f5f2),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(14), borderSide: BorderSide.none),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Expanded(
+                  child: Container(
+                    width: double.infinity,
+                    alignment: Alignment.centerLeft,
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                    decoration: BoxDecoration(color: color.withAlpha(24), borderRadius: BorderRadius.circular(12)),
+                    child: Text(
+                      !hasRate
+                          ? (s.language == 'hi' ? 'पहले ऊपर से रेट अपडेट करें' : 'Update prices above first')
+                          : amount > 0
+                              ? (premium ? '${quantity.toStringAsFixed(3)} g' : '${quantity.toStringAsFixed(2)} ${s.language == 'hi' ? 'यूनिट' : 'units'}')
+                              : (s.language == 'hi' ? 'राशि लिखें तो गणना दिखेगी' : 'Enter an amount to see the quantity'),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(fontWeight: FontWeight.w800, color: hasRate ? color : kTextSoft, fontSize: 14),
+                    ),
+                  ),
+                ),
               ]),
-            )
-          else
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-              decoration: BoxDecoration(color: const Color(0xfff1f5f3), borderRadius: BorderRadius.circular(10)),
-              child: Text(s.language == 'hi' ? 'अपडेट करें' : 'Update', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.grey.shade600)),
             ),
+          ),
         ]),
-        const SizedBox(height: 14),
-        TextField(
-          controller: controller,
-          enabled: hasRate,
-          onChanged: (_) => setState(() {}),
-          keyboardType: const TextInputType.numberWithOptions(decimal: true),
-          style: const TextStyle(fontWeight: FontWeight.w700),
-          decoration: InputDecoration(
-            prefixText: '₹ ',
-            hintText: s.language == 'hi' ? 'राशि लिखें' : 'Enter amount',
-            isDense: true,
-            filled: true,
-            fillColor: const Color(0xfff0f5f2),
-            border: OutlineInputBorder(borderRadius: BorderRadius.circular(14), borderSide: BorderSide.none),
-          ),
-        ),
-        const SizedBox(height: 10),
-        Expanded(
-          child: Container(
-            width: double.infinity,
-            alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-            decoration: BoxDecoration(color: color.withAlpha(24), borderRadius: BorderRadius.circular(12)),
-            child: Text(
-              !hasRate
-                  ? (s.language == 'hi' ? 'पहले ऊपर से रेट अपडेट करें' : 'Update prices above first')
-                  : amount > 0
-                      ? (premium ? '${quantity.toStringAsFixed(3)} g' : '${quantity.toStringAsFixed(2)} ${s.language == 'hi' ? 'यूनिट' : 'units'}')
-                      : (s.language == 'hi' ? 'राशि लिखें तो गणना दिखेगी' : 'Enter an amount to see the quantity'),
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(fontWeight: FontWeight.w800, color: hasRate ? color : Colors.grey.shade600, fontSize: 14),
-            ),
-          ),
-        ),
-      ]),
+      ),
     );
   }
 
