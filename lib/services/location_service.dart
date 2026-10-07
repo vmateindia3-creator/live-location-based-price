@@ -5,14 +5,12 @@ import 'package:geolocator/geolocator.dart';
 import '../models/market_models.dart';
 
 class LocationService {
+  /// Request permission (if needed) and return the current position.
+  /// Throws when the service is off or permission is denied, so the UI can
+  /// show the "select location first" prompt instead of hanging.
   Future<PlaceResult> current() async {
-    var serviceEnabled = await Geolocator.isLocationServiceEnabled();
-    if (!serviceEnabled) {
-      await Geolocator.openLocationSettings();
-      serviceEnabled = await _waitForLocationService();
-    }
-    if (!serviceEnabled) {
-      throw Exception('Location is off');
+    if (!await Geolocator.isLocationServiceEnabled()) {
+      throw Exception('Location service is off');
     }
 
     var permission = await Geolocator.checkPermission();
@@ -20,10 +18,9 @@ class LocationService {
       permission = await Geolocator.requestPermission();
     }
     if (permission == LocationPermission.deniedForever) {
-      await Geolocator.openAppSettings();
       throw Exception('Location permission denied forever');
     }
-    if (permission == LocationPermission.denied) {
+    if (permission != LocationPermission.whileInUse && permission != LocationPermission.always) {
       throw Exception('Location permission denied');
     }
 
@@ -31,12 +28,13 @@ class LocationService {
     return PlaceResult(name: 'Current location', latitude: position.latitude, longitude: position.longitude);
   }
 
-  Future<bool> _waitForLocationService() async {
-    for (var seconds = 0; seconds < 30; seconds++) {
-      if (await Geolocator.isLocationServiceEnabled()) return true;
-      await Future<void>.delayed(const Duration(seconds: 1));
+  /// Open the right settings screen so the user can enable location access.
+  Future<void> openSettings() async {
+    if (!await Geolocator.isLocationServiceEnabled()) {
+      await Geolocator.openLocationSettings();
+    } else {
+      await Geolocator.openAppSettings();
     }
-    return false;
   }
 
   Future<Position> _fastPosition() async {
