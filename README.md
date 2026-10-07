@@ -9,7 +9,9 @@ flutter pub get
 flutter run
 ```
 
-The app now defaults to the deployed HTTPS backend at `https://live-location-based-price-api.onrender.com`. You can override it for local development with `--dart-define=PRICE_API_BASE_URL=http://10.0.2.2:8080`. The app runs with a safe demo fallback when the backend is unavailable. **Do not put provider keys in Flutter.** Keep Google Places, weather, fuel and bullion credentials on your server.
+The app defaults to the deployed HTTPS backend at `https://live-location-based-price-api.onrender.com`. Override it for local development with `--dart-define=PRICE_API_BASE_URL=http://10.0.2.2:8080`. The app shows an empty state (never fake numbers) when the backend is unavailable. **Do not put provider keys in Flutter.** Keep Google Places, weather and any future market credentials on your server.
+
+> **Platform folders:** `android/` and `ios/` are generated in CI (`flutter create`), not committed. Run `flutter create --platforms=android,ios --project-name live_location_based_price .` once locally before `flutter run`, then add the location permissions and AdMob application IDs listed in `CONFIGURATION.md`.
 
 ## Backend
 
@@ -30,12 +32,16 @@ Endpoints:
 - `GET /v1/market?lat=28.61&lng=77.20&city=Delhi`
 - `GET /v1/places/search?q=Mumbai`
 
-The backend uses Open-Meteo by default for weather and safe demo prices until a licensed market provider is configured. “Google live data” is not one official price feed; do not scrape Google results for production pricing.
+The backend reads the selected city's GoodReturns page, and falls back to the daily-refreshed `backend/data/price_cache.json` when the live page cannot be read. It never substitutes another city's value or a demo number. Weather uses Open-Meteo by default and needs no key.
+
+## Data accuracy
+
+GoodReturns rates are **indicative**. They are informational and should be checked on the linked city page before any purchase. Do not scrape Google results for production pricing — use a licensed feed or an approved API. See `PRICE_CACHE.md` for the scheduled cache and `CONFIGURATION.md` for release setup.
 
 ## AdMob
 
-`AdService` is wired for non-blocking interstitials. Add your Android/iOS AdMob app IDs in platform manifests and replace test ad unit IDs before release. Never show ads on every tap; the current policy uses a tab-switch cooldown.
+`AdService` is wired for non-blocking interstitials with a 3-minute tab-switch cooldown. Replace the test ad unit ID in `lib/services/ad_service.dart` and add your Android/iOS AdMob application IDs to the platform manifests before release. Never show ads on every tap.
 
 ## Structure
 
-`lib/services` contains APIs, location and ads; `lib/providers` owns state; `lib/screens` contains future page modules; `lib/widgets` contains future reusable components; `backend` contains the server API and provider adapters. This keeps provider changes independent from UI.
+`lib/services` contains APIs, location and ads; `lib/providers` owns state; `lib/models` holds the API contract and shared price ranges; `backend` contains the server API, provider adapters and the scheduled cache refresher. This keeps provider changes independent from the UI.
