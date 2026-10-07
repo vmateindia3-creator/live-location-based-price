@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart' as gma;
 
 import 'models/market_models.dart';
 import 'providers/app_state.dart';
@@ -201,7 +201,7 @@ class _HomeState extends State<Home> {
   final search = TextEditingController();
   final Map<String, TextEditingController> amountControllers = {};
 
-  BannerAd? _banner;
+  gma.BannerAd? _banner;
   bool _bannerReady = false;
 
   @override
@@ -211,11 +211,11 @@ class _HomeState extends State<Home> {
   }
 
   void _loadBanner() {
-    final banner = BannerAd(
+    final banner = gma.BannerAd(
       adUnitId: AdService.bannerUnit,
-      size: AdSize.banner,
-      request: const AdRequest(),
-      listener: BannerAdListener(
+      size: gma.AdSize.banner,
+      request: const gma.AdRequest(),
+      listener: gma.BannerAdListener(
         onAdLoaded: (_) {
           if (mounted) setState(() => _bannerReady = true);
         },
@@ -268,7 +268,7 @@ class _HomeState extends State<Home> {
       color: Colors.white,
       alignment: Alignment.center,
       height: ad.size.height.toDouble(),
-      child: AdWidget(ad: ad),
+      child: gma.AdWidget(ad: ad),
     );
   }
 
