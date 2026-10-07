@@ -41,15 +41,19 @@ WEATHER_URL = os.getenv("WEATHER_PROVIDER_URL", "https://api.open-meteo.com/v1/f
 GOODRETURNS = "https://www.goodreturns.in"
 CACHE_FILE = Path(__file__).resolve().parent / "data" / "price_cache.json"
 
-# Conservative Indian retail ranges. Anything outside is treated as a parse
-# error and dropped rather than shown to the user.
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131 Safari/537.36",
+    "Accept-Language": "en-IN,en;q=0.9",
+}
+
+# Conservative Indian retail ranges, all normalised to a single unit.
 PRICE_RANGES = {
-    "petrol": (50.0, 150.0),
-    "diesel": (50.0, 150.0),
-    "lpg": (300.0, 2500.0),
-    "cng": (20.0, 200.0),
-    "gold": (5000.0, 30000.0),   # INR per gram
-    "silver": (50.0, 1000.0),    # INR per gram
+    "petrol": (50.0, 150.0),      # INR per litre
+    "diesel": (50.0, 150.0),      # INR per litre
+    "lpg": (300.0, 2500.0),       # INR per cylinder
+    "cng": (20.0, 200.0),         # INR per kg
+    "gold": (5000.0, 30000.0),    # INR per gram
+    "silver": (50.0, 1000.0),     # INR per gram
 }
 PRICE_UNITS = {
     "petrol": "INR/L",
@@ -58,6 +62,26 @@ PRICE_UNITS = {
     "cng": "INR/kg",
     "gold": "INR/g",
     "silver": "INR/g",
+}
+
+# A small city table used when reverse geocoding is unavailable, so a location
+# still maps to a nearby city with its own rates instead of the national page.
+CITY_COORDS = {
+    "Delhi": (28.6139, 77.2090), "New Delhi": (28.6139, 77.2090), "Gurugram": (28.4595, 77.0266),
+    "Noida": (28.5355, 77.3910), "Mumbai": (19.0760, 72.8777), "Thane": (19.2183, 72.9781),
+    "Navi Mumbai": (19.0330, 73.0297), "Pune": (18.5204, 73.8567), "Nagpur": (21.1458, 79.0882),
+    "Kolkata": (22.5726, 88.3639), "Howrah": (22.5958, 88.2636), "Bengaluru": (12.9716, 77.5946),
+    "Chennai": (13.0827, 80.2707), "Hyderabad": (17.3850, 78.4867), "Secunderabad": (17.4399, 78.4983),
+    "Ahmedabad": (23.0225, 72.5714), "Surat": (21.1702, 72.8311), "Vadodara": (22.3072, 73.1812),
+    "Jaipur": (26.9124, 75.7873), "Lucknow": (26.8467, 80.9462), "Kanpur": (26.4499, 80.3319),
+    "Varanasi": (25.3176, 82.9739), "Patna": (25.5941, 85.1376), "Bhopal": (23.2599, 77.4126),
+    "Indore": (22.7196, 75.8577), "Raipur": (21.2514, 81.6296), "Chandigarh": (30.7333, 76.7794),
+    "Ludhiana": (30.9010, 75.8573), "Amritsar": (31.6340, 74.8723), "Dehradun": (30.3165, 78.0322),
+    "Kochi": (9.9312, 76.2673), "Thiruvananthapuram": (8.5241, 76.9366), "Kozhikode": (11.2588, 75.7804),
+    "Coimbatore": (11.0168, 76.9558), "Madurai": (9.9252, 78.1198), "Visakhapatnam": (17.6868, 83.2185),
+    "Vijayawada": (16.5062, 80.6480), "Bhubaneswar": (20.2961, 85.8245), "Guwahati": (26.1445, 91.7362),
+    "Ranchi": (23.3441, 85.3096), "Jodhpur": (26.2389, 73.0243), "Agra": (27.1767, 78.0081),
+    "Goa": (15.2993, 74.1240), "Panaji": (15.4909, 73.8278), "Mysuru": (12.2958, 76.6394),
 }
 
 # Simple per-IP rate limit (requests per minute). Disable with RATE_LIMIT_PER_MIN=0.
@@ -83,6 +107,15 @@ def sanitize_prices(prices):
         if low <= value <= high:
             clean[key] = round(value, 2)
     return clean
+
+
+def normalize_value(key, value):
+    """Convert a parsed value to the app's single unit for that item."""
+    if key == "silver" and value > PRICE_RANGES["silver"][1]:
+        value /= 1000.0  # GoodReturns quotes silver per kilogram.
+    if key == "gold" and value > PRICE_RANGES["gold"][1]:
+        value /= 10.0  # GoodReturns may quote gold per 10 grams.
+    return value
 
 
 def now_iso():
@@ -146,23 +179,38 @@ def city_slug(city):
         "new delhi": "new-delhi",
         "trivandrum": "trivandrum",
         "thiruvananthapuram": "trivandrum",
+        "gurugram": "gurgaon",
+        "mysuru": "mysore",
+        "mumbai": "mumbai",
+        "navi mumbai": "navi-mumbai",
     }
     name = (city or "").strip().lower().split(",")[0]
     name = aliases.get(name, name)
     return re.sub(r"[^a-z0-9]+", "-", name).strip("-")
 
 
-def goodreturns_urls(city):
+def candidate_urls(city):
+    """Per-item GoodReturns URLs to try in order (city page, then national)."""
     slug = city_slug(city)
-    suffix = f"-in-{slug}.html" if slug and slug != "india" else ".html"
-    return {
-        "petrol": f"{GOODRETURNS}/petrol-price{suffix}",
-        "diesel": f"{GOODRETURNS}/diesel-price{suffix}",
-        "lpg": f"{GOODRETURNS}/lpg-price{suffix}",
-        "cng": f"{GOODRETURNS}/cng-price{suffix}",
-        "gold": f"{GOODRETURNS}/gold-rates/{slug}.html" if slug and slug != "india" else f"{GOODRETURNS}/gold-rates/",
-        "silver": f"{GOODRETURNS}/silver-rates/{slug}.html" if slug and slug != "india" else f"{GOODRETURNS}/silver-rates/",
+    has_city = bool(slug) and slug != "india"
+    suffix = f"-in-{slug}.html" if has_city else ".html"
+    urls = {
+        "petrol": [f"{GOODRETURNS}/petrol-price{suffix}"],
+        "diesel": [f"{GOODRETURNS}/diesel-price{suffix}"],
+        "lpg": [f"{GOODRETURNS}/lpg-price{suffix}"],
+        "cng": [f"{GOODRETURNS}/cng-price{suffix}"],
+        "gold": [f"{GOODRETURNS}/gold-rates/{slug}.html" if has_city else f"{GOODRETURNS}/gold-rates/"],
+        "silver": [f"{GOODRETURNS}/silver-rates/{slug}.html" if has_city else f"{GOODRETURNS}/silver-rates/"],
     }
+    if has_city:
+        urls["gold"].append(f"{GOODRETURNS}/gold-rates/")
+        urls["silver"].append(f"{GOODRETURNS}/silver-rates/")
+    return urls
+
+
+def goodreturns_urls(city):
+    """Primary URL per item (used for the API's sourceUrls field)."""
+    return {key: value[0] for key, value in candidate_urls(city).items()}
 
 
 def goodreturns_text(raw_html):
@@ -173,42 +221,56 @@ def goodreturns_text(raw_html):
 def parse_goodreturns_value(key, text):
     number = r"([0-9][0-9,]*(?:\.[0-9]{1,2})?)"
     patterns = {
-        "petrol": rf"Today's petrol price .*?₹\s*{number}\s*per litre",
-        "diesel": rf"Today's diesel price .*?₹\s*{number}\s*per litre",
-        "lpg": rf"Domestic LPG .*? stands at ₹\s*{number}",
-        "cng": rf"CNG price .*?₹\s*{number}\s*(?:per kilogram|per kg|/ Kg)",
-        "gold": rf"24K Gold /g\s*₹\s*{number}",
-        "silver": rf"Silver /kg\s*₹\s*{number}",
+        "petrol": [
+            rf"Today's petrol price .*?₹\s*{number}\s*per litre",
+            rf"[Pp]etrol [Pp]rice.*?₹\s*{number}\s*(?:per litre|/ ?litre|/ ?L)",
+        ],
+        "diesel": [
+            rf"Today's diesel price .*?₹\s*{number}\s*per litre",
+            rf"[Dd]iesel [Pp]rice.*?₹\s*{number}\s*(?:per litre|/ ?litre|/ ?L)",
+        ],
+        "lpg": [
+            rf"Domestic LPG .*? stands at ₹\s*{number}",
+            rf"LPG.*?₹\s*{number}\s*(?:per cylinder|/ ?cylinder)",
+        ],
+        "cng": [
+            rf"CNG price .*?₹\s*{number}\s*(?:per kilogram|per kg|/ Kg)",
+            rf"CNG.*?₹\s*{number}\s*(?:per kg|/ ?kg)",
+        ],
+        "gold": [
+            rf"24K Gold /g\s*₹\s*{number}",
+            rf"Gold ?/? ?g\s*₹\s*{number}",
+            rf"24 ?[Kk] Gold.*?₹\s*{number}",
+        ],
+        "silver": [
+            rf"Silver /kg\s*₹\s*{number}",
+            rf"Silver ?/? ?kg\s*₹\s*{number}",
+            rf"Silver.*?₹\s*{number}",
+        ],
     }
-    match = re.search(patterns[key], text, flags=re.I)
-    if not match:
-        return None
-    value = float(match.group(1).replace(",", ""))
-    if key == "silver":
-        value /= 1000.0  # GoodReturns reports silver per kilogram; we store per gram.
-    return value
+    for pattern in patterns[key]:
+        match = re.search(pattern, text, flags=re.I)
+        if match:
+            return normalize_value(key, float(match.group(1).replace(",", "")))
+    return None
 
 
 def fetch_goodreturns_prices(city):
     """Best-effort live scrape of the selected city's GoodReturns pages."""
-    urls = goodreturns_urls(city)
+    urls = candidate_urls(city)
 
     def read(item):
-        key, url = item
-        try:
-            response = requests.get(
-                url,
-                headers={
-                    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131 Safari/537.36",
-                    "Accept-Language": "en-IN,en;q=0.9",
-                },
-                timeout=8,
-            )
-            response.raise_for_status()
-            return key, parse_goodreturns_value(key, goodreturns_text(response.text))
-        except (requests.RequestException, ValueError, TypeError) as exc:
-            logger.debug("goodreturns %s failed for %s: %s", key, city, exc)
-            return key, None
+        key, candidates = item
+        for url in candidates:
+            try:
+                response = requests.get(url, headers=HEADERS, timeout=8)
+                response.raise_for_status()
+                value = parse_goodreturns_value(key, goodreturns_text(response.text))
+                if value is not None:
+                    return key, value
+            except (requests.RequestException, ValueError, TypeError) as exc:
+                logger.debug("goodreturns %s failed for %s (%s): %s", key, city, url, exc)
+        return key, None
 
     with ThreadPoolExecutor(max_workers=6) as pool:
         values = dict(pool.map(read, urls.items()))
@@ -250,6 +312,18 @@ def fetch_prices(city):
     return {}, "unavailable", set(), now_iso()
 
 
+def nearest_city(lat, lng):
+    """Closest known city to a coordinate (used when geocoding is unavailable)."""
+    best = None
+    best_distance = float("inf")
+    for name, (clat, clng) in CITY_COORDS.items():
+        distance = (clat - lat) ** 2 + (clng - lng) ** 2
+        if distance < best_distance:
+            best_distance = distance
+            best = name
+    return best
+
+
 def resolve_city(lat, lng, requested):
     name = (requested or "").strip()
     if name and name.lower() not in {"india", "current location"}:
@@ -263,10 +337,12 @@ def resolve_city(lat, lng, requested):
         )
         response.raise_for_status()
         address = response.json().get("address", {})
-        return address.get("city") or address.get("town") or address.get("municipality") or address.get("state_district") or name or "India"
+        found = address.get("city") or address.get("town") or address.get("municipality") or address.get("state_district")
+        if found:
+            return found
     except (requests.RequestException, ValueError, TypeError) as exc:
         logger.debug("reverse geocode failed: %s", exc)
-        return name or "India"
+    return nearest_city(lat, lng) or name or "India"
 
 
 def valid_coords(lat, lng):
