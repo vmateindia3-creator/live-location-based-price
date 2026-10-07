@@ -8,7 +8,15 @@ services:
     healthCheckPath: /health
     envVars:
       - key: CACHE_TTL_SECONDS
-        value: "300"
+        value: "1800"
+      - key: CACHE_MAX_AGE_SECONDS
+        value: "129600"
+      - key: SCRAPE_MIN_INTERVAL_SECONDS
+        value: "1.0"
+      - key: SCRAPE_MAX_CONCURRENCY
+        value: "2"
+      - key: RATE_LIMIT_PER_MIN
+        value: "120"
       - key: GOOGLE_PLACES_API_KEY
         sync: false
       - key: WEATHER_PROVIDER_URL
