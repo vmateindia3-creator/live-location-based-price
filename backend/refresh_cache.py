@@ -1,8 +1,14 @@
 """Refresh ``data/price_cache.json`` from GoodReturns.
 
-Run by the scheduled GitHub Actions workflow (``.github/workflows/price-cache.yml``)
-and usable manually. Only cities that return at least one plausible value are
-written; existing entries are kept if a refresh fails.
+Run daily by ``.github/workflows/price-cache.yml`` and usable manually.
+
+This file is the app's *primary* price source: the API serves these cached
+values to every user without making any upstream request, so traffic does not
+scale with the number of users. Only cities missing from this file (or older
+than ``CACHE_MAX_AGE_SECONDS``) fall back to a throttled live scrape.
+
+Only cities that return at least one plausible value are written; an existing
+entry is kept if a refresh fails, so one bad day does not blank the app.
 """
 
 import json
@@ -14,9 +20,23 @@ from app import city_slug, fetch_goodreturns_prices
 
 ROOT = Path(__file__).resolve().parent
 CACHE_FILE = ROOT / "data" / "price_cache.json"
+
 DEFAULT_CITIES = [
-    "Delhi", "Mumbai", "Kolkata", "Bengaluru", "Chennai", "Hyderabad",
-    "Pune", "Ahmedabad", "Jaipur", "Lucknow", "Patna", "Bhopal",
+    # metros
+    "Delhi", "New Delhi", "Mumbai", "Kolkata", "Bengaluru", "Chennai", "Hyderabad", "Pune", "Ahmedabad",
+    # NCR
+    "Gurugram", "Noida", "Ghaziabad", "Faridabad",
+    # west
+    "Surat", "Vadodara", "Rajkot", "Thane", "Navi Mumbai", "Nashik", "Nagpur", "Aurangabad", "Kolhapur", "Solapur",
+    # north
+    "Jaipur", "Jodhpur", "Udaipur", "Kota", "Lucknow", "Kanpur", "Varanasi", "Agra", "Meerut", "Chandigarh",
+    "Ludhiana", "Amritsar", "Dehradun", "Jammu", "Shimla",
+    # central / east
+    "Bhopal", "Indore", "Gwalior", "Jabalpur", "Raipur", "Ranchi", "Jamshedpur", "Bhubaneswar", "Cuttack", "Patna",
+    "Guwahati", "Siliguri",
+    # south
+    "Kochi", "Thiruvananthapuram", "Kozhikode", "Coimbatore", "Madurai", "Tiruchirappalli", "Mysuru", "Mangaluru",
+    "Visakhapatnam", "Vijayawada", "Guntur", "Tirupati",
 ]
 
 
@@ -42,7 +62,7 @@ def main():
             print(f"{city}: no usable values (kept previous entry if any)")
 
     CACHE_FILE.write_text(json.dumps(cache, indent=2, sort_keys=True) + "\n")
-    print(f"wrote {CACHE_FILE} ({updated}/{len(cities)} cities refreshed)")
+    print(f"wrote {CACHE_FILE} ({updated}/{len(cities)} cities refreshed, {len(cache)} total)")
 
 
 if __name__ == "__main__":
