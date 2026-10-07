@@ -453,14 +453,18 @@ class _HomeState extends State<Home> {
     return LayoutBuilder(
       builder: (context, constraints) {
         final columns = constraints.maxWidth >= 900 ? 3 : 2;
-        const gap = 12.0;
-        final width = (constraints.maxWidth - (columns - 1) * gap) / columns;
-        return Wrap(
-          spacing: gap,
-          runSpacing: 12,
-          children: [
-            ...keys.map((key) => SizedBox(width: width, child: _priceCard(key, s))),
-          ],
+        return GridView.builder(
+          shrinkWrap: true,
+          physics: const NeverScrollableScrollPhysics(),
+          padding: EdgeInsets.zero,
+          itemCount: keys.length,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: columns,
+            mainAxisSpacing: 12,
+            crossAxisSpacing: 12,
+            mainAxisExtent: 216,
+          ),
+          itemBuilder: (context, index) => _priceCard(keys[index], s),
         );
       },
     );
@@ -506,10 +510,13 @@ class _HomeState extends State<Home> {
             ]),
           ),
           if (hasRate)
-            Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
-              Text('₹${rate.toStringAsFixed(2)}', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: color)),
-              Text(s.language == 'hi' ? 'आज का रेट' : 'today', style: TextStyle(fontSize: 10, color: Colors.grey.shade600)),
-            ])
+            ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 96),
+              child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+                FittedBox(fit: BoxFit.scaleDown, child: Text('₹${rate.toStringAsFixed(2)}', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: color))),
+                Text(s.language == 'hi' ? 'आज का रेट' : 'today', style: TextStyle(fontSize: 10, color: Colors.grey.shade600)),
+              ]),
+            )
           else
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
@@ -534,17 +541,22 @@ class _HomeState extends State<Home> {
           ),
         ),
         const SizedBox(height: 10),
-        Container(
-          width: double.infinity,
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-          decoration: BoxDecoration(color: color.withAlpha(24), borderRadius: BorderRadius.circular(12)),
-          child: Text(
-            !hasRate
-                ? (s.language == 'hi' ? 'पहले ऊपर से रेट अपडेट करें' : 'Update prices above first')
-                : amount > 0
-                    ? (premium ? '${quantity.toStringAsFixed(3)} g' : '${quantity.toStringAsFixed(2)} ${s.language == 'hi' ? 'यूनिट' : 'units'}')
-                    : (s.language == 'hi' ? 'राशि लिखें तो गणना दिखेगी' : 'Enter an amount to see the quantity'),
-            style: TextStyle(fontWeight: FontWeight.w800, color: hasRate ? color : Colors.grey.shade600, fontSize: 14),
+        Expanded(
+          child: Container(
+            width: double.infinity,
+            alignment: Alignment.centerLeft,
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+            decoration: BoxDecoration(color: color.withAlpha(24), borderRadius: BorderRadius.circular(12)),
+            child: Text(
+              !hasRate
+                  ? (s.language == 'hi' ? 'पहले ऊपर से रेट अपडेट करें' : 'Update prices above first')
+                  : amount > 0
+                      ? (premium ? '${quantity.toStringAsFixed(3)} g' : '${quantity.toStringAsFixed(2)} ${s.language == 'hi' ? 'यूनिट' : 'units'}')
+                      : (s.language == 'hi' ? 'राशि लिखें तो गणना दिखेगी' : 'Enter an amount to see the quantity'),
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(fontWeight: FontWeight.w800, color: hasRate ? color : Colors.grey.shade600, fontSize: 14),
+            ),
           ),
         ),
       ]),
