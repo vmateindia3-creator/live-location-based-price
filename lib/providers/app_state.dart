@@ -11,8 +11,17 @@ class AppState extends ChangeNotifier {
 
   Future<void> load({PlaceResult? target}) async {
     loading = true; error = null; notifyListeners();
-    try { place = target ?? await _location.current(); data = await _market.fetch(latitude: place.latitude, longitude: place.longitude, city: place.name); }
-    catch (e) { error = 'Location unavailable'; data = await _market.fetch(latitude: place.latitude, longitude: place.longitude, city: place.name); }
+    try {
+      place = target ?? await _location.current();
+    } catch (_) {
+      error = language == 'hi' ? 'Location उपलब्ध नहीं है' : 'Location unavailable';
+    }
+    try {
+      data = await _market.fetch(latitude: place.latitude, longitude: place.longitude, city: place.name);
+    } catch (_) {
+      data = null;
+      error ??= language == 'hi' ? 'Rates अभी उपलब्ध नहीं हैं' : 'Rates are unavailable';
+    }
     loading = false; notifyListeners();
   }
   Future<void> searchCity(String query) async {

@@ -37,10 +37,13 @@ class MarketService {
       final uri = Uri.parse('$baseUrl/v1/market').replace(queryParameters: {
         'lat': latitude.toString(), 'lng': longitude.toString(), if (city != null) 'city': city,
       });
-      final response = await _client.get(uri).timeout(const Duration(seconds: 8));
-      if (response.statusCode == 200) {
-        return MarketData.fromJson(jsonDecode(response.body) as Map<String, dynamic>);
-      }
+        final response = await _client.get(uri).timeout(const Duration(seconds: 8));
+        if (response.statusCode == 200) {
+          final decoded = jsonDecode(response.body);
+          if (decoded is Map<String, dynamic>) {
+            return MarketData.fromJson(decoded);
+          }
+        }
     } catch (_) {}
     return _demo();
   }

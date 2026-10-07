@@ -12,7 +12,11 @@ import 'services/ad_service.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  MobileAds.instance.initialize();
+  try {
+    MobileAds.instance.initialize();
+  } catch (_) {
+    // Ads are optional; a device-specific SDK issue must not block the app.
+  }
   runApp(const LivePriceApp());
 }
 
