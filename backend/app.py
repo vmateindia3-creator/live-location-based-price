@@ -429,6 +429,17 @@ def _apply_rate_limit():
     return None
 
 
+@app.after_request
+def _security_headers(resp):
+    resp.headers.setdefault("X-Content-Type-Options", "nosniff")
+    resp.headers.setdefault("X-Frame-Options", "DENY")
+    resp.headers.setdefault("Referrer-Policy", "no-referrer")
+    resp.headers.setdefault("Strict-Transport-Security", "max-age=31536000; includeSubDomains")
+    resp.headers.setdefault("Cache-Control", "no-store")
+    resp.headers["Server"] = "locarate"
+    return resp
+
+
 @app.get("/health")
 def health():
     return jsonify({"ok": True, "service": "live-location-based-price-api", "time": now_iso()})
