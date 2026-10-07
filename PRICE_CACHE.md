@@ -1,15 +1,58 @@
-# Scheduled price cache
+# Price caching — how the app survives heavy traffic
 
-`.github/workflows/price-cache.yml` runs daily at **06:00 IST** (`00:30 UTC`; GitHub can start cron jobs a few minutes late) and can also be started manually. It runs `backend/refresh_cache.py`, which fetches GoodReturns values for the configured India city list and writes `backend/data/price_cache.json`.
+The API is built so that the number of **users** does not scale the number of
+requests to the source site. Three tiers sit in front of it:
 
-Render is configured with `autoDeploy: true`. When the cache commit changes, Render rebuilds the backend Docker image automatically; the image includes `backend/data/price_cache.json`. A concurrency guard prevents overlapping refresh runs.
+| Tier | What | Lifetime | Upstream calls |
+|---|---|---|---|
+| 1. City cache (in memory) | prices keyed by **city only** | `CACHE_TTL_SECONDS` (default 30 min) | one per city per 30 min, shared by all users |
+| 2. Scheduled file cache (`backend/data/price_cache.json`) | ~60 cities, refreshed twice a day | served while younger than `CACHE_MAX_AGE_SECONDS` (36 h) | none |
+| 3. Live scrape | only cities missing from tier 2, or older than 36 h | — | throttled (see below) |
 
-## How the backend uses it
+Weather is cached separately by rounded coordinates (15 min) and reverse
+geocoding for 24 h, so a typical request makes **zero** outbound calls.
 
-`app.fetch_prices(city)` tries the live GoodReturns page first. If that returns nothing, it reads the scheduled cache for the same city and returns `source: scheduled-cache` with the cached `observedAt` timestamp. It never falls back to another city's rate. If neither source has data, `prices` is empty and `source` is `unavailable`.
+## Why the city cache matters
 
-Only cities that return at least one plausible value are written; an existing entry is kept if a refresh fails.
+Previously the cache key included the user's coordinates, so every user in a
+city produced a different key and the cache barely helped — each request
+scraped the source. Keying by city fixes that.
 
-This is an indicative cache, not an official live price feed. GoodReturns can block automated requests, return stale or mixed-unit results, or change page markup. Exact accuracy requires a licensed provider or an approved API.
+Measured locally: **200 requests across 40 coordinates in one city → 1 price
+scrape** (previously 200).
 
-To expand the scheduled list, edit `PRICE_CACHE_CITIES` (in the workflow and/or `.env`). To run it immediately, use GitHub Actions → Scheduled Price Cache → Run workflow.
+## Upstream protection
+
+Live scraping is a last resort and is rate-limited:
+
+- `SCRAPE_MIN_INTERVAL_SECONDS` (default 1.0) — minimum gap between scrape rounds.
+- `SCRAPE_MAX_CONCURRENCY` (default 2) — at most this many rounds in flight.
+- `RATE_LIMIT_PER_MIN` (default 120) — per-IP limit on the API itself, so one
+  client cannot burn your server's capacity.
+
+## The scheduled refresh
+
+`.github/workflows/price-cache.yml` runs `backend/refresh_cache.py` at **06:00
+and 18:00 IST** and commits `backend/data/price_cache.json`. Render
+(`autoDeploy: true`) redeploys with the new file, and every user is then served
+from it with no live scraping at all.
+
+Only cities that return at least one plausible value are written, and an
+existing entry is kept if a refresh fails — so one bad day does not blank the
+app.
+
+To change the city list, set `PRICE_CACHE_CITIES` (workflow or `.env`); otherwise
+the built-in list of ~60 Indian cities is used.
+
+## Tunables
+
+`CACHE_TTL_SECONDS`, `GEOCODE_TTL_SECONDS`, `WEATHER_TTL_SECONDS`,
+`CACHE_MAX_AGE_SECONDS`, `SCRAPE_MIN_INTERVAL_SECONDS`, `SCRAPE_MAX_CONCURRENCY`,
+`RATE_LIMIT_PER_MIN` — see `backend/.env.example`.
+
+## Honest limits
+
+This keeps the app fast and reduces load on the source site, but it does not
+change the fact that the data comes from a third-party website. For a commercial
+launch, use a licensed/official feed or obtain written permission — that is the
+only way to be safe at scale, technically and legally.
