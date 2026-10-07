@@ -188,15 +188,15 @@ class _SplashGateState extends State<SplashGate> {
     return Scaffold(
       body: DecoratedBox(
         decoration: BoxDecoration(gradient: LinearGradient(colors: widget.theme.gradient, begin: Alignment.topLeft, end: Alignment.bottomRight)),
-        child: Center(
+        child: const Center(
           child: Column(mainAxisSize: MainAxisSize.min, children: [
-            const BrandMark(size: 96),
-            const SizedBox(height: 22),
-            const Text('LocaRate', style: TextStyle(color: Colors.white, fontSize: 32, fontWeight: FontWeight.w800, letterSpacing: .4)),
-            const SizedBox(height: 6),
-            const Text('Live rates across India', style: TextStyle(color: Colors.white70, fontSize: 15)),
-            const SizedBox(height: 30),
-            const SizedBox(width: 26, height: 26, child: CircularProgressIndicator(strokeWidth: 2.6, color: Colors.white)),
+            BrandMark(size: 96),
+            SizedBox(height: 22),
+            Text('LocaRate', style: TextStyle(color: Colors.white, fontSize: 32, fontWeight: FontWeight.w800, letterSpacing: .4)),
+            SizedBox(height: 6),
+            Text('Live rates across India', style: TextStyle(color: Colors.white70, fontSize: 15)),
+            SizedBox(height: 30),
+            SizedBox(width: 26, height: 26, child: CircularProgressIndicator(strokeWidth: 2.6, color: Colors.white)),
           ]),
         ),
       ),
