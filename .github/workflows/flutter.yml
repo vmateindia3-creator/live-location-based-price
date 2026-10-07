@@ -36,6 +36,46 @@ jobs:
               t = t.replace('</dict>', entry + '</dict>', 1)
               plist.write_text(t)
           PY
+      - name: Generate app icon
+        run: |
+          pip install --quiet pillow
+          python3 - <<'PY'
+          import os, shutil
+          from PIL import Image, ImageDraw, ImageFont
+
+          def make(size):
+              top, bot = (7, 94, 84), (37, 211, 102)
+              bg = Image.new('RGB', (size, size), top)
+              bd = ImageDraw.Draw(bg)
+              for y in range(size):
+                  t = y / (size - 1)
+                  bd.line([(0, y), (size, y)], fill=tuple(int(top[i] + (bot[i] - top[i]) * t) for i in range(3)))
+              mask = Image.new('L', (size, size), 0)
+              ImageDraw.Draw(mask).rounded_rectangle([0, 0, size - 1, size - 1], radius=int(size * 0.22), fill=255)
+              img = Image.new('RGBA', (size, size), (0, 0, 0, 0))
+              img.paste(bg, (0, 0), mask)
+              d = ImageDraw.Draw(img)
+              cx, cy, rad = size / 2, size * 0.42, size * 0.20
+              d.ellipse([cx - rad, cy - rad, cx + rad, cy + rad], fill=(255, 255, 255, 255))
+              d.polygon([(cx - rad * 0.62, cy + rad * 0.72), (cx + rad * 0.62, cy + rad * 0.72), (cx, cy + rad * 2.1)], fill=(255, 255, 255, 255))
+              try:
+                  f = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', int(size * 0.19))
+                  txt = '\u20b9'
+                  bb = d.textbbox((0, 0), txt, font=f)
+                  d.text((cx - (bb[2] - bb[0]) / 2 - bb[0], cy - (bb[3] - bb[1]) / 2 - bb[1]), txt, font=f, fill=(7, 94, 84, 255))
+              except Exception as exc:
+                  print('rupee glyph skipped:', exc)
+              return img
+
+          sizes = {'mdpi': 48, 'hdpi': 72, 'xhdpi': 96, 'xxhdpi': 144, 'xxxhdpi': 192}
+          for density, px in sizes.items():
+              folder = f'android/app/src/main/res/mipmap-{density}'
+              os.makedirs(folder, exist_ok=True)
+              make(px).save(f'{folder}/ic_launcher.png')
+          # Use the PNG launcher icon on all Android versions.
+          shutil.rmtree('android/app/src/main/res/mipmap-anydpi-v26', ignore_errors=True)
+          print('icon written')
+          PY
       - name: Remove generated placeholder test
         run: rm -f test/widget_test.dart
       - run: flutter pub get
@@ -69,26 +109,37 @@ jobs:
               entry = '    <key>NSLocationWhenInUseUsageDescription</key>\n    <string>LocaRate uses your location to show local weather and prices.</string>\n'
               plist.write_text(text.replace(marker, entry + marker, 1))
           PY
-      - name: Add test AdMob application ID
+      # Real AdMob application ID comes from the ADMOB_APP_ID secret; falls
+      # back to Google's test ID when the secret is not set.
+      - name: Add AdMob application ID
+        env:
+          ADMOB_APP_ID: ${{ secrets.ADMOB_APP_ID }}
         run: |
           python3 - <<'PY'
+          import os
           from pathlib import Path
+          app_id = (os.environ.get('ADMOB_APP_ID') or '').strip() or 'ca-app-pub-3940256099942544~3347511713'
           manifest = Path('android/app/src/main/AndroidManifest.xml')
           text = manifest.read_text()
-          meta = '<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-3940256099942544~3347511713" />'
-          if meta not in text:
+          meta = f'<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="{app_id}" />'
+          if 'com.google.android.gms.ads.APPLICATION_ID' not in text:
               start = text.find('<application')
               end = text.find('>', start)
               text = text[:end + 1] + '\n        ' + meta + text[end + 1:]
               manifest.write_text(text)
+          print('AdMob app id:', app_id)
           PY
-      # Release APKs are much smaller than the debug universal build, so they
-      # download and install far more reliably. Signed with the debug key until
-      # a production keystore is added.
       - name: Build release APKs (per-ABI + universal)
+        env:
+          ADMOB_BANNER: ${{ secrets.ADMOB_BANNER_ID }}
+          ADMOB_INTERSTITIAL: ${{ secrets.ADMOB_INTERSTITIAL_ID }}
         run: |
-          flutter build apk --release --split-per-abi
-          flutter build apk --release
+          DEFINES=""
+          if [ -n "$ADMOB_BANNER" ]; then DEFINES="$DEFINES --dart-define=ADMOB_BANNER=$ADMOB_BANNER"; fi
+          if [ -n "$ADMOB_INTERSTITIAL" ]; then DEFINES="$DEFINES --dart-define=ADMOB_INTERSTITIAL=$ADMOB_INTERSTITIAL"; fi
+          echo "defines:$DEFINES"
+          flutter build apk --release --split-per-abi $DEFINES
+          flutter build apk --release $DEFINES
       - uses: actions/upload-artifact@v4
         with:
           name: locarate-release-apks
@@ -97,8 +148,7 @@ jobs:
             build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
             build/app/outputs/flutter-apk/app-x86_64-release.apk
             build/app/outputs/flutter-apk/app-release.apk
-      # Publish the latest APKs to the release so the direct download link is
-      # always current (overwrites the previous assets).
+      # Keep the release download link current.
       - name: Publish APKs to release
         if: github.ref == 'refs/heads/master'
         env:
