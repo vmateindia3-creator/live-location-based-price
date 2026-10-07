@@ -22,11 +22,11 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r backend/requirements.txt
-      - name: Fetch Google indicative prices
+      - name: Refresh city price cache from GoodReturns
         env:
-          GOOGLE_SEARCH_ENABLED: 'true'
           PRICE_CACHE_CITIES: Delhi,Mumbai,Kolkata,Bengaluru,Chennai,Hyderabad,Pune,Ahmedabad,Jaipur,Lucknow,Patna,Bhopal
-        run: python backend/refresh_cache.py
+        working-directory: backend
+        run: python refresh_cache.py
       - name: Commit refreshed cache
         run: |
           git config user.name 'github-actions[bot]'
