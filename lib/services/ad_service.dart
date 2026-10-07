@@ -7,17 +7,16 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 /// AdMob application IDs to AndroidManifest.xml / Info.plist (see
 /// CONFIGURATION.md), plus a consent flow.
 class AdService {
-  // TODO(release): replace with your production unit IDs.
-  // Overridable at build time:
+  // Production AdMob unit IDs. Overridable at build time:
   //   --dart-define=ADMOB_BANNER=ca-app-pub-XXXX/YYYY
   //   --dart-define=ADMOB_INTERSTITIAL=ca-app-pub-XXXX/ZZZZ
   static const String interstitialUnit = String.fromEnvironment(
     'ADMOB_INTERSTITIAL',
-    defaultValue: 'ca-app-pub-3940256099942544/1033173712',
+    defaultValue: 'ca-app-pub-7525502636617186/7260782534',
   );
   static const String bannerUnit = String.fromEnvironment(
     'ADMOB_BANNER',
-    defaultValue: 'ca-app-pub-3940256099942544/6300978111',
+    defaultValue: 'ca-app-pub-7525502636617186/5258444888',
   );
 
   static const Duration _cooldown = Duration(minutes: 3);
