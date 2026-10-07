@@ -1,22 +1,63 @@
 # Release configuration
 
-1. Generate the platform folders and add the Android/iOS location permissions required by `geolocator`:
-   ```bash
-   flutter create --platforms=android,ios --project-name live_location_based_price .
-   ```
-   Android — `android/app/src/main/AndroidManifest.xml`:
-   ```xml
-   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-   ```
-   iOS — `ios/Runner/Info.plist`: `NSLocationWhenInUseUsageDescription`.
+## 1. AdMob (so ads serve and earn)
 
-2. Add your AdMob **application** IDs to the Android manifest and iOS plist, and replace the test **unit** ID in `lib/services/ad_service.dart` with your production interstitial unit ID. Add a consent flow before serving personalised ads.
+1. Create an account at https://admob.google.com and add an app (Android).
+2. Create two ad units: one **Banner** and one **Interstitial**.
+3. In the GitHub repo, add these **Actions secrets** (Settings → Secrets and variables → Actions):
+   - `ADMOB_APP_ID` — the AdMob **app** ID, looks like `ca-app-pub-XXXXXXXX~YYYYYYYY`
+   - `ADMOB_BANNER_ID` — the banner **unit** ID, `ca-app-pub-XXXXXXXX/BBBBBBBBBB`
+   - `ADMOB_INTERSTITIAL_ID` — the interstitial **unit** ID, `ca-app-pub-XXXXXXXX/IIIIIIIIII`
 
-3. Point the app at your backend with `--dart-define=PRICE_API_BASE_URL=https://your-api.example`. Keep all provider keys server-side.
+CI injects the app ID into the manifest and passes the unit IDs to the build via
+`--dart-define`. Until the secrets exist, the build uses Google's **test** IDs
+(ads show as test ads and earn nothing).
 
-4. On the backend, set `ALLOWED_ORIGINS` to your app/web origins, set a sensible `RATE_LIMIT_PER_MIN`, and add `GOOGLE_PLACES_API_KEY` if you want Google city search.
+## 2. Signing (for Play Store)
 
-5. Every price response already carries `source`, `observedAt`/`updatedAt`, `units` and `sourceUrls`. Keep and surface them so users can verify a rate.
+Play Store needs an **AAB signed with your own keystore** (not the debug key).
 
-6. Use a licensed market provider or an approved API for production pricing — do not scrape Google results from the client, and treat GoodReturns values as indicative only.
+```bash
+keytool -genkey -v -keystore locarate-release.jks -keyalg RSA -keysize 2048 \
+  -validity 10000 -alias locarate
+```
+
+Then either:
+- build locally: set `android/key.properties` pointing at the keystore and
+  `flutter build appbundle --release`, or
+- add CI secrets `ANDROID_KEYSTORE_BASE64`, `ANDROID_KEYSTORE_PASSWORD`,
+  `ANDROID_KEY_ALIAS`, `ANDROID_KEY_PASSWORD` and configure the release signing
+  config in `android/app/build.gradle(.kts)`.
+
+**Keep the keystore and its passwords safe and backed up.** If you lose them you
+cannot publish updates to the same app.
+
+## 3. Play Console checklist
+
+- Create the app, set the display name **LocaRate**, upload the AAB to an
+  internal-test track first.
+- Add a **Privacy Policy URL** (host `PRIVACY_POLICY.md` publicly, e.g. GitHub
+  Pages) and link `TERMS.md`.
+- Complete the **Data safety** form: the app uses approximate location, shows
+  ads (AdMob), and collects no account data.
+- Complete **Content rating** and the **Ads** declaration.
+- Add store listing assets: 512×512 icon, feature graphic, screenshots.
+
+## 4. App icon
+
+CI generates the launcher icon automatically (`mipmap-*` PNGs) so the app is not
+the default Flutter logo. To use your own, replace the generated files with your
+artwork at the same sizes (48/72/96/144/192 px).
+
+## 5. Data source — important
+
+The app currently derives rates from a third-party public website. Before a
+commercial launch, confirm that your use is permitted (see the README and the
+discussion in the repo). The safest path is a licensed/official data feed or
+written permission from the source. Play Store also requires you to own or have
+the right to use any data and content in the app.
+
+## 6. Backend
+
+Set `ALLOWED_ORIGINS` and a sensible `RATE_LIMIT_PER_MIN` on the server, and
+confirm live rates on your Render deployment.
