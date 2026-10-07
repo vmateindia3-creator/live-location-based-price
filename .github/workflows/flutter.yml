@@ -36,14 +36,16 @@ jobs:
               t = t.replace('</dict>', entry + '</dict>', 1)
               plist.write_text(t)
           PY
-      - name: Generate app icon
+      # Uses assets/icon.png (1024x1024) when present, otherwise draws a default.
+      - name: Set app icon
         run: |
           pip install --quiet pillow
           python3 - <<'PY'
           import os, shutil
+          from pathlib import Path
           from PIL import Image, ImageDraw, ImageFont
 
-          def make(size):
+          def default_icon(size):
               top, bot = (7, 94, 84), (37, 211, 102)
               bg = Image.new('RGB', (size, size), top)
               bd = ImageDraw.Draw(bg)
@@ -60,21 +62,21 @@ jobs:
               d.polygon([(cx - rad * 0.62, cy + rad * 0.72), (cx + rad * 0.62, cy + rad * 0.72), (cx, cy + rad * 2.1)], fill=(255, 255, 255, 255))
               try:
                   f = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', int(size * 0.19))
-                  txt = '\u20b9'
-                  bb = d.textbbox((0, 0), txt, font=f)
-                  d.text((cx - (bb[2] - bb[0]) / 2 - bb[0], cy - (bb[3] - bb[1]) / 2 - bb[1]), txt, font=f, fill=(7, 94, 84, 255))
+                  bb = d.textbbox((0, 0), '\u20b9', font=f)
+                  d.text((cx - (bb[2] - bb[0]) / 2 - bb[0], cy - (bb[3] - bb[1]) / 2 - bb[1]), '\u20b9', font=f, fill=(7, 94, 84, 255))
               except Exception as exc:
                   print('rupee glyph skipped:', exc)
               return img
 
-          sizes = {'mdpi': 48, 'hdpi': 72, 'xhdpi': 96, 'xxhdpi': 144, 'xxxhdpi': 192}
-          for density, px in sizes.items():
+          src = Path('assets/icon.png')
+          base = Image.open(src).convert('RGBA') if src.exists() else None
+          print('using assets/icon.png' if base else 'assets/icon.png not found - generating default icon')
+          for density, px in {'mdpi': 48, 'hdpi': 72, 'xhdpi': 96, 'xxhdpi': 144, 'xxxhdpi': 192}.items():
               folder = f'android/app/src/main/res/mipmap-{density}'
               os.makedirs(folder, exist_ok=True)
-              make(px).save(f'{folder}/ic_launcher.png')
-          # Use the PNG launcher icon on all Android versions.
+              (base.resize((px, px), Image.LANCZOS) if base else default_icon(px)).save(f'{folder}/ic_launcher.png')
           shutil.rmtree('android/app/src/main/res/mipmap-anydpi-v26', ignore_errors=True)
-          print('icon written')
+          print('app icon written')
           PY
       - name: Remove generated placeholder test
         run: rm -f test/widget_test.dart
@@ -109,8 +111,6 @@ jobs:
               entry = '    <key>NSLocationWhenInUseUsageDescription</key>\n    <string>LocaRate uses your location to show local weather and prices.</string>\n'
               plist.write_text(text.replace(marker, entry + marker, 1))
           PY
-      # Real AdMob application ID comes from the ADMOB_APP_ID secret; falls
-      # back to Google's test ID when the secret is not set.
       - name: Add AdMob application ID
         env:
           ADMOB_APP_ID: ${{ secrets.ADMOB_APP_ID }}
@@ -129,6 +129,65 @@ jobs:
               manifest.write_text(text)
           print('AdMob app id:', app_id)
           PY
+      # Optional: if the keystore secrets are set, sign the release build with
+      # your own key so it can be uploaded to Play. Otherwise debug signing.
+      - name: Configure release signing
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          STORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          if [ -z "$KEYSTORE_B64" ]; then
+            echo "No keystore secret set - release builds stay debug-signed."
+            exit 0
+          fi
+          echo "$KEYSTORE_B64" | base64 -d > android/app/keystore.jks
+          printf 'storePassword=%s\nkeyPassword=%s\nkeyAlias=%s\nstoreFile=keystore.jks\n' "$STORE_PASSWORD" "$KEY_PASSWORD" "$KEY_ALIAS" > android/key.properties
+          python3 - <<'PY'
+          from pathlib import Path
+          kts = '''    signingConfigs {
+              create("release") {
+                  val props = java.util.Properties()
+                  val f = rootProject.file("key.properties")
+                  if (f.exists()) {
+                      props.load(java.io.FileInputStream(f))
+                      keyAlias = props["keyAlias"] as String
+                      keyPassword = props["keyPassword"] as String
+                      storeFile = file(props["storeFile"] as String)
+                      storePassword = props["storePassword"] as String
+                  }
+              }
+          }
+          '''
+          groovy = '''    signingConfigs {
+              release {
+                  def props = new Properties()
+                  def f = rootProject.file("key.properties")
+                  if (f.exists()) {
+                      props.load(new FileInputStream(f))
+                      keyAlias props['keyAlias']
+                      keyPassword props['keyPassword']
+                      storeFile file(props['storeFile'])
+                      storePassword props['storePassword']
+                  }
+              }
+          }
+          '''
+          for name in ('android/app/build.gradle.kts', 'android/app/build.gradle'):
+              p = Path(name)
+              if not p.exists():
+                  continue
+              t = p.read_text()
+              snippet = kts if name.endswith('.kts') else groovy
+              if 'signingConfigs' not in t:
+                  t = t.replace('buildTypes {', snippet + '    buildTypes {', 1)
+              t = t.replace('signingConfig = signingConfigs.getByName("debug")', 'signingConfig = signingConfigs.getByName("release")')
+              t = t.replace('signingConfig signingConfigs.debug', 'signingConfig signingConfigs.release')
+              p.write_text(t)
+              print('patched signing in', name)
+          PY
+          echo "release signing configured"
       - name: Build release APKs (per-ABI + universal)
         env:
           ADMOB_BANNER: ${{ secrets.ADMOB_BANNER_ID }}
@@ -140,6 +199,7 @@ jobs:
           echo "defines:$DEFINES"
           flutter build apk --release --split-per-abi $DEFINES
           flutter build apk --release $DEFINES
+          flutter build appbundle --release $DEFINES
       - uses: actions/upload-artifact@v4
         with:
           name: locarate-release-apks
@@ -148,13 +208,16 @@ jobs:
             build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
             build/app/outputs/flutter-apk/app-x86_64-release.apk
             build/app/outputs/flutter-apk/app-release.apk
-      # Keep the release download link current.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: locarate-play-aab
+          path: build/app/outputs/bundle/release/app-release.aab
       - name: Publish APKs to release
         if: github.ref == 'refs/heads/master'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release view v1.0.0 >/dev/null 2>&1 || gh release create v1.0.0 --title "LocaRate v1.0.0" --notes "LocaRate — live location based fuel, LPG, CNG, gold, silver and weather rates for India."
+          gh release view v1.0.0 >/dev/null 2>&1 || gh release create v1.0.0 --title "LocaRate v1.0.0" --notes "LocaRate - live location based fuel, LPG, CNG, gold, silver and weather rates for India."
           cp build/app/outputs/flutter-apk/app-arm64-v8a-release.apk locarate-arm64.apk
           cp build/app/outputs/flutter-apk/app-release.apk locarate-universal.apk
           gh release upload v1.0.0 locarate-arm64.apk --clobber
