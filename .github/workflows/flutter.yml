@@ -18,6 +18,21 @@ jobs:
           cache: true
       - name: Generate platform folders for CI
         run: flutter create --platforms=android,ios --project-name live_location_based_price .
+      - name: Set app display name
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          manifest = Path('android/app/src/main/AndroidManifest.xml')
+          text = manifest.read_text()
+          text = text.replace('android:label="live_location_based_price"', 'android:label="LocaRate"')
+          manifest.write_text(text)
+          plist = Path('ios/Runner/Info.plist')
+          t = plist.read_text()
+          if '<key>CFBundleDisplayName</key>' not in t:
+              entry = '\t<key>CFBundleDisplayName</key>\n\t<string>LocaRate</string>\n'
+              t = t.replace('</dict>', entry + '</dict>', 1)
+              plist.write_text(t)
+          PY
       - name: Remove generated placeholder test
         run: rm -f test/widget_test.dart
       - run: flutter pub get
