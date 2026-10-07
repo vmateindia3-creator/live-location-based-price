@@ -20,7 +20,7 @@ class AppState extends ChangeNotifier {
   bool loading = false;
   bool pricesRevealed = false;
   String? error;
-  String language = 'hi';
+  String language = 'en';
 
   bool get hasLocation => place != null;
 
