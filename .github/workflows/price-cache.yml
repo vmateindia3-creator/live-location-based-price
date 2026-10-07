@@ -2,8 +2,10 @@ name: Scheduled Price Cache
 
 on:
   schedule:
-    # 00:30 UTC = 06:00 IST. GitHub may start cron jobs a few minutes late.
+    # 00:30 UTC = 06:00 IST (fuel prices change early morning) and
+    # 12:30 UTC = 18:00 IST. GitHub may start cron jobs a few minutes late.
     - cron: '30 0 * * *'
+    - cron: '30 12 * * *'
   workflow_dispatch:
 
 permissions:
@@ -23,8 +25,8 @@ jobs:
           python-version: '3.12'
       - run: pip install -r backend/requirements.txt
       - name: Refresh city price cache from GoodReturns
-        env:
-          PRICE_CACHE_CITIES: Delhi,Mumbai,Kolkata,Bengaluru,Chennai,Hyderabad,Pune,Ahmedabad,Jaipur,Lucknow,Patna,Bhopal
+        # Uses the built-in list of ~60 Indian cities; override with
+        # PRICE_CACHE_CITIES if you want a different set.
         working-directory: backend
         run: python refresh_cache.py
       - name: Commit refreshed cache
