@@ -1,11 +1,17 @@
 """Live Location Based Price — Flask API.
 
-Price data comes from the selected city's GoodReturns page. A scheduled
-GitHub Actions job refreshes ``data/price_cache.json``; the API falls back to
-that cache when the live page cannot be read, so a rate is never silently
-replaced with a different city's value.
+Designed to serve many users from cache and hit the upstream site as rarely as
+possible:
 
-Weather uses Open-Meteo by default and needs no key.
+1. **City cache** (in memory, ``CACHE_TTL_SECONDS``): a city is looked up at
+   most once per TTL, no matter how many users ask for it.
+2. **Scheduled file cache** (``data/price_cache.json``, refreshed daily): served
+   directly, with no upstream request at all.
+3. **Live scrape** (throttled, last resort): only for a city that is not in the
+   file cache, or whose entry is older than ``CACHE_MAX_AGE_SECONDS``.
+
+Reverse geocoding and weather are cached separately, so a request usually makes
+zero outbound calls.
 """
 
 import html
@@ -18,7 +24,7 @@ from collections import defaultdict, deque
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
-from threading import Lock
+from threading import BoundedSemaphore, Lock
 
 import requests
 from dotenv import load_dotenv
@@ -32,11 +38,20 @@ logger = logging.getLogger("live-price")
 
 app = Flask(__name__)
 
-# CORS: restrict with ALLOWED_ORIGINS="https://app.example.com,https://other"
 _allowed_origins = os.getenv("ALLOWED_ORIGINS", "*").strip()
 CORS(app, resources={r"/v1/*": {"origins": _allowed_origins or "*"}})
 
-CACHE_TTL = int(os.getenv("CACHE_TTL_SECONDS", "300"))
+# Cache lifetimes (seconds).
+CACHE_TTL = int(os.getenv("CACHE_TTL_SECONDS", "1800"))          # city prices: 30 min
+GEOCODE_TTL = int(os.getenv("GEOCODE_TTL_SECONDS", "86400"))     # reverse geocode: 24 h
+WEATHER_TTL = int(os.getenv("WEATHER_TTL_SECONDS", "900"))       # weather: 15 min
+CACHE_MAX_AGE = int(os.getenv("CACHE_MAX_AGE_SECONDS", "129600"))  # file cache: serve up to 36 h
+
+# Upstream protection: at most this many scrape rounds in flight, and at least
+# this many seconds between the start of two rounds.
+SCRAPE_MIN_INTERVAL = float(os.getenv("SCRAPE_MIN_INTERVAL_SECONDS", "1.0"))
+SCRAPE_MAX_CONCURRENCY = int(os.getenv("SCRAPE_MAX_CONCURRENCY", "2"))
+
 WEATHER_URL = os.getenv("WEATHER_PROVIDER_URL", "https://api.open-meteo.com/v1/forecast")
 GOODRETURNS = "https://www.goodreturns.in"
 CACHE_FILE = Path(__file__).resolve().parent / "data" / "price_cache.json"
@@ -46,11 +61,10 @@ HEADERS = {
     "Accept-Language": "en-IN,en;q=0.9",
 }
 
-# Conservative Indian retail ranges, all normalised to a single unit.
 PRICE_RANGES = {
     "petrol": (50.0, 150.0),      # INR per litre
     "diesel": (50.0, 150.0),      # INR per litre
-    "lpg": (300.0, 2500.0),       # INR per cylinder
+    "lpg": (300.0, 2500.0),       # INR per 14.2 kg domestic cylinder
     "cng": (20.0, 200.0),         # INR per kg
     "gold": (5000.0, 30000.0),    # INR per gram
     "silver": (50.0, 1000.0),     # INR per gram
@@ -64,8 +78,7 @@ PRICE_UNITS = {
     "silver": "INR/g",
 }
 
-# A small city table used when reverse geocoding is unavailable, so a location
-# still maps to a nearby city with its own rates instead of the national page.
+# Fallback city table used when reverse geocoding is unavailable.
 CITY_COORDS = {
     "Delhi": (28.6139, 77.2090), "New Delhi": (28.6139, 77.2090), "Gurugram": (28.4595, 77.0266),
     "Noida": (28.5355, 77.3910), "Mumbai": (19.0760, 72.8777), "Thane": (19.2183, 72.9781),
@@ -84,7 +97,7 @@ CITY_COORDS = {
     "Goa": (15.2993, 74.1240), "Panaji": (15.4909, 73.8278), "Mysuru": (12.2958, 76.6394),
 }
 
-# Simple per-IP rate limit (requests per minute). Disable with RATE_LIMIT_PER_MIN=0.
+# Per-IP request limit (requests per minute). 0 disables it.
 RATE_LIMIT_PER_MIN = int(os.getenv("RATE_LIMIT_PER_MIN", "120"))
 _rate_buckets = defaultdict(deque)
 _rate_lock = Lock()
@@ -92,9 +105,12 @@ _rate_lock = Lock()
 cache = {}
 cache_lock = Lock()
 
+_scrape_sem = BoundedSemaphore(SCRAPE_MAX_CONCURRENCY)
+_scrape_lock = Lock()
+_last_scrape = 0.0
+
 
 def sanitize_prices(prices):
-    """Keep only plausible INR values; never show an unverified number."""
     clean = {}
     for key, raw_value in (prices or {}).items():
         if key not in PRICE_RANGES:
@@ -112,9 +128,9 @@ def sanitize_prices(prices):
 def normalize_value(key, value):
     """Convert a parsed value to the app's single unit for that item."""
     if key == "silver" and value > PRICE_RANGES["silver"][1]:
-        value /= 1000.0  # GoodReturns quotes silver per kilogram.
+        value /= 1000.0  # quoted per kilogram
     if key == "gold" and value > PRICE_RANGES["gold"][1]:
-        value /= 10.0  # GoodReturns may quote gold per 10 grams.
+        value /= 10.0  # quoted per 10 grams
     return value
 
 
@@ -122,17 +138,27 @@ def now_iso():
     return datetime.now(timezone.utc).isoformat()
 
 
+def age_seconds(iso):
+    try:
+        dt = datetime.fromisoformat(str(iso).replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return max(0.0, (datetime.now(timezone.utc) - dt).total_seconds())
+    except (TypeError, ValueError):
+        return float("inf")
+
+
 def cache_get(key):
     with cache_lock:
         item = cache.get(key)
-        if item and time.time() - item["saved"] < CACHE_TTL:
+        if item and time.time() - item["saved"] < item.get("ttl", CACHE_TTL):
             return item["value"]
     return None
 
 
-def cache_put(key, value):
+def cache_put(key, value, ttl=None):
     with cache_lock:
-        cache[key] = {"saved": time.time(), "value": value}
+        cache[key] = {"saved": time.time(), "value": value, "ttl": ttl or CACHE_TTL}
 
 
 def rate_limited(ip):
@@ -172,6 +198,16 @@ def fetch_weather(lat, lng):
         return demo_weather()
 
 
+def weather_for(lat, lng):
+    key = f"weather:{round(lat, 2)}:{round(lng, 2)}"
+    hit = cache_get(key)
+    if hit is not None:
+        return hit
+    value = fetch_weather(lat, lng)
+    cache_put(key, value, ttl=WEATHER_TTL)
+    return value
+
+
 def city_slug(city):
     aliases = {
         "bengaluru": "bangalore",
@@ -181,7 +217,6 @@ def city_slug(city):
         "thiruvananthapuram": "trivandrum",
         "gurugram": "gurgaon",
         "mysuru": "mysore",
-        "mumbai": "mumbai",
         "navi mumbai": "navi-mumbai",
     }
     name = (city or "").strip().lower().split(",")[0]
@@ -209,7 +244,6 @@ def candidate_urls(city):
 
 
 def goodreturns_urls(city):
-    """Primary URL per item (used for the API's sourceUrls field)."""
     return {key: value[0] for key, value in candidate_urls(city).items()}
 
 
@@ -277,6 +311,18 @@ def fetch_goodreturns_prices(city):
     return sanitize_prices({key: value for key, value in values.items() if value is not None})
 
 
+def scrape_throttled(city):
+    """Live scrape, but never more than a couple at once and spaced out."""
+    global _last_scrape
+    with _scrape_sem:
+        with _scrape_lock:
+            wait = SCRAPE_MIN_INTERVAL - (time.time() - _last_scrape)
+            if wait > 0:
+                time.sleep(wait)
+            _last_scrape = time.time()
+        return fetch_goodreturns_prices(city)
+
+
 def load_file_cache():
     try:
         data = json.loads(CACHE_FILE.read_text())
@@ -286,7 +332,6 @@ def load_file_cache():
 
 
 def load_cached_prices(city):
-    """Read the scheduled cache for a city (keyed by slug, falling back to name)."""
     data = load_file_cache()
     slug = city_slug(city)
     entry = data.get(slug) or data.get((city or "").strip().lower())
@@ -299,21 +344,34 @@ def load_cached_prices(city):
 
 
 def fetch_prices(city):
-    """Live GoodReturns first, then the scheduled cache; never another city's rate."""
-    live = fetch_goodreturns_prices(city)
+    """Scheduled cache first (no upstream call), then a throttled live scrape."""
+    cached = load_cached_prices(city)
+    if cached and age_seconds(cached.get("updatedAt")) <= CACHE_MAX_AGE:
+        return cached["prices"], "scheduled-cache", set(cached["prices"]), cached.get("updatedAt") or now_iso()
+
+    live = scrape_throttled(city)
     if live:
         source = "goodreturns" if len(live) == len(PRICE_RANGES) else "goodreturns-partial"
         return live, source, set(live), now_iso()
 
-    cached = load_cached_prices(city)
-    if cached:
-        return cached["prices"], "scheduled-cache", set(cached["prices"]), cached.get("updatedAt") or now_iso()
+    if cached:  # stale is better than nothing
+        return cached["prices"], "scheduled-cache-stale", set(cached["prices"]), cached.get("updatedAt") or now_iso()
 
     return {}, "unavailable", set(), now_iso()
 
 
+def cached_prices(city):
+    """One upstream lookup per city per CACHE_TTL, shared by all users."""
+    key = f"prices:{city.strip().lower()}"
+    hit = cache_get(key)
+    if hit is not None:
+        return hit
+    result = fetch_prices(city)
+    cache_put(key, result)
+    return result
+
+
 def nearest_city(lat, lng):
-    """Closest known city to a coordinate (used when geocoding is unavailable)."""
     best = None
     best_distance = float("inf")
     for name, (clat, clng) in CITY_COORDS.items():
@@ -345,6 +403,19 @@ def resolve_city(lat, lng, requested):
     return nearest_city(lat, lng) or name or "India"
 
 
+def resolve_city_cached(lat, lng, requested):
+    name = (requested or "").strip()
+    if name and name.lower() not in {"india", "current location"}:
+        return name
+    key = f"geo:{round(lat, 2)}:{round(lng, 2)}"
+    hit = cache_get(key)
+    if hit:
+        return hit
+    city = resolve_city(lat, lng, requested)
+    cache_put(key, city, ttl=GEOCODE_TTL)
+    return city
+
+
 def valid_coords(lat, lng):
     return -90 <= lat <= 90 and -180 <= lng <= 180
 
@@ -373,27 +444,21 @@ def market():
     if not valid_coords(lat, lng):
         return jsonify({"error": "lat must be -90..90 and lng must be -180..180"}), 400
 
-    city = resolve_city(lat, lng, request.args.get("city", "India")[:80])
-    cache_key = f"market:{round(lat, 2)}:{round(lng, 2)}:{city.lower()}"
-    cached = cache_get(cache_key)
-    if cached:
-        return jsonify(cached)
-
-    prices, source, observed_keys, observed_at = fetch_prices(city)
+    city = resolve_city_cached(lat, lng, request.args.get("city", "India")[:80])
+    prices, source, observed_keys, observed_at = cached_prices(city)
     response = {
         "updatedAt": now_iso(),
         "observedAt": observed_at,
         "currency": "INR",
         "city": city,
         "source": source,
-        "warning": "GoodReturns indicative rates; verify on the linked city page" if source.startswith("goodreturns") else ("Scheduled cache value; verify before use" if source == "scheduled-cache" else None),
+        "warning": "Indicative rates; verify before purchase" if prices else None,
         "prices": prices,
         "units": {k: PRICE_UNITS[k] for k in prices},
         "observedKeys": sorted(observed_keys),
         "sourceUrls": goodreturns_urls(city),
-        "weather": fetch_weather(lat, lng),
+        "weather": weather_for(lat, lng),
     }
-    cache_put(cache_key, response)
     return jsonify(response)
 
 
@@ -402,7 +467,6 @@ def places_search():
     query = request.args.get("q", "").strip()
     if not query:
         return jsonify({"results": []})
-    # Google Places is optional; keep the key on the server.
     key = os.getenv("GOOGLE_PLACES_API_KEY", "").strip()
     if key:
         try:
