@@ -79,9 +79,18 @@ jobs:
               text = text[:end + 1] + '\n        ' + meta + text[end + 1:]
               manifest.write_text(text)
           PY
-      - name: Build universal debug APK for all Android ABIs
-        run: flutter build apk --debug
+      # Release APKs are much smaller than the debug universal build, so they
+      # download and install far more reliably. Signed with the debug key until
+      # a production keystore is added.
+      - name: Build release APKs (per-ABI + universal)
+        run: |
+          flutter build apk --release --split-per-abi
+          flutter build apk --release
       - uses: actions/upload-artifact@v4
         with:
-          name: locarate-universal-apk
-          path: build/app/outputs/flutter-apk/app-debug.apk
+          name: locarate-release-apks
+          path: |
+            build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
+            build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
+            build/app/outputs/flutter-apk/app-x86_64-release.apk
+            build/app/outputs/flutter-apk/app-release.apk
