@@ -93,11 +93,16 @@ class _LivePriceAppState extends State<LivePriceApp> {
       animation: state,
       builder: (_, __) {
         final temperature = state.data?.weather.temperatureC ?? 28;
-        final colors = temperature > 34
-            ? [const Color(0xff075e54), const Color(0xfff59e0b)]
-            : temperature < 18
-                ? [const Color(0xff0f4c81), const Color(0xff38bdf8)]
-                : [const Color(0xff075e54), const Color(0xff25d366)];
+        final List<Color> colors;
+        if (temperature >= 32) {
+          colors = [const Color(0xffb45309), const Color(0xfff59e0b)]; // hot
+        } else if (temperature >= 24) {
+          colors = [const Color(0xff075e54), const Color(0xff25d366)]; // warm
+        } else if (temperature >= 18) {
+          colors = [const Color(0xff0e7490), const Color(0xff38bdf8)]; // cool
+        } else {
+          colors = [const Color(0xff1e3a8a), const Color(0xff60a5fa)]; // cold
+        }
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           locale: Locale(state.language),
@@ -452,7 +457,7 @@ class _HomeState extends State<Home> {
   Widget _grid(List<String> keys, AppState s) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        final columns = constraints.maxWidth >= 900 ? 3 : 2;
+        final columns = constraints.maxWidth >= 700 ? 2 : 1;
         return GridView.builder(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
@@ -462,7 +467,7 @@ class _HomeState extends State<Home> {
             crossAxisCount: columns,
             mainAxisSpacing: 12,
             crossAxisSpacing: 12,
-            mainAxisExtent: 216,
+            mainAxisExtent: 190,
           ),
           itemBuilder: (context, index) => _priceCard(keys[index], s),
         );
@@ -506,7 +511,7 @@ class _HomeState extends State<Home> {
             child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(_name(key, s.language), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800)),
               const SizedBox(height: 2),
-              Text(s.language == 'hi' ? (kItemUnitLabelHi[key] ?? '') : (kItemUnitLabel[key] ?? ''), style: TextStyle(fontSize: 11.5, color: Colors.grey.shade600)),
+              Text(s.language == 'hi' ? (kItemUnitLabelHi[key] ?? '') : (kItemUnitLabel[key] ?? ''), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 11.5, color: Colors.grey.shade600)),
             ]),
           ),
           if (hasRate)
