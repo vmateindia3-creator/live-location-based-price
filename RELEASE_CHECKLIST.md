@@ -2,14 +2,14 @@
 
 - [x] Flask health, market and places endpoints
 - [x] Render Docker deployment
-- [x] Google Search indicative and partial-result mode
-- [x] Fallback/source labels in Flutter UI
-- [x] Backend smoke tests and GitHub Actions CI
-- [x] Debug APK build with test AdMob application ID and location permission
+- [x] GoodReturns live prices with scheduled-cache fallback
+- [x] Conservative price sanitisation and source labels in the Flutter UI
+- [x] Offline backend smoke tests and GitHub Actions CI
+- [x] Per-IP rate limiting, CORS control and structured logging
 - [x] Privacy policy draft
-- [ ] Choose and configure a real licensed price provider
-- [ ] Add Android/iOS location permissions
-- [ ] Replace AdMob test IDs and add consent flow
-- [ ] Build signed Android AAB on a Flutter-capable machine
+- [ ] Commit `android/` and `ios/` folders with location permissions
+- [ ] Replace AdMob test IDs and add a consent flow
+- [ ] Build a signed Android AAB on a Flutter-capable machine
 - [ ] Test on real phones with location off, slow network and backend downtime
-- [ ] Publish reviewed privacy policy and store listing
+- [ ] Choose and configure a real licensed price provider
+- [ ] Publish a reviewed privacy policy and store listing
