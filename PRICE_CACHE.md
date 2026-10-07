@@ -1,11 +1,15 @@
 # Scheduled price cache
 
-The repository now has a GitHub Actions workflow at `.github/workflows/price-cache.yml`. It runs daily at **06:00 IST** (`00:30 UTC`; GitHub can start cron jobs a few minutes late) and can also be started manually. It fetches best-effort Google Search values for the configured India city list and commits `backend/data/price_cache.json`.
+`.github/workflows/price-cache.yml` runs daily at **06:00 IST** (`00:30 UTC`; GitHub can start cron jobs a few minutes late) and can also be started manually. It runs `backend/refresh_cache.py`, which fetches GoodReturns values for the configured India city list and writes `backend/data/price_cache.json`.
 
 Render is configured with `autoDeploy: true`. When the cache commit changes, Render rebuilds the backend Docker image automatically; the image includes `backend/data/price_cache.json`. A concurrency guard prevents overlapping refresh runs.
 
-The backend uses a saved city cache first and returns `source: google-scheduled-cache` with `observedKeys`. Values outside conservative Indian retail ranges are discarded. The Flutter app shows only observed keys; it does not present fallback demo values as real rates.
+## How the backend uses it
 
-This is an indicative cache, not an official live price feed. Google can block automated searches, return stale or mixed-unit results, or change page markup. Exact accuracy requires a licensed provider or an approved Google API. Firebase/Firestore can be added later as durable storage for arbitrary user-searched cities; the current repository cache covers the configured city list and the backend's best-effort on-demand search.
+`app.fetch_prices(city)` tries the live GoodReturns page first. If that returns nothing, it reads the scheduled cache for the same city and returns `source: scheduled-cache` with the cached `observedAt` timestamp. It never falls back to another city's rate. If neither source has data, `prices` is empty and `source` is `unavailable`.
 
-To expand the scheduled list, edit `PRICE_CACHE_CITIES` in the workflow. To run it immediately, use GitHub Actions → Scheduled Price Cache → Run workflow.
+Only cities that return at least one plausible value are written; an existing entry is kept if a refresh fails.
+
+This is an indicative cache, not an official live price feed. GoodReturns can block automated requests, return stale or mixed-unit results, or change page markup. Exact accuracy requires a licensed provider or an approved API.
+
+To expand the scheduled list, edit `PRICE_CACHE_CITIES` (in the workflow and/or `.env`). To run it immediately, use GitHub Actions → Scheduled Price Cache → Run workflow.
