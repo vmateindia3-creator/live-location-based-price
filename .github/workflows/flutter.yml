@@ -118,7 +118,7 @@ jobs:
           python3 - <<'PY'
           import os
           from pathlib import Path
-          app_id = (os.environ.get('ADMOB_APP_ID') or '').strip() or 'ca-app-pub-3940256099942544~3347511713'
+          app_id = (os.environ.get('ADMOB_APP_ID') or '').strip() or 'ca-app-pub-7525502636617186~5609798674'
           manifest = Path('android/app/src/main/AndroidManifest.xml')
           text = manifest.read_text()
           meta = f'<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="{app_id}" />'
