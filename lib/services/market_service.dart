@@ -47,7 +47,7 @@ class MarketService {
 
   MarketData _demo() => MarketData(
     updatedAt: DateTime.now(),
-    prices: const {'petrol': 94.72, 'diesel': 87.62, 'lpg': 803, 'cng': 75.09, 'gold': 75250, 'silver': 92500},
+    prices: const {},
     weather: const WeatherData(temperatureC: 29, condition: 'Partly cloudy', humidity: 48, windKph: 11),
     source: 'demo-fallback',
     currency: 'INR',

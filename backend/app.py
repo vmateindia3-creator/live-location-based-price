@@ -24,13 +24,29 @@ cache_lock = Lock()
 DEMO_PRICES = {"petrol": 94.72, "diesel": 87.62, "lpg": 803.0, "cng": 75.09, "gold": 75250.0, "silver": 92500.0}
 CACHE_FILE = Path(__file__).resolve().parent / "data" / "price_cache.json"
 PRICE_RANGES = {
-    "petrol": (80.0, 150.0),
-    "diesel": (70.0, 150.0),
+    "petrol": (50.0, 150.0),
+    "diesel": (50.0, 150.0),
     "lpg": (700.0, 1200.0),
     "cng": (20.0, 200.0),
     "gold": (50000.0, 200000.0),
     "silver": (50000.0, 300000.0),
 }
+
+
+def sanitize_prices(prices):
+    """Keep only plausible INR values; never show an unverified demo number."""
+    clean = {}
+    for key, raw_value in (prices or {}).items():
+        if key not in PRICE_RANGES:
+            continue
+        try:
+            value = float(raw_value)
+        except (TypeError, ValueError):
+            continue
+        low, high = PRICE_RANGES[key]
+        if low <= value <= high:
+            clean[key] = round(value, 2)
+    return clean
 
 
 def now_iso():
@@ -80,19 +96,17 @@ def fetch_prices(city):
             response = requests.get(provider, params={"city": city or "India"}, headers=headers, timeout=7)
             response.raise_for_status()
             prices = response.json().get("prices", {})
-            normalized = {key: float(prices[key]) for key in DEMO_PRICES if key in prices}
-            if len(normalized) == len(DEMO_PRICES):
+            normalized = sanitize_prices(prices)
+            if normalized:
                 return normalized, "configured-provider", set(normalized)
         except (requests.RequestException, ValueError, TypeError, KeyError):
             pass
     if os.getenv("GOOGLE_SEARCH_ENABLED", "false").lower() == "true":
         search_prices = fetch_google_indicative_prices(city)
         if search_prices:
-            merged = DEMO_PRICES.copy()
-            merged.update(search_prices)
-            source = "google-search-indicative" if len(search_prices) == len(DEMO_PRICES) else "google-search-partial"
-            return merged, source, set(search_prices)
-    return DEMO_PRICES.copy(), "demo-fallback", set()
+            source = "google-search-indicative" if len(search_prices) == len(PRICE_RANGES) else "google-search-partial"
+            return search_prices, source, set(search_prices)
+    return {}, "demo-fallback", set()
 
 
 def load_scheduled_prices(city):
@@ -100,7 +114,7 @@ def load_scheduled_prices(city):
         cache = json.loads(CACHE_FILE.read_text())
         item = cache.get((city or "").strip().lower(), {})
         prices = item.get("prices", {})
-        return {key: float(value) for key, value in prices.items() if key in DEMO_PRICES}
+        return sanitize_prices(prices)
     except (FileNotFoundError, json.JSONDecodeError, TypeError, ValueError):
         return {}
 
@@ -120,7 +134,9 @@ def fetch_google_indicative_prices(city):
             low, high = PRICE_RANGES[key]
             valid = [value for value in values if low <= value <= high]
             if valid:
-                result[key] = valid[0]
+                # Prefer the value that occurs most often in the snippet/page;
+                # this avoids selecting a nearby date, year, or unrelated rate.
+                result[key] = max(set(valid), key=valid.count)
         except (requests.RequestException, ValueError, TypeError):
             continue
     return result or None

@@ -266,9 +266,10 @@ class _HomeState extends State<Home> {
     final amountController = _amountController(key);
     final value = double.tryParse(amountController.text) ?? 0;
     final officialRate = temporaryRates[key];
-    final displayAvailable = officialRate != null || (data != null && (data.source == 'configured-provider' || data.observedKeys.contains(key)));
-    final effectivePrice = officialRate ?? price;
-    final quantity = officialRate == null || effectivePrice == 0 ? 0 : value / effectivePrice;
+    final serverPrice = data?.prices[key];
+    final displayAvailable = officialRate != null || serverPrice != null;
+    final effectivePrice = officialRate ?? serverPrice ?? 0;
+    final quantity = !displayAvailable || effectivePrice == 0 ? 0 : value / effectivePrice;
     final premium = key == 'gold' || key == 'silver';
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 6),
@@ -290,7 +291,7 @@ class _HomeState extends State<Home> {
           const SizedBox(height: 8),
           Align(
             alignment: Alignment.centerLeft,
-            child: Text(officialRate != null ? (premium ? '${quantity.toStringAsFixed(3)} g' : '${quantity.toStringAsFixed(2)} units') : (s.language == 'hi' ? 'पहले official page check करें' : 'Check official page first'), maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xff075e54))),
+            child: Text(displayAvailable ? (premium ? '${quantity.toStringAsFixed(3)} g' : '${quantity.toStringAsFixed(2)} units') : (s.language == 'hi' ? 'पहले official page check करें' : 'Check official page first'), maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xff075e54))),
           ),
           const SizedBox(height: 8),
           Align(

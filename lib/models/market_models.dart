@@ -12,9 +12,16 @@ class MarketData {
   factory MarketData.fromJson(Map<String, dynamic> json) {
     final raw = Map<String, dynamic>.from(json['prices'] as Map? ?? {});
     final weather = Map<String, dynamic>.from(json['weather'] as Map? ?? {});
+    final safePrices = <String, double>{};
+    for (final entry in raw.entries) {
+      final value = entry.value is num ? (entry.value as num).toDouble() : null;
+      if (value != null && _isPlausible(entry.key, value)) {
+        safePrices[entry.key] = value;
+      }
+    }
     return MarketData(
       updatedAt: DateTime.tryParse(json['updatedAt']?.toString() ?? '')?.toLocal() ?? DateTime.now(),
-      prices: raw.map((key, value) => MapEntry(key, (value as num).toDouble())),
+      prices: safePrices,
       weather: WeatherData.fromJson(weather),
       source: json['source']?.toString() ?? 'unknown',
       currency: json['currency']?.toString() ?? 'INR',
@@ -22,6 +29,18 @@ class MarketData {
       observedKeys: ((json['observedKeys'] as List?) ?? const []).map((e) => e.toString()).toSet(),
       sourceUrls: Map<String, String>.from((json['sourceUrls'] as Map?) ?? const {}),
     );
+  }
+
+  static bool _isPlausible(String key, double value) {
+    final range = <String, List<double>>{
+      'petrol': [50, 150],
+      'diesel': [50, 150],
+      'lpg': [300, 2500],
+      'cng': [20, 200],
+      'gold': [50000, 200000],
+      'silver': [50000, 300000],
+    }[key];
+    return range != null && value >= range[0] && value <= range[1];
   }
 }
 
