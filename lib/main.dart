@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -413,7 +414,8 @@ class _HomeState extends State<Home> {
 
   /// Prefer the URL the backend already returned; only build one as a fallback.
   String _sourceUrl(String key, MarketData? data, String city) {
-    final fromServer = data?.sourceUrls?[key];
+    final urls = data?.sourceUrls;
+    final fromServer = urls == null ? null : urls[key];
     if (fromServer != null && fromServer.isNotEmpty) {
       return fromServer;
     }
