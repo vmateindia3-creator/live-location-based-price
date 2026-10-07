@@ -1,10 +1,11 @@
 class MarketData {
-  const MarketData({required this.updatedAt, required this.prices, required this.weather, required this.source, required this.currency, this.warning, this.observedKeys = const {}, this.sourceUrls = const {}});
+  const MarketData({required this.updatedAt, required this.prices, required this.weather, required this.source, required this.currency, this.city = 'India', this.warning, this.observedKeys = const {}, this.sourceUrls = const {}});
   final DateTime updatedAt;
   final Map<String, double> prices;
   final WeatherData weather;
   final String source;
   final String currency;
+  final String city;
   final String? warning;
   final Set<String> observedKeys;
   final Map<String, String> sourceUrls;
@@ -25,6 +26,7 @@ class MarketData {
       weather: WeatherData.fromJson(weather),
       source: json['source']?.toString() ?? 'unknown',
       currency: json['currency']?.toString() ?? 'INR',
+      city: json['city']?.toString() ?? 'India',
       warning: json['warning']?.toString(),
       observedKeys: ((json['observedKeys'] as List?) ?? const []).map((e) => e.toString()).toSet(),
       sourceUrls: Map<String, String>.from((json['sourceUrls'] as Map?) ?? const {}),
@@ -37,8 +39,8 @@ class MarketData {
       'diesel': [50, 150],
       'lpg': [300, 2500],
       'cng': [20, 200],
-      'gold': [50000, 200000],
-      'silver': [50000, 300000],
+      'gold': [5000, 30000],
+      'silver': [50, 1000],
     }[key];
     return range != null && value >= range[0] && value <= range[1];
   }

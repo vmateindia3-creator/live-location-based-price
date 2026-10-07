@@ -32,14 +32,12 @@ The repository also contains `backend/Dockerfile` for Railway, Fly.io or any Doc
 
 ## Provider policy
 
-The API does not scrape Google Search. Weather uses Open-Meteo by default. Set `PRICE_PROVIDER_URL` to a licensed Indian fuel/bullion provider or an internal scheduled ingestion service. The provider response must contain:
+Price data is fetched from the selected city's GoodReturns pages. Weather uses Open-Meteo by default. The API normalizes fuel to INR/L (CNG INR/kg, LPG INR/cylinder), gold to INR/gram and silver to INR/gram. If a GoodReturns city page cannot be read, that item is omitted rather than replaced with another city's or demo price.
 
 ```json
-{"prices":{"petrol":94.72,"diesel":87.62,"lpg":803,"cng":75.09,"gold":75250,"silver":92500}}
+{"prices":{"petrol":111.21,"diesel":97.83,"lpg":941.50,"cng":88.00,"gold":15023,"silver":234.90}}
 ```
 
 For a long-running deployment, put this behind HTTPS, add a real database/Redis cache, scheduled refresh jobs, request authentication/rate limits, source attribution and monitoring.
 
-## Google Search indicative mode
-
-Render enables `GOOGLE_SEARCH_ENABLED=true` through `render.yaml`. The backend makes India-specific search queries and only uses extracted values when at least four categories are found. Results are labeled `google-search-indicative` with a `warning`; otherwise the API keeps the safe demo fallback. Google may block automated requests or change markup, so these values must be verified before use.
+GoodReturns values are informational and should be checked on the linked city page before a purchase. The app never silently substitutes a different city, stale cache value or demo value.

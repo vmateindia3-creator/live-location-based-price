@@ -1,13 +1,12 @@
 import os
 import time
+import html
 from datetime import datetime, timezone
 from threading import Lock
+from concurrent.futures import ThreadPoolExecutor
 
 import requests
 import re
-import json
-from pathlib import Path
-from urllib.parse import quote_plus
 from dotenv import load_dotenv
 from flask import Flask, jsonify, request
 from flask_cors import CORS
@@ -21,16 +20,16 @@ WEATHER_URL = os.getenv("WEATHER_PROVIDER_URL", "https://api.open-meteo.com/v1/f
 cache = {}
 cache_lock = Lock()
 
-DEMO_PRICES = {"petrol": 94.72, "diesel": 87.62, "lpg": 803.0, "cng": 75.09, "gold": 75250.0, "silver": 92500.0}
-CACHE_FILE = Path(__file__).resolve().parent / "data" / "price_cache.json"
 PRICE_RANGES = {
     "petrol": (50.0, 150.0),
     "diesel": (50.0, 150.0),
     "lpg": (700.0, 1200.0),
     "cng": (20.0, 200.0),
-    "gold": (50000.0, 200000.0),
-    "silver": (50000.0, 300000.0),
+    # Metals are normalized to INR per gram for exact amount calculations.
+    "gold": (5000.0, 30000.0),
+    "silver": (50.0, 1000.0),
 }
+GOODRETURNS = "https://www.goodreturns.in"
 
 
 def sanitize_prices(prices):
@@ -83,78 +82,105 @@ def fetch_weather(lat, lng):
 
 
 def fetch_prices(city):
-    scheduled = load_scheduled_prices(city)
-    if scheduled:
-        return scheduled, "google-scheduled-cache", set(scheduled)
-    provider = os.getenv("PRICE_PROVIDER_URL", "").strip()
-    if provider:
-        headers = {"Accept": "application/json"}
-        api_key = os.getenv("PRICE_PROVIDER_API_KEY", "").strip()
-        if api_key:
-            headers["Authorization"] = f"Bearer {api_key}"
-        try:
-            response = requests.get(provider, params={"city": city or "India"}, headers=headers, timeout=7)
-            response.raise_for_status()
-            prices = response.json().get("prices", {})
-            normalized = sanitize_prices(prices)
-            if normalized:
-                return normalized, "configured-provider", set(normalized)
-        except (requests.RequestException, ValueError, TypeError, KeyError):
-            pass
-    if os.getenv("GOOGLE_SEARCH_ENABLED", "false").lower() == "true":
-        search_prices = fetch_google_indicative_prices(city)
-        if search_prices:
-            source = "google-search-indicative" if len(search_prices) == len(PRICE_RANGES) else "google-search-partial"
-            return search_prices, source, set(search_prices)
-    return {}, "demo-fallback", set()
+    goodreturns = fetch_goodreturns_prices(city)
+    if goodreturns:
+        source = "goodreturns" if len(goodreturns) == len(PRICE_RANGES) else "goodreturns-partial"
+        return goodreturns, source, set(goodreturns)
+    # Never substitute stale/demo/Google values when the selected city page
+    # could not be read; showing no rate is safer than showing another city's rate.
+    return {}, "goodreturns-unavailable", set()
 
 
-def load_scheduled_prices(city):
-    try:
-        cache = json.loads(CACHE_FILE.read_text())
-        item = cache.get((city or "").strip().lower(), {})
-        prices = item.get("prices", {})
-        return sanitize_prices(prices)
-    except (FileNotFoundError, json.JSONDecodeError, TypeError, ValueError):
-        return {}
+def city_slug(city):
+    aliases = {
+        "bengaluru": "bangalore",
+        "bengalore": "bangalore",
+        "new delhi": "new-delhi",
+        "trivandrum": "trivandrum",
+        "thiruvananthapuram": "trivandrum",
+    }
+    name = (city or "").strip().lower().split(",")[0]
+    name = aliases.get(name, name)
+    return re.sub(r"[^a-z0-9]+", "-", name).strip("-")
 
 
-def fetch_google_indicative_prices(city):
-    """Best-effort snippets only. Google Search is not an official price feed."""
-    queries = google_price_queries(city)
-    headers = {"User-Agent": "Mozilla/5.0 (compatible; LiveLocationPrice/1.0; +https://github.com/vmateindia3-creator/live-location-based-price)"}
-    result = {}
-    for key, query in queries.items():
-        try:
-            html = requests.get("https://www.google.com/search", params={"q": query, "hl": "en", "gl": "in"}, headers=headers, timeout=4).text
-            text = re.sub(r"<[^>]+>", " ", html)
-            text = re.sub(r"\s+", " ", text)
-            amounts = re.findall(r"(?:₹|Rs\.?|INR)\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)", text, flags=re.I)
-            values = [float(value.replace(",", "")) for value in amounts]
-            low, high = PRICE_RANGES[key]
-            valid = [value for value in values if low <= value <= high]
-            if valid:
-                # Prefer the value that occurs most often in the snippet/page;
-                # this avoids selecting a nearby date, year, or unrelated rate.
-                result[key] = max(set(valid), key=valid.count)
-        except (requests.RequestException, ValueError, TypeError):
-            continue
-    return result or None
-
-
-def google_price_queries(city):
+def goodreturns_urls(city):
+    slug = city_slug(city)
+    suffix = f"-in-{slug}.html" if slug and slug != "india" else ".html"
     return {
-        "petrol": f"petrol price in {city} today India",
-        "diesel": f"diesel price in {city} today India",
-        "lpg": f"LPG cylinder price in {city} today India",
-        "cng": f"CNG price in {city} today India",
-        "gold": f"gold rate in {city} today India 24 carat 10 gram",
-        "silver": f"silver rate in {city} today India per kg",
+        "petrol": f"{GOODRETURNS}/petrol-price{suffix}",
+        "diesel": f"{GOODRETURNS}/diesel-price{suffix}",
+        "lpg": f"{GOODRETURNS}/lpg-price{suffix}",
+        "cng": f"{GOODRETURNS}/cng-price{suffix}",
+        "gold": f"{GOODRETURNS}/gold-rates/{slug}.html" if slug and slug != "india" else f"{GOODRETURNS}/gold-rates/",
+        "silver": f"{GOODRETURNS}/silver-rates/{slug}.html" if slug and slug != "india" else f"{GOODRETURNS}/silver-rates/",
     }
 
 
-def google_source_urls(city):
-    return {key: f"https://www.google.com/search?q={quote_plus(query)}&hl=en&gl=in" for key, query in google_price_queries(city).items()}
+def goodreturns_text(raw_html):
+    text = re.sub(r"<[^>]+>", " ", raw_html)
+    return re.sub(r"\s+", " ", html.unescape(text)).strip()
+
+
+def parse_goodreturns_value(key, text):
+    number = r"([0-9][0-9,]*(?:\.[0-9]{1,2})?)"
+    patterns = {
+        "petrol": rf"Today's petrol price .*?₹\s*{number}\s*per litre",
+        "diesel": rf"Today's diesel price .*?₹\s*{number}\s*per litre",
+        "lpg": rf"Domestic LPG .*? stands at ₹\s*{number}",
+        "cng": rf"CNG price .*?₹\s*{number}\s*(?:per kilogram|per kg|/ Kg)",
+        "gold": rf"24K Gold /g\s*₹\s*{number}",
+        "silver": rf"Silver /kg\s*₹\s*{number}",
+    }
+    match = re.search(patterns[key], text, flags=re.I)
+    if not match:
+        return None
+    value = float(match.group(1).replace(",", ""))
+    if key == "silver":
+        value /= 1000.0  # GoodReturns page reports silver per kilogram.
+    return value
+
+
+def fetch_goodreturns_prices(city):
+    urls = goodreturns_urls(city)
+
+    def read(item):
+        key, url = item
+        try:
+            response = requests.get(
+                url,
+                headers={
+                    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131 Safari/537.36",
+                    "Accept-Language": "en-IN,en;q=0.9",
+                },
+                timeout=8,
+            )
+            response.raise_for_status()
+            return key, parse_goodreturns_value(key, goodreturns_text(response.text))
+        except (requests.RequestException, ValueError, TypeError):
+            return key, None
+
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        values = dict(pool.map(read, urls.items()))
+    return sanitize_prices({key: value for key, value in values.items() if value is not None})
+
+
+
+def resolve_city(lat, lng, requested):
+    name = (requested or "").strip()
+    if name and name.lower() not in {"india", "current location"}:
+        return name
+    try:
+        response = requests.get(
+            "https://nominatim.openstreetmap.org/reverse",
+            params={"lat": lat, "lon": lng, "format": "jsonv2", "zoom": 10},
+            headers={"User-Agent": "LiveLocationPrice/1.0"},
+            timeout=5,
+        )
+        address = response.json().get("address", {})
+        return address.get("city") or address.get("town") or address.get("municipality") or address.get("state_district") or name or "India"
+    except (requests.RequestException, ValueError, TypeError):
+        return name or "India"
 
 
 @app.get("/health")
@@ -169,13 +195,13 @@ def market():
         lng = float(request.args.get("lng", "78.9629"))
     except ValueError:
         return jsonify({"error": "lat and lng must be numbers"}), 400
-    city = request.args.get("city", "India")[:80]
+    city = resolve_city(lat, lng, request.args.get("city", "India")[:80])
     cache_key = f"market:{round(lat, 2)}:{round(lng, 2)}:{city.lower()}"
     cached = cache_get(cache_key)
     if cached:
         return jsonify(cached)
     prices, source, observed_keys = fetch_prices(city)
-    response = {"updatedAt": now_iso(), "currency": "INR", "city": city, "source": source, "warning": "Indicative Google Search result; verify before use" if source.startswith("google-") else None, "prices": prices, "observedKeys": sorted(observed_keys), "sourceUrls": google_source_urls(city), "weather": fetch_weather(lat, lng)}
+    response = {"updatedAt": now_iso(), "currency": "INR", "city": city, "source": source, "warning": "GoodReturns indicative rates; verify on the linked city page" if source.startswith("goodreturns") else None, "prices": prices, "observedKeys": sorted(observed_keys), "sourceUrls": goodreturns_urls(city), "weather": fetch_weather(lat, lng)}
     cache_put(cache_key, response)
     return jsonify(response)
 

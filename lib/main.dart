@@ -295,7 +295,7 @@ class _HomeState extends State<Home> {
             const SizedBox(width: 8),
             Expanded(child: Text(_name(key, s.language), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w800))),
             const SizedBox(width: 4),
-            FittedBox(fit: BoxFit.scaleDown, child: Text(displayAvailable ? '₹${effectivePrice.toStringAsFixed(2)}' : '--', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xff075e54)))),
+            FittedBox(fit: BoxFit.scaleDown, child: Text(displayAvailable ? '₹${effectivePrice.toStringAsFixed(2)}${_unitSuffix(key)}' : '--', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Color(0xff075e54)))),
           ]),
           const SizedBox(height: 12),
           TextField(controller: amountController, onChanged: (_) => setState(() {}), keyboardType: TextInputType.number, decoration: InputDecoration(prefixText: '₹ ', labelText: s.language == 'hi' ? 'राशि' : 'Amount', filled: true, fillColor: const Color(0xfff0f5f2), border: OutlineInputBorder(borderRadius: BorderRadius.circular(14), borderSide: BorderSide.none))),
@@ -326,7 +326,8 @@ class _HomeState extends State<Home> {
   }
 
   void _showSourceViewer(String key, MarketData? data, AppState s) {
-    final url = _sourceUrl(key, data, s.place.name);
+    final selectedCity = data?.city ?? s.place.name;
+    final url = _sourceUrl(key, data, selectedCity);
     final controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setNavigationDelegate(NavigationDelegate(onNavigationRequest: (request) => _allowedSource(request.url) ? NavigationDecision.navigate : NavigationDecision.prevent))
@@ -342,7 +343,7 @@ class _HomeState extends State<Home> {
           Padding(
             padding: const EdgeInsets.fromLTRB(18, 12, 8, 8),
             child: Row(children: [
-              Expanded(child: Text('${_sourceName(key)} • ${s.place.name}', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16))),
+              Expanded(child: Text('${_sourceName(key)} • $selectedCity', style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16))),
               IconButton(onPressed: () => Navigator.pop(context), icon: const Icon(Icons.close)),
             ]),
           ),
@@ -374,37 +375,29 @@ class _HomeState extends State<Home> {
 
   String _sourceButtonLabel(String key, String language) {
     if (language == 'hi') {
-      return key == 'gold' || key == 'silver' ? 'विश्वसनीय source देखें' : 'Official source देखें';
+      return 'GoodReturns source देखें';
     }
-    return key == 'gold' || key == 'silver' ? 'View trusted source' : 'View official source';
+    return 'View GoodReturns source';
   }
 
-  String _sourceName(String key) {
-    if (key == 'petrol' || key == 'diesel' || key == 'lpg' || key == 'cng') {
-      return 'IndianOil / PPAC';
-    }
-    return 'IBJA / GoodReturns';
-  }
+  String _unitSuffix(String key) => key == 'gold' || key == 'silver' ? '/g' : key == 'cng' ? '/kg' : key == 'lpg' ? '/cyl' : '/L';
+
+  String _sourceName(String key) => 'GoodReturns';
 
   String _sourceUrl(String key, MarketData? data, String city) {
-    if (key == 'petrol' || key == 'diesel') {
-      return 'https://ppac.gov.in/retail-selling-price-rsp-of-petrol-diesel-and-domestic-lpg/price-build-up-of-petrol-and-diesel';
+    final slug = city.toLowerCase().trim().split(',').first.replaceAll(RegExp(r'[^a-z0-9]+'), '-').replaceAll(RegExp(r'^-|-$'), '');
+    const aliases = {'bengaluru': 'bangalore', 'bengalore': 'bangalore', 'new delhi': 'new-delhi', 'thiruvananthapuram': 'trivandrum'};
+    final normalized = aliases[city.toLowerCase().trim()] ?? slug;
+    if (key == 'gold' || key == 'silver') {
+      final section = key == 'gold' ? 'gold-rates' : 'silver-rates';
+      return normalized.isEmpty || normalized == 'india' ? 'https://www.goodreturns.in/$section/' : 'https://www.goodreturns.in/$section/$normalized.html';
     }
-    if (key == 'lpg') {
-      return 'https://cx.indianoil.in/webcenter/portal/Customer/pages_productprice';
-    }
-    if (key == 'cng') {
-      return 'https://iocl.com/prices-of-petroleum-products';
-    }
-    if (key == 'gold') {
-      return 'https://www.goodreturns.in/gold-rates/';
-    }
-    return 'https://www.goodreturns.in/silver-rates/';
+    return normalized.isEmpty || normalized == 'india' ? 'https://www.goodreturns.in/$key-price.html' : 'https://www.goodreturns.in/$key-price-in-$normalized.html';
   }
 
   bool _allowedSource(String rawUrl) {
     final host = Uri.tryParse(rawUrl)?.host ?? '';
-    return host == 'ppac.gov.in' || host.endsWith('.ppac.gov.in') || host == 'iocl.com' || host.endsWith('.iocl.com') || host == 'indianoil.in' || host.endsWith('.indianoil.in') || host == 'goodreturns.in' || host.endsWith('.goodreturns.in') || host == 'ibjarates.com' || host.endsWith('.ibjarates.com');
+    return host == 'goodreturns.in' || host.endsWith('.goodreturns.in');
   }
 
   Future<void> _captureOfficialRate(WebViewController controller, String key, AppState s) async {
@@ -439,7 +432,10 @@ class _HomeState extends State<Home> {
     if (key == 'lpg') {
       return value >= 300 && value <= 2500;
     }
-    return value >= 1000 && value <= 250000;
+    if (key == 'gold') {
+      return value >= 5000 && value <= 30000;
+    }
+    return value >= 50 && value <= 1000;
   }
 
   String _javaScriptText(String raw) {

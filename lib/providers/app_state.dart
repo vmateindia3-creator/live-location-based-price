@@ -17,7 +17,11 @@ class AppState extends ChangeNotifier {
       error = language == 'hi' ? 'Location उपलब्ध नहीं है' : 'Location unavailable';
     }
     try {
-      data = await _market.fetch(latitude: place.latitude, longitude: place.longitude, city: place.name);
+      final loaded = await _market.fetch(latitude: place.latitude, longitude: place.longitude, city: place.name);
+      data = loaded;
+      if (target == null && loaded.city.trim().isNotEmpty && loaded.city != 'India') {
+        place = PlaceResult(name: loaded.city, latitude: place.latitude, longitude: place.longitude);
+      }
     } catch (_) {
       data = null;
       error ??= language == 'hi' ? 'Rates अभी उपलब्ध नहीं हैं' : 'Rates are unavailable';
