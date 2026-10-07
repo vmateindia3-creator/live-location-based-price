@@ -1,22 +1,242 @@
 {
+  "ahmedabad": {
+    "city": "Ahmedabad",
+    "observedKeys": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "prices": {
+      "cng": 94.02,
+      "diesel": 97.92,
+      "gold": 14960.0,
+      "lpg": 949.0,
+      "petrol": 101.83,
+      "silver": 235.0
+    },
+    "updatedAt": "2026-10-07T06:15:38.998856+00:00"
+  },
+  "bangalore": {
+    "city": "Bengaluru",
+    "observedKeys": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "prices": {
+      "cng": 98.0,
+      "diesel": 99.56,
+      "gold": 14957.0,
+      "lpg": 944.5,
+      "petrol": 111.68,
+      "silver": 235.0
+    },
+    "updatedAt": "2026-10-07T06:15:38.998856+00:00"
+  },
   "bhopal": {
     "city": "Bhopal",
     "observedKeys": [
-      "cng"
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
     ],
     "prices": {
-      "cng": 51.0
+      "cng": 97.5,
+      "diesel": 99.55,
+      "gold": 14960.0,
+      "lpg": 947.5,
+      "petrol": 114.45,
+      "silver": 235.0
     },
-    "updatedAt": "2026-10-05T18:23:45.515278+00:00"
+    "updatedAt": "2026-10-07T06:15:38.998856+00:00"
+  },
+  "chennai": {
+    "city": "Chennai",
+    "observedKeys": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "prices": {
+      "cng": 99.5,
+      "diesel": 99.55,
+      "gold": 14957.0,
+      "lpg": 957.5,
+      "petrol": 107.76,
+      "silver": 245.0
+    },
+    "updatedAt": "2026-10-07T06:15:38.998856+00:00"
+  },
+  "delhi": {
+    "city": "Delhi",
+    "observedKeys": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "prices": {
+      "cng": 86.98,
+      "diesel": 97.83,
+      "gold": 14970.0,
+      "lpg": 941.5,
+      "petrol": 111.21,
+      "silver": 235.0
+    },
+    "updatedAt": "2026-10-07T06:15:38.998856+00:00"
+  },
+  "hyderabad": {
+    "city": "Hyderabad",
+    "observedKeys": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "prices": {
+      "cng": 112.0,
+      "diesel": 103.82,
+      "gold": 14957.0,
+      "lpg": 994.0,
+      "petrol": 115.69,
+      "silver": 245.0
+    },
+    "updatedAt": "2026-10-07T06:15:38.998856+00:00"
+  },
+  "jaipur": {
+    "city": "Jaipur",
+    "observedKeys": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "prices": {
+      "cng": 99.5,
+      "diesel": 97.78,
+      "gold": 14970.0,
+      "lpg": 945.5,
+      "petrol": 112.66,
+      "silver": 235.0
+    },
+    "updatedAt": "2026-10-07T06:15:38.998856+00:00"
   },
   "kolkata": {
     "city": "Kolkata",
     "observedKeys": [
-      "cng"
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
     ],
     "prices": {
-      "cng": 49.0
+      "cng": 93.5,
+      "diesel": 99.82,
+      "gold": 14957.0,
+      "lpg": 968.0,
+      "petrol": 113.51,
+      "silver": 235.0
     },
-    "updatedAt": "2026-10-05T18:23:45.515278+00:00"
+    "updatedAt": "2026-10-07T06:15:38.998856+00:00"
+  },
+  "lucknow": {
+    "city": "Lucknow",
+    "observedKeys": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "prices": {
+      "cng": 95.75,
+      "diesel": 95.36,
+      "gold": 14970.0,
+      "lpg": 979.5,
+      "petrol": 101.86,
+      "silver": 235.0
+    },
+    "updatedAt": "2026-10-07T06:15:38.998856+00:00"
+  },
+  "mumbai": {
+    "city": "Mumbai",
+    "observedKeys": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "prices": {
+      "cng": 88.0,
+      "diesel": 97.83,
+      "gold": 14957.0,
+      "lpg": 941.5,
+      "petrol": 111.21,
+      "silver": 235.0
+    },
+    "updatedAt": "2026-10-07T06:15:38.998856+00:00"
+  },
+  "patna": {
+    "city": "Patna",
+    "observedKeys": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "prices": {
+      "cng": 93.0,
+      "diesel": 99.36,
+      "gold": 14960.0,
+      "lpg": 1031.5,
+      "petrol": 113.37,
+      "silver": 235.0
+    },
+    "updatedAt": "2026-10-07T06:15:38.998856+00:00"
+  },
+  "pune": {
+    "city": "Pune",
+    "observedKeys": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "prices": {
+      "cng": 100.5,
+      "diesel": 98.44,
+      "gold": 14957.0,
+      "lpg": 945.0,
+      "petrol": 111.78,
+      "silver": 235.0
+    },
+    "updatedAt": "2026-10-07T06:15:38.998856+00:00"
   }
 }
