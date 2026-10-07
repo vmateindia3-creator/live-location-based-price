@@ -1,14 +1,16 @@
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-/// Non-blocking interstitial ads.
+/// Ad placement for the app.
 ///
-/// The ad unit below is Google's **test** interstitial. Before release, replace
-/// it with your production unit ID and add the AdMob application IDs to
-/// AndroidManifest.xml / Info.plist (see CONFIGURATION.md). Never show an ad on
-/// every tap; [maybeShow] enforces a cooldown.
+/// Both unit IDs below are Google's **test** IDs, so ads can be placed now and
+/// swapped for production units later. Before release, replace them and add the
+/// AdMob application IDs to AndroidManifest.xml / Info.plist (see
+/// CONFIGURATION.md), plus a consent flow.
 class AdService {
-  // TODO(release): replace with the production interstitial unit ID.
-  static const String _interstitialUnit = 'ca-app-pub-3940256099942544/1033173712';
+  // TODO(release): replace with your production unit IDs.
+  static const String interstitialUnit = 'ca-app-pub-3940256099942544/1033173712';
+  static const String bannerUnit = 'ca-app-pub-3940256099942544/6300978111';
+
   static const Duration _cooldown = Duration(minutes: 3);
 
   InterstitialAd? _ad;
@@ -16,7 +18,7 @@ class AdService {
 
   void preload() {
     InterstitialAd.load(
-      adUnitId: _interstitialUnit,
+      adUnitId: interstitialUnit,
       request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (ad) => _ad = ad,
@@ -25,6 +27,7 @@ class AdService {
     );
   }
 
+  /// Interstitial shown on tab switches, with a cooldown so it is not intrusive.
   void maybeShow() {
     final now = DateTime.now();
     if (_lastShown != null && now.difference(_lastShown!) < _cooldown) {
