@@ -13,6 +13,15 @@ cp .env.example .env
 python app.py
 ```
 
+## Test
+
+Tests are offline and deterministic (no network):
+
+```bash
+cd backend
+python -m unittest discover -s . -p 'test_*.py'
+```
+
 ## Deploy on Render
 
 1. Open Render and choose **New → Blueprint**.
@@ -32,12 +41,22 @@ The repository also contains `backend/Dockerfile` for Railway, Fly.io or any Doc
 
 ## Provider policy
 
-Price data is fetched from the selected city's GoodReturns pages. Weather uses Open-Meteo by default. The API normalizes fuel to INR/L (CNG INR/kg, LPG INR/cylinder), gold to INR/gram and silver to INR/gram. If a GoodReturns city page cannot be read, that item is omitted rather than replaced with another city's or demo price.
+Prices come from the selected city's GoodReturns pages. If the live page cannot be read, the API falls back to the daily-refreshed `data/price_cache.json` (`source: scheduled-cache`). It never substitutes a different city's value or a demo number; if neither source has data, `prices` is empty and `source` is `unavailable`. Weather uses Open-Meteo by default.
+
+The API normalizes fuel to INR/L (CNG INR/kg, LPG INR/cylinder), and gold and silver to INR/gram. Ranges outside conservative Indian retail bands are dropped.
 
 ```json
-{"prices":{"petrol":111.21,"diesel":97.83,"lpg":941.50,"cng":88.00,"gold":15023,"silver":234.90}}
+{"prices":{"petrol":94.72,"diesel":87.62,"lpg":903.00,"cng":75.09,"gold":10250.00,"silver":128.00},
+ "units":{"petrol":"INR/L","gold":"INR/g"},
+ "source":"goodreturns","observedKeys":["petrol","diesel","lpg","cng","gold","silver"]}
 ```
 
-For a long-running deployment, put this behind HTTPS, add a real database/Redis cache, scheduled refresh jobs, request authentication/rate limits, source attribution and monitoring.
+GoodReturns values are informational and should be checked on the linked city page before a purchase.
 
-GoodReturns values are informational and should be checked on the linked city page before a purchase. The app never silently substitutes a different city, stale cache value or demo value.
+## Operations
+
+- In-memory cache with `CACHE_TTL_SECONDS` (per worker, cleared on restart).
+- Simple per-IP rate limit via `RATE_LIMIT_PER_MIN` (0 disables it).
+- Restrict browser origins with `ALLOWED_ORIGINS` in production.
+
+For a long-running deployment, put this behind HTTPS, add a real database/Redis cache, request authentication, source attribution and monitoring.
