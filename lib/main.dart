@@ -4,7 +4,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart' hide AppState;
 import 'package:webview_flutter/webview_flutter.dart';
 import 'models/market_models.dart';
 import 'providers/app_state.dart';
@@ -12,11 +11,6 @@ import 'services/ad_service.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  try {
-    MobileAds.instance.initialize();
-  } catch (_) {
-    // Ads are optional; a device-specific SDK issue must not block the app.
-  }
   runApp(const LivePriceApp());
 }
 
@@ -32,8 +26,21 @@ class _LivePriceAppState extends State<LivePriceApp> {
   @override
   void initState() {
     super.initState();
-    state.load();
-    ads.preload();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted) return;
+      // Open safely with the India fallback. GPS/permission is user-triggered
+      // from the location button, so a broken provider cannot kill startup.
+      state.load(target: const PlaceResult(name: 'India', latitude: 20.5937, longitude: 78.9629));
+      Future<void>.delayed(const Duration(seconds: 4), () {
+        if (mounted) {
+          try {
+            ads.preload();
+          } catch (_) {
+            // Ads are optional and must never block the first screen.
+          }
+        }
+      });
+    });
   }
 
   @override
