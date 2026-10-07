@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:webview_flutter/webview_flutter.dart';
+
 import 'models/market_models.dart';
 import 'providers/app_state.dart';
 import 'services/ad_service.dart';
@@ -16,7 +16,8 @@ void main() {
 
 class LivePriceApp extends StatefulWidget {
   const LivePriceApp({super.key});
-  @override State<LivePriceApp> createState() => _LivePriceAppState();
+  @override
+  State<LivePriceApp> createState() => _LivePriceAppState();
 }
 
 class _LivePriceAppState extends State<LivePriceApp> {
@@ -41,6 +42,13 @@ class _LivePriceAppState extends State<LivePriceApp> {
         }
       });
     });
+  }
+
+  @override
+  void dispose() {
+    ads.dispose();
+    state.dispose();
+    super.dispose();
   }
 
   @override
@@ -86,21 +94,39 @@ class SplashGate extends StatefulWidget {
 }
 
 class _SplashGateState extends State<SplashGate> {
-  bool ready = false;
+  bool _minElapsed = false;
+  bool _started = false;
 
   @override
   void initState() {
     super.initState();
-    Future<void>.delayed(const Duration(milliseconds: 2200), () {
-      if (mounted) {
-        setState(() => ready = true);
-      }
+    Future<void>.delayed(const Duration(milliseconds: 1200), () {
+      if (mounted) setState(() => _minElapsed = true);
     });
+    widget.state.addListener(_onStateChanged);
+  }
+
+  void _onStateChanged() {
+    if (!mounted) return;
+    if (widget.state.loading) {
+      _started = true;
+    }
+    setState(() {});
   }
 
   @override
+  void dispose() {
+    widget.state.removeListener(_onStateChanged);
+    super.dispose();
+  }
+
+  // Wait for the first load to finish (plus a short minimum splash) instead of
+  // a fixed timer, so the home screen never flashes an empty state.
+  bool get _ready => _minElapsed && _started && !widget.state.loading;
+
+  @override
   Widget build(BuildContext context) {
-    if (ready) {
+    if (_ready) {
       return Home(state: widget.state, ads: widget.ads, colors: widget.colors);
     }
     return Scaffold(
@@ -132,7 +158,8 @@ class Home extends StatefulWidget {
   final AppState state;
   final AdService ads;
   final List<Color> colors;
-  @override State<Home> createState() => _HomeState();
+  @override
+  State<Home> createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
@@ -167,56 +194,56 @@ class _HomeState extends State<Home> {
               final horizontal = isTablet ? 32.0 : 16.0;
               return Column(
                 children: [
-              Padding(
-                padding: EdgeInsets.fromLTRB(isTablet ? 32 : 20, 18, isTablet ? 32 : 20, 12),
-                child: Row(children: [
-                  Expanded(child: FittedBox(alignment: Alignment.centerLeft, fit: BoxFit.scaleDown, child: Text(s.language == 'hi' ? 'लाइव रेट' : 'Live Price', style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w800)))),
-                  TextButton(onPressed: s.toggleLanguage, child: Text(s.language == 'hi' ? 'EN' : 'हि', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
-                  IconButton(onPressed: () async { await s.load(); if (mounted) search.clear(); }, icon: const Icon(Icons.my_location, color: Colors.white)),
-                ]),
-              ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: horizontal),
-                child: TextField(
-                  controller: search,
-                  onSubmitted: (value) async {
-                    await s.searchCity(value);
-                    if (mounted) {
-                      search.text = s.place.name;
-                    }
-                  },
-                  style: const TextStyle(color: Colors.white),
-                  decoration: InputDecoration(
-                    hintText: s.language == 'hi' ? 'शहर खोजें…' : 'Search city in India…',
-                    hintStyle: const TextStyle(color: Colors.white70),
-                    prefixIcon: const Icon(Icons.search, color: Colors.white),
-                    filled: true,
-                    fillColor: Colors.white24,
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(18), borderSide: BorderSide.none),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(isTablet ? 32 : 20, 18, isTablet ? 32 : 20, 12),
+                    child: Row(children: [
+                      Expanded(child: FittedBox(alignment: Alignment.centerLeft, fit: BoxFit.scaleDown, child: Text(s.language == 'hi' ? 'लाइव रेट' : 'Live Price', style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w800)))),
+                      TextButton(onPressed: s.toggleLanguage, child: Text(s.language == 'hi' ? 'EN' : 'हि', style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold))),
+                      IconButton(onPressed: () async { await s.load(); if (mounted) search.clear(); }, icon: const Icon(Icons.my_location, color: Colors.white)),
+                    ]),
                   ),
-                ),
-              ),
-              const SizedBox(height: 14),
-              _weather(data?.weather, s),
-              Expanded(
-                child: Container(
-                  decoration: const BoxDecoration(color: Color(0xfff4faf7), borderRadius: BorderRadius.vertical(top: Radius.circular(28))),
-                  child: Column(children: [
-                    Padding(padding: const EdgeInsets.fromLTRB(18, 16, 18, 4), child: Row(children: [_tab(s.language == 'hi' ? 'ईंधन' : 'Fuel', 0), _tab(s.language == 'hi' ? 'धातु' : 'Wealth', 1)])),
-                    Expanded(
-                      child: s.loading
-                          ? const Center(child: CircularProgressIndicator())
-                          : ListView(
-                              padding: EdgeInsets.fromLTRB(horizontal, 4, horizontal, 24),
-                              children: [
-                                _responsiveGrid(keys, data, s),
-                                if (s.error != null) Text(s.error!, style: const TextStyle(color: Colors.red)),
-                              ],
-                            ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: horizontal),
+                    child: TextField(
+                      controller: search,
+                      onSubmitted: (value) async {
+                        await s.searchCity(value);
+                        if (mounted) {
+                          search.text = s.place.name;
+                        }
+                      },
+                      style: const TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                        hintText: s.language == 'hi' ? 'शहर खोजें…' : 'Search city in India…',
+                        hintStyle: const TextStyle(color: Colors.white70),
+                        prefixIcon: const Icon(Icons.search, color: Colors.white),
+                        filled: true,
+                        fillColor: Colors.white24,
+                        border: OutlineInputBorder(borderRadius: BorderRadius.circular(18), borderSide: BorderSide.none),
+                      ),
                     ),
-                  ]),
-                ),
-              ),
+                  ),
+                  const SizedBox(height: 14),
+                  _weather(data?.weather, s),
+                  Expanded(
+                    child: Container(
+                      decoration: const BoxDecoration(color: Color(0xfff4faf7), borderRadius: BorderRadius.vertical(top: Radius.circular(28))),
+                      child: Column(children: [
+                        Padding(padding: const EdgeInsets.fromLTRB(18, 16, 18, 4), child: Row(children: [_tab(s.language == 'hi' ? 'ईंधन' : 'Fuel', 0), _tab(s.language == 'hi' ? 'धातु' : 'Wealth', 1)])),
+                        Expanded(
+                          child: s.loading
+                              ? const Center(child: CircularProgressIndicator())
+                              : ListView(
+                                  padding: EdgeInsets.fromLTRB(horizontal, 4, horizontal, 24),
+                                  children: [
+                                    _responsiveGrid(keys, data, s),
+                                    if (s.error != null) Text(s.error!, style: const TextStyle(color: Colors.red)),
+                                  ],
+                                ),
+                        ),
+                      ]),
+                    ),
+                  ),
                 ],
               );
             },
@@ -236,7 +263,7 @@ class _HomeState extends State<Home> {
           spacing: gap,
           runSpacing: 4,
           children: [
-            ...keys.map((key) => SizedBox(width: width, child: _priceCard(key, data?.prices[key] ?? 0, data, s))),
+            ...keys.map((key) => SizedBox(width: width, child: _priceCard(key, data, s))),
           ],
         );
       },
@@ -256,7 +283,7 @@ class _HomeState extends State<Home> {
         ),
       );
 
-  Widget _weather(dynamic weather, AppState s) => Padding(
+  Widget _weather(WeatherData? weather, AppState s) => Padding(
         padding: const EdgeInsets.fromLTRB(18, 0, 18, 18),
         child: Row(children: [
           const Icon(Icons.cloud_queue, color: Colors.white, size: 38),
@@ -273,7 +300,7 @@ class _HomeState extends State<Home> {
     return amountControllers.putIfAbsent(key, () => TextEditingController(text: '1000'));
   }
 
-  Widget _priceCard(String key, double price, MarketData? data, AppState s) {
+  Widget _priceCard(String key, MarketData? data, AppState s) {
     final amountController = _amountController(key);
     final value = double.tryParse(amountController.text) ?? 0;
     final officialRate = temporaryRates[key];
@@ -380,11 +407,16 @@ class _HomeState extends State<Home> {
     return 'View GoodReturns source';
   }
 
-  String _unitSuffix(String key) => key == 'gold' || key == 'silver' ? '/g' : key == 'cng' ? '/kg' : key == 'lpg' ? '/cyl' : '/L';
+  String _unitSuffix(String key) => kPriceUnits[key] ?? '';
 
   String _sourceName(String key) => 'GoodReturns';
 
+  /// Prefer the URL the backend already returned; only build one as a fallback.
   String _sourceUrl(String key, MarketData? data, String city) {
+    final fromServer = data?.sourceUrls?[key];
+    if (fromServer != null && fromServer.isNotEmpty) {
+      return fromServer;
+    }
     final slug = city.toLowerCase().trim().split(',').first.replaceAll(RegExp(r'[^a-z0-9]+'), '-').replaceAll(RegExp(r'^-|-$'), '');
     const aliases = {'bengaluru': 'bangalore', 'bengalore': 'bangalore', 'new delhi': 'new-delhi', 'thiruvananthapuram': 'trivandrum'};
     final normalized = aliases[city.toLowerCase().trim()] ?? slug;
@@ -403,20 +435,14 @@ class _HomeState extends State<Home> {
   Future<void> _captureOfficialRate(WebViewController controller, String key, AppState s) async {
     try {
       final result = await controller.runJavaScriptReturningResult('document.body ? document.body.innerText : ""');
-      final raw = result.toString();
-      final text = _javaScriptText(raw);
-      final numbers = RegExp(r'(?:₹|Rs\.?|INR)?\s*([0-9]{1,3}(?:,[0-9]{2,3})*(?:\.[0-9]{1,2})?)')
-          .allMatches(text)
-          .map((match) => double.tryParse(match.group(1)!.replaceAll(',', '')))
-          .whereType<double>()
-          .where((value) => _validRate(key, value))
-          .toList();
-      if (numbers.isEmpty) {
+      final text = _javaScriptText(result.toString());
+      final rate = _extractRate(key, text);
+      if (rate == null) {
         throw const FormatException('No visible rate found');
       }
-      setState(() => temporaryRates[key] = numbers.first);
+      setState(() => temporaryRates[key] = rate);
       if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(s.language == 'hi' ? 'Official page का ₹${numbers.first.toStringAsFixed(2)} rate अस्थायी रूप से इस्तेमाल हो रहा है' : '₹${numbers.first.toStringAsFixed(2)} from the official page is active temporarily')));
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(s.language == 'hi' ? 'Official page का ₹${rate.toStringAsFixed(2)} rate अस्थायी रूप से इस्तेमाल हो रहा है' : '₹${rate.toStringAsFixed(2)} from the official page is active temporarily')));
       }
     } catch (_) {
       if (mounted) {
@@ -425,17 +451,36 @@ class _HomeState extends State<Home> {
     }
   }
 
-  bool _validRate(String key, double value) {
-    if (key == 'petrol' || key == 'diesel' || key == 'cng') {
-      return value >= 20 && value <= 250;
+  /// Find the rate next to the item's label, not just the first number on the
+  /// page (which is often a date, another city or an ad figure).
+  double? _extractRate(String key, String text) {
+    final keywords = <String, List<String>>{
+      'petrol': ['petrol'],
+      'diesel': ['diesel'],
+      'lpg': ['lpg', 'cylinder'],
+      'cng': ['cng'],
+      'gold': ['24k', 'gold'],
+      'silver': ['silver'],
+    }[key]!;
+    final numberRe = RegExp(r'([0-9]{1,3}(?:,[0-9]{2,3})*(?:\.[0-9]{1,2})?)');
+    for (final line in text.split(RegExp(r'[\n\r]+'))) {
+      final lower = line.toLowerCase();
+      if (!keywords.any(lower.contains)) continue;
+      for (final match in numberRe.allMatches(line)) {
+        final value = double.tryParse(match.group(1)!.replaceAll(',', ''));
+        if (value != null && isPlausiblePrice(key, value)) {
+          return value;
+        }
+      }
     }
-    if (key == 'lpg') {
-      return value >= 300 && value <= 2500;
+    // Last resort: any plausible value on the page.
+    for (final match in numberRe.allMatches(text)) {
+      final value = double.tryParse(match.group(1)!.replaceAll(',', ''));
+      if (value != null && isPlausiblePrice(key, value)) {
+        return value;
+      }
     }
-    if (key == 'gold') {
-      return value >= 5000 && value <= 30000;
-    }
-    return value >= 50 && value <= 1000;
+    return null;
   }
 
   String _javaScriptText(String raw) {
@@ -446,5 +491,4 @@ class _HomeState extends State<Home> {
       return raw;
     }
   }
-
 }
