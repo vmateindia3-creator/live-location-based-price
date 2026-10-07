@@ -16,10 +16,15 @@ class AppState extends ChangeNotifier {
   final LocationService _location;
 
   MarketData? data;
-  PlaceResult place = const PlaceResult(name: 'India', latitude: 20.5937, longitude: 78.9629);
+  PlaceResult? place;
   bool loading = false;
+  bool pricesRevealed = false;
   String? error;
   String language = 'hi';
+
+  bool get hasLocation => place != null;
+
+  String _msg(String hi, String en) => language == 'hi' ? hi : en;
 
   Future<void> _restoreLanguage() async {
     try {
@@ -34,28 +39,59 @@ class AppState extends ChangeNotifier {
     }
   }
 
+  /// Resolve the location (from [target] or the device) and load weather.
+  /// Prices stay hidden until [updatePrices] is called.
   Future<void> load({PlaceResult? target}) async {
     loading = true;
     error = null;
+    pricesRevealed = false;
     notifyListeners();
 
     try {
       place = target ?? await _location.current();
     } catch (_) {
-      error = language == 'hi' ? 'Location उपलब्ध नहीं है' : 'Location unavailable';
-    }
-
-    try {
-      final loaded = await _market.fetch(latitude: place.latitude, longitude: place.longitude, city: place.name);
-      data = loaded;
-      if (target == null && loaded.city.trim().isNotEmpty && loaded.city != 'India') {
-        place = PlaceResult(name: loaded.city, latitude: place.latitude, longitude: place.longitude);
+      if (target == null) {
+        place = null;
+        error = _msg('पहले location चुनें', 'Select location first');
+        loading = false;
+        notifyListeners();
+        return;
       }
-    } catch (_) {
-      // Keep the last successful data rather than blanking the screen.
-      error ??= language == 'hi' ? 'Rates अभी उपलब्ध नहीं हैं' : 'Rates are unavailable';
     }
 
+    if (place != null) {
+      try {
+        final loaded = await _market.fetch(latitude: place!.latitude, longitude: place!.longitude, city: place!.name);
+        data = loaded;
+        if (target == null && loaded.city.trim().isNotEmpty && loaded.city != 'India') {
+          place = PlaceResult(name: loaded.city, latitude: place!.latitude, longitude: place!.longitude);
+        }
+      } catch (_) {
+        error ??= _msg('डेटा अभी उपलब्ध नहीं है', 'Data is unavailable right now');
+      }
+    }
+
+    loading = false;
+    notifyListeners();
+  }
+
+  /// Fetch the latest rates for the selected location and reveal them.
+  Future<void> updatePrices() async {
+    final current = place;
+    if (current == null) {
+      error = _msg('पहले location चुनें', 'Select location first');
+      notifyListeners();
+      return;
+    }
+    loading = true;
+    error = null;
+    notifyListeners();
+    try {
+      data = await _market.fetch(latitude: current.latitude, longitude: current.longitude, city: current.name);
+      pricesRevealed = true;
+    } catch (_) {
+      error = _msg('रेट अभी उपलब्ध नहीं हैं', 'Rates are unavailable right now');
+    }
     loading = false;
     notifyListeners();
   }
@@ -68,11 +104,13 @@ class AppState extends ChangeNotifier {
     try {
       await load(target: await _market.search(query));
     } catch (_) {
-      error = language == 'hi' ? 'शहर नहीं मिला' : 'City not found';
+      error = _msg('शहर नहीं मिला', 'City not found');
       loading = false;
       notifyListeners();
     }
   }
+
+  Future<void> openLocationSettings() => _location.openSettings();
 
   void toggleLanguage() {
     language = language == 'hi' ? 'en' : 'hi';
