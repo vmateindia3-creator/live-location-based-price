@@ -1,17 +1,21 @@
 """Live Location Based Price — Flask API.
 
-Designed to serve many users from cache and hit the upstream site as rarely as
-possible:
+Price data comes from GoodReturns. The tricky part is that GoodReturns only has
+dedicated pages for bigger cities: for a smaller town the city URL quietly
+returns the generic "Price in India" page, whose headline figure is **Mumbai's**
+rate. Blindly reading that headline is what made every town show Mumbai prices.
 
-1. **City cache** (in memory, ``CACHE_TTL_SECONDS``): a city is looked up at
-   most once per TTL, no matter how many users ask for it.
-2. **Scheduled file cache** (``data/price_cache.json``, refreshed daily): served
-   directly, with no upstream request at all.
-3. **Live scrape** (throttled, last resort): only for a city that is not in the
-   file cache, or whose entry is older than ``CACHE_MAX_AGE_SECONDS``.
+So for fuel we resolve, in order:
+  1. the city's row in the page's "Metro Cities & State Capitals" table,
+  2. the **state's** row in the "State-Wise" table,
+  3. only then the headline (marked as approximate).
 
-Reverse geocoding and weather are cached separately, so a request usually makes
-zero outbound calls.
+Gold and silver are effectively national rates, so their city page is used
+directly with a national fallback.
+
+Caching keeps the number of users from scaling the requests to the source:
+a city is looked up at most once per CACHE_TTL, the scheduled file cache is
+served without any upstream call, and any live scrape is throttled.
 """
 
 import html
@@ -44,11 +48,9 @@ CORS(app, resources={r"/v1/*": {"origins": _allowed_origins or "*"}})
 # Cache lifetimes (seconds).
 CACHE_TTL = int(os.getenv("CACHE_TTL_SECONDS", "1800"))          # city prices: 30 min
 GEOCODE_TTL = int(os.getenv("GEOCODE_TTL_SECONDS", "86400"))     # reverse geocode: 24 h
-WEATHER_TTL = int(os.getenv("WEATHER_TTL_SECONDS", "900"))       # weather: 15 min
+WEATHER_TTL = int(os.getenv("WEATHER_TTL_SECONDS", "900"))       # weather: 15 min (fresher than hourly)
 CACHE_MAX_AGE = int(os.getenv("CACHE_MAX_AGE_SECONDS", "129600"))  # file cache: serve up to 36 h
 
-# Upstream protection: at most this many scrape rounds in flight, and at least
-# this many seconds between the start of two rounds.
 SCRAPE_MIN_INTERVAL = float(os.getenv("SCRAPE_MIN_INTERVAL_SECONDS", "1.0"))
 SCRAPE_MAX_CONCURRENCY = int(os.getenv("SCRAPE_MAX_CONCURRENCY", "2"))
 
@@ -78,26 +80,118 @@ PRICE_UNITS = {
     "silver": "INR/g",
 }
 
-# Fallback city table used when reverse geocoding is unavailable.
-CITY_COORDS = {
-    "Delhi": (28.6139, 77.2090), "New Delhi": (28.6139, 77.2090), "Gurugram": (28.4595, 77.0266),
-    "Noida": (28.5355, 77.3910), "Mumbai": (19.0760, 72.8777), "Thane": (19.2183, 72.9781),
-    "Navi Mumbai": (19.0330, 73.0297), "Pune": (18.5204, 73.8567), "Nagpur": (21.1458, 79.0882),
-    "Kolkata": (22.5726, 88.3639), "Howrah": (22.5958, 88.2636), "Bengaluru": (12.9716, 77.5946),
-    "Chennai": (13.0827, 80.2707), "Hyderabad": (17.3850, 78.4867), "Secunderabad": (17.4399, 78.4983),
-    "Ahmedabad": (23.0225, 72.5714), "Surat": (21.1702, 72.8311), "Vadodara": (22.3072, 73.1812),
-    "Jaipur": (26.9124, 75.7873), "Lucknow": (26.8467, 80.9462), "Kanpur": (26.4499, 80.3319),
-    "Varanasi": (25.3176, 82.9739), "Patna": (25.5941, 85.1376), "Bhopal": (23.2599, 77.4126),
-    "Indore": (22.7196, 75.8577), "Raipur": (21.2514, 81.6296), "Chandigarh": (30.7333, 76.7794),
-    "Ludhiana": (30.9010, 75.8573), "Amritsar": (31.6340, 74.8723), "Dehradun": (30.3165, 78.0322),
-    "Kochi": (9.9312, 76.2673), "Thiruvananthapuram": (8.5241, 76.9366), "Kozhikode": (11.2588, 75.7804),
-    "Coimbatore": (11.0168, 76.9558), "Madurai": (9.9252, 78.1198), "Visakhapatnam": (17.6868, 83.2185),
-    "Vijayawada": (16.5062, 80.6480), "Bhubaneswar": (20.2961, 85.8245), "Guwahati": (26.1445, 91.7362),
-    "Ranchi": (23.3441, 85.3096), "Jodhpur": (26.2389, 73.0243), "Agra": (27.1767, 78.0081),
-    "Goa": (15.2993, 74.1240), "Panaji": (15.4909, 73.8278), "Mysuru": (12.2958, 76.6394),
+# Cities that appear in GoodReturns' metro/state-capital table, mapped to the
+# name used there.
+CITY_TABLE_ALIASES = {
+    "new delhi": "New Delhi", "delhi": "New Delhi",
+    "gurugram": "Gurgaon", "gurgaon": "Gurgaon",
+    "noida": "Noida",
+    "mumbai": "Mumbai", "thane": "Mumbai", "navi mumbai": "Mumbai",
+    "kolkata": "Kolkata", "howrah": "Kolkata",
+    "chennai": "Chennai",
+    "hyderabad": "Hyderabad", "secunderabad": "Hyderabad",
+    "bengaluru": "Bangalore", "bangalore": "Bangalore",
+    "bhubaneswar": "Bhubaneswar", "cuttack": "Bhubaneswar",
+    "chandigarh": "Chandigarh",
+    "jaipur": "Jaipur",
+    "lucknow": "Lucknow",
+    "patna": "Patna",
+    "thiruvananthapuram": "Thiruvananthapuram", "trivandrum": "Thiruvananthapuram",
 }
 
-# Per-IP request limit (requests per minute). 0 disables it.
+# name -> (lat, lng, state). Used for nearest-city fallback and for the
+# state-wise lookup when reverse geocoding is unavailable.
+CITY_COORDS = {
+    "Amethi": (26.1536, 81.8108, "Uttar Pradesh"),
+    "Sultanpur": (26.2649, 82.0727, "Uttar Pradesh"),
+    "Delhi": (28.6139, 77.2090, "Delhi"),
+    "New Delhi": (28.6139, 77.2090, "Delhi"),
+    "Gurugram": (28.4595, 77.0266, "Haryana"),
+    "Faridabad": (28.4089, 77.3178, "Haryana"),
+    "Noida": (28.5355, 77.3910, "Uttar Pradesh"),
+    "Ghaziabad": (28.6692, 77.4538, "Uttar Pradesh"),
+    "Mumbai": (19.0760, 72.8777, "Maharashtra"),
+    "Thane": (19.2183, 72.9781, "Maharashtra"),
+    "Navi Mumbai": (19.0330, 73.0297, "Maharashtra"),
+    "Pune": (18.5204, 73.8567, "Maharashtra"),
+    "Nagpur": (21.1458, 79.0882, "Maharashtra"),
+    "Nashik": (19.9975, 73.7898, "Maharashtra"),
+    "Aurangabad": (19.8762, 75.3433, "Maharashtra"),
+    "Kolhapur": (16.7050, 74.2433, "Maharashtra"),
+    "Solapur": (17.6599, 75.9064, "Maharashtra"),
+    "Kolkata": (22.5726, 88.3639, "West Bengal"),
+    "Howrah": (22.5958, 88.2636, "West Bengal"),
+    "Siliguri": (26.7271, 88.3953, "West Bengal"),
+    "Bengaluru": (12.9716, 77.5946, "Karnataka"),
+    "Mysuru": (12.2958, 76.6394, "Karnataka"),
+    "Mangaluru": (12.9141, 74.8560, "Karnataka"),
+    "Hubballi": (15.3647, 75.1240, "Karnataka"),
+    "Chennai": (13.0827, 80.2707, "Tamil Nadu"),
+    "Coimbatore": (11.0168, 76.9558, "Tamil Nadu"),
+    "Madurai": (9.9252, 78.1198, "Tamil Nadu"),
+    "Tiruchirappalli": (10.7905, 78.7047, "Tamil Nadu"),
+    "Salem": (11.6643, 78.1460, "Tamil Nadu"),
+    "Hyderabad": (17.3850, 78.4867, "Telangana"),
+    "Secunderabad": (17.4399, 78.4983, "Telangana"),
+    "Warangal": (17.9689, 79.5941, "Telangana"),
+    "Ahmedabad": (23.0225, 72.5714, "Gujarat"),
+    "Surat": (21.1702, 72.8311, "Gujarat"),
+    "Vadodara": (22.3072, 73.1812, "Gujarat"),
+    "Rajkot": (22.3039, 70.8022, "Gujarat"),
+    "Jamnagar": (22.4707, 70.0577, "Gujarat"),
+    "Gandhinagar": (23.2156, 72.6369, "Gujarat"),
+    "Jaipur": (26.9124, 75.7873, "Rajasthan"),
+    "Jodhpur": (26.2389, 73.0243, "Rajasthan"),
+    "Udaipur": (24.5854, 73.7125, "Rajasthan"),
+    "Kota": (25.2138, 75.8648, "Rajasthan"),
+    "Ajmer": (26.4499, 74.6399, "Rajasthan"),
+    "Lucknow": (26.8467, 80.9462, "Uttar Pradesh"),
+    "Kanpur": (26.4499, 80.3319, "Uttar Pradesh"),
+    "Varanasi": (25.3176, 82.9739, "Uttar Pradesh"),
+    "Agra": (27.1767, 78.0081, "Uttar Pradesh"),
+    "Meerut": (28.9845, 77.7064, "Uttar Pradesh"),
+    "Prayagraj": (25.4358, 81.8463, "Uttar Pradesh"),
+    "Gorakhpur": (26.7606, 83.3732, "Uttar Pradesh"),
+    "Patna": (25.5941, 85.1376, "Bihar"),
+    "Gaya": (24.7955, 85.0002, "Bihar"),
+    "Muzaffarpur": (26.1209, 85.3647, "Bihar"),
+    "Bhopal": (23.2599, 77.4126, "Madhya Pradesh"),
+    "Indore": (22.7196, 75.8577, "Madhya Pradesh"),
+    "Gwalior": (26.2183, 78.1828, "Madhya Pradesh"),
+    "Jabalpur": (23.1815, 79.9864, "Madhya Pradesh"),
+    "Ujjain": (23.1793, 75.7849, "Madhya Pradesh"),
+    "Raipur": (21.2514, 81.6296, "Chhattisgarh"),
+    "Bhilai": (21.1938, 81.3509, "Chhattisgarh"),
+    "Ranchi": (23.3441, 85.3096, "Jharkhand"),
+    "Jamshedpur": (22.8046, 86.2029, "Jharkhand"),
+    "Dhanbad": (23.7957, 86.4304, "Jharkhand"),
+    "Bhubaneswar": (20.2961, 85.8245, "Odisha"),
+    "Cuttack": (20.4625, 85.8830, "Odisha"),
+    "Chandigarh": (30.7333, 76.7794, "Chandigarh"),
+    "Ludhiana": (30.9010, 75.8573, "Punjab"),
+    "Amritsar": (31.6340, 74.8723, "Punjab"),
+    "Jalandhar": (31.3260, 75.5762, "Punjab"),
+    "Dehradun": (30.3165, 78.0322, "Uttarakhand"),
+    "Haridwar": (29.9457, 78.1642, "Uttarakhand"),
+    "Shimla": (31.1048, 77.1734, "Himachal Pradesh"),
+    "Jammu": (32.7266, 74.8570, "Jammu & Kashmir"),
+    "Srinagar": (34.0837, 74.7973, "Jammu & Kashmir"),
+    "Guwahati": (26.1445, 91.7362, "Assam"),
+    "Kochi": (9.9312, 76.2673, "Kerala"),
+    "Thiruvananthapuram": (8.5241, 76.9366, "Kerala"),
+    "Kozhikode": (11.2588, 75.7804, "Kerala"),
+    "Thrissur": (10.5276, 76.2144, "Kerala"),
+    "Visakhapatnam": (17.6868, 83.2185, "Andhra Pradesh"),
+    "Vijayawada": (16.5062, 80.6480, "Andhra Pradesh"),
+    "Guntur": (16.3067, 80.4365, "Andhra Pradesh"),
+    "Tirupati": (13.6288, 79.4192, "Andhra Pradesh"),
+    "Nellore": (14.4426, 79.9865, "Andhra Pradesh"),
+    "Goa": (15.2993, 74.1240, "Goa"),
+    "Panaji": (15.4909, 73.8278, "Goa"),
+}
+
+CITY_STATE = {name.lower(): state for name, (_, _, state) in CITY_COORDS.items()}
+
 RATE_LIMIT_PER_MIN = int(os.getenv("RATE_LIMIT_PER_MIN", "120"))
 _rate_buckets = defaultdict(deque)
 _rate_lock = Lock()
@@ -109,6 +203,10 @@ _scrape_sem = BoundedSemaphore(SCRAPE_MAX_CONCURRENCY)
 _scrape_lock = Lock()
 _last_scrape = 0.0
 
+
+# --------------------------------------------------------------------------- #
+# helpers
+# --------------------------------------------------------------------------- #
 
 def sanitize_prices(prices):
     clean = {}
@@ -181,12 +279,23 @@ def demo_weather():
 
 def fetch_weather(lat, lng):
     try:
-        params = {"latitude": lat, "longitude": lng, "current": "temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code"}
-        response = requests.get(WEATHER_URL, params=params, timeout=5)
+        params = {
+            "latitude": lat,
+            "longitude": lng,
+            "current": "temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code",
+            "timezone": "auto",
+        }
+        response = requests.get(WEATHER_URL, params=params, timeout=6)
         response.raise_for_status()
         current = response.json().get("current", {})
         code = int(current.get("weather_code", 3))
-        conditions = {0: "Clear", 1: "Mainly clear", 2: "Partly cloudy", 3: "Overcast", 61: "Rain", 71: "Snow", 95: "Thunderstorm"}
+        conditions = {
+            0: "Clear", 1: "Mainly clear", 2: "Partly cloudy", 3: "Overcast",
+            45: "Fog", 48: "Fog", 51: "Drizzle", 53: "Drizzle", 55: "Drizzle",
+            61: "Light rain", 63: "Rain", 65: "Heavy rain", 71: "Snow", 73: "Snow",
+            80: "Showers", 81: "Showers", 82: "Heavy showers", 95: "Thunderstorm",
+            96: "Thunderstorm", 99: "Thunderstorm",
+        }
         return {
             "temperatureC": float(current.get("temperature_2m", 29)),
             "condition": conditions.get(code, "Current weather"),
@@ -224,8 +333,82 @@ def city_slug(city):
     return re.sub(r"[^a-z0-9]+", "-", name).strip("-")
 
 
+# --------------------------------------------------------------------------- #
+# location resolution (city + state)
+# --------------------------------------------------------------------------- #
+
+def nearest_city(lat, lng):
+    """Closest known city -> (name, state)."""
+    best = None
+    best_distance = float("inf")
+    for name, (clat, clng, state) in CITY_COORDS.items():
+        distance = (clat - lat) ** 2 + (clng - lng) ** 2
+        if distance < best_distance:
+            best_distance = distance
+            best = (name, state)
+    return best
+
+
+def reverse_geocode(lat, lng):
+    """(city, state) from coordinates, or (None, None)."""
+    try:
+        response = requests.get(
+            "https://nominatim.openstreetmap.org/reverse",
+            params={"lat": lat, "lon": lng, "format": "jsonv2", "zoom": 10, "addressdetails": 1},
+            headers={"User-Agent": "LiveLocationPrice/1.0"},
+            timeout=6,
+        )
+        response.raise_for_status()
+        address = response.json().get("address", {})
+        city = (address.get("city") or address.get("town") or address.get("municipality")
+                or address.get("county") or address.get("state_district") or address.get("village"))
+        state = address.get("state")
+        return city, state
+    except (requests.RequestException, ValueError, TypeError) as exc:
+        logger.debug("reverse geocode failed: %s", exc)
+        return None, None
+
+
+def resolve_location(lat, lng, requested):
+    """Resolve (city, state) for a request.
+
+    A searched city name is trusted for the city, but the state is still taken
+    from the coordinates so the state-wise table can be used for small towns.
+    """
+    key = f"geo:{round(lat, 2)}:{round(lng, 2)}"
+    cached = cache_get(key)
+    if cached:
+        geo_city, geo_state = cached
+    else:
+        geo_city, geo_state = reverse_geocode(lat, lng)
+        if not geo_city and not geo_state:
+            fallback = nearest_city(lat, lng)
+            if fallback:
+                geo_city, geo_state = fallback
+        cache_put(key, (geo_city, geo_state), ttl=GEOCODE_TTL)
+
+    name = (requested or "").strip()
+    if name and name.lower() not in {"india", "current location"}:
+        city = name
+        state = geo_state or CITY_STATE.get(name.lower(), "")
+    else:
+        city = geo_city or "India"
+        state = geo_state or ""
+
+    if not state:
+        state = CITY_STATE.get(city.lower(), "")
+    return city, state
+
+
+def valid_coords(lat, lng):
+    return -90 <= lat <= 90 and -180 <= lng <= 180
+
+
+# --------------------------------------------------------------------------- #
+# GoodReturns fetching and parsing
+# --------------------------------------------------------------------------- #
+
 def candidate_urls(city):
-    """Per-item GoodReturns URLs to try in order (city page, then national)."""
     slug = city_slug(city)
     has_city = bool(slug) and slug != "india"
     suffix = f"-in-{slug}.html" if has_city else ".html"
@@ -252,45 +435,92 @@ def goodreturns_text(raw_html):
     return re.sub(r"\s+", " ", html.unescape(text)).strip()
 
 
-def parse_goodreturns_value(key, text):
-    number = r"([0-9][0-9,]*(?:\.[0-9]{1,2})?)"
-    patterns = {
-        "petrol": [
-            rf"Today's petrol price .*?₹\s*{number}\s*per litre",
-            rf"[Pp]etrol [Pp]rice.*?₹\s*{number}\s*(?:per litre|/ ?litre|/ ?L)",
-        ],
-        "diesel": [
-            rf"Today's diesel price .*?₹\s*{number}\s*per litre",
-            rf"[Dd]iesel [Pp]rice.*?₹\s*{number}\s*(?:per litre|/ ?litre|/ ?L)",
-        ],
-        "lpg": [
-            rf"Domestic LPG .*? stands at ₹\s*{number}",
-            rf"LPG.*?₹\s*{number}\s*(?:per cylinder|/ ?cylinder)",
-        ],
-        "cng": [
-            rf"CNG price .*?₹\s*{number}\s*(?:per kilogram|per kg|/ Kg)",
-            rf"CNG.*?₹\s*{number}\s*(?:per kg|/ ?kg)",
-        ],
-        "gold": [
-            rf"24K Gold /g\s*₹\s*{number}",
-            rf"Gold ?/? ?g\s*₹\s*{number}",
-            rf"24 ?[Kk] Gold.*?₹\s*{number}",
-        ],
-        "silver": [
-            rf"Silver /kg\s*₹\s*{number}",
-            rf"Silver ?/? ?kg\s*₹\s*{number}",
-            rf"Silver.*?₹\s*{number}",
-        ],
-    }
-    for pattern in patterns[key]:
+def section(text, start_marker, end_marker=None):
+    """Slice the page text between two markers."""
+    i = text.find(start_marker)
+    if i < 0:
+        return ""
+    i += len(start_marker)
+    if end_marker:
+        j = text.find(end_marker, i)
+        if j >= 0:
+            return text[i:j]
+    return text[i:]
+
+
+def table_value(text, label):
+    """First number that follows `label` in a table row."""
+    if not text or not label:
+        return None
+    pattern = rf"{re.escape(label)}\b\s*[|\-]?\s*₹?\s*([0-9][0-9,]*(?:\.[0-9]{{1,2}})?)"
+    match = re.search(pattern, text, flags=re.I)
+    if not match:
+        return None
+    return float(match.group(1).replace(",", ""))
+
+
+HEADLINE_PATTERNS = {
+    "petrol": [rf"Today's petrol price .*?₹\s*([0-9][0-9,]*(?:\.[0-9]{{1,2}})?)\s*per litre"],
+    "diesel": [rf"Today's diesel price .*?₹\s*([0-9][0-9,]*(?:\.[0-9]{{1,2}})?)\s*per litre"],
+    "lpg": [rf"Domestic LPG \(14\.2 kg\) cylinder price .*?₹\s*([0-9][0-9,]*(?:\.[0-9]{{1,2}})?)"],
+    "cng": [rf"CNG price .*?₹\s*([0-9][0-9,]*(?:\.[0-9]{{1,2}})?)\s*(?:per kilogram|per kg)"],
+}
+
+METAL_PATTERNS = {
+    "gold": [
+        rf"24K Gold /g\s*₹\s*([0-9][0-9,]*(?:\.[0-9]{{1,2}})?)",
+        rf"gold price in .*? stands at ₹\s*([0-9][0-9,]*(?:\.[0-9]{{1,2}})?)\s*per gram",
+    ],
+    "silver": [
+        rf"Silver /kg\s*₹\s*([0-9][0-9,]*(?:\.[0-9]{{1,2}})?)",
+        rf"silver price in .*? stands at ₹\s*([0-9][0-9,]*(?:\.[0-9]{{1,2}})?)\s*per gram",
+    ],
+}
+
+
+def parse_fuel_value(key, text, city, state):
+    """City row -> state row -> headline. Never silently returns Mumbai's rate."""
+    metro = section(text, "Metro Cities & State Capitals", "State-Wise")
+    city_label = CITY_TABLE_ALIASES.get((city or "").strip().lower())
+    if city_label:
+        value = table_value(metro, city_label)
+        if value is not None:
+            return normalize_value(key, value)
+
+    state_section = section(text, "State-Wise", "Crude Oil")
+    if state:
+        value = table_value(state_section, state)
+        if value is not None:
+            return normalize_value(key, value)
+
+    # CNG genuinely differs per city; a missing city row must not fall back to
+    # another city's rate.
+    if key == "cng":
+        return None
+
+    for pattern in HEADLINE_PATTERNS[key]:
         match = re.search(pattern, text, flags=re.I)
         if match:
             return normalize_value(key, float(match.group(1).replace(",", "")))
     return None
 
 
-def fetch_goodreturns_prices(city):
-    """Best-effort live scrape of the selected city's GoodReturns pages."""
+def parse_metal_value(key, text):
+    for pattern in METAL_PATTERNS[key]:
+        match = re.search(pattern, text, flags=re.I)
+        if match:
+            return normalize_value(key, float(match.group(1).replace(",", "")))
+    return None
+
+
+def parse_goodreturns_value(key, text, city="", state=""):
+    """Backwards-compatible single entry point."""
+    if key in ("gold", "silver"):
+        return parse_metal_value(key, text)
+    return parse_fuel_value(key, text, city, state)
+
+
+def fetch_goodreturns_prices(city, state=""):
     urls = candidate_urls(city)
 
     def read(item):
@@ -299,7 +529,7 @@ def fetch_goodreturns_prices(city):
             try:
                 response = requests.get(url, headers=HEADERS, timeout=8)
                 response.raise_for_status()
-                value = parse_goodreturns_value(key, goodreturns_text(response.text))
+                value = parse_goodreturns_value(key, goodreturns_text(response.text), city, state)
                 if value is not None:
                     return key, value
             except (requests.RequestException, ValueError, TypeError) as exc:
@@ -311,8 +541,7 @@ def fetch_goodreturns_prices(city):
     return sanitize_prices({key: value for key, value in values.items() if value is not None})
 
 
-def scrape_throttled(city):
-    """Live scrape, but never more than a couple at once and spaced out."""
+def scrape_throttled(city, state=""):
     global _last_scrape
     with _scrape_sem:
         with _scrape_lock:
@@ -320,8 +549,12 @@ def scrape_throttled(city):
             if wait > 0:
                 time.sleep(wait)
             _last_scrape = time.time()
-        return fetch_goodreturns_prices(city)
+        return fetch_goodreturns_prices(city, state)
 
+
+# --------------------------------------------------------------------------- #
+# caching / price assembly
+# --------------------------------------------------------------------------- #
 
 def load_file_cache():
     try:
@@ -343,82 +576,35 @@ def load_cached_prices(city):
     return {"prices": prices, "updatedAt": entry.get("updatedAt")}
 
 
-def fetch_prices(city):
-    """Scheduled cache first (no upstream call), then a throttled live scrape."""
+def fetch_prices(city, state=""):
     cached = load_cached_prices(city)
     if cached and age_seconds(cached.get("updatedAt")) <= CACHE_MAX_AGE:
         return cached["prices"], "scheduled-cache", set(cached["prices"]), cached.get("updatedAt") or now_iso()
 
-    live = scrape_throttled(city)
+    live = scrape_throttled(city, state)
     if live:
         source = "goodreturns" if len(live) == len(PRICE_RANGES) else "goodreturns-partial"
         return live, source, set(live), now_iso()
 
-    if cached:  # stale is better than nothing
+    if cached:
         return cached["prices"], "scheduled-cache-stale", set(cached["prices"]), cached.get("updatedAt") or now_iso()
 
     return {}, "unavailable", set(), now_iso()
 
 
-def cached_prices(city):
-    """One upstream lookup per city per CACHE_TTL, shared by all users."""
-    key = f"prices:{city.strip().lower()}"
+def cached_prices(city, state=""):
+    key = f"prices:{city.strip().lower()}|{(state or '').strip().lower()}"
     hit = cache_get(key)
     if hit is not None:
         return hit
-    result = fetch_prices(city)
+    result = fetch_prices(city, state)
     cache_put(key, result)
     return result
 
 
-def nearest_city(lat, lng):
-    best = None
-    best_distance = float("inf")
-    for name, (clat, clng) in CITY_COORDS.items():
-        distance = (clat - lat) ** 2 + (clng - lng) ** 2
-        if distance < best_distance:
-            best_distance = distance
-            best = name
-    return best
-
-
-def resolve_city(lat, lng, requested):
-    name = (requested or "").strip()
-    if name and name.lower() not in {"india", "current location"}:
-        return name
-    try:
-        response = requests.get(
-            "https://nominatim.openstreetmap.org/reverse",
-            params={"lat": lat, "lon": lng, "format": "jsonv2", "zoom": 10},
-            headers={"User-Agent": "LiveLocationPrice/1.0"},
-            timeout=5,
-        )
-        response.raise_for_status()
-        address = response.json().get("address", {})
-        found = address.get("city") or address.get("town") or address.get("municipality") or address.get("state_district")
-        if found:
-            return found
-    except (requests.RequestException, ValueError, TypeError) as exc:
-        logger.debug("reverse geocode failed: %s", exc)
-    return nearest_city(lat, lng) or name or "India"
-
-
-def resolve_city_cached(lat, lng, requested):
-    name = (requested or "").strip()
-    if name and name.lower() not in {"india", "current location"}:
-        return name
-    key = f"geo:{round(lat, 2)}:{round(lng, 2)}"
-    hit = cache_get(key)
-    if hit:
-        return hit
-    city = resolve_city(lat, lng, requested)
-    cache_put(key, city, ttl=GEOCODE_TTL)
-    return city
-
-
-def valid_coords(lat, lng):
-    return -90 <= lat <= 90 and -180 <= lng <= 180
-
+# --------------------------------------------------------------------------- #
+# routes
+# --------------------------------------------------------------------------- #
 
 @app.before_request
 def _apply_rate_limit():
@@ -455,13 +641,14 @@ def market():
     if not valid_coords(lat, lng):
         return jsonify({"error": "lat must be -90..90 and lng must be -180..180"}), 400
 
-    city = resolve_city_cached(lat, lng, request.args.get("city", "India")[:80])
-    prices, source, observed_keys, observed_at = cached_prices(city)
+    city, state = resolve_location(lat, lng, request.args.get("city", "India")[:80])
+    prices, source, observed_keys, observed_at = cached_prices(city, state)
     response = {
         "updatedAt": now_iso(),
         "observedAt": observed_at,
         "currency": "INR",
         "city": city,
+        "state": state,
         "source": source,
         "warning": "Indicative rates; verify before purchase" if prices else None,
         "prices": prices,
