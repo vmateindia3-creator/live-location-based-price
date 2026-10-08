@@ -1,0 +1,9047 @@
+{
+  "24-paraganas-north": {
+    "checked": true,
+    "district": "24 Paraganas North",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "24-paraganas-south": {
+    "checked": true,
+    "district": "24 Paraganas South",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "adilabad": {
+    "checked": true,
+    "district": "Adilabad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "agar-malwa": {
+    "checked": true,
+    "district": "Agar Malwa",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "agra": {
+    "checked": true,
+    "district": "Agra",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "ahmadabad": {
+    "checked": true,
+    "district": "Ahmadabad",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "ahmednagar": {
+    "checked": true,
+    "district": "Ahmednagar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "aizawl": {
+    "checked": true,
+    "district": "Aizawl",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Mizoram"
+  },
+  "ajmer": {
+    "checked": true,
+    "district": "Ajmer",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "akola": {
+    "checked": true,
+    "district": "Akola",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "alappuzha": {
+    "checked": true,
+    "district": "Alappuzha",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Kerala"
+  },
+  "aligarh": {
+    "checked": true,
+    "district": "Aligarh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "alipurduar": {
+    "checked": true,
+    "district": "Alipurduar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "alirajpur": {
+    "checked": true,
+    "district": "Alirajpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "alluri-sitharama-raju": {
+    "checked": true,
+    "district": "Alluri Sitharama Raju",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "almora": {
+    "checked": true,
+    "district": "Almora",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttarakhand"
+  },
+  "alwar": {
+    "checked": true,
+    "district": "Alwar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "ambala": {
+    "checked": true,
+    "district": "Ambala",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "ambedkar-nagar": {
+    "checked": true,
+    "district": "Ambedkar Nagar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "amethi": {
+    "checked": true,
+    "district": "Amethi",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "amravati": {
+    "checked": true,
+    "district": "Amravati",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "amreli": {
+    "checked": true,
+    "district": "Amreli",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "amritsar": {
+    "checked": true,
+    "district": "Amritsar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "amroha": {
+    "checked": true,
+    "district": "Amroha",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "anakapalli": {
+    "checked": true,
+    "district": "Anakapalli",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "anand": {
+    "checked": true,
+    "district": "Anand",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "anantapur": {
+    "checked": true,
+    "district": "Anantapur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "anantnag": {
+    "checked": true,
+    "district": "Anantnag",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "anjaw": {
+    "checked": true,
+    "district": "Anjaw",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "annamayya": {
+    "checked": true,
+    "district": "Annamayya",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "anugul": {
+    "checked": true,
+    "district": "Anugul",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "anuppur": {
+    "checked": true,
+    "district": "Anuppur",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "araria": {
+    "checked": true,
+    "district": "Araria",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "ariyalur": {
+    "checked": true,
+    "district": "Ariyalur",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "arvalli": {
+    "checked": true,
+    "district": "Arvalli",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "arwal": {
+    "checked": true,
+    "district": "Arwal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "ashoknagar": {
+    "checked": true,
+    "district": "Ashoknagar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "auraiya": {
+    "checked": true,
+    "district": "Auraiya",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "aurangabad": {
+    "checked": true,
+    "district": "Aurangabad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "ayodhya": {
+    "checked": true,
+    "district": "Ayodhya",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "azamgarh": {
+    "checked": true,
+    "district": "Azamgarh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "bagalkot": {
+    "checked": true,
+    "district": "Bagalkot",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "bageshwar": {
+    "checked": true,
+    "district": "Bageshwar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttarakhand"
+  },
+  "baghpat": {
+    "checked": true,
+    "district": "Baghpat",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "bahraich": {
+    "checked": true,
+    "district": "Bahraich",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "bajali": {
+    "checked": true,
+    "district": "Bajali",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "baksa": {
+    "checked": true,
+    "district": "Baksa",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "balaghat": {
+    "checked": true,
+    "district": "Balaghat",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "balangir": {
+    "checked": true,
+    "district": "Balangir",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "baleshwar": {
+    "checked": true,
+    "district": "Baleshwar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "ballari": {
+    "checked": true,
+    "district": "Ballari",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "ballia": {
+    "checked": true,
+    "district": "Ballia",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "balod": {
+    "checked": true,
+    "district": "Balod",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "baloda-bazar": {
+    "checked": true,
+    "district": "Baloda Bazar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "balrampur": {
+    "checked": true,
+    "district": "Balrampur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "banas-kantha": {
+    "checked": true,
+    "district": "Banas Kantha",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "banda": {
+    "checked": true,
+    "district": "Banda",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "bandipora": {
+    "checked": true,
+    "district": "Bandipora",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "bangalore": {
+    "checked": true,
+    "district": "Bengaluru Urban",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "banka": {
+    "checked": true,
+    "district": "Banka",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "bankura": {
+    "checked": true,
+    "district": "Bankura",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "banswara": {
+    "checked": true,
+    "district": "Banswara",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "bapatla": {
+    "checked": true,
+    "district": "Bapatla",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "barabanki": {
+    "checked": true,
+    "district": "Barabanki",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "baramulla": {
+    "checked": true,
+    "district": "Baramulla",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "baran": {
+    "checked": true,
+    "district": "Baran",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "bareilly": {
+    "checked": true,
+    "district": "Bareilly",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "bargarh": {
+    "checked": true,
+    "district": "Bargarh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "barmer": {
+    "checked": true,
+    "district": "Barmer",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "barnala": {
+    "checked": true,
+    "district": "Barnala",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "barpeta": {
+    "checked": true,
+    "district": "Barpeta",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "barwani": {
+    "checked": true,
+    "district": "Barwani",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "bastar": {
+    "checked": true,
+    "district": "Bastar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "basti": {
+    "checked": true,
+    "district": "Basti",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "bathinda": {
+    "checked": true,
+    "district": "Bathinda",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "beed": {
+    "checked": true,
+    "district": "Beed",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "begusarai": {
+    "checked": true,
+    "district": "Begusarai",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "belagavi": {
+    "checked": true,
+    "district": "Belagavi",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "bemetara": {
+    "checked": true,
+    "district": "Bemetara",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "bengaluru-rural": {
+    "checked": true,
+    "district": "Bengaluru Rural",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "betul": {
+    "checked": true,
+    "district": "Betul",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "bhadohi": {
+    "checked": true,
+    "district": "Bhadohi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "bhadradri-kothagudem": {
+    "checked": true,
+    "district": "Bhadradri Kothagudem",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "bhadrak": {
+    "checked": true,
+    "district": "Bhadrak",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "bhagalpur": {
+    "checked": true,
+    "district": "Bhagalpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "bhandara": {
+    "checked": true,
+    "district": "Bhandara",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "bharatpur": {
+    "checked": true,
+    "district": "Bharatpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "bharuch": {
+    "checked": true,
+    "district": "Bharuch",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "bhavnagar": {
+    "checked": true,
+    "district": "Bhavnagar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "bhilwara": {
+    "checked": true,
+    "district": "Bhilwara",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "bhind": {
+    "checked": true,
+    "district": "Bhind",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "bhiwani": {
+    "checked": true,
+    "district": "Bhiwani",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "bhojpur": {
+    "checked": true,
+    "district": "Bhojpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "bhopal": {
+    "checked": true,
+    "district": "Bhopal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "bidar": {
+    "checked": true,
+    "district": "Bidar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "bijapur": {
+    "checked": true,
+    "district": "Bijapur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "bijnor": {
+    "checked": true,
+    "district": "Bijnor",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "bikaner": {
+    "checked": true,
+    "district": "Bikaner",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "bilaspur": {
+    "checked": true,
+    "district": "Bilaspur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "birbhum": {
+    "checked": true,
+    "district": "Birbhum",
+    "items": [
+      "diesel",
+      "gold",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "bishnupur": {
+    "checked": true,
+    "district": "Bishnupur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "biswanath": {
+    "checked": true,
+    "district": "Biswanath",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "bokaro": {
+    "checked": true,
+    "district": "Bokaro",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "bongaigaon": {
+    "checked": true,
+    "district": "Bongaigaon",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "botad": {
+    "checked": true,
+    "district": "Botad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "boudh": {
+    "checked": true,
+    "district": "Boudh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "budaun": {
+    "checked": true,
+    "district": "Budaun",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "budgam": {
+    "checked": true,
+    "district": "Budgam",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "bulandshahr": {
+    "checked": true,
+    "district": "Bulandshahr",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "buldhana": {
+    "checked": true,
+    "district": "Buldhana",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "bundi": {
+    "checked": true,
+    "district": "Bundi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "burhanpur": {
+    "checked": true,
+    "district": "Burhanpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "buxar": {
+    "checked": true,
+    "district": "Buxar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "cachar": {
+    "checked": true,
+    "district": "Cachar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "central": {
+    "checked": true,
+    "district": "Central",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Delhi"
+  },
+  "chamarajanagara": {
+    "checked": true,
+    "district": "Chamarajanagara",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "chamba": {
+    "checked": true,
+    "district": "Chamba",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Himachal Pradesh"
+  },
+  "chamoli": {
+    "checked": true,
+    "district": "Chamoli",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttarakhand"
+  },
+  "champawat": {
+    "checked": true,
+    "district": "Champawat",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttarakhand"
+  },
+  "champhai": {
+    "checked": true,
+    "district": "Champhai",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Mizoram"
+  },
+  "chandauli": {
+    "checked": true,
+    "district": "Chandauli",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "chandel": {
+    "checked": true,
+    "district": "Chandel",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "chandigarh": {
+    "checked": true,
+    "district": "Chandigarh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chandigarh"
+  },
+  "chandrapur": {
+    "checked": true,
+    "district": "Chandrapur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "changlang": {
+    "checked": true,
+    "district": "Changlang",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "charaideo": {
+    "checked": true,
+    "district": "Charaideo",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "charki-dadri": {
+    "checked": true,
+    "district": "Charki Dadri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "chatra": {
+    "checked": true,
+    "district": "Chatra",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "chengalpattu": {
+    "checked": true,
+    "district": "Chengalpattu",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "chennai": {
+    "checked": true,
+    "district": "Chennai",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "chhatarpur": {
+    "checked": true,
+    "district": "Chhatarpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "chhindwara": {
+    "checked": true,
+    "district": "Chhindwara",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "chhotaudepur": {
+    "checked": true,
+    "district": "Chhotaudepur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "chikkaballapura": {
+    "checked": true,
+    "district": "Chikkaballapura",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "chikkamagaluru": {
+    "checked": true,
+    "district": "Chikkamagaluru",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "chirang": {
+    "checked": true,
+    "district": "Chirang",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "chitradurga": {
+    "checked": true,
+    "district": "Chitradurga",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "chitrakoot": {
+    "checked": true,
+    "district": "Chitrakoot",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "chittoor": {
+    "checked": true,
+    "district": "Chittoor",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "chittorgarh": {
+    "checked": true,
+    "district": "Chittorgarh",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "churachandpur": {
+    "checked": true,
+    "district": "Churachandpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "churu": {
+    "checked": true,
+    "district": "Churu",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "coimbatore": {
+    "checked": true,
+    "district": "Coimbatore",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "coochbehar": {
+    "checked": true,
+    "district": "Coochbehar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "cuddalore": {
+    "checked": true,
+    "district": "Cuddalore",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "cuttack": {
+    "checked": true,
+    "district": "Cuttack",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "dadra-and-nagar-haveli": {
+    "checked": true,
+    "district": "Dadra And Nagar Haveli",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "The Dadra And Nagar Haveli And Daman And Diu"
+  },
+  "dakshina-kannada": {
+    "checked": true,
+    "district": "Dakshina Kannada",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "daman": {
+    "checked": true,
+    "district": "Daman",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "The Dadra And Nagar Haveli And Daman And Diu"
+  },
+  "damoh": {
+    "checked": true,
+    "district": "Damoh",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "dang": {
+    "checked": true,
+    "district": "Dang",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "dantewada": {
+    "checked": true,
+    "district": "Dantewada",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "darbhanga": {
+    "checked": true,
+    "district": "Darbhanga",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "darjeeling": {
+    "checked": true,
+    "district": "Darjeeling",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "darrang": {
+    "checked": true,
+    "district": "Darrang",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "datia": {
+    "checked": true,
+    "district": "Datia",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "dausa": {
+    "checked": true,
+    "district": "Dausa",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "davangere": {
+    "checked": true,
+    "district": "Davangere",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "dehradun": {
+    "checked": true,
+    "district": "Dehradun",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttarakhand"
+  },
+  "deogarh": {
+    "checked": true,
+    "district": "Deogarh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "deoghar": {
+    "checked": true,
+    "district": "Deoghar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "deoria": {
+    "checked": true,
+    "district": "Deoria",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "devbhumi-dwarka": {
+    "checked": true,
+    "district": "Devbhumi Dwarka",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "dewas": {
+    "checked": true,
+    "district": "Dewas",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "dhalai": {
+    "checked": true,
+    "district": "Dhalai",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tripura"
+  },
+  "dhamtari": {
+    "checked": true,
+    "district": "Dhamtari",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "dhanbad": {
+    "checked": true,
+    "district": "Dhanbad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "dhar": {
+    "checked": true,
+    "district": "Dhar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "dharmapuri": {
+    "checked": true,
+    "district": "Dharmapuri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "dharwad": {
+    "checked": true,
+    "district": "Dharwad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "dhemaji": {
+    "checked": true,
+    "district": "Dhemaji",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "dhenkanal": {
+    "checked": true,
+    "district": "Dhenkanal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "dholpur": {
+    "checked": true,
+    "district": "Dholpur",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "dhubri": {
+    "checked": true,
+    "district": "Dhubri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "dhule": {
+    "checked": true,
+    "district": "Dhule",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "dibang-valley": {
+    "checked": true,
+    "district": "Dibang Valley",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "dibrugarh": {
+    "checked": true,
+    "district": "Dibrugarh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "dima-hasao": {
+    "checked": true,
+    "district": "Dima Hasao",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "dimapur": {
+    "checked": true,
+    "district": "Dimapur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Nagaland"
+  },
+  "dinajpur-dakshin": {
+    "checked": true,
+    "district": "Dinajpur Dakshin",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "dinajpur-uttar": {
+    "checked": true,
+    "district": "Dinajpur Uttar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "dindigul": {
+    "checked": true,
+    "district": "Dindigul",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "dindori": {
+    "checked": true,
+    "district": "Dindori",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "diu": {
+    "checked": true,
+    "district": "Diu",
+    "items": [
+      "diesel",
+      "gold",
+      "petrol",
+      "silver"
+    ],
+    "state": "The Dadra And Nagar Haveli And Daman And Diu"
+  },
+  "doda": {
+    "checked": true,
+    "district": "Doda",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "dohad": {
+    "checked": true,
+    "district": "Dohad",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "dumka": {
+    "checked": true,
+    "district": "Dumka",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "dungarpur": {
+    "checked": true,
+    "district": "Dungarpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "durg": {
+    "checked": true,
+    "district": "Durg",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "east": {
+    "checked": true,
+    "district": "East",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Delhi"
+  },
+  "east-district": {
+    "checked": true,
+    "district": "East District",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Sikkim"
+  },
+  "east-garo-hills": {
+    "checked": true,
+    "district": "East Garo Hills",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Meghalaya"
+  },
+  "east-godavari": {
+    "checked": true,
+    "district": "East Godavari",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "east-jaintia-hills": {
+    "checked": true,
+    "district": "East Jaintia Hills",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Meghalaya"
+  },
+  "east-kameng": {
+    "checked": true,
+    "district": "East Kameng",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "east-khasi-hills": {
+    "checked": true,
+    "district": "East Khasi Hills",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Meghalaya"
+  },
+  "east-nimar": {
+    "checked": true,
+    "district": "East Nimar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "east-siang": {
+    "checked": true,
+    "district": "East Siang",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "east-singhbum": {
+    "checked": true,
+    "district": "East Singhbum",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "eluru": {
+    "checked": true,
+    "district": "Eluru",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "ernakulam": {
+    "checked": true,
+    "district": "Ernakulam",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Kerala"
+  },
+  "erode": {
+    "checked": true,
+    "district": "Erode",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "etah": {
+    "checked": true,
+    "district": "Etah",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "etawah": {
+    "checked": true,
+    "district": "Etawah",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "faridabad": {
+    "checked": true,
+    "district": "Faridabad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "faridkot": {
+    "checked": true,
+    "district": "Faridkot",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "farrukhabad": {
+    "checked": true,
+    "district": "Farrukhabad",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "fatehabad": {
+    "checked": true,
+    "district": "Fatehabad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "fatehgarh-sahib": {
+    "checked": true,
+    "district": "Fatehgarh Sahib",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "fatehpur": {
+    "checked": true,
+    "district": "Fatehpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "fazilka": {
+    "checked": true,
+    "district": "Fazilka",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "firozabad": {
+    "checked": true,
+    "district": "Firozabad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "firozepur": {
+    "checked": true,
+    "district": "Firozepur",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "gadag": {
+    "checked": true,
+    "district": "Gadag",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "gadchiroli": {
+    "checked": true,
+    "district": "Gadchiroli",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "gajapati": {
+    "checked": true,
+    "district": "Gajapati",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "ganderbal": {
+    "checked": true,
+    "district": "Ganderbal",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "gandhinagar": {
+    "checked": true,
+    "district": "Gandhinagar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "ganganagar": {
+    "checked": true,
+    "district": "Ganganagar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "ganjam": {
+    "checked": true,
+    "district": "Ganjam",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "garhwa": {
+    "checked": true,
+    "district": "Garhwa",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "gariyaband": {
+    "checked": true,
+    "district": "Gariyaband",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "gaurella-pendra-marwahi": {
+    "checked": true,
+    "district": "Gaurella Pendra Marwahi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "gautam-buddha-nagar": {
+    "checked": true,
+    "district": "Gautam Buddha Nagar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "gaya": {
+    "checked": true,
+    "district": "Gaya",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "ghaziabad": {
+    "checked": true,
+    "district": "Ghaziabad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "ghazipur": {
+    "checked": true,
+    "district": "Ghazipur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "gir-somnath": {
+    "checked": true,
+    "district": "Gir Somnath",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "giridih": {
+    "checked": true,
+    "district": "Giridih",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "goalpara": {
+    "checked": true,
+    "district": "Goalpara",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "godda": {
+    "checked": true,
+    "district": "Godda",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "golaghat": {
+    "checked": true,
+    "district": "Golaghat",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "gomati": {
+    "checked": true,
+    "district": "Gomati",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tripura"
+  },
+  "gonda": {
+    "checked": true,
+    "district": "Gonda",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "gondia": {
+    "checked": true,
+    "district": "Gondia",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "gopalganj": {
+    "checked": true,
+    "district": "Gopalganj",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "gorakhpur": {
+    "checked": true,
+    "district": "Gorakhpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "gumla": {
+    "checked": true,
+    "district": "Gumla",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "guna": {
+    "checked": true,
+    "district": "Guna",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "guntur": {
+    "checked": true,
+    "district": "Guntur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "gurdaspur": {
+    "checked": true,
+    "district": "Gurdaspur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "gurgaon": {
+    "checked": true,
+    "district": "Gurugram",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "gwalior": {
+    "checked": true,
+    "district": "Gwalior",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "hailakandi": {
+    "checked": true,
+    "district": "Hailakandi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "hamirpur": {
+    "checked": true,
+    "district": "Hamirpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Himachal Pradesh"
+  },
+  "hanumakonda": {
+    "checked": true,
+    "district": "Hanumakonda",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "hanumangarh": {
+    "checked": true,
+    "district": "Hanumangarh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "hapur": {
+    "checked": true,
+    "district": "Hapur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "harda": {
+    "checked": true,
+    "district": "Harda",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "hardoi": {
+    "checked": true,
+    "district": "Hardoi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "haridwar": {
+    "checked": true,
+    "district": "Haridwar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttarakhand"
+  },
+  "hassan": {
+    "checked": true,
+    "district": "Hassan",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "hathras": {
+    "checked": true,
+    "district": "Hathras",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "haveri": {
+    "checked": true,
+    "district": "Haveri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "hazaribagh": {
+    "checked": true,
+    "district": "Hazaribagh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "hingoli": {
+    "checked": true,
+    "district": "Hingoli",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "hisar": {
+    "checked": true,
+    "district": "Hisar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "hnahthial": {
+    "checked": true,
+    "district": "Hnahthial",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Mizoram"
+  },
+  "hojai": {
+    "checked": true,
+    "district": "Hojai",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "hooghly": {
+    "checked": true,
+    "district": "Hooghly",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "hoshangabad": {
+    "checked": true,
+    "district": "Hoshangabad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "hoshiarpur": {
+    "checked": true,
+    "district": "Hoshiarpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "howrah": {
+    "checked": true,
+    "district": "Howrah",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "hyderabad": {
+    "checked": true,
+    "district": "Hyderabad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "idukki": {
+    "checked": true,
+    "district": "Idukki",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Kerala"
+  },
+  "imphal-east": {
+    "checked": true,
+    "district": "Imphal East",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "imphal-west": {
+    "checked": true,
+    "district": "Imphal West",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "indore": {
+    "checked": true,
+    "district": "Indore",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "jabalpur": {
+    "checked": true,
+    "district": "Jabalpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "jagatsinghapur": {
+    "checked": true,
+    "district": "Jagatsinghapur",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "jagitial": {
+    "checked": true,
+    "district": "Jagitial",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "jaipur": {
+    "checked": true,
+    "district": "Jaipur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "jaisalmer": {
+    "checked": true,
+    "district": "Jaisalmer",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "jajapur": {
+    "checked": true,
+    "district": "Jajapur",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "jalandhar": {
+    "checked": true,
+    "district": "Jalandhar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "jalaun": {
+    "checked": true,
+    "district": "Jalaun",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "jalgaon": {
+    "checked": true,
+    "district": "Jalgaon",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "jalna": {
+    "checked": true,
+    "district": "Jalna",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "jalore": {
+    "checked": true,
+    "district": "Jalore",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "jalpaiguri": {
+    "checked": true,
+    "district": "Jalpaiguri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "jammu": {
+    "checked": true,
+    "district": "Jammu",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "jamnagar": {
+    "checked": true,
+    "district": "Jamnagar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "jamtara": {
+    "checked": true,
+    "district": "Jamtara",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "jamui": {
+    "checked": true,
+    "district": "Jamui",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "jangoan": {
+    "checked": true,
+    "district": "Jangoan",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "janjgir-champa": {
+    "checked": true,
+    "district": "Janjgir-Champa",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "jashpur": {
+    "checked": true,
+    "district": "Jashpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "jaunpur": {
+    "checked": true,
+    "district": "Jaunpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "jayashankar-bhupalapally": {
+    "checked": true,
+    "district": "Jayashankar Bhupalapally",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "jehanabad": {
+    "checked": true,
+    "district": "Jehanabad",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "jhabua": {
+    "checked": true,
+    "district": "Jhabua",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "jhajjar": {
+    "checked": true,
+    "district": "Jhajjar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "jhalawar": {
+    "checked": true,
+    "district": "Jhalawar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "jhansi": {
+    "checked": true,
+    "district": "Jhansi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "jhargram": {
+    "checked": true,
+    "district": "Jhargram",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "jharsuguda": {
+    "checked": true,
+    "district": "Jharsuguda",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "jhunjhunu": {
+    "checked": true,
+    "district": "Jhunjhunu",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "jind": {
+    "checked": true,
+    "district": "Jind",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "jiribam": {
+    "checked": true,
+    "district": "Jiribam",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "jodhpur": {
+    "checked": true,
+    "district": "Jodhpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "jogulamba-gadwal": {
+    "checked": true,
+    "district": "Jogulamba Gadwal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "jorhat": {
+    "checked": true,
+    "district": "Jorhat",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "junagadh": {
+    "checked": true,
+    "district": "Junagadh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "kabirdham": {
+    "checked": true,
+    "district": "Kabirdham",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "kachchh": {
+    "checked": true,
+    "district": "Kachchh",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "kaimur-bhabua": {
+    "checked": true,
+    "district": "Kaimur (Bhabua)",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "kaithal": {
+    "checked": true,
+    "district": "Kaithal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "kakching": {
+    "checked": true,
+    "district": "Kakching",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "kakinada": {
+    "checked": true,
+    "district": "Kakinada",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "kalaburagi": {
+    "checked": true,
+    "district": "Kalaburagi",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "kalahandi": {
+    "checked": true,
+    "district": "Kalahandi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "kalimpong": {
+    "checked": true,
+    "district": "Kalimpong",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "kallakurichi": {
+    "checked": true,
+    "district": "Kallakurichi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "kamareddy": {
+    "checked": true,
+    "district": "Kamareddy",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "kamjong": {
+    "checked": true,
+    "district": "Kamjong",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "kamrup": {
+    "checked": true,
+    "district": "Kamrup",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "kamrup-metro": {
+    "checked": true,
+    "district": "Kamrup Metro",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "kanchipuram": {
+    "checked": true,
+    "district": "Kanchipuram",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "kandhamal": {
+    "checked": true,
+    "district": "Kandhamal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "kangpokpi": {
+    "checked": true,
+    "district": "Kangpokpi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "kangra": {
+    "checked": true,
+    "district": "Kangra",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Himachal Pradesh"
+  },
+  "kanker": {
+    "checked": true,
+    "district": "Kanker",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "kannauj": {
+    "checked": true,
+    "district": "Kannauj",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "kanniyakumari": {
+    "checked": true,
+    "district": "Kanniyakumari",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "kannur": {
+    "checked": true,
+    "district": "Kannur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Kerala"
+  },
+  "kanpur-dehat": {
+    "checked": true,
+    "district": "Kanpur Dehat",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "kanpur-nagar": {
+    "checked": true,
+    "district": "Kanpur Nagar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "kapurthala": {
+    "checked": true,
+    "district": "Kapurthala",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "karaikal": {
+    "checked": true,
+    "district": "Karaikal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Puducherry"
+  },
+  "karauli": {
+    "checked": true,
+    "district": "Karauli",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "karbi-anglong": {
+    "checked": true,
+    "district": "Karbi Anglong",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "kargil": {
+    "checked": true,
+    "district": "Kargil",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Ladakh"
+  },
+  "karimganj": {
+    "checked": true,
+    "district": "Karimganj",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "karimnagar": {
+    "checked": true,
+    "district": "Karimnagar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "karnal": {
+    "checked": true,
+    "district": "Karnal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "karur": {
+    "checked": true,
+    "district": "Karur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "kasaragod": {
+    "checked": true,
+    "district": "Kasaragod",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Kerala"
+  },
+  "kasganj": {
+    "checked": true,
+    "district": "Kasganj",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "kathua": {
+    "checked": true,
+    "district": "Kathua",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "katihar": {
+    "checked": true,
+    "district": "Katihar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "katni": {
+    "checked": true,
+    "district": "Katni",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "kaushambi": {
+    "checked": true,
+    "district": "Kaushambi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "kendrapara": {
+    "checked": true,
+    "district": "Kendrapara",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "kendujhar": {
+    "checked": true,
+    "district": "Kendujhar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "khagaria": {
+    "checked": true,
+    "district": "Khagaria",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "khammam": {
+    "checked": true,
+    "district": "Khammam",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "khargone": {
+    "checked": true,
+    "district": "Khargone",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "khawzawl": {
+    "checked": true,
+    "district": "Khawzawl",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Mizoram"
+  },
+  "kheda": {
+    "checked": true,
+    "district": "Kheda",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "kheri": {
+    "checked": true,
+    "district": "Kheri",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "khordha": {
+    "checked": true,
+    "district": "Khordha",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "khowai": {
+    "checked": true,
+    "district": "Khowai",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tripura"
+  },
+  "khunti": {
+    "checked": true,
+    "district": "Khunti",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "kinnaur": {
+    "checked": true,
+    "district": "Kinnaur",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Himachal Pradesh"
+  },
+  "kiphire": {
+    "checked": true,
+    "district": "Kiphire",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Nagaland"
+  },
+  "kishanganj": {
+    "checked": true,
+    "district": "Kishanganj",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "kishtwar": {
+    "checked": true,
+    "district": "Kishtwar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "kodagu": {
+    "checked": true,
+    "district": "Kodagu",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "koderma": {
+    "checked": true,
+    "district": "Koderma",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "kohima": {
+    "checked": true,
+    "district": "Kohima",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Nagaland"
+  },
+  "kokrajhar": {
+    "checked": true,
+    "district": "Kokrajhar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "kolar": {
+    "checked": true,
+    "district": "Kolar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "kolasib": {
+    "checked": true,
+    "district": "Kolasib",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Mizoram"
+  },
+  "kolhapur": {
+    "checked": true,
+    "district": "Kolhapur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "kolkata": {
+    "checked": true,
+    "district": "Kolkata",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "kollam": {
+    "checked": true,
+    "district": "Kollam",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Kerala"
+  },
+  "konaseema": {
+    "checked": true,
+    "district": "Konaseema",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "kondagaon": {
+    "checked": true,
+    "district": "Kondagaon",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "koppal": {
+    "checked": true,
+    "district": "Koppal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "koraput": {
+    "checked": true,
+    "district": "Koraput",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "korba": {
+    "checked": true,
+    "district": "Korba",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "korea": {
+    "checked": true,
+    "district": "Korea",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "kota": {
+    "checked": true,
+    "district": "Kota",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "kottayam": {
+    "checked": true,
+    "district": "Kottayam",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Kerala"
+  },
+  "kozhikode": {
+    "checked": true,
+    "district": "Kozhikode",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Kerala"
+  },
+  "krishna": {
+    "checked": true,
+    "district": "Krishna",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "krishnagiri": {
+    "checked": true,
+    "district": "Krishnagiri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "kulgam": {
+    "checked": true,
+    "district": "Kulgam",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "kullu": {
+    "checked": true,
+    "district": "Kullu",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Himachal Pradesh"
+  },
+  "kumuram-bheem-asifabad": {
+    "checked": true,
+    "district": "Kumuram Bheem Asifabad",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "kupwara": {
+    "checked": true,
+    "district": "Kupwara",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "kurnool": {
+    "checked": true,
+    "district": "Kurnool",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "kurukshetra": {
+    "checked": true,
+    "district": "Kurukshetra",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "kurung-kumey": {
+    "checked": true,
+    "district": "Kurung Kumey",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "kushi-nagar": {
+    "checked": true,
+    "district": "Kushi Nagar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "lahul-and-spiti": {
+    "checked": true,
+    "district": "Lahul And Spiti",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Himachal Pradesh"
+  },
+  "lakhimpur": {
+    "checked": true,
+    "district": "Lakhimpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "lakhisarai": {
+    "checked": true,
+    "district": "Lakhisarai",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "lakshadweep-district": {
+    "checked": true,
+    "district": "Lakshadweep District",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Lakshadweep"
+  },
+  "lalitpur": {
+    "checked": true,
+    "district": "Lalitpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "latehar": {
+    "checked": true,
+    "district": "Latehar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "latur": {
+    "checked": true,
+    "district": "Latur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "lawngtlai": {
+    "checked": true,
+    "district": "Lawngtlai",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Mizoram"
+  },
+  "leh-ladakh": {
+    "checked": true,
+    "district": "Leh Ladakh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Ladakh"
+  },
+  "leparada": {
+    "checked": true,
+    "district": "Leparada",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "lohardaga": {
+    "checked": true,
+    "district": "Lohardaga",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "lohit": {
+    "checked": true,
+    "district": "Lohit",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "longding": {
+    "checked": true,
+    "district": "Longding",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "longleng": {
+    "checked": true,
+    "district": "Longleng",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Nagaland"
+  },
+  "lower-siang": {
+    "checked": true,
+    "district": "Lower Siang",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "lower-subansiri": {
+    "checked": true,
+    "district": "Lower Subansiri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "lucknow": {
+    "checked": true,
+    "district": "Lucknow",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "ludhiana": {
+    "checked": true,
+    "district": "Ludhiana",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "lunglei": {
+    "checked": true,
+    "district": "Lunglei",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Mizoram"
+  },
+  "madhepura": {
+    "checked": true,
+    "district": "Madhepura",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "madhubani": {
+    "checked": true,
+    "district": "Madhubani",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "madurai": {
+    "checked": true,
+    "district": "Madurai",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "mahabubabad": {
+    "checked": true,
+    "district": "Mahabubabad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "mahabubnagar": {
+    "checked": true,
+    "district": "Mahabubnagar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "maharajganj": {
+    "checked": true,
+    "district": "Maharajganj",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "mahasamund": {
+    "checked": true,
+    "district": "Mahasamund",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "mahe": {
+    "checked": true,
+    "district": "Mahe",
+    "items": [
+      "diesel",
+      "gold",
+      "petrol",
+      "silver"
+    ],
+    "state": "Puducherry"
+  },
+  "mahendragarh": {
+    "checked": true,
+    "district": "Mahendragarh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "mahesana": {
+    "checked": true,
+    "district": "Mahesana",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "mahisagar": {
+    "checked": true,
+    "district": "Mahisagar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "mahoba": {
+    "checked": true,
+    "district": "Mahoba",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "mainpuri": {
+    "checked": true,
+    "district": "Mainpuri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "majuli": {
+    "checked": true,
+    "district": "Majuli",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "malappuram": {
+    "checked": true,
+    "district": "Malappuram",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Kerala"
+  },
+  "maldah": {
+    "checked": true,
+    "district": "Maldah",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "malerkotla": {
+    "checked": true,
+    "district": "Malerkotla",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "malkangiri": {
+    "checked": true,
+    "district": "Malkangiri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "mamit": {
+    "checked": true,
+    "district": "Mamit",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Mizoram"
+  },
+  "mancherial": {
+    "checked": true,
+    "district": "Mancherial",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "mandi": {
+    "checked": true,
+    "district": "Mandi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Himachal Pradesh"
+  },
+  "mandla": {
+    "checked": true,
+    "district": "Mandla",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "mandsaur": {
+    "checked": true,
+    "district": "Mandsaur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "mandya": {
+    "checked": true,
+    "district": "Mandya",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "mansa": {
+    "checked": true,
+    "district": "Mansa",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "marigaon": {
+    "checked": true,
+    "district": "Marigaon",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "mathura": {
+    "checked": true,
+    "district": "Mathura",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "mau": {
+    "checked": true,
+    "district": "Mau",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "mayiladuthurai": {
+    "checked": true,
+    "district": "Mayiladuthurai",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "mayurbhanj": {
+    "checked": true,
+    "district": "Mayurbhanj",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "medak": {
+    "checked": true,
+    "district": "Medak",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "medchal-malkajgiri": {
+    "checked": true,
+    "district": "Medchal Malkajgiri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "medinipur-east": {
+    "checked": true,
+    "district": "Medinipur East",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "medinipur-west": {
+    "checked": true,
+    "district": "Medinipur West",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "meerut": {
+    "checked": true,
+    "district": "Meerut",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "mirzapur": {
+    "checked": true,
+    "district": "Mirzapur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "moga": {
+    "checked": true,
+    "district": "Moga",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "mokokchung": {
+    "checked": true,
+    "district": "Mokokchung",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Nagaland"
+  },
+  "mon": {
+    "checked": true,
+    "district": "Mon",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Nagaland"
+  },
+  "moradabad": {
+    "checked": true,
+    "district": "Moradabad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "morbi": {
+    "checked": true,
+    "district": "Morbi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "morena": {
+    "checked": true,
+    "district": "Morena",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "mulugu": {
+    "checked": true,
+    "district": "Mulugu",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "mumbai": {
+    "checked": true,
+    "district": "Mumbai",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "mumbai-suburban": {
+    "checked": true,
+    "district": "Mumbai Suburban",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "mungeli": {
+    "checked": true,
+    "district": "Mungeli",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "munger": {
+    "checked": true,
+    "district": "Munger",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "murshidabad": {
+    "checked": true,
+    "district": "Murshidabad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "muzaffarnagar": {
+    "checked": true,
+    "district": "Muzaffarnagar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "muzaffarpur": {
+    "checked": true,
+    "district": "Muzaffarpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "mysore": {
+    "checked": true,
+    "district": "Mysuru",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "nabarangpur": {
+    "checked": true,
+    "district": "Nabarangpur",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "nadia": {
+    "checked": true,
+    "district": "Nadia",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "nagaon": {
+    "checked": true,
+    "district": "Nagaon",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "nagapattinam": {
+    "checked": true,
+    "district": "Nagapattinam",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "nagarkurnool": {
+    "checked": true,
+    "district": "Nagarkurnool",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "nagaur": {
+    "checked": true,
+    "district": "Nagaur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "nagpur": {
+    "checked": true,
+    "district": "Nagpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "nainital": {
+    "checked": true,
+    "district": "Nainital",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttarakhand"
+  },
+  "nalanda": {
+    "checked": true,
+    "district": "Nalanda",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "nalbari": {
+    "checked": true,
+    "district": "Nalbari",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "nalgonda": {
+    "checked": true,
+    "district": "Nalgonda",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "namakkal": {
+    "checked": true,
+    "district": "Namakkal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "namsai": {
+    "checked": true,
+    "district": "Namsai",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "nanded": {
+    "checked": true,
+    "district": "Nanded",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "nandurbar": {
+    "checked": true,
+    "district": "Nandurbar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "nandyal": {
+    "checked": true,
+    "district": "Nandyal",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "narayanpet": {
+    "checked": true,
+    "district": "Narayanpet",
+    "items": [
+      "diesel",
+      "gold",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "narayanpur": {
+    "checked": true,
+    "district": "Narayanpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "narmada": {
+    "checked": true,
+    "district": "Narmada",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "narsinghpur": {
+    "checked": true,
+    "district": "Narsinghpur",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "nashik": {
+    "checked": true,
+    "district": "Nashik",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "navsari": {
+    "checked": true,
+    "district": "Navsari",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "nawada": {
+    "checked": true,
+    "district": "Nawada",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "nayagarh": {
+    "checked": true,
+    "district": "Nayagarh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "neemuch": {
+    "checked": true,
+    "district": "Neemuch",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "new-delhi": {
+    "checked": true,
+    "district": "New Delhi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Delhi"
+  },
+  "nicobars": {
+    "checked": true,
+    "district": "Nicobars",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andaman And Nicobar Islands"
+  },
+  "nirmal": {
+    "checked": true,
+    "district": "Nirmal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "niwari": {
+    "checked": true,
+    "district": "Niwari",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "nizamabad": {
+    "checked": true,
+    "district": "Nizamabad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "noney": {
+    "checked": true,
+    "district": "Noney",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "north": {
+    "checked": true,
+    "district": "North",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Delhi"
+  },
+  "north-and-middle-andaman": {
+    "checked": true,
+    "district": "North And Middle Andaman",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andaman And Nicobar Islands"
+  },
+  "north-district": {
+    "checked": true,
+    "district": "North District",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Sikkim"
+  },
+  "north-east": {
+    "checked": true,
+    "district": "North East",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Delhi"
+  },
+  "north-garo-hills": {
+    "checked": true,
+    "district": "North Garo Hills",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Meghalaya"
+  },
+  "north-goa": {
+    "checked": true,
+    "district": "North Goa",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Goa"
+  },
+  "north-tripura": {
+    "checked": true,
+    "district": "North Tripura",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tripura"
+  },
+  "north-west": {
+    "checked": true,
+    "district": "North West",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Delhi"
+  },
+  "ntr": {
+    "checked": true,
+    "district": "Ntr",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "nuapada": {
+    "checked": true,
+    "district": "Nuapada",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "nuh": {
+    "checked": true,
+    "district": "Nuh",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "osmanabad": {
+    "checked": true,
+    "district": "Osmanabad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "pakke-kessang": {
+    "checked": true,
+    "district": "Pakke Kessang",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "pakur": {
+    "checked": true,
+    "district": "Pakur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "pakyong": {
+    "checked": true,
+    "district": "Pakyong",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Sikkim"
+  },
+  "palakkad": {
+    "checked": true,
+    "district": "Palakkad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Kerala"
+  },
+  "palamu": {
+    "checked": true,
+    "district": "Palamu",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "palghar": {
+    "checked": true,
+    "district": "Palghar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "pali": {
+    "checked": true,
+    "district": "Pali",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "palnadu": {
+    "checked": true,
+    "district": "Palnadu",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "palwal": {
+    "checked": true,
+    "district": "Palwal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "panch-mahals": {
+    "checked": true,
+    "district": "Panch Mahals",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "panchkula": {
+    "checked": true,
+    "district": "Panchkula",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "panipat": {
+    "checked": true,
+    "district": "Panipat",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "panna": {
+    "checked": true,
+    "district": "Panna",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "papum-pare": {
+    "checked": true,
+    "district": "Papum Pare",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "parbhani": {
+    "checked": true,
+    "district": "Parbhani",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "parvathipuram-manyam": {
+    "checked": true,
+    "district": "Parvathipuram Manyam",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "paschim-bardhaman": {
+    "checked": true,
+    "district": "Paschim Bardhaman",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "pashchim-champaran": {
+    "checked": true,
+    "district": "Pashchim Champaran",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "patan": {
+    "checked": true,
+    "district": "Patan",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "pathanamthitta": {
+    "checked": true,
+    "district": "Pathanamthitta",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Kerala"
+  },
+  "pathankot": {
+    "checked": true,
+    "district": "Pathankot",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "patiala": {
+    "checked": true,
+    "district": "Patiala",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "patna": {
+    "checked": true,
+    "district": "Patna",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "pauri-garhwal": {
+    "checked": true,
+    "district": "Pauri Garhwal",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttarakhand"
+  },
+  "peddapalli": {
+    "checked": true,
+    "district": "Peddapalli",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "perambalur": {
+    "checked": true,
+    "district": "Perambalur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "peren": {
+    "checked": true,
+    "district": "Peren",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Nagaland"
+  },
+  "phek": {
+    "checked": true,
+    "district": "Phek",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Nagaland"
+  },
+  "pherzawl": {
+    "checked": true,
+    "district": "Pherzawl",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "pilibhit": {
+    "checked": true,
+    "district": "Pilibhit",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "pithoragarh": {
+    "checked": true,
+    "district": "Pithoragarh",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttarakhand"
+  },
+  "pondicherry": {
+    "checked": true,
+    "district": "Pondicherry",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Puducherry"
+  },
+  "poonch": {
+    "checked": true,
+    "district": "Poonch",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "porbandar": {
+    "checked": true,
+    "district": "Porbandar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "prakasam": {
+    "checked": true,
+    "district": "Prakasam",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "pratapgarh": {
+    "checked": true,
+    "district": "Pratapgarh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "prayagraj": {
+    "checked": true,
+    "district": "Prayagraj",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "pudukkottai": {
+    "checked": true,
+    "district": "Pudukkottai",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "pulwama": {
+    "checked": true,
+    "district": "Pulwama",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "pune": {
+    "checked": true,
+    "district": "Pune",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "purba-bardhaman": {
+    "checked": true,
+    "district": "Purba Bardhaman",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "purbi-champaran": {
+    "checked": true,
+    "district": "Purbi Champaran",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "puri": {
+    "checked": true,
+    "district": "Puri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "purnia": {
+    "checked": true,
+    "district": "Purnia",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "purulia": {
+    "checked": true,
+    "district": "Purulia",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "West Bengal"
+  },
+  "rae-bareli": {
+    "checked": true,
+    "district": "Rae Bareli",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "raichur": {
+    "checked": true,
+    "district": "Raichur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "raigad": {
+    "checked": true,
+    "district": "Raigad",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "raigarh": {
+    "checked": true,
+    "district": "Raigarh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "raipur": {
+    "checked": true,
+    "district": "Raipur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "raisen": {
+    "checked": true,
+    "district": "Raisen",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "rajanna-sircilla": {
+    "checked": true,
+    "district": "Rajanna Sircilla",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "rajgarh": {
+    "checked": true,
+    "district": "Rajgarh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "rajkot": {
+    "checked": true,
+    "district": "Rajkot",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "rajnandgaon": {
+    "checked": true,
+    "district": "Rajnandgaon",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "rajouri": {
+    "checked": true,
+    "district": "Rajouri",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "rajsamand": {
+    "checked": true,
+    "district": "Rajsamand",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "ramanagara": {
+    "checked": true,
+    "district": "Ramanagara",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "ramanathapuram": {
+    "checked": true,
+    "district": "Ramanathapuram",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "ramban": {
+    "checked": true,
+    "district": "Ramban",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "ramgarh": {
+    "checked": true,
+    "district": "Ramgarh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "rampur": {
+    "checked": true,
+    "district": "Rampur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "ranchi": {
+    "checked": true,
+    "district": "Ranchi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "ranga-reddy": {
+    "checked": true,
+    "district": "Ranga Reddy",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "ranipet": {
+    "checked": true,
+    "district": "Ranipet",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "ratlam": {
+    "checked": true,
+    "district": "Ratlam",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "ratnagiri": {
+    "checked": true,
+    "district": "Ratnagiri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "rayagada": {
+    "checked": true,
+    "district": "Rayagada",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "reasi": {
+    "checked": true,
+    "district": "Reasi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "rewa": {
+    "checked": true,
+    "district": "Rewa",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "rewari": {
+    "checked": true,
+    "district": "Rewari",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "ri-bhoi": {
+    "checked": true,
+    "district": "Ri Bhoi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Meghalaya"
+  },
+  "rohtak": {
+    "checked": true,
+    "district": "Rohtak",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "rohtas": {
+    "checked": true,
+    "district": "Rohtas",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "rudra-prayag": {
+    "checked": true,
+    "district": "Rudra Prayag",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttarakhand"
+  },
+  "rupnagar": {
+    "checked": true,
+    "district": "Rupnagar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "s-a-s-nagar": {
+    "checked": true,
+    "district": "S.A.S Nagar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "sabar-kantha": {
+    "checked": true,
+    "district": "Sabar Kantha",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "sagar": {
+    "checked": true,
+    "district": "Sagar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "saharanpur": {
+    "checked": true,
+    "district": "Saharanpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "saharsa": {
+    "checked": true,
+    "district": "Saharsa",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "sahebganj": {
+    "checked": true,
+    "district": "Sahebganj",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "saitual": {
+    "checked": true,
+    "district": "Saitual",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Mizoram"
+  },
+  "salem": {
+    "checked": true,
+    "district": "Salem",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "samastipur": {
+    "checked": true,
+    "district": "Samastipur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "samba": {
+    "checked": true,
+    "district": "Samba",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "sambalpur": {
+    "checked": true,
+    "district": "Sambalpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "sambhal": {
+    "checked": true,
+    "district": "Sambhal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "sangareddy": {
+    "checked": true,
+    "district": "Sangareddy",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "sangli": {
+    "checked": true,
+    "district": "Sangli",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "sangrur": {
+    "checked": true,
+    "district": "Sangrur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "sant-kabeer-nagar": {
+    "checked": true,
+    "district": "Sant Kabeer Nagar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "saraikela-kharsawan": {
+    "checked": true,
+    "district": "Saraikela Kharsawan",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "saran": {
+    "checked": true,
+    "district": "Saran",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "satara": {
+    "checked": true,
+    "district": "Satara",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "satna": {
+    "checked": true,
+    "district": "Satna",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "sawai-madhopur": {
+    "checked": true,
+    "district": "Sawai Madhopur",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "sehore": {
+    "checked": true,
+    "district": "Sehore",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "senapati": {
+    "checked": true,
+    "district": "Senapati",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "seoni": {
+    "checked": true,
+    "district": "Seoni",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "sepahijala": {
+    "checked": true,
+    "district": "Sepahijala",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tripura"
+  },
+  "serchhip": {
+    "checked": true,
+    "district": "Serchhip",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Mizoram"
+  },
+  "shahdara": {
+    "checked": true,
+    "district": "Shahdara",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Delhi"
+  },
+  "shahdol": {
+    "checked": true,
+    "district": "Shahdol",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "shahid-bhagat-singh-nagar": {
+    "checked": true,
+    "district": "Shahid Bhagat Singh Nagar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "shahjahanpur": {
+    "checked": true,
+    "district": "Shahjahanpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "shajapur": {
+    "checked": true,
+    "district": "Shajapur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "shamli": {
+    "checked": true,
+    "district": "Shamli",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "sheikhpura": {
+    "checked": true,
+    "district": "Sheikhpura",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "sheohar": {
+    "checked": true,
+    "district": "Sheohar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "sheopur": {
+    "checked": true,
+    "district": "Sheopur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "shi-yomi": {
+    "checked": true,
+    "district": "Shi Yomi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "shimla": {
+    "checked": true,
+    "district": "Shimla",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Himachal Pradesh"
+  },
+  "shivamogga": {
+    "checked": true,
+    "district": "Shivamogga",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "shivpuri": {
+    "checked": true,
+    "district": "Shivpuri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "shopian": {
+    "checked": true,
+    "district": "Shopian",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "shravasti": {
+    "checked": true,
+    "district": "Shravasti",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "siddharth-nagar": {
+    "checked": true,
+    "district": "Siddharth Nagar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "siddipet": {
+    "checked": true,
+    "district": "Siddipet",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "sidhi": {
+    "checked": true,
+    "district": "Sidhi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "sikar": {
+    "checked": true,
+    "district": "Sikar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "simdega": {
+    "checked": true,
+    "district": "Simdega",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "sindhudurg": {
+    "checked": true,
+    "district": "Sindhudurg",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "singrauli": {
+    "checked": true,
+    "district": "Singrauli",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "sirmaur": {
+    "checked": true,
+    "district": "Sirmaur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Himachal Pradesh"
+  },
+  "sirohi": {
+    "checked": true,
+    "district": "Sirohi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "sirsa": {
+    "checked": true,
+    "district": "Sirsa",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "sitamarhi": {
+    "checked": true,
+    "district": "Sitamarhi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "sitapur": {
+    "checked": true,
+    "district": "Sitapur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "sivaganga": {
+    "checked": true,
+    "district": "Sivaganga",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "sivasagar": {
+    "checked": true,
+    "district": "Sivasagar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "siwan": {
+    "checked": true,
+    "district": "Siwan",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "solan": {
+    "checked": true,
+    "district": "Solan",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Himachal Pradesh"
+  },
+  "solapur": {
+    "checked": true,
+    "district": "Solapur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "sonbhadra": {
+    "checked": true,
+    "district": "Sonbhadra",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "sonepur": {
+    "checked": true,
+    "district": "Sonepur",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "sonipat": {
+    "checked": true,
+    "district": "Sonipat",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "sonitpur": {
+    "checked": true,
+    "district": "Sonitpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "south": {
+    "checked": true,
+    "district": "South",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Delhi"
+  },
+  "south-andamans": {
+    "checked": true,
+    "district": "South Andamans",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andaman And Nicobar Islands"
+  },
+  "south-district": {
+    "checked": true,
+    "district": "South District",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Sikkim"
+  },
+  "south-east": {
+    "checked": true,
+    "district": "South East",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Delhi"
+  },
+  "south-garo-hills": {
+    "checked": true,
+    "district": "South Garo Hills",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Meghalaya"
+  },
+  "south-goa": {
+    "checked": true,
+    "district": "South Goa",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Goa"
+  },
+  "south-salmara-mancachar": {
+    "checked": true,
+    "district": "South Salmara Mancachar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "south-tripura": {
+    "checked": true,
+    "district": "South Tripura",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tripura"
+  },
+  "south-west": {
+    "checked": true,
+    "district": "South West",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Delhi"
+  },
+  "south-west-garo-hills": {
+    "checked": true,
+    "district": "South West Garo Hills",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Meghalaya"
+  },
+  "south-west-khasi-hills": {
+    "checked": true,
+    "district": "South West Khasi Hills",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Meghalaya"
+  },
+  "spsr-nellore": {
+    "checked": true,
+    "district": "Spsr Nellore",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "sri-muktsar-sahib": {
+    "checked": true,
+    "district": "Sri Muktsar Sahib",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "sri-sathya-sai": {
+    "checked": true,
+    "district": "Sri Sathya Sai",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "srikakulam": {
+    "checked": true,
+    "district": "Srikakulam",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "srinagar": {
+    "checked": true,
+    "district": "Srinagar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "sukma": {
+    "checked": true,
+    "district": "Sukma",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "sultanpur": {
+    "checked": true,
+    "district": "Sultanpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "sundargarh": {
+    "checked": true,
+    "district": "Sundargarh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Odisha"
+  },
+  "supaul": {
+    "checked": true,
+    "district": "Supaul",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "surajpur": {
+    "checked": true,
+    "district": "Surajpur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "surat": {
+    "checked": true,
+    "district": "Surat",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "surendranagar": {
+    "checked": true,
+    "district": "Surendranagar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "surguja": {
+    "checked": true,
+    "district": "Surguja",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Chhattisgarh"
+  },
+  "suryapet": {
+    "checked": true,
+    "district": "Suryapet",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "tamenglong": {
+    "checked": true,
+    "district": "Tamenglong",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "tapi": {
+    "checked": true,
+    "district": "Tapi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "tarn-taran": {
+    "checked": true,
+    "district": "Tarn Taran",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Punjab"
+  },
+  "tawang": {
+    "checked": true,
+    "district": "Tawang",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "tehri-garhwal": {
+    "checked": true,
+    "district": "Tehri Garhwal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttarakhand"
+  },
+  "tengnoupal": {
+    "checked": true,
+    "district": "Tengnoupal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "tenkasi": {
+    "checked": true,
+    "district": "Tenkasi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "thane": {
+    "checked": true,
+    "district": "Thane",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "thanjavur": {
+    "checked": true,
+    "district": "Thanjavur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "the-nilgiris": {
+    "checked": true,
+    "district": "The Nilgiris",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "theni": {
+    "checked": true,
+    "district": "Theni",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "thiruvallur": {
+    "checked": true,
+    "district": "Thiruvallur",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "thiruvarur": {
+    "checked": true,
+    "district": "Thiruvarur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "thoubal": {
+    "checked": true,
+    "district": "Thoubal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "thrissur": {
+    "checked": true,
+    "district": "Thrissur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Kerala"
+  },
+  "tikamgarh": {
+    "checked": true,
+    "district": "Tikamgarh",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "tinsukia": {
+    "checked": true,
+    "district": "Tinsukia",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "tirap": {
+    "checked": true,
+    "district": "Tirap",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "tiruchirappalli": {
+    "checked": true,
+    "district": "Tiruchirappalli",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "tirunelveli": {
+    "checked": true,
+    "district": "Tirunelveli",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "tirupathur": {
+    "checked": true,
+    "district": "Tirupathur",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "tirupati": {
+    "checked": true,
+    "district": "Tirupati",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "tiruppur": {
+    "checked": true,
+    "district": "Tiruppur",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "tiruvannamalai": {
+    "checked": true,
+    "district": "Tiruvannamalai",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "tonk": {
+    "checked": true,
+    "district": "Tonk",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "trivandrum": {
+    "checked": true,
+    "district": "Thiruvananthapuram",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Kerala"
+  },
+  "tuensang": {
+    "checked": true,
+    "district": "Tuensang",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Nagaland"
+  },
+  "tumakuru": {
+    "checked": true,
+    "district": "Tumakuru",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "tuticorin": {
+    "checked": true,
+    "district": "Tuticorin",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "udaipur": {
+    "checked": true,
+    "district": "Udaipur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Rajasthan"
+  },
+  "udalguri": {
+    "checked": true,
+    "district": "Udalguri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "udam-singh-nagar": {
+    "checked": true,
+    "district": "Udam Singh Nagar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttarakhand"
+  },
+  "udhampur": {
+    "checked": true,
+    "district": "Udhampur",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jammu And Kashmir"
+  },
+  "udupi": {
+    "checked": true,
+    "district": "Udupi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "ujjain": {
+    "checked": true,
+    "district": "Ujjain",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "ukhrul": {
+    "checked": true,
+    "district": "Ukhrul",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Manipur"
+  },
+  "umaria": {
+    "checked": true,
+    "district": "Umaria",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "una": {
+    "checked": true,
+    "district": "Una",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Himachal Pradesh"
+  },
+  "unakoti": {
+    "checked": true,
+    "district": "Unakoti",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tripura"
+  },
+  "unnao": {
+    "checked": true,
+    "district": "Unnao",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "upper-siang": {
+    "checked": true,
+    "district": "Upper Siang",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "upper-subansiri": {
+    "checked": true,
+    "district": "Upper Subansiri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "uttar-kashi": {
+    "checked": true,
+    "district": "Uttar Kashi",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttarakhand"
+  },
+  "uttara-kannada": {
+    "checked": true,
+    "district": "Uttara Kannada",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "vadodara": {
+    "checked": true,
+    "district": "Vadodara",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "vaishali": {
+    "checked": true,
+    "district": "Vaishali",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Bihar"
+  },
+  "valsad": {
+    "checked": true,
+    "district": "Valsad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Gujarat"
+  },
+  "varanasi": {
+    "checked": true,
+    "district": "Varanasi",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Uttar Pradesh"
+  },
+  "vellore": {
+    "checked": true,
+    "district": "Vellore",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "vidisha": {
+    "checked": true,
+    "district": "Vidisha",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Madhya Pradesh"
+  },
+  "vijayapura": {
+    "checked": true,
+    "district": "Vijayapura",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "vijaynagar": {
+    "checked": true,
+    "district": "Vijaynagar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "vikarabad": {
+    "checked": true,
+    "district": "Vikarabad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "villupuram": {
+    "checked": true,
+    "district": "Villupuram",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "virudhunagar": {
+    "checked": true,
+    "district": "Virudhunagar",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tamil Nadu"
+  },
+  "visakhapatanam": {
+    "checked": true,
+    "district": "Visakhapatanam",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "vizianagaram": {
+    "checked": true,
+    "district": "Vizianagaram",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "wanaparthy": {
+    "checked": true,
+    "district": "Wanaparthy",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "warangal": {
+    "checked": true,
+    "district": "Warangal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "wardha": {
+    "checked": true,
+    "district": "Wardha",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "washim": {
+    "checked": true,
+    "district": "Washim",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "wayanad": {
+    "checked": true,
+    "district": "Wayanad",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Kerala"
+  },
+  "west": {
+    "checked": true,
+    "district": "West",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Delhi"
+  },
+  "west-district": {
+    "checked": true,
+    "district": "West District",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Sikkim"
+  },
+  "west-garo-hills": {
+    "checked": true,
+    "district": "West Garo Hills",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Meghalaya"
+  },
+  "west-godavari": {
+    "checked": true,
+    "district": "West Godavari",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "west-jaintia-hills": {
+    "checked": true,
+    "district": "West Jaintia Hills",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Meghalaya"
+  },
+  "west-kameng": {
+    "checked": true,
+    "district": "West Kameng",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "west-karbi-anglong": {
+    "checked": true,
+    "district": "West Karbi Anglong",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Assam"
+  },
+  "west-khasi-hills": {
+    "checked": true,
+    "district": "West Khasi Hills",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Meghalaya"
+  },
+  "west-siang": {
+    "checked": true,
+    "district": "West Siang",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Arunachal Pradesh"
+  },
+  "west-singhbhum": {
+    "checked": true,
+    "district": "West Singhbhum",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Jharkhand"
+  },
+  "west-tripura": {
+    "checked": true,
+    "district": "West Tripura",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Tripura"
+  },
+  "wokha": {
+    "checked": true,
+    "district": "Wokha",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Nagaland"
+  },
+  "y-s-r": {
+    "checked": true,
+    "district": "Y.S.R.",
+    "items": [
+      "cng",
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Andhra Pradesh"
+  },
+  "yadadri-bhuvanagiri": {
+    "checked": true,
+    "district": "Yadadri Bhuvanagiri",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Telangana"
+  },
+  "yadgir": {
+    "checked": true,
+    "district": "Yadgir",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "yamunanagar": {
+    "checked": true,
+    "district": "Yamunanagar",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Haryana"
+  },
+  "yavatmal": {
+    "checked": true,
+    "district": "Yavatmal",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Maharashtra"
+  },
+  "zunheboto": {
+    "checked": true,
+    "district": "Zunheboto",
+    "items": [
+      "diesel",
+      "gold",
+      "lpg",
+      "petrol",
+      "silver"
+    ],
+    "state": "Nagaland"
+  }
+}
