@@ -220,5 +220,8 @@ jobs:
           gh release view v1.0.0 >/dev/null 2>&1 || gh release create v1.0.0 --title "LocaRate v1.0.0" --notes "LocaRate - live location based fuel, LPG, CNG, gold, silver and weather rates for India."
           cp build/app/outputs/flutter-apk/app-arm64-v8a-release.apk locarate-arm64.apk
           cp build/app/outputs/flutter-apk/app-release.apk locarate-universal.apk
-          gh release upload v1.0.0 locarate-arm64.apk --clobber
-          gh release upload v1.0.0 locarate-universal.apk --clobber
+          # Delete first, then upload: `--clobber` intermittently 404s on the asset lookup.
+          gh release delete-asset v1.0.0 locarate-arm64.apk -y >/dev/null 2>&1 || true
+          gh release upload v1.0.0 locarate-arm64.apk
+          gh release delete-asset v1.0.0 locarate-universal.apk -y >/dev/null 2>&1 || true
+          gh release upload v1.0.0 locarate-universal.apk
