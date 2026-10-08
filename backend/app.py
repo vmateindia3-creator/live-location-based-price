@@ -836,6 +836,7 @@ def fetch_district_prices(district, state="", only_items=None):
 
     def read(item):
         key, candidates = item
+        fallback = None
         for url in candidates:
             try:
                 response = requests.get(url, headers=HEADERS, timeout=8)
@@ -848,12 +849,16 @@ def fetch_district_prices(district, state="", only_items=None):
                 value = parse_metal_value(key, text)
                 if value is not None:
                     return key, value, True
-            else:
-                specific = city_headline_value(key, text, district)
-                value = specific if specific is not None else parse_fuel_value(key, text, district, state)
-                if value is not None:
-                    return key, value, specific is not None
-        return key, None, False
+                continue
+            specific = city_headline_value(key, text, district)
+            if specific is not None:
+                return key, specific, True
+            # The generic page always yields a state figure. Keep it as a
+            # fallback, but keep looking for a page that is really about this
+            # district - that is exactly what the alias candidates are for.
+            if fallback is None:
+                fallback = parse_fuel_value(key, text, district, state)
+        return key, fallback, False
 
     prices, specific_items = {}, []
     with ThreadPoolExecutor(max_workers=6) as pool:
