@@ -2,22 +2,31 @@ name: Scheduled Price Cache
 
 on:
   schedule:
-    # 00:30 UTC = 06:00 IST (fuel prices change early morning) and
-    # 12:30 UTC = 18:00 IST. GitHub may start cron jobs a few minutes late.
+    # 06:00, 12:00 and 18:00 IST. Each run refreshes only a slice of districts
+    # (oldest first), so the whole country is covered without hammering the
+    # source. GitHub may start cron jobs a few minutes late.
     - cron: '30 0 * * *'
+    - cron: '30 6 * * *'
     - cron: '30 12 * * *'
   workflow_dispatch:
+    inputs:
+      max_districts:
+        description: 'Districts to refresh this run (blank = the default slice)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
 
+# Never let two refreshes run at once: a double burst is what gets us blocked.
 concurrency:
-  group: daily-price-cache
+  group: price-cache
   cancel-in-progress: false
 
 jobs:
   refresh-price-cache:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -31,9 +40,13 @@ jobs:
           pip install --quiet indiapins
           python build_pincodes.py
       - name: Refresh city + state price cache from GoodReturns
-        # Cities come from the built-in list; the state-wise table gives every
-        # state's rate, so any PIN code in India resolves to its state's price.
+        # A slice of districts (their own pages), plus the state-wise table that
+        # covers every PIN code in India.
         working-directory: backend
+        env:
+          MAX_DISTRICTS_PER_RUN: ${{ github.event.inputs.max_districts || '260' }}
+          DISTRICT_FETCH_DELAY_SECONDS: '1.2'
+          FETCH_CONCURRENCY: '3'
         run: python refresh_cache.py
       - name: Commit refreshed data
         run: |
