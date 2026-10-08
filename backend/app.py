@@ -61,6 +61,9 @@ CACHE_MAX_AGE = int(os.getenv("CACHE_MAX_AGE_SECONDS", "129600"))  # file cache:
 
 SCRAPE_MIN_INTERVAL = float(os.getenv("SCRAPE_MIN_INTERVAL_SECONDS", "1.0"))
 SCRAPE_MAX_CONCURRENCY = int(os.getenv("SCRAPE_MAX_CONCURRENCY", "2"))
+# How many pages one location's refresh opens at once. Kept low on purpose: a
+# burst is what gets a crawler blocked.
+FETCH_CONCURRENCY = int(os.getenv("FETCH_CONCURRENCY", "3"))
 
 WEATHER_URL = os.getenv("WEATHER_PROVIDER_URL", "https://api.open-meteo.com/v1/forecast")
 GOODRETURNS = "https://www.goodreturns.in"
@@ -805,7 +808,7 @@ def fetch_goodreturns_prices(city, state=""):
                 logger.debug("goodreturns %s failed for %s (%s): %s", key, city, url, exc)
         return key, None
 
-    with ThreadPoolExecutor(max_workers=6) as pool:
+    with ThreadPoolExecutor(max_workers=FETCH_CONCURRENCY) as pool:
         values = dict(pool.map(read, urls.items()))
     return sanitize_prices({key: value for key, value in values.items() if value is not None})
 
@@ -861,7 +864,7 @@ def fetch_district_prices(district, state="", only_items=None):
         return key, fallback, False
 
     prices, specific_items = {}, []
-    with ThreadPoolExecutor(max_workers=6) as pool:
+    with ThreadPoolExecutor(max_workers=FETCH_CONCURRENCY) as pool:
         for key, value, specific in pool.map(read, urls.items()):
             if value is not None:
                 prices[key] = value
