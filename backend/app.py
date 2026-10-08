@@ -65,6 +65,7 @@ SCRAPE_MAX_CONCURRENCY = int(os.getenv("SCRAPE_MAX_CONCURRENCY", "2"))
 WEATHER_URL = os.getenv("WEATHER_PROVIDER_URL", "https://api.open-meteo.com/v1/forecast")
 GOODRETURNS = "https://www.goodreturns.in"
 CACHE_FILE = Path(__file__).resolve().parent / "data" / "price_cache.json"
+PINCODES_FILE = Path(__file__).resolve().parent / "data" / "pincodes.json"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131 Safari/537.36",
@@ -221,6 +222,7 @@ cache_lock = Lock()
 _scrape_sem = BoundedSemaphore(SCRAPE_MAX_CONCURRENCY)
 _scrape_lock = Lock()
 _last_scrape = 0.0
+_pincodes = None
 
 
 # --------------------------------------------------------------------------- #
@@ -657,9 +659,22 @@ def state_price_payload(state):
     return sanitize_prices(prices)
 
 
+def load_pincodes():
+    """Bundled PIN -> [district, state, lat, lng] map (built by build_pincodes.py)."""
+    global _pincodes
+    if _pincodes is None:
+        try:
+            data = json.loads(PINCODES_FILE.read_text())
+            _pincodes = data if isinstance(data, dict) else {}
+        except (FileNotFoundError, json.JSONDecodeError, OSError):
+            _pincodes = {}
+        logger.info("loaded %d PIN codes", len(_pincodes))
+    return _pincodes
+
+
 def pin_lookup(pin):
-    """{district, state, lat, lng} for an Indian PIN code, or None."""
-    if not pin or indiapins is None:
+    """{district, state, lat, lng} for any Indian PIN code, or None."""
+    if not pin:
         return None
     pin = str(pin).strip()
     if not re.fullmatch(r"[1-9][0-9]{5}", pin):
@@ -668,21 +683,29 @@ def pin_lookup(pin):
     hit = cache_get(key)
     if hit is not None:
         return hit or None
-    try:
-        matches = indiapins.matching(pin)
-    except (ValueError, KeyError, TypeError):
-        matches = None
-    if not matches:
-        cache_put(key, {}, ttl=GEOCODE_TTL)
-        return None
-    first = matches[0]
-    info = {
-        "district": (first.get("District") or "").strip().title(),
-        "state": (first.get("State") or "").strip().title(),
-        "lat": first.get("Latitude"),
-        "lng": first.get("Longitude"),
-    }
-    cache_put(key, info, ttl=GEOCODE_TTL)
+
+    info = None
+    record = load_pincodes().get(pin)
+    if record:
+        district, state, lat, lng = (list(record) + [None, None, None, None])[:4]
+        info = {"district": district or "", "state": state or "", "lat": lat, "lng": lng}
+    elif indiapins is not None:
+        try:
+            matches = indiapins.matching(pin)
+        except (ValueError, KeyError, TypeError):
+            matches = None
+        if matches:
+            first = matches[0]
+            info = {
+                "district": (first.get("District") or "").strip().title(),
+                "state": (first.get("State") or "").strip().title(),
+                "lat": first.get("Latitude"),
+                "lng": first.get("Longitude"),
+            }
+    else:
+        logger.warning("PIN %s supplied but no PIN data available", pin)
+
+    cache_put(key, info or {}, ttl=GEOCODE_TTL)
     return info
 
 
