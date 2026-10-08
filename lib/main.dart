@@ -57,22 +57,51 @@ class AppTheme {
   final Color tint; // very light accent for chips/pills
 }
 
+/// Temperature stops (deg C) and the accent colour at each stop. The colour is
+/// interpolated between stops, so *every* degree shifts the whole app's theme
+/// instead of jumping between four coarse bands.
+const List<double> _tempStops = [5, 12, 18, 24, 29, 34, 40];
+const List<Color> _tempColors = [
+  Color(0xff1e3a8a), // 5 C  - deep blue
+  Color(0xff2563eb), // 12 C - blue
+  Color(0xff0891b2), // 18 C - cyan
+  Color(0xff0d9488), // 24 C - teal
+  Color(0xff15803d), // 29 C - green
+  Color(0xffd97706), // 34 C - amber
+  Color(0xffb91c1c), // 40 C - red
+];
+
+/// Shown when the weather is not known yet, so a missing temperature never
+/// masquerades as a real (green) one.
+const AppTheme kNeutralTheme = AppTheme(
+  gradient: [Color(0xff334155), Color(0xff64748b)],
+  accent: Color(0xff334155),
+  surface: Color(0xfff8fafc),
+  tint: Color(0xffeef2f6),
+);
+
 AppTheme themeForTemperature(double temp) {
-  final List<Color> g;
-  if (temp >= 32) {
-    g = [const Color(0xffb45309), const Color(0xfffbbf24)]; // hot
-  } else if (temp >= 27) {
-    g = [const Color(0xff065f46), const Color(0xff34d399)]; // warm
-  } else if (temp >= 21) {
-    g = [const Color(0xff0e7490), const Color(0xff22d3ee)]; // mild
-  } else {
-    g = [const Color(0xff1e3a8a), const Color(0xff60a5fa)]; // cool
+  final t = temp.isNaN
+      ? _tempStops.first
+      : (temp < _tempStops.first
+          ? _tempStops.first
+          : (temp > _tempStops.last ? _tempStops.last : temp));
+
+  var accent = _tempColors.first;
+  for (var i = 0; i < _tempStops.length - 1; i++) {
+    if (t <= _tempStops[i + 1]) {
+      final span = _tempStops[i + 1] - _tempStops[i];
+      final f = span == 0 ? 0.0 : (t - _tempStops[i]) / span;
+      accent = Color.lerp(_tempColors[i], _tempColors[i + 1], f)!;
+      break;
+    }
   }
+
   return AppTheme(
-    gradient: g,
-    accent: g[0],
-    surface: Color.lerp(g[0], Colors.white, 0.95)!,
-    tint: Color.lerp(g[0], Colors.white, 0.86)!,
+    gradient: [accent, Color.lerp(accent, Colors.white, 0.38)!],
+    accent: accent,
+    surface: Color.lerp(accent, Colors.white, 0.95)!,
+    tint: Color.lerp(accent, Colors.white, 0.86)!,
   );
 }
 
@@ -121,7 +150,10 @@ class _LivePriceAppState extends State<LivePriceApp> {
     return AnimatedBuilder(
       animation: state,
       builder: (_, __) {
-        final theme = themeForTemperature(state.data?.weather.temperatureC ?? 28);
+        final temp = state.data?.weather.temperatureC;
+        final theme = (temp == null || temp.isNaN)
+            ? kNeutralTheme
+            : themeForTemperature(temp);
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           locale: Locale(state.language),
