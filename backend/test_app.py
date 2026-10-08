@@ -236,20 +236,63 @@ class LocationTests(unittest.TestCase):
 
     def test_resolve_location_prefers_requested_city_but_keeps_geo_state(self):
         with mock.patch.object(app_module, "reverse_geocode", return_value=("Amethi", "Uttar Pradesh")):
-            self.assertEqual(resolve_location(26.15, 81.81, "Amethi"), ("Amethi", "Uttar Pradesh"))
+            self.assertEqual(resolve_location(26.15, 81.81, "Amethi")[:2], ("Amethi", "Uttar Pradesh"))
 
     def test_resolve_location_uses_geocode_for_current_location(self):
         with mock.patch.object(app_module, "reverse_geocode", return_value=("Amethi", "Uttar Pradesh")):
-            self.assertEqual(resolve_location(26.15, 81.81, "Current location"), ("Amethi", "Uttar Pradesh"))
+            self.assertEqual(resolve_location(26.15, 81.81, "Current location")[:2], ("Amethi", "Uttar Pradesh"))
 
     def test_resolve_location_falls_back_to_nearest_city(self):
         with mock.patch.object(app_module, "reverse_geocode", return_value=(None, None)):
-            self.assertEqual(resolve_location(26.15, 81.81, "Current location"), ("Amethi", "Uttar Pradesh"))
+            self.assertEqual(resolve_location(26.15, 81.81, "Current location")[:2], ("Amethi", "Uttar Pradesh"))
 
     def test_candidate_urls_has_national_fallback_for_gold(self):
         urls = candidate_urls("Delhi")
         self.assertTrue(urls["gold"][0].endswith("/gold-rates/delhi.html"))
         self.assertTrue(urls["gold"][1].endswith("/gold-rates/"))
+
+
+class PanIndiaTests(unittest.TestCase):
+    def setUp(self):
+        app_module.cache.clear()
+
+    def test_parse_state_table(self):
+        text = " | Bihar | ₹113.37 | 0.00 | | Uttar Pradesh | ₹101.86 | 0.00 | "
+        out = app_module.parse_state_table(text)
+        self.assertEqual(out.get("Bihar"), 113.37)
+        self.assertEqual(out.get("Uttar Pradesh"), 101.86)
+
+    def test_pin_lookup_resolves_district_and_state(self):
+        info = app_module.pin_lookup("227405")  # Amethi, Uttar Pradesh
+        self.assertIsNotNone(info)
+        self.assertEqual(info["state"].lower(), "uttar pradesh")
+        self.assertIn("amethi", info["district"].lower())
+
+    def test_pin_lookup_rejects_bad_input(self):
+        self.assertIsNone(app_module.pin_lookup("12345"))
+        self.assertIsNone(app_module.pin_lookup("abc"))
+
+    def test_resolve_location_uses_pincode(self):
+        city, state, lat, lng = resolve_location(0.0, 0.0, "", "227405")
+        self.assertEqual(state.lower(), "uttar pradesh")
+        self.assertGreater(lat, 20.0)
+        self.assertGreater(lng, 70.0)
+
+    def test_state_price_payload(self):
+        with mock.patch.object(app_module, "load_state_prices", return_value={"petrol": {"uttar pradesh": 101.86}, "lpg": {"uttar pradesh": 979.5}}):
+            self.assertEqual(app_module.state_price_payload("Uttar Pradesh"), {"petrol": 101.86, "lpg": 979.5})
+
+    def test_state_price_payload_handles_goodreturns_spelling(self):
+        with mock.patch.object(app_module, "load_state_prices", return_value={"petrol": {"chhatisgarh": 108.06}}):
+            self.assertEqual(app_module.state_price_payload("Chhattisgarh"), {"petrol": 108.06})
+
+    def test_fetch_prices_falls_back_to_state_table(self):
+        with mock.patch.object(app_module, "load_cached_prices", return_value=None), \
+             mock.patch.object(app_module, "scrape_throttled", return_value={}), \
+             mock.patch.object(app_module, "load_state_prices", return_value={"petrol": {"uttar pradesh": 101.86}}):
+            prices, source, _, _ = fetch_prices("Amethi", "Uttar Pradesh")
+        self.assertEqual(source, "state-table")
+        self.assertEqual(prices, {"petrol": 101.86})
 
 
 if __name__ == "__main__":
