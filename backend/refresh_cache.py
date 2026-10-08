@@ -16,7 +16,7 @@ import os
 from datetime import datetime, timezone
 from pathlib import Path
 
-from app import CITY_STATE, city_slug, fetch_goodreturns_prices
+from app import CITY_STATE, city_slug, fetch_goodreturns_prices, fetch_national_state_prices
 
 ROOT = Path(__file__).resolve().parent
 CACHE_FILE = ROOT / "data" / "price_cache.json"
@@ -70,6 +70,12 @@ def main():
             print(f"{city} [{state or '-'}]: {', '.join(sorted(prices))}")
         else:
             print(f"{city} [{state or '-'}]: no usable values (kept previous entry if any)")
+
+    # One national page per item carries every state's rate -> pan-India coverage.
+    states = fetch_national_state_prices()
+    if states:
+        cache["_states"] = states
+        print("state table:", {k: len(v) for k, v in states.items()})
 
     CACHE_FILE.write_text(json.dumps(cache, indent=2, sort_keys=True) + "\n")
     print(f"wrote {CACHE_FILE} ({updated}/{len(cities)} cities refreshed, {len(cache)} total)")
