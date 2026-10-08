@@ -40,7 +40,7 @@ class MarketService {
     return _knownPlace(trimmed);
   }
 
-  Future<MarketData> fetch({required double latitude, required double longitude, String? city}) async {
+  Future<MarketData> fetch({required double latitude, required double longitude, String? city, String? pincode}) async {
     if (baseUrl.isEmpty) {
       return _fallback();
     }
@@ -49,6 +49,7 @@ class MarketService {
         'lat': latitude.toString(),
         'lng': longitude.toString(),
         if (city != null && city.isNotEmpty) 'city': city,
+        if (pincode != null && pincode.isNotEmpty) 'pincode': pincode,
       });
       final response = await _client.get(uri).timeout(const Duration(seconds: 8));
       if (response.statusCode == 200) {
@@ -57,12 +58,18 @@ class MarketService {
           return MarketData.fromJson(decoded);
         }
       }
-      debugPrint('market ${response.statusCode} for $city');
+      debugPrint('market ${response.statusCode} for $city $pincode');
     } catch (error) {
-      debugPrint('market fetch failed for $city: $error');
+      debugPrint('market fetch failed for $city $pincode: $error');
     }
     return _fallback();
   }
+
+  /// Look prices up by PIN code — the backend resolves district, state and
+  /// coordinates itself, and falls back to the nearest city when a PIN has no
+  /// dedicated page.
+  Future<MarketData> fetchByPincode(String pincode) =>
+      fetch(latitude: 20.5937, longitude: 78.9629, pincode: pincode);
 
   PlaceResult _knownPlace(String query) {
     const known = <String, List<double>>{
