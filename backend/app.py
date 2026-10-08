@@ -837,6 +837,15 @@ def market():
 
     city, state, rlat, rlng = resolve_location(lat, lng, request.args.get("city", "India")[:80], request.args.get("pincode", "").strip())
     prices, source, observed_keys, observed_at = cached_prices(city, state)
+    if not prices:
+        # Nearest covered city, so a town with no data still shows a local rate.
+        fallback = nearest_city(rlat, rlng)
+        if fallback and fallback[0].lower() != city.lower():
+            alt_prices, alt_source, alt_keys, alt_at = cached_prices(fallback[0], fallback[1])
+            if alt_prices:
+                prices, source, observed_keys, observed_at = alt_prices, f"{alt_source}-nearest", alt_keys, alt_at
+                city = fallback[0]
+                state = fallback[1]
     response = {
         "updatedAt": now_iso(),
         "observedAt": observed_at,
