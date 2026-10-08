@@ -110,6 +110,33 @@ class AppState extends ChangeNotifier {
     }
   }
 
+  /// Look up prices by PIN code and reveal them straight away.
+  Future<void> searchPincode(String pin) async {
+    final trimmed = pin.trim();
+    if (!RegExp(r'^[1-9][0-9]{5}$').hasMatch(trimmed)) {
+      error = _msg('6 अंकों का सही PIN डालें', 'Enter a valid 6-digit PIN code');
+      notifyListeners();
+      return;
+    }
+    loading = true;
+    error = null;
+    notifyListeners();
+    try {
+      final loaded = await _market.fetchByPincode(trimmed);
+      data = loaded;
+      place = PlaceResult(
+        name: loaded.city.isNotEmpty ? loaded.city : trimmed,
+        latitude: place?.latitude ?? 20.5937,
+        longitude: place?.longitude ?? 78.9629,
+      );
+      pricesRevealed = true;
+    } catch (_) {
+      error = _msg('इस PIN का डेटा नहीं मिला', 'No data found for this PIN');
+    }
+    loading = false;
+    notifyListeners();
+  }
+
   Future<void> openLocationSettings() => _location.openSettings();
 
   void toggleLanguage() {
