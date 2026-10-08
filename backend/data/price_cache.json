@@ -16,7 +16,7 @@
       "silver": 235.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "ahmedabad": {
     "city": "Ahmedabad",
@@ -35,7 +35,7 @@
       "silver": 235.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "amethi": {
     "city": "Amethi",
@@ -56,7 +56,7 @@
       "silver": 235.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "amritsar": {
     "city": "Amritsar",
@@ -75,7 +75,7 @@
       "silver": 235.0
     },
     "state": "Punjab",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "aurangabad": {
     "city": "Aurangabad",
@@ -94,7 +94,7 @@
       "silver": 235.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "bangalore": {
     "city": "Bengaluru",
@@ -113,7 +113,7 @@
       "silver": 235.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "bhilai": {
     "city": "Bhilai",
@@ -125,14 +125,14 @@
       "silver"
     ],
     "prices": {
-      "diesel": 97.83,
+      "diesel": 101.32,
       "gold": 14957.0,
-      "lpg": 941.5,
-      "petrol": 111.21,
+      "lpg": 1013.0,
+      "petrol": 108.06,
       "silver": 235.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "bhopal": {
     "city": "Bhopal",
@@ -151,7 +151,7 @@
       "silver": 235.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "bhubaneswar": {
     "city": "Bhubaneswar",
@@ -170,7 +170,7 @@
       "silver": 245.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "chandigarh": {
     "city": "Chandigarh",
@@ -189,7 +189,7 @@
       "silver": 235.0
     },
     "state": "Chandigarh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "chennai": {
     "city": "Chennai",
@@ -208,7 +208,7 @@
       "silver": 245.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "coimbatore": {
     "city": "Coimbatore",
@@ -227,7 +227,7 @@
       "silver": 245.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "cuttack": {
     "city": "Cuttack",
@@ -246,7 +246,7 @@
       "silver": 245.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "dehradun": {
     "city": "Dehradun",
@@ -265,7 +265,7 @@
       "silver": 235.0
     },
     "state": "Uttarakhand",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "delhi": {
     "city": "Delhi",
@@ -286,7 +286,7 @@
       "silver": 235.0
     },
     "state": "Delhi",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "dhanbad": {
     "city": "Dhanbad",
@@ -305,7 +305,7 @@
       "silver": 235.0
     },
     "state": "Jharkhand",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "faridabad": {
     "city": "Faridabad",
@@ -324,7 +324,7 @@
       "silver": 235.0
     },
     "state": "Haryana",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "gaya": {
     "city": "Gaya",
@@ -343,7 +343,7 @@
       "silver": 235.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "ghaziabad": {
     "city": "Ghaziabad",
@@ -362,7 +362,7 @@
       "silver": 235.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "gorakhpur": {
     "city": "Gorakhpur",
@@ -381,7 +381,7 @@
       "silver": 235.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "guntur": {
     "city": "Guntur",
@@ -400,7 +400,7 @@
       "silver": 245.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "gurgaon": {
     "city": "Gurugram",
@@ -419,7 +419,7 @@
       "silver": 235.0
     },
     "state": "Haryana",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "guwahati": {
     "city": "Guwahati",
@@ -438,7 +438,7 @@
       "silver": 235.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "gwalior": {
     "city": "Gwalior",
@@ -457,7 +457,7 @@
       "silver": 235.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "haridwar": {
     "city": "Haridwar",
@@ -476,7 +476,7 @@
       "silver": 235.0
     },
     "state": "Uttarakhand",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "hubballi": {
     "city": "Hubballi",
@@ -497,7 +497,7 @@
       "silver": 235.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "hyderabad": {
     "city": "Hyderabad",
@@ -516,7 +516,7 @@
       "silver": 245.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "indore": {
     "city": "Indore",
@@ -535,7 +535,7 @@
       "silver": 235.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "jabalpur": {
     "city": "Jabalpur",
@@ -554,7 +554,7 @@
       "silver": 235.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "jaipur": {
     "city": "Jaipur",
@@ -573,7 +573,7 @@
       "silver": 235.0
     },
     "state": "Rajasthan",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "jalandhar": {
     "city": "Jalandhar",
@@ -592,7 +592,7 @@
       "silver": 235.0
     },
     "state": "Punjab",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "jammu": {
     "city": "Jammu",
@@ -611,7 +611,7 @@
       "silver": 235.0
     },
     "state": "Jammu & Kashmir",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "jamshedpur": {
     "city": "Jamshedpur",
@@ -632,7 +632,7 @@
       "silver": 235.0
     },
     "state": "Jharkhand",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "jodhpur": {
     "city": "Jodhpur",
@@ -651,7 +651,7 @@
       "silver": 235.0
     },
     "state": "Rajasthan",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "kanpur": {
     "city": "Kanpur",
@@ -672,7 +672,7 @@
       "silver": 235.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "kochi": {
     "city": "Kochi",
@@ -693,7 +693,7 @@
       "silver": 245.0
     },
     "state": "Kerala",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "kolhapur": {
     "city": "Kolhapur",
@@ -712,7 +712,7 @@
       "silver": 235.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "kolkata": {
     "city": "Kolkata",
@@ -731,7 +731,7 @@
       "silver": 235.0
     },
     "state": "West Bengal",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "kota": {
     "city": "Kota",
@@ -750,7 +750,7 @@
       "silver": 235.0
     },
     "state": "Rajasthan",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "kozhikode": {
     "city": "Kozhikode",
@@ -769,7 +769,7 @@
       "silver": 245.0
     },
     "state": "Kerala",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "lucknow": {
     "city": "Lucknow",
@@ -788,7 +788,7 @@
       "silver": 235.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "ludhiana": {
     "city": "Ludhiana",
@@ -807,7 +807,7 @@
       "silver": 235.0
     },
     "state": "Punjab",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "madurai": {
     "city": "Madurai",
@@ -826,7 +826,7 @@
       "silver": 245.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "mangaluru": {
     "city": "Mangaluru",
@@ -847,7 +847,7 @@
       "silver": 235.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "meerut": {
     "city": "Meerut",
@@ -866,7 +866,7 @@
       "silver": 235.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "mumbai": {
     "city": "Mumbai",
@@ -885,7 +885,7 @@
       "silver": 235.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "muzaffarpur": {
     "city": "Muzaffarpur",
@@ -904,7 +904,7 @@
       "silver": 235.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "mysore": {
     "city": "Mysuru",
@@ -923,7 +923,7 @@
       "silver": 235.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "nagpur": {
     "city": "Nagpur",
@@ -942,7 +942,7 @@
       "silver": 235.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "nashik": {
     "city": "Nashik",
@@ -961,7 +961,7 @@
       "silver": 235.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "navi-mumbai": {
     "city": "Navi Mumbai",
@@ -982,7 +982,7 @@
       "silver": 235.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "nellore": {
     "city": "Nellore",
@@ -1001,7 +1001,7 @@
       "silver": 245.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "new-delhi": {
     "city": "New Delhi",
@@ -1020,7 +1020,7 @@
       "silver": 235.0
     },
     "state": "Delhi",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "noida": {
     "city": "Noida",
@@ -1039,7 +1039,7 @@
       "silver": 235.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "panaji": {
     "city": "Panaji",
@@ -1058,7 +1058,7 @@
       "silver": 235.0
     },
     "state": "Goa",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "patna": {
     "city": "Patna",
@@ -1077,7 +1077,7 @@
       "silver": 235.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "prayagraj": {
     "city": "Prayagraj",
@@ -1096,7 +1096,7 @@
       "silver": 235.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "pune": {
     "city": "Pune",
@@ -1115,7 +1115,7 @@
       "silver": 235.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "raipur": {
     "city": "Raipur",
@@ -1134,7 +1134,7 @@
       "silver": 235.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "rajkot": {
     "city": "Rajkot",
@@ -1153,7 +1153,7 @@
       "silver": 235.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "ranchi": {
     "city": "Ranchi",
@@ -1172,7 +1172,7 @@
       "silver": 235.0
     },
     "state": "Jharkhand",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "shimla": {
     "city": "Shimla",
@@ -1191,7 +1191,7 @@
       "silver": 235.0
     },
     "state": "Himachal Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "siliguri": {
     "city": "Siliguri",
@@ -1212,7 +1212,7 @@
       "silver": 235.0
     },
     "state": "West Bengal",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "solapur": {
     "city": "Solapur",
@@ -1231,7 +1231,7 @@
       "silver": 235.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "sultanpur": {
     "city": "Sultanpur",
@@ -1250,7 +1250,7 @@
       "silver": 235.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "surat": {
     "city": "Surat",
@@ -1269,7 +1269,7 @@
       "silver": 235.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "thane": {
     "city": "Thane",
@@ -1288,7 +1288,7 @@
       "silver": 235.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "thrissur": {
     "city": "Thrissur",
@@ -1307,7 +1307,7 @@
       "silver": 245.0
     },
     "state": "Kerala",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "tiruchirappalli": {
     "city": "Tiruchirappalli",
@@ -1328,7 +1328,7 @@
       "silver": 235.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "tirupati": {
     "city": "Tirupati",
@@ -1347,7 +1347,7 @@
       "silver": 245.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "trivandrum": {
     "city": "Thiruvananthapuram",
@@ -1366,7 +1366,7 @@
       "silver": 245.0
     },
     "state": "Kerala",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "udaipur": {
     "city": "Udaipur",
@@ -1385,7 +1385,7 @@
       "silver": 235.0
     },
     "state": "Rajasthan",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "ujjain": {
     "city": "Ujjain",
@@ -1404,7 +1404,7 @@
       "silver": 235.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "vadodara": {
     "city": "Vadodara",
@@ -1423,7 +1423,7 @@
       "silver": 235.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "varanasi": {
     "city": "Varanasi",
@@ -1442,7 +1442,7 @@
       "silver": 235.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "vijayawada": {
     "city": "Vijayawada",
@@ -1461,7 +1461,7 @@
       "silver": 245.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "visakhapatnam": {
     "city": "Visakhapatnam",
@@ -1480,7 +1480,7 @@
       "silver": 245.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   },
   "warangal": {
     "city": "Warangal",
@@ -1499,6 +1499,6 @@
       "silver": 245.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-08T05:44:30.303247+00:00"
+    "updatedAt": "2026-10-08T05:51:00.747357+00:00"
   }
 }
