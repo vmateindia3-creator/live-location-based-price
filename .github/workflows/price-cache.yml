@@ -24,15 +24,21 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r backend/requirements.txt
-      - name: Refresh city price cache from GoodReturns
-        # Uses the built-in list of ~60 Indian cities; override with
-        # PRICE_CACHE_CITIES if you want a different set.
+      # Rebuild the bundled PIN -> district/state/coordinates index (~19,600 PINs).
+      - name: Build PIN code index
+        working-directory: backend
+        run: |
+          pip install --quiet indiapins
+          python build_pincodes.py
+      - name: Refresh city + state price cache from GoodReturns
+        # Cities come from the built-in list; the state-wise table gives every
+        # state's rate, so any PIN code in India resolves to its state's price.
         working-directory: backend
         run: python refresh_cache.py
-      - name: Commit refreshed cache
+      - name: Commit refreshed data
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add backend/data/price_cache.json
-          git diff --cached --quiet || git commit -m 'chore: refresh scheduled price cache'
+          git add backend/data/price_cache.json backend/data/pincodes.json
+          git diff --cached --quiet || git commit -m 'chore: refresh price cache and PIN code index'
           git push
