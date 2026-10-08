@@ -621,8 +621,11 @@ def city_headline_value(key, text, city):
     escaped_template = re.escape(label_template)
     for name in headline_names(city):
         label = escaped_template.replace(r"\{city\}", re.escape(name))
-        pattern = label + r"\b.*?₹\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)"
-        match = re.search(pattern, text[:3000], flags=re.I)
+        # A short bounded gap ("…price in X stands at ₹ 1004.00") and the WHOLE
+        # text: real pages carry ~100 KB of <head> metadata before the headline,
+        # so limiting this to the first few thousand characters never matched.
+        pattern = label + r"\b.{0,120}?₹\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)"
+        match = re.search(pattern, text, flags=re.I)
         if match:
             try:
                 return normalize_value(key, float(match.group(1).replace(",", "")))
@@ -660,7 +663,7 @@ def parse_fuel_value(key, text, city, state):
 
     # The national page's headline is Mumbai's rate ("price in India (Mumbai)").
     # Never pass it off as some other city's, whatever the patterns below find.
-    if re.search(r"price in India\s*\(", text[:1500], flags=re.I):
+    if re.search(r"price in India\s*\(", text, flags=re.I):
         return None
 
     for pattern in HEADLINE_PATTERNS[key]:
