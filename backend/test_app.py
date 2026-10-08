@@ -355,3 +355,21 @@ class NearestFillTests(unittest.TestCase):
         with mock.patch.object(app_module, "load_file_cache", return_value=self.CACHE):
             found = app_module.nearest_item_source("lpg", 26.85, 80.95, exclude="lucknow")
         self.assertEqual(found[0], "Amethi")
+
+
+class RealPageShapeTests(unittest.TestCase):
+    """Real pages carry ~100 KB of <head> before the headline."""
+
+    def test_headline_found_after_a_long_metadata_head(self):
+        page = ("var gr_db_canonical_url = \"https://www.goodreturns.in/x\"; " * 2000) + (
+            "The Domestic LPG (14.2 kg) cylinder price in Gorakhpur stands at ₹ 1004.00. No change")
+        self.assertGreater(len(page), 100000)
+        self.assertEqual(parse_fuel_value("lpg", page, "Gorakhpur", "Uttar Pradesh"), 1004.0)
+
+    def test_headline_found_under_an_alias_after_a_long_head(self):
+        page = ("x " * 60000) + "The Domestic LPG (14.2 kg) cylinder price in Faizabad stands at ₹ 1004.50."
+        self.assertEqual(parse_fuel_value("lpg", page, "Ayodhya", "Uttar Pradesh"), 1004.5)
+
+    def test_a_distant_number_is_not_mistaken_for_the_headline(self):
+        page = "The Domestic LPG (14.2 kg) cylinder price in Gorakhpur stands at ₹ 1004.00. " + ("filler " * 400) + "₹ 9999.00"
+        self.assertEqual(parse_fuel_value("lpg", page, "Gorakhpur", "Uttar Pradesh"), 1004.0)
