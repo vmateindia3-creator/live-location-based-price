@@ -133,6 +133,26 @@ class FuelParsingTests(unittest.TestCase):
         text = "Today's petrol price in India (Mumbai) stands at ₹ 111.21 per litre."
         self.assertEqual(parse_fuel_value("petrol", text, "Nowhere", ""), 111.21)
 
+    def test_town_with_own_page_uses_its_own_headline(self):
+        page = (
+            "Petrol Price in Varanasi Today's petrol price in Varanasi stands at ₹102.23 per litre. "
+            "Metro Cities & State Capitals | Lucknow | ₹101.86 | 0.00 | "
+            "State-Wise Petrol Price in India | Uttar Pradesh | ₹101.86 | 0.00 | "
+        )
+        self.assertEqual(parse_fuel_value("petrol", page, "Varanasi", "Uttar Pradesh"), 102.23)
+
+    def test_generic_page_is_not_mistaken_for_city_page(self):
+        # Amethi's URL serves the generic page, so the state row must be used.
+        self.assertEqual(parse_fuel_value("petrol", PETROL_PAGE, "Amethi", "Uttar Pradesh"), 101.86)
+
+    def test_state_alias_handles_goodreturns_spelling(self):
+        page = (
+            "Petrol Price in India Today's petrol price in India (Mumbai) stands at ₹ 111.21 per litre. "
+            "Metro Cities & State Capitals | New Delhi | ₹102.12 | 0.00 | "
+            "State-Wise Petrol Price in India | Chhatisgarh | ₹108.06 | 0.00 | "
+        )
+        self.assertEqual(parse_fuel_value("petrol", page, "Bhilai", "Chhattisgarh"), 108.06)
+
     def test_table_value_helper(self):
         self.assertEqual(table_value(" | Lucknow | ₹101.86 | 0.00 | ", "Lucknow"), 101.86)
         self.assertIsNone(table_value(" | Lucknow | ₹101.86 | ", "Amethi"))
