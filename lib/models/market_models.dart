@@ -39,6 +39,7 @@ class MarketData {
     this.observedKeys = const {},
     this.sourceUrls = const {},
     this.units = const {},
+    this.approximate = const {},
   });
 
   final DateTime updatedAt;
@@ -53,6 +54,10 @@ class MarketData {
   final Set<String> observedKeys;
   final Map<String, String> sourceUrls;
   final Map<String, String> units;
+
+  /// Items whose value came from the nearest place that quotes it, because this
+  /// location has no figure of its own. Keyed by item -> source place.
+  final Map<String, String> approximate;
 
   factory MarketData.fromJson(Map<String, dynamic> json) {
     final raw = Map<String, dynamic>.from(json['prices'] as Map? ?? {});
@@ -77,6 +82,7 @@ class MarketData {
       observedKeys: ((json['observedKeys'] as List?) ?? const []).map((e) => e.toString()).toSet(),
       sourceUrls: Map<String, String>.from((json['sourceUrls'] as Map?) ?? const {}),
       units: Map<String, String>.from((json['units'] as Map?) ?? const {}),
+      approximate: Map<String, String>.from((json['approximate'] as Map?) ?? const {}),
     );
   }
 }
@@ -89,7 +95,9 @@ class WeatherData {
   final double windKph;
 
   factory WeatherData.fromJson(Map<String, dynamic> json) => WeatherData(
-        temperatureC: (json['temperatureC'] as num? ?? 28).toDouble(),
+        // NaN (not a made-up 28) when the API sends no temperature, so the app
+        // can show a neutral theme instead of pretending it is warm.
+        temperatureC: (json['temperatureC'] as num? ?? double.nan).toDouble(),
         condition: json['condition']?.toString() ?? 'Clear',
         humidity: (json['humidity'] as num? ?? 45).toInt(),
         windKph: (json['windKph'] as num? ?? 10).toDouble(),
