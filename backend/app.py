@@ -545,7 +545,10 @@ def city_headline_value(key, text, city):
     """A town with its own page quotes its own rate in the headline."""
     if not city or city.strip().lower() in {"india", "current location"}:
         return None
-    label = CITY_HEADLINE_LABELS[key].format(city=re.escape(city.strip()))
+    label_template = CITY_HEADLINE_LABELS.get(key)
+    if not label_template:
+        return None
+    label = label_template.format(city=re.escape(city.strip()))
     pattern = label + r"\b.*?₹\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)"
     match = re.search(pattern, text[:3000], flags=re.I)
     if not match:
@@ -728,6 +731,61 @@ def fetch_goodreturns_prices(city, state=""):
     with ThreadPoolExecutor(max_workers=6) as pool:
         values = dict(pool.map(read, urls.items()))
     return sanitize_prices({key: value for key, value in values.items() if value is not None})
+
+
+def district_list():
+    """Unique (district, state) pairs from the bundled PIN index (~750)."""
+    seen = {}
+    for record in load_pincodes().values():
+        if not isinstance(record, (list, tuple)) or len(record) < 2:
+            continue
+        district, state = str(record[0] or "").strip(), str(record[1] or "").strip()
+        if district and state:
+            slug = city_slug(district)
+            if slug:
+                seen.setdefault(slug, (district, state))
+    return sorted(seen.values(), key=lambda pair: pair[0])
+
+
+def fetch_district_prices(district, state="", only_items=None):
+    """Prices for a district, and which items have a district-specific page.
+
+    A district only gets its own entry when at least one item really is quoted
+    for that district; otherwise the state row is already the right answer.
+    """
+    urls = candidate_urls(district)
+    if only_items is not None:
+        urls = {key: value for key, value in urls.items() if key in only_items}
+
+    def read(item):
+        key, candidates = item
+        for url in candidates:
+            try:
+                response = requests.get(url, headers=HEADERS, timeout=8)
+                response.raise_for_status()
+                text = goodreturns_text(response.text)
+            except (requests.RequestException, ValueError, TypeError) as exc:
+                logger.debug("district %s %s failed (%s): %s", district, key, url, exc)
+                continue
+            if key in ("gold", "silver"):
+                value = parse_metal_value(key, text)
+                if value is not None:
+                    return key, value, True
+            else:
+                specific = city_headline_value(key, text, district)
+                value = specific if specific is not None else parse_fuel_value(key, text, district, state)
+                if value is not None:
+                    return key, value, specific is not None
+        return key, None, False
+
+    prices, specific_items = {}, []
+    with ThreadPoolExecutor(max_workers=6) as pool:
+        for key, value, specific in pool.map(read, urls.items()):
+            if value is not None:
+                prices[key] = value
+            if specific:
+                specific_items.append(key)
+    return sanitize_prices(prices), sorted(specific_items)
 
 
 def scrape_throttled(city, state=""):
