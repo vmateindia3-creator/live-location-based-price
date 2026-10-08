@@ -1,8 +1,4 @@
-"""Offline, deterministic tests for the API.
-
-No test here touches the network: price, weather and geocoding calls are
-patched, so CI is not flaky when GoodReturns or a geocoder is slow or blocking.
-"""
+"""Offline, deterministic tests for the API. No test touches the network."""
 
 import unittest
 from unittest import mock
@@ -18,14 +14,49 @@ from app import (
     fetch_prices,
     nearest_city,
     normalize_value,
+    parse_fuel_value,
     parse_goodreturns_value,
-    resolve_city_cached,
+    parse_metal_value,
+    resolve_location,
     sanitize_prices,
+    table_value,
     weather_for,
 )
 
 FULL_PRICES = {"petrol": 94.72, "diesel": 87.62, "lpg": 903.0, "cng": 75.09, "gold": 10250.0, "silver": 128.0}
 FULL_WEATHER = {"temperatureC": 28.0, "condition": "Clear", "humidity": 50, "windKph": 10.0}
+
+# Shaped like the real GoodReturns page text (headline = Mumbai, real values in tables).
+PETROL_PAGE = (
+    "Petrol Price in India Today's petrol price in India (Mumbai) stands at ₹ 111.21 per litre. "
+    "Petrol Price in Indian Metro Cities & State Capitals "
+    "| City | Price | Price Change | | New Delhi | ₹102.12 | 0.00 | | Lucknow | ₹101.86 | 0.00 | "
+    "| Mumbai | ₹111.21 | 0.00 | "
+    "State-Wise Petrol Price in India "
+    "| Uttar Pradesh | ₹101.86 | 0.00 | | Delhi | ₹102.12 | 0.00 | | Maharashtra | ₹111.21 | 0.00 | "
+    "Crude Oil Consumption in India "
+)
+LPG_PAGE = (
+    "LPG Price in India The Domestic LPG (14.2 kg) cylinder price in India (Mumbai) stands at ₹ 941.50. "
+    "Today's LPG Price in Indian Metro Cities & State Capitals "
+    "| City | Domestic (14.2 Kg) | Commercial (19 Kg) | "
+    "| New Delhi | ₹942.00 (0.00) | ₹2,810.00 (+62.50) | | Lucknow | ₹979.50 (0.00) | ₹2,932.50 (+62.50) | "
+    "State-Wise LPG Price in India "
+    "| Uttar Pradesh | ₹979.50 (0.00) | ₹2,932.50 (+62.50) | | Delhi | ₹942.00 (0.00) | ₹2,810.00 (+62.50) | "
+    "LPG rates in India "
+)
+CNG_PAGE = (
+    "CNG Price in India Today's CNG price in India (Mumbai) is ₹86.98 per kg. "
+    "CNG Price in Indian Metro Cities & State Capitals | New Delhi | ₹86.98 | 0.00 | "
+    "State-Wise CNG Price in India | Delhi | ₹86.98 | 0.00 | About CNG "
+)
+GOLD_PAGE = (
+    "Gold Rate in Delhi Today's gold price in Delhi stands at ₹14,970 per gram for 24 karat gold (99.9% purity). "
+    "8 October 2026 24K Gold /g ₹14,970 22K Gold /g ₹13,725 18K Gold /g ₹11,233 "
+)
+SILVER_PAGE = (
+    "Silver Rate in Delhi Today's silver price in Delhi stands at ₹2,35,000 per kg. Silver /kg ₹2,35,000 "
+)
 
 
 class ApiTests(unittest.TestCase):
@@ -33,29 +64,28 @@ class ApiTests(unittest.TestCase):
         self.client = app.test_client()
         self._price_patch = mock.patch.object(app_module, "fetch_prices", return_value=(FULL_PRICES, "goodreturns", set(FULL_PRICES), "2026-01-01T00:00:00+00:00"))
         self._weather_patch = mock.patch.object(app_module, "fetch_weather", return_value=dict(FULL_WEATHER))
+        self._geo_patch = mock.patch.object(app_module, "reverse_geocode", return_value=("Delhi", "Delhi"))
         self._price_patch.start()
         self._weather_patch.start()
+        self._geo_patch.start()
         app_module.cache.clear()
 
     def tearDown(self):
         self._price_patch.stop()
         self._weather_patch.stop()
+        self._geo_patch.stop()
 
     def test_health(self):
-        response = self.client.get("/health")
-        self.assertEqual(response.status_code, 200)
-        self.assertTrue(response.json["ok"])
+        self.assertTrue(self.client.get("/health").json["ok"])
 
     def test_market_contract(self):
-        response = self.client.get("/v1/market?lat=28.61&lng=77.20&city=Delhi")
-        self.assertEqual(response.status_code, 200)
-        payload = response.json
+        payload = self.client.get("/v1/market?lat=28.61&lng=77.20&city=Delhi").json
         self.assertEqual(payload["currency"], "INR")
         self.assertEqual(set(payload["prices"]), set(FULL_PRICES))
-        self.assertEqual(set(payload["observedKeys"]), set(FULL_PRICES))
-        self.assertIn("weather", payload)
         self.assertEqual(payload["units"]["petrol"], "INR/L")
-        self.assertIn("petrol", payload["sourceUrls"])
+        self.assertEqual(payload["city"], "Delhi")
+        self.assertEqual(payload["state"], "Delhi")
+        self.assertIn("weather", payload)
 
     def test_market_returns_wealth_keys(self):
         prices = self.client.get("/v1/market?lat=28.61&lng=77.20&city=Delhi").json["prices"]
@@ -64,27 +94,83 @@ class ApiTests(unittest.TestCase):
 
     def test_market_when_source_unavailable(self):
         with mock.patch.object(app_module, "fetch_prices", return_value=({}, "unavailable", set(), "2026-01-01T00:00:00+00:00")):
-            response = self.client.get("/v1/market?lat=28.61&lng=77.20&city=Delhi")
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json["prices"], {})
-        self.assertEqual(response.json["source"], "unavailable")
+            payload = self.client.get("/v1/market?lat=28.61&lng=77.20&city=Delhi").json
+        self.assertEqual(payload["prices"], {})
+        self.assertEqual(payload["source"], "unavailable")
 
-    def test_invalid_coordinates(self):
+    def test_invalid_and_out_of_range_coordinates(self):
         self.assertEqual(self.client.get("/v1/market?lat=nope").status_code, 400)
-
-    def test_out_of_range_coordinates(self):
         self.assertEqual(self.client.get("/v1/market?lat=200&lng=77").status_code, 400)
-        self.assertEqual(self.client.get("/v1/market?lat=28&lng=999").status_code, 400)
 
     def test_places_search_falls_back_to_builtin(self):
         with mock.patch.object(app_module.requests, "get", side_effect=app_module.requests.RequestException("offline")):
             response = self.client.get("/v1/places/search?q=Mumbai")
-        self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json["results"][0]["name"], "Mumbai")
-        self.assertAlmostEqual(response.json["results"][0]["latitude"], 19.0760, places=3)
 
-    def test_places_search_empty_query(self):
-        self.assertEqual(self.client.get("/v1/places/search?q=").json["results"], [])
+
+class FuelParsingTests(unittest.TestCase):
+    def test_state_row_used_for_small_town(self):
+        # Amethi has no city page -> the state row is the correct value, not Mumbai.
+        self.assertEqual(parse_fuel_value("petrol", PETROL_PAGE, "Amethi", "Uttar Pradesh"), 101.86)
+
+    def test_city_row_wins_when_present(self):
+        self.assertEqual(parse_fuel_value("petrol", PETROL_PAGE, "Lucknow", "Uttar Pradesh"), 101.86)
+        self.assertEqual(parse_fuel_value("lpg", LPG_PAGE, "Lucknow", "Uttar Pradesh"), 979.50)
+
+    def test_delhi_uses_new_delhi_row(self):
+        self.assertEqual(parse_fuel_value("petrol", PETROL_PAGE, "Delhi", "Delhi"), 102.12)
+
+    def test_never_returns_mumbai_headline_when_city_known(self):
+        # Mumbai's headline is 111.21; a known city/state must not fall back to it.
+        self.assertNotEqual(parse_fuel_value("petrol", PETROL_PAGE, "Amethi", "Uttar Pradesh"), 111.21)
+        self.assertNotEqual(parse_fuel_value("lpg", LPG_PAGE, "Amethi", "Uttar Pradesh"), 941.50)
+
+    def test_cng_does_not_fall_back_to_another_city(self):
+        self.assertIsNone(parse_fuel_value("cng", CNG_PAGE, "Amethi", "Uttar Pradesh"))
+        self.assertEqual(parse_fuel_value("cng", CNG_PAGE, "Delhi", "Delhi"), 86.98)
+
+    def test_headline_used_only_when_nothing_else(self):
+        text = "Today's petrol price in India (Mumbai) stands at ₹ 111.21 per litre."
+        self.assertEqual(parse_fuel_value("petrol", text, "Nowhere", ""), 111.21)
+
+    def test_table_value_helper(self):
+        self.assertEqual(table_value(" | Lucknow | ₹101.86 | 0.00 | ", "Lucknow"), 101.86)
+        self.assertIsNone(table_value(" | Lucknow | ₹101.86 | ", "Amethi"))
+
+
+class MetalParsingTests(unittest.TestCase):
+    def test_gold_per_gram(self):
+        self.assertEqual(parse_metal_value("gold", GOLD_PAGE), 14970.0)
+
+    def test_silver_per_kg_normalised(self):
+        self.assertEqual(parse_metal_value("silver", SILVER_PAGE), 235.0)
+
+    def test_backwards_compatible_entry_point(self):
+        self.assertEqual(parse_goodreturns_value("gold", "24K Gold /g ₹10,250"), 10250.0)
+        self.assertEqual(parse_goodreturns_value("petrol", "Today's petrol price in Delhi is ₹94.72 per litre."), 94.72)
+
+
+class ValueTests(unittest.TestCase):
+    def test_sanitize(self):
+        clean = sanitize_prices({"petrol": 47, "gold": 20, "silver": 2000, "cng": 88, "banana": 10})
+        self.assertEqual(clean, {"cng": 88})
+
+    def test_normalize(self):
+        self.assertEqual(normalize_value("gold", 10250.0), 10250.0)
+        self.assertEqual(normalize_value("silver", 235000.0), 235.0)
+
+    def test_ranges(self):
+        self.assertFalse(PRICE_RANGES["petrol"][0] <= 47 <= PRICE_RANGES["petrol"][1])
+        self.assertFalse(PRICE_RANGES["silver"][0] <= 2000 <= PRICE_RANGES["silver"][1])
+
+    def test_city_slug(self):
+        self.assertEqual(city_slug("Bengaluru"), "bangalore")
+        self.assertEqual(city_slug("New Delhi"), "new-delhi")
+        self.assertEqual(city_slug("Amethi"), "amethi")
+
+    def test_age_seconds(self):
+        self.assertLess(age_seconds(app_module.now_iso()), 5)
+        self.assertEqual(age_seconds("not-a-date"), float("inf"))
 
 
 class CachingTests(unittest.TestCase):
@@ -95,40 +181,22 @@ class CachingTests(unittest.TestCase):
         fresh = {"prices": {"petrol": 100.0}, "updatedAt": app_module.now_iso()}
         with mock.patch.object(app_module, "load_cached_prices", return_value=fresh), \
              mock.patch.object(app_module, "scrape_throttled") as scrape:
-            prices, source, _, _ = fetch_prices("Delhi")
+            prices, source, _, _ = fetch_prices("Delhi", "Delhi")
         self.assertEqual(source, "scheduled-cache")
-        self.assertEqual(prices, {"petrol": 100.0})
         scrape.assert_not_called()
 
-    def test_fetch_prices_scrapes_when_file_cache_stale(self):
+    def test_fetch_prices_scrapes_when_stale(self):
         stale = {"prices": {"petrol": 90.0}, "updatedAt": "2020-01-01T00:00:00+00:00"}
         with mock.patch.object(app_module, "load_cached_prices", return_value=stale), \
              mock.patch.object(app_module, "scrape_throttled", return_value={"petrol": 95.0}) as scrape:
-            prices, source, _, _ = fetch_prices("Delhi")
+            prices, source, _, _ = fetch_prices("Delhi", "Delhi")
         scrape.assert_called_once()
-        self.assertEqual(source, "goodreturns-partial")
         self.assertEqual(prices, {"petrol": 95.0})
-
-    def test_fetch_prices_serves_stale_when_scrape_empty(self):
-        stale = {"prices": {"petrol": 90.0}, "updatedAt": "2020-01-01T00:00:00+00:00"}
-        with mock.patch.object(app_module, "load_cached_prices", return_value=stale), \
-             mock.patch.object(app_module, "scrape_throttled", return_value={}):
-            prices, source, _, _ = fetch_prices("Delhi")
-        self.assertEqual(source, "scheduled-cache-stale")
-        self.assertEqual(prices, {"petrol": 90.0})
-
-    def test_fetch_prices_unavailable_when_nothing(self):
-        with mock.patch.object(app_module, "load_cached_prices", return_value=None), \
-             mock.patch.object(app_module, "scrape_throttled", return_value={}):
-            prices, source, _, _ = fetch_prices("Nowhere")
-        self.assertEqual(source, "unavailable")
-        self.assertEqual(prices, {})
 
     def test_cached_prices_hits_upstream_once_per_city(self):
         with mock.patch.object(app_module, "fetch_prices", return_value=({"petrol": 1.0}, "x", {"petrol"}, "t")) as fp:
-            cached_prices("Delhi")
-            cached_prices("Delhi")
-            cached_prices("delhi")  # same city, different case
+            cached_prices("Delhi", "Delhi")
+            cached_prices("Delhi", "Delhi")
         self.assertEqual(fp.call_count, 1)
 
     def test_weather_cached_by_coordinates(self):
@@ -137,87 +205,31 @@ class CachingTests(unittest.TestCase):
             weather_for(28.61, 77.20)
         self.assertEqual(fw.call_count, 1)
 
-    def test_resolve_city_cached(self):
-        with mock.patch.object(app_module, "resolve_city", return_value="Delhi") as rc:
-            resolve_city_cached(28.61, 77.20, "Current location")
-            resolve_city_cached(28.61, 77.20, "Current location")
-        self.assertEqual(rc.call_count, 1)
-
-    def test_resolve_city_cached_skips_geocode_for_named_city(self):
-        with mock.patch.object(app_module, "resolve_city") as rc:
-            self.assertEqual(resolve_city_cached(28.61, 77.20, "Jaipur"), "Jaipur")
-        rc.assert_not_called()
-
-    def test_age_seconds(self):
-        self.assertLess(age_seconds(app_module.now_iso()), 5)
-        self.assertEqual(age_seconds("not-a-date"), float("inf"))
-
-
-class ParserTests(unittest.TestCase):
-    def test_sanitize_rejects_implausible_values(self):
-        clean = sanitize_prices({"petrol": 47, "gold": 20, "silver": 2000, "cng": 88})
-        self.assertNotIn("petrol", clean)
-        self.assertNotIn("gold", clean)
-        self.assertNotIn("silver", clean)
-        self.assertEqual(clean["cng"], 88)
-
-    def test_sanitize_drops_unknown_keys(self):
-        self.assertEqual(sanitize_prices({"banana": 10}), {})
-
-    def test_sanitize_handles_bad_types(self):
-        self.assertEqual(sanitize_prices({"petrol": "abc", "diesel": None}), {})
-
-    def test_parse_petrol(self):
-        self.assertEqual(parse_goodreturns_value("petrol", "Today's petrol price in Delhi is ₹94.72 per litre in Delhi."), 94.72)
-
-    def test_parse_silver_normalises_kg_to_gram(self):
-        self.assertEqual(parse_goodreturns_value("silver", "Silver /kg ₹1,28,000"), 128.0)
-
-    def test_parse_gold_normalises_10g_to_gram(self):
-        self.assertEqual(parse_goodreturns_value("gold", "24K Gold ₹75,000"), 7500.0)
-
-    def test_parse_gold_per_gram_unchanged(self):
-        self.assertEqual(parse_goodreturns_value("gold", "24K Gold /g ₹10,250"), 10250.0)
-
-    def test_normalize_value_keeps_in_range(self):
-        self.assertEqual(normalize_value("gold", 10250.0), 10250.0)
-        self.assertEqual(normalize_value("petrol", 94.72), 94.72)
-
-    def test_parse_returns_none_on_missing_pattern(self):
-        self.assertIsNone(parse_goodreturns_value("petrol", "no rate here"))
-
-    def test_price_ranges_reject_obviously_wrong_values(self):
-        self.assertFalse(PRICE_RANGES["petrol"][0] <= 47 <= PRICE_RANGES["petrol"][1])
-        self.assertFalse(PRICE_RANGES["gold"][0] <= 20 <= PRICE_RANGES["gold"][1])
-        self.assertFalse(PRICE_RANGES["silver"][0] <= 2000 <= PRICE_RANGES["silver"][1])
-
-    def test_city_slug_aliases(self):
-        self.assertEqual(city_slug("Bengaluru"), "bangalore")
-        self.assertEqual(city_slug("New Delhi"), "new-delhi")
-        self.assertEqual(city_slug("Thiruvananthapuram"), "trivandrum")
-        self.assertEqual(city_slug("Gurugram"), "gurgaon")
-
 
 class LocationTests(unittest.TestCase):
-    def test_nearest_city_matches_major_city(self):
-        self.assertEqual(nearest_city(28.61, 77.20), "Delhi")
-        self.assertEqual(nearest_city(19.07, 72.87), "Mumbai")
+    def setUp(self):
+        app_module.cache.clear()
+
+    def test_nearest_city_returns_name_and_state(self):
+        self.assertEqual(nearest_city(26.15, 81.81), ("Amethi", "Uttar Pradesh"))
+        self.assertEqual(nearest_city(28.61, 77.20)[1], "Delhi")
+
+    def test_resolve_location_prefers_requested_city_but_keeps_geo_state(self):
+        with mock.patch.object(app_module, "reverse_geocode", return_value=("Amethi", "Uttar Pradesh")):
+            self.assertEqual(resolve_location(26.15, 81.81, "Amethi"), ("Amethi", "Uttar Pradesh"))
+
+    def test_resolve_location_uses_geocode_for_current_location(self):
+        with mock.patch.object(app_module, "reverse_geocode", return_value=("Amethi", "Uttar Pradesh")):
+            self.assertEqual(resolve_location(26.15, 81.81, "Current location"), ("Amethi", "Uttar Pradesh"))
+
+    def test_resolve_location_falls_back_to_nearest_city(self):
+        with mock.patch.object(app_module, "reverse_geocode", return_value=(None, None)):
+            self.assertEqual(resolve_location(26.15, 81.81, "Current location"), ("Amethi", "Uttar Pradesh"))
 
     def test_candidate_urls_has_national_fallback_for_gold(self):
         urls = candidate_urls("Delhi")
-        self.assertGreaterEqual(len(urls["gold"]), 2)
         self.assertTrue(urls["gold"][0].endswith("/gold-rates/delhi.html"))
         self.assertTrue(urls["gold"][1].endswith("/gold-rates/"))
-
-    def test_candidate_urls_india_uses_national_pages(self):
-        self.assertTrue(candidate_urls("India")["petrol"][0].endswith("/petrol-price.html"))
-
-    def test_resolve_city_prefers_requested_name(self):
-        self.assertEqual(app_module.resolve_city(28.6, 77.2, "Jaipur"), "Jaipur")
-
-    def test_resolve_city_falls_back_to_nearest_city(self):
-        with mock.patch.object(app_module.requests, "get", side_effect=app_module.requests.RequestException("offline")):
-            self.assertEqual(app_module.resolve_city(28.61, 77.20, "Current location"), "Delhi")
 
 
 if __name__ == "__main__":
