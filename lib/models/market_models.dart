@@ -33,6 +33,8 @@ class MarketData {
     required this.source,
     required this.currency,
     this.city = 'India',
+    this.state = '',
+    this.pincode,
     this.warning,
     this.observedKeys = const {},
     this.sourceUrls = const {},
@@ -45,6 +47,8 @@ class MarketData {
   final String source;
   final String currency;
   final String city;
+  final String state;
+  final String? pincode;
   final String? warning;
   final Set<String> observedKeys;
   final Map<String, String> sourceUrls;
@@ -67,6 +71,8 @@ class MarketData {
       source: json['source']?.toString() ?? 'unknown',
       currency: json['currency']?.toString() ?? 'INR',
       city: json['city']?.toString() ?? 'India',
+      state: json['state']?.toString() ?? '',
+      pincode: json['pincode']?.toString(),
       warning: json['warning']?.toString(),
       observedKeys: ((json['observedKeys'] as List?) ?? const []).map((e) => e.toString()).toSet(),
       sourceUrls: Map<String, String>.from((json['sourceUrls'] as Map?) ?? const {}),
