@@ -35,6 +35,14 @@ from dotenv import load_dotenv
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
+try:  # optional: PIN-code lookup (district/state/coordinates for any Indian PIN)
+    import indiapins
+    import indiapins as _pins
+    indiapins_nearest = getattr(_pins, "nearest", None)
+except ImportError:  # pragma: no cover - the API still works without it
+    indiapins = None
+    indiapins_nearest = None
+
 load_dotenv()
 
 logging.basicConfig(level=os.getenv("LOG_LEVEL", "INFO"))
@@ -79,6 +87,17 @@ PRICE_UNITS = {
     "gold": "INR/g",
     "silver": "INR/g",
 }
+
+# Every state/UT as GoodReturns spells it in the state-wise table. The national
+# page carries all of these, so one fetch per item covers the whole country.
+INDIA_STATES = [
+    "Andaman & Nicobar", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chandigarh",
+    "Chhatisgarh", "Dadra and Nagar Haveli and Daman and Diu", "Delhi", "Goa", "Gujarat", "Haryana",
+    "Himachal Pradesh", "Jammu & Kashmir", "Jharkhand", "Karnataka", "Kerala", "Ladakh", "Lakshadweep",
+    "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "Odisha",
+    "Pondicherry", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana", "Tripura",
+    "Uttar Pradesh", "Uttarakhand", "West Bengal",
+]
 
 # Cities that appear in GoodReturns' metro/state-capital table, mapped to the
 # name used there.
@@ -369,12 +388,23 @@ def reverse_geocode(lat, lng):
         return None, None
 
 
-def resolve_location(lat, lng, requested):
-    """Resolve (city, state) for a request.
+def resolve_location(lat, lng, requested, pin=None):
+    """Resolve (city, state, lat, lng) for a request.
 
-    A searched city name is trusted for the city, but the state is still taken
-    from the coordinates so the state-wise table can be used for small towns.
+    A PIN code is the most precise input; otherwise the searched city name plus
+    the coordinates (reverse geocoded) are used.
     """
+    if pin:
+        info = pin_lookup(pin)
+        if info:
+            plat, plng = info.get("lat"), info.get("lng")
+            return (
+                info.get("district") or (requested or "").strip() or "India",
+                info.get("state") or "",
+                float(plat) if isinstance(plat, (int, float)) else lat,
+                float(plng) if isinstance(plng, (int, float)) else lng,
+            )
+
     key = f"geo:{round(lat, 2)}:{round(lng, 2)}"
     cached = cache_get(key)
     if cached:
@@ -397,7 +427,7 @@ def resolve_location(lat, lng, requested):
 
     if not state:
         state = CITY_STATE.get(city.lower(), "")
-    return city, state
+    return city, state, lat, lng
 
 
 def valid_coords(lat, lng):
@@ -570,6 +600,92 @@ def parse_goodreturns_value(key, text, city="", state=""):
     return parse_fuel_value(key, text, city, state)
 
 
+def parse_state_table(state_section_text):
+    """{state: value} from the national page's state-wise table."""
+    out = {}
+    for state in INDIA_STATES:
+        value = table_value(state_section_text, state)
+        if value is not None:
+            out[state] = round(value, 2)
+    return out
+
+
+def fetch_national_state_prices():
+    """Every state's rate, from one national page per item.
+
+    This is what makes the app pan-India: whichever PIN code a user has, their
+    state's published rate is available without a per-PIN fetch.
+    """
+    result = {}
+    for key in ("petrol", "diesel", "lpg", "cng"):
+        url = f"{GOODRETURNS}/{key}-price.html"
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=10)
+            response.raise_for_status()
+            text = goodreturns_text(response.text)
+            values = parse_state_table(section(text, "State-Wise", "Crude Oil"))
+            if values:
+                result[key] = values
+        except (requests.RequestException, ValueError, TypeError) as exc:
+            logger.debug("national %s page failed: %s", key, exc)
+    return result
+
+
+def load_state_prices():
+    """State-level prices from the scheduled cache ({'petrol': {'Bihar': 113.37}})."""
+    raw = load_file_cache().get("_states") or {}
+    out = {}
+    for key, states in raw.items():
+        if isinstance(states, dict):
+            out[key] = {str(s).strip().lower(): v for s, v in states.items()}
+    return out
+
+
+def state_price_payload(state):
+    """The state's published rates, as a prices dict."""
+    if not state:
+        return {}
+    wanted = state.strip().lower()
+    alias = STATE_ALIASES.get(wanted)
+    candidates = {wanted} | ({alias.strip().lower()} if alias else set())
+    prices = {}
+    for key, states in load_state_prices().items():
+        for name in candidates:
+            if name in states:
+                prices[key] = states[name]
+                break
+    return sanitize_prices(prices)
+
+
+def pin_lookup(pin):
+    """{district, state, lat, lng} for an Indian PIN code, or None."""
+    if not pin or indiapins is None:
+        return None
+    pin = str(pin).strip()
+    if not re.fullmatch(r"[1-9][0-9]{5}", pin):
+        return None
+    key = f"pin:{pin}"
+    hit = cache_get(key)
+    if hit is not None:
+        return hit or None
+    try:
+        matches = indiapins.matching(pin)
+    except (ValueError, KeyError, TypeError):
+        matches = None
+    if not matches:
+        cache_put(key, {}, ttl=GEOCODE_TTL)
+        return None
+    first = matches[0]
+    info = {
+        "district": (first.get("District") or "").strip().title(),
+        "state": (first.get("State") or "").strip().title(),
+        "lat": first.get("Latitude"),
+        "lng": first.get("Longitude"),
+    }
+    cache_put(key, info, ttl=GEOCODE_TTL)
+    return info
+
+
 def fetch_goodreturns_prices(city, state=""):
     urls = candidate_urls(city)
 
@@ -639,6 +755,11 @@ def fetch_prices(city, state=""):
     if cached:
         return cached["prices"], "scheduled-cache-stale", set(cached["prices"]), cached.get("updatedAt") or now_iso()
 
+    # Pan-India fallback: the state's published rate (works for every PIN code).
+    state_prices = state_price_payload(state)
+    if state_prices:
+        return state_prices, "state-table", set(state_prices), now_iso()
+
     return {}, "unavailable", set(), now_iso()
 
 
@@ -691,7 +812,7 @@ def market():
     if not valid_coords(lat, lng):
         return jsonify({"error": "lat must be -90..90 and lng must be -180..180"}), 400
 
-    city, state = resolve_location(lat, lng, request.args.get("city", "India")[:80])
+    city, state, rlat, rlng = resolve_location(lat, lng, request.args.get("city", "India")[:80], request.args.get("pincode", "").strip())
     prices, source, observed_keys, observed_at = cached_prices(city, state)
     response = {
         "updatedAt": now_iso(),
@@ -699,13 +820,14 @@ def market():
         "currency": "INR",
         "city": city,
         "state": state,
+        "pincode": request.args.get("pincode", "").strip() or None,
         "source": source,
         "warning": "Indicative rates; verify before purchase" if prices else None,
         "prices": prices,
         "units": {k: PRICE_UNITS[k] for k in prices},
         "observedKeys": sorted(observed_keys),
         "sourceUrls": goodreturns_urls(city),
-        "weather": weather_for(lat, lng),
+        "weather": weather_for(rlat, rlng),
     }
     return jsonify(response)
 
