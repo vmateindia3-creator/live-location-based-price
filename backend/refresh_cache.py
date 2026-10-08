@@ -1,20 +1,25 @@
 """Refresh the price cache from GoodReturns.
 
-Run daily by ``.github/workflows/price-cache.yml`` and usable manually.
+Run by ``.github/workflows/price-cache.yml`` several times a day, and usable
+manually.
 
 Two layers, so every PIN code in India resolves to real prices:
 
 1. **Districts** — every PIN code belongs to a district, and GoodReturns has a
-   dedicated page for a large share of India's districts (Gorakhpur, Bhadohi,
-   Faizabad, ...). We fetch those and store them keyed by district, so a PIN
-   gets its district's own rate. Districts with no page are remembered and never
-   retried, which keeps the daily load small.
+   dedicated page for most of India's districts (Gorakhpur, Bhadohi, Faizabad,
+   ...). We fetch those and store them keyed by district, so a PIN gets its
+   district's own rate.
 2. **States** — the national page carries every state's rate in one fetch, so a
    district without a page still resolves to its state's published rate.
 
-Everything is throttled: a small delay between districts, at most a few
-connections at once, and a normal browser user-agent — so the source is not
-hammered.
+Being a good citizen matters more than being fast. This job:
+
+* fetches only a **slice of districts per run** (the least recently updated
+  ones), so the whole country is covered over the day without a big burst;
+* pauses between districts and keeps only a few connections open;
+* **stops early** when the source starts returning nothing, rather than
+  hammering a site that is (rightly) pushing back;
+* never overwrites a good cache entry with an empty one.
 """
 
 import json
@@ -36,9 +41,12 @@ ROOT = Path(__file__).resolve().parent
 CACHE_FILE = ROOT / "data" / "price_cache.json"
 DISTRICT_PAGES_FILE = ROOT / "data" / "district_pages.json"
 
-# Be a good citizen: pause between districts and cap the run if asked.
-DISTRICT_DELAY = float(os.getenv("DISTRICT_FETCH_DELAY_SECONDS", "0.6"))
-MAX_DISTRICTS = int(os.getenv("MAX_DISTRICTS", "0"))  # 0 = all districts
+# Spread the load: only this many districts per run, oldest first.
+MAX_DISTRICTS_PER_RUN = int(os.getenv("MAX_DISTRICTS_PER_RUN", "260"))
+# Pause between districts (seconds).
+DISTRICT_DELAY = float(os.getenv("DISTRICT_FETCH_DELAY_SECONDS", "1.2"))
+# Give up after this many districts in a row return nothing.
+BLOCK_ABORT_AFTER = int(os.getenv("BLOCK_ABORT_AFTER", "6"))
 
 DEFAULT_CITIES = [
     # metros
@@ -70,47 +78,72 @@ def _load(path):
         return {}
 
 
+def _entry(cache, slug, city, state, prices, refreshed_at):
+    return {
+        "city": city,
+        "state": state,
+        "updatedAt": refreshed_at,
+        "prices": prices,
+        "observedKeys": sorted(prices),
+    }
+
+
 def refresh_cities(cache, refreshed_at):
     cities = [x.strip() for x in os.getenv("PRICE_CACHE_CITIES", ",".join(DEFAULT_CITIES)).split(",") if x.strip()]
     updated = 0
     for city in cities:
         state = CITY_STATE.get(city.lower(), "")
         prices = fetch_goodreturns_prices(city, state) or {}
+        # Keep whatever we already had if this fetch came back empty.
         if prices:
-            cache[city_slug(city)] = {
-                "city": city, "state": state, "updatedAt": refreshed_at,
-                "prices": prices, "observedKeys": sorted(prices),
-            }
+            cache[city_slug(city)] = _entry(cache, city_slug(city), city, state, prices, refreshed_at)
             updated += 1
+        elif not (cache.get(city_slug(city)) or {}).get("prices"):
+            updated += 0
+        time.sleep(0.4)
     print(f"cities: {updated}/{len(cities)} refreshed")
     return updated
 
 
 def refresh_districts(cache, pages, refreshed_at):
     districts = district_list()
-    if MAX_DISTRICTS:
-        districts = districts[:MAX_DISTRICTS]
-    added = skipped = 0
+    # Least recently updated first, so successive runs sweep the whole country.
+    districts.sort(key=lambda pair: (pages.get(city_slug(pair[0])) or {}).get("lastFetchedAt") or "")
+    if MAX_DISTRICTS_PER_RUN:
+        districts = districts[:MAX_DISTRICTS_PER_RUN]
+
+    added = skipped = streak = 0
     for index, (district, state) in enumerate(districts, start=1):
         slug = city_slug(district)
-        entry = pages.get(slug)
-        if entry and entry.get("checked") and not entry.get("items"):
+        entry = pages.get(slug) or {}
+        if entry.get("checked") and not entry.get("items"):
             skipped += 1          # known to have no page of its own
             continue
-        only = entry.get("items") if entry and entry.get("checked") else None
+        only = entry.get("items") if entry.get("checked") else None
         prices, items = fetch_district_prices(district, state, only_items=only)
-        pages[slug] = {"district": district, "state": state, "items": items, "checked": True}
-        if items and prices:
-            cache[slug] = {
-                "city": district, "state": state, "updatedAt": refreshed_at,
-                "prices": prices, "observedKeys": sorted(prices),
-            }
-            added += 1
-        if index % 50 == 0:
-            print(f"  districts: {index}/{len(districts)} done ({added} with own pages)")
+
+        if not prices:
+            # The source is pushing back (or this page is gone). Keep the old
+            # entry and, if it keeps happening, stop for today.
+            streak += 1
+            if streak >= BLOCK_ABORT_AFTER:
+                print(f"  stopping: {streak} districts in a row returned nothing - source looks blocked")
+                break
+            continue
+        streak = 0
+
+        pages[slug] = {
+            "district": district, "state": state, "items": items,
+            "checked": True, "lastFetchedAt": refreshed_at,
+        }
+        cache[slug] = _entry(cache, slug, district, state, prices, refreshed_at)
+        added += 1
+        if index % 25 == 0:
+            print(f"  districts: {index}/{len(districts)} done ({added} updated)")
         if DISTRICT_DELAY:
             time.sleep(DISTRICT_DELAY)
-    print(f"districts: {added} stored, {skipped} skipped (no page), {len(districts)} total")
+
+    print(f"districts: {added} updated, {skipped} skipped (no page), {len(districts)} attempted")
     return added
 
 
@@ -132,7 +165,7 @@ def main():
     CACHE_FILE.write_text(json.dumps(cache, indent=2, sort_keys=True) + "\n")
     DISTRICT_PAGES_FILE.write_text(json.dumps(pages, indent=2, sort_keys=True) + "\n")
     stored = len([k for k in cache if not k.startswith("_")])
-    print(f"wrote {CACHE_FILE} ({stored} locations) and {DISTRICT_PAGES_FILE} ({len(pages)} districts checked)")
+    print(f"wrote {CACHE_FILE} ({stored} locations) and {DISTRICT_PAGES_FILE} ({len(pages)} districts)")
 
 
 if __name__ == "__main__":
