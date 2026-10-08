@@ -477,9 +477,55 @@ METAL_PATTERNS = {
     ],
 }
 
+# GoodReturns spells some states differently from Nominatim.
+STATE_ALIASES = {
+    "chhattisgarh": "Chhatisgarh",
+    "orissa": "Odisha",
+    "uttaranchal": "Uttarakhand",
+    "pondicherry": "Pondicherry",
+    "puducherry": "Pondicherry",
+    "nct of delhi": "Delhi",
+    "jammu and kashmir": "Jammu & Kashmir",
+}
+
+
+def state_labels(state):
+    """Spellings to try for the state-wise table row."""
+    if not state:
+        return []
+    labels = []
+    alias = STATE_ALIASES.get(state.strip().lower())
+    if alias:
+        labels.append(alias)
+    labels.append(state.strip())
+    return labels
+
+
+CITY_HEADLINE_LABELS = {
+    "petrol": "Today's petrol price in {city}",
+    "diesel": "Today's diesel price in {city}",
+    "lpg": "Domestic LPG (14.2 kg) cylinder price in {city}",
+    "cng": "CNG price in {city}",
+}
+
+
+def city_headline_value(key, text, city):
+    """A town with its own page quotes its own rate in the headline."""
+    if not city or city.strip().lower() in {"india", "current location"}:
+        return None
+    label = CITY_HEADLINE_LABELS[key].format(city=re.escape(city.strip()))
+    pattern = label + r"\b.*?₹\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)"
+    match = re.search(pattern, text[:3000], flags=re.I)
+    if not match:
+        return None
+    return normalize_value(key, float(match.group(1).replace(",", "")))
+
 
 def parse_fuel_value(key, text, city, state):
-    """City row -> state row -> headline. Never silently returns Mumbai's rate."""
+    """City table row -> city headline -> state row -> generic headline.
+
+    Never silently returns Mumbai's headline for a different city.
+    """
     metro = section(text, "Metro Cities & State Capitals", "State-Wise")
     city_label = CITY_TABLE_ALIASES.get((city or "").strip().lower())
     if city_label:
@@ -487,9 +533,13 @@ def parse_fuel_value(key, text, city, state):
         if value is not None:
             return normalize_value(key, value)
 
+    value = city_headline_value(key, text, city)
+    if value is not None:
+        return value
+
     state_section = section(text, "State-Wise", "Crude Oil")
-    if state:
-        value = table_value(state_section, state)
+    for label in state_labels(state):
+        value = table_value(state_section, label)
         if value is not None:
             return normalize_value(key, value)
 
