@@ -44,8 +44,8 @@ const Map<String, String> kItemUnitLabelHi = {
 };
 
 const Color kBrand = Color(0xff075e54);
-const Color kTextDark = Color(0xff0f172a);
-const Color kTextSoft = Color(0xff64748b);
+const Color kTextDark = Color(0xff0b1220);
+const Color kTextSoft = Color(0xff475569);
 const Color kHairline = Color(0xffe8eef0);
 
 /// The app-wide look, driven by the temperature of the selected location.
@@ -334,12 +334,23 @@ class _HomeState extends State<Home> {
                   const SizedBox(width: 4),
                   Flexible(
                     child: Text(
-                      s.place?.name ?? (s.language == 'hi' ? 'लोकेशन नहीं' : 'No location'),
+                      [
+                        s.place?.name ?? (s.language == 'hi' ? 'लोकेशन नहीं' : 'No location'),
+                        if ((s.data?.state ?? '').isNotEmpty) s.data!.state,
+                      ].join(' • '),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(color: Colors.white70, fontSize: 12.5, fontWeight: FontWeight.w500),
+                      style: const TextStyle(color: Colors.white, fontSize: 12.5, fontWeight: FontWeight.w600),
                     ),
                   ),
+                  if ((s.data?.pincode ?? '').isNotEmpty) ...[
+                    const SizedBox(width: 6),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                      decoration: BoxDecoration(color: Colors.white24, borderRadius: BorderRadius.circular(8)),
+                      child: Text(s.data!.pincode!, style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.w700)),
+                    ),
+                  ],
                 ]),
               ]),
             ),
@@ -351,14 +362,20 @@ class _HomeState extends State<Home> {
           TextField(
             controller: search,
             onSubmitted: (value) async {
-              await s.searchCity(value);
-              if (mounted) search.text = s.place?.name ?? '';
+              final typed = value.trim();
+              if (RegExp(r'^[0-9]{6}$').hasMatch(typed)) {
+                await s.searchPincode(typed);
+              } else {
+                await s.searchCity(typed);
+              }
+              if (mounted) search.text = '';
             },
-            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
             decoration: InputDecoration(
-              hintText: s.language == 'hi' ? 'शहर खोजें…' : 'Search city in India…',
-              hintStyle: const TextStyle(color: Colors.white70),
+              hintText: s.language == 'hi' ? 'शहर या PIN कोड खोजें…' : 'Search city or PIN code…',
+              hintStyle: const TextStyle(color: Colors.white70, fontWeight: FontWeight.w500),
               prefixIcon: const Icon(Icons.search, color: Colors.white70, size: 20),
+              suffixIcon: const Icon(Icons.pin_drop_outlined, color: Colors.white70, size: 19),
               filled: true,
               fillColor: Colors.white24,
               isDense: true,
@@ -597,8 +614,19 @@ class _HomeState extends State<Home> {
                   Container(
                     width: 46,
                     height: 46,
-                    decoration: BoxDecoration(color: color.withAlpha(30), borderRadius: BorderRadius.circular(14)),
-                    child: Icon(icon, color: color, size: 24),
+                    padding: const EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [color, Color.lerp(color, Colors.white, 0.5)!],
+                      ),
+                    ),
+                    child: Container(
+                      decoration: const BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+                      child: Icon(icon, color: color, size: 22),
+                    ),
                   ),
                   const SizedBox(width: 12),
                   Expanded(
