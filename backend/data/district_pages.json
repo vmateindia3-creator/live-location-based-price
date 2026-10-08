@@ -3,11 +3,7 @@
     "checked": true,
     "district": "24 Paraganas North",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -16,11 +12,7 @@
     "checked": true,
     "district": "24 Paraganas South",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -29,10 +21,7 @@
     "checked": true,
     "district": "Adilabad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -41,10 +30,7 @@
     "checked": true,
     "district": "Agar Malwa",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -53,10 +39,7 @@
     "checked": true,
     "district": "Agra",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -65,11 +48,7 @@
     "checked": true,
     "district": "Ahmadabad",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -78,11 +57,7 @@
     "checked": true,
     "district": "Ahmednagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -91,10 +66,7 @@
     "checked": true,
     "district": "Aizawl",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Mizoram"
@@ -103,10 +75,7 @@
     "checked": true,
     "district": "Ajmer",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -115,10 +84,7 @@
     "checked": true,
     "district": "Akola",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -127,10 +93,7 @@
     "checked": true,
     "district": "Alappuzha",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Kerala"
@@ -139,10 +102,7 @@
     "checked": true,
     "district": "Aligarh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -151,10 +111,7 @@
     "checked": true,
     "district": "Alipurduar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -163,10 +120,7 @@
     "checked": true,
     "district": "Alirajpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -175,11 +129,7 @@
     "checked": true,
     "district": "Alluri Sitharama Raju",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -188,11 +138,7 @@
     "checked": true,
     "district": "Almora",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttarakhand"
@@ -201,10 +147,7 @@
     "checked": true,
     "district": "Alwar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -213,10 +156,7 @@
     "checked": true,
     "district": "Ambala",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -225,11 +165,7 @@
     "checked": true,
     "district": "Ambedkar Nagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -238,11 +174,7 @@
     "checked": true,
     "district": "Amethi",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -251,10 +183,7 @@
     "checked": true,
     "district": "Amravati",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -263,10 +192,7 @@
     "checked": true,
     "district": "Amreli",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -275,10 +201,7 @@
     "checked": true,
     "district": "Amritsar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -287,10 +210,7 @@
     "checked": true,
     "district": "Amroha",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -299,11 +219,7 @@
     "checked": true,
     "district": "Anakapalli",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -312,10 +228,7 @@
     "checked": true,
     "district": "Anand",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -324,10 +237,7 @@
     "checked": true,
     "district": "Anantapur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -336,11 +246,7 @@
     "checked": true,
     "district": "Anantnag",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -349,10 +255,7 @@
     "checked": true,
     "district": "Anjaw",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -361,11 +264,7 @@
     "checked": true,
     "district": "Annamayya",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -374,11 +273,7 @@
     "checked": true,
     "district": "Anugul",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -387,11 +282,7 @@
     "checked": true,
     "district": "Anuppur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -400,10 +291,7 @@
     "checked": true,
     "district": "Araria",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -412,11 +300,7 @@
     "checked": true,
     "district": "Ariyalur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -425,11 +309,7 @@
     "checked": true,
     "district": "Arvalli",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -438,10 +318,7 @@
     "checked": true,
     "district": "Arwal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -450,10 +327,7 @@
     "checked": true,
     "district": "Ashoknagar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -462,10 +336,7 @@
     "checked": true,
     "district": "Auraiya",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -474,10 +345,7 @@
     "checked": true,
     "district": "Aurangabad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -486,11 +354,7 @@
     "checked": true,
     "district": "Ayodhya",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -499,10 +363,7 @@
     "checked": true,
     "district": "Azamgarh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -511,10 +372,7 @@
     "checked": true,
     "district": "Bagalkot",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -523,11 +381,7 @@
     "checked": true,
     "district": "Bageshwar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttarakhand"
@@ -536,10 +390,7 @@
     "checked": true,
     "district": "Baghpat",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -548,10 +399,7 @@
     "checked": true,
     "district": "Bahraich",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -560,10 +408,7 @@
     "checked": true,
     "district": "Bajali",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -572,10 +417,7 @@
     "checked": true,
     "district": "Baksa",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -584,10 +426,7 @@
     "checked": true,
     "district": "Balaghat",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -596,11 +435,7 @@
     "checked": true,
     "district": "Balangir",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -609,10 +444,7 @@
     "checked": true,
     "district": "Baleshwar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -621,11 +453,7 @@
     "checked": true,
     "district": "Ballari",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -634,10 +462,7 @@
     "checked": true,
     "district": "Ballia",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -646,10 +471,7 @@
     "checked": true,
     "district": "Balod",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -658,10 +480,7 @@
     "checked": true,
     "district": "Baloda Bazar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -670,10 +489,7 @@
     "checked": true,
     "district": "Balrampur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -682,10 +498,7 @@
     "checked": true,
     "district": "Banas Kantha",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -694,10 +507,7 @@
     "checked": true,
     "district": "Banda",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -706,11 +516,7 @@
     "checked": true,
     "district": "Bandipora",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -731,10 +537,7 @@
     "checked": true,
     "district": "Banka",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -743,10 +546,7 @@
     "checked": true,
     "district": "Bankura",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -755,10 +555,7 @@
     "checked": true,
     "district": "Banswara",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -767,11 +564,7 @@
     "checked": true,
     "district": "Bapatla",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -780,10 +573,7 @@
     "checked": true,
     "district": "Barabanki",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -792,11 +582,7 @@
     "checked": true,
     "district": "Baramulla",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -805,10 +591,7 @@
     "checked": true,
     "district": "Baran",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -817,10 +600,7 @@
     "checked": true,
     "district": "Bareilly",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -829,10 +609,7 @@
     "checked": true,
     "district": "Bargarh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -841,10 +618,7 @@
     "checked": true,
     "district": "Barmer",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -853,10 +627,7 @@
     "checked": true,
     "district": "Barnala",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -865,10 +636,7 @@
     "checked": true,
     "district": "Barpeta",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -877,11 +645,7 @@
     "checked": true,
     "district": "Barwani",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -890,10 +654,7 @@
     "checked": true,
     "district": "Bastar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -902,10 +663,7 @@
     "checked": true,
     "district": "Basti",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -914,10 +672,7 @@
     "checked": true,
     "district": "Bathinda",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -926,11 +681,7 @@
     "checked": true,
     "district": "Beed",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -939,10 +690,7 @@
     "checked": true,
     "district": "Begusarai",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -951,11 +699,7 @@
     "checked": true,
     "district": "Belagavi",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -964,10 +708,7 @@
     "checked": true,
     "district": "Bemetara",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -976,11 +717,16 @@
     "checked": true,
     "district": "Bengaluru Rural",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
+      "silver"
+    ],
+    "state": "Karnataka"
+  },
+  "bengaluru-urban": {
+    "checked": true,
+    "district": "Bengaluru Urban",
+    "items": [
+      "gold",
       "silver"
     ],
     "state": "Karnataka"
@@ -989,10 +735,7 @@
     "checked": true,
     "district": "Betul",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -1001,10 +744,7 @@
     "checked": true,
     "district": "Bhadohi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -1013,10 +753,7 @@
     "checked": true,
     "district": "Bhadradri Kothagudem",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -1025,10 +762,7 @@
     "checked": true,
     "district": "Bhadrak",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -1037,10 +771,7 @@
     "checked": true,
     "district": "Bhagalpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -1049,10 +780,7 @@
     "checked": true,
     "district": "Bhandara",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -1061,10 +789,7 @@
     "checked": true,
     "district": "Bharatpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -1073,10 +798,7 @@
     "checked": true,
     "district": "Bharuch",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -1085,10 +807,7 @@
     "checked": true,
     "district": "Bhavnagar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -1097,10 +816,7 @@
     "checked": true,
     "district": "Bhilwara",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -1109,10 +825,7 @@
     "checked": true,
     "district": "Bhind",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -1121,10 +834,7 @@
     "checked": true,
     "district": "Bhiwani",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -1133,10 +843,7 @@
     "checked": true,
     "district": "Bhojpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -1145,10 +852,7 @@
     "checked": true,
     "district": "Bhopal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -1157,10 +861,7 @@
     "checked": true,
     "district": "Bidar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -1169,10 +870,7 @@
     "checked": true,
     "district": "Bijapur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -1181,10 +879,7 @@
     "checked": true,
     "district": "Bijnor",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -1193,10 +888,7 @@
     "checked": true,
     "district": "Bikaner",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -1205,10 +897,7 @@
     "checked": true,
     "district": "Bilaspur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -1217,9 +906,7 @@
     "checked": true,
     "district": "Birbhum",
     "items": [
-      "diesel",
       "gold",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -1228,10 +915,7 @@
     "checked": true,
     "district": "Bishnupur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -1240,10 +924,7 @@
     "checked": true,
     "district": "Biswanath",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -1252,10 +933,7 @@
     "checked": true,
     "district": "Bokaro",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -1264,10 +942,7 @@
     "checked": true,
     "district": "Bongaigaon",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -1276,10 +951,7 @@
     "checked": true,
     "district": "Botad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -1288,10 +960,7 @@
     "checked": true,
     "district": "Boudh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -1300,10 +969,7 @@
     "checked": true,
     "district": "Budaun",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -1312,11 +978,7 @@
     "checked": true,
     "district": "Budgam",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -1325,10 +987,7 @@
     "checked": true,
     "district": "Bulandshahr",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -1337,11 +996,7 @@
     "checked": true,
     "district": "Buldhana",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -1350,10 +1005,7 @@
     "checked": true,
     "district": "Bundi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -1362,10 +1014,7 @@
     "checked": true,
     "district": "Burhanpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -1374,10 +1023,7 @@
     "checked": true,
     "district": "Buxar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -1386,10 +1032,7 @@
     "checked": true,
     "district": "Cachar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -1398,11 +1041,7 @@
     "checked": true,
     "district": "Central",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Delhi"
@@ -1411,11 +1050,7 @@
     "checked": true,
     "district": "Chamarajanagara",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -1424,11 +1059,7 @@
     "checked": true,
     "district": "Chamba",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Himachal Pradesh"
@@ -1437,11 +1068,7 @@
     "checked": true,
     "district": "Chamoli",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttarakhand"
@@ -1450,10 +1077,7 @@
     "checked": true,
     "district": "Champawat",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttarakhand"
@@ -1462,10 +1086,7 @@
     "checked": true,
     "district": "Champhai",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Mizoram"
@@ -1474,10 +1095,7 @@
     "checked": true,
     "district": "Chandauli",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -1486,10 +1104,7 @@
     "checked": true,
     "district": "Chandel",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -1498,10 +1113,7 @@
     "checked": true,
     "district": "Chandigarh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chandigarh"
@@ -1510,10 +1122,7 @@
     "checked": true,
     "district": "Chandrapur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -1522,10 +1131,7 @@
     "checked": true,
     "district": "Changlang",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -1534,10 +1140,7 @@
     "checked": true,
     "district": "Charaideo",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -1546,10 +1149,7 @@
     "checked": true,
     "district": "Charki Dadri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -1558,10 +1158,7 @@
     "checked": true,
     "district": "Chatra",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -1570,10 +1167,7 @@
     "checked": true,
     "district": "Chengalpattu",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -1582,10 +1176,7 @@
     "checked": true,
     "district": "Chennai",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -1594,10 +1185,7 @@
     "checked": true,
     "district": "Chhatarpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -1606,11 +1194,7 @@
     "checked": true,
     "district": "Chhindwara",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -1619,10 +1203,7 @@
     "checked": true,
     "district": "Chhotaudepur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -1631,10 +1212,7 @@
     "checked": true,
     "district": "Chikkaballapura",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -1643,11 +1221,7 @@
     "checked": true,
     "district": "Chikkamagaluru",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -1656,10 +1230,7 @@
     "checked": true,
     "district": "Chirang",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -1668,10 +1239,7 @@
     "checked": true,
     "district": "Chitradurga",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -1680,11 +1248,7 @@
     "checked": true,
     "district": "Chitrakoot",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -1693,10 +1257,7 @@
     "checked": true,
     "district": "Chittoor",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -1705,11 +1266,7 @@
     "checked": true,
     "district": "Chittorgarh",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -1718,10 +1275,7 @@
     "checked": true,
     "district": "Churachandpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -1730,10 +1284,7 @@
     "checked": true,
     "district": "Churu",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -1742,10 +1293,7 @@
     "checked": true,
     "district": "Coimbatore",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -1754,11 +1302,7 @@
     "checked": true,
     "district": "Coochbehar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -1767,10 +1311,7 @@
     "checked": true,
     "district": "Cuddalore",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -1779,10 +1320,7 @@
     "checked": true,
     "district": "Cuttack",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -1791,10 +1329,7 @@
     "checked": true,
     "district": "Dadra And Nagar Haveli",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "The Dadra And Nagar Haveli And Daman And Diu"
@@ -1803,10 +1338,7 @@
     "checked": true,
     "district": "Dakshina Kannada",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -1815,10 +1347,7 @@
     "checked": true,
     "district": "Daman",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "The Dadra And Nagar Haveli And Daman And Diu"
@@ -1827,11 +1356,7 @@
     "checked": true,
     "district": "Damoh",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -1840,11 +1365,7 @@
     "checked": true,
     "district": "Dang",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -1853,10 +1374,7 @@
     "checked": true,
     "district": "Dantewada",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -1865,10 +1383,7 @@
     "checked": true,
     "district": "Darbhanga",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -1877,10 +1392,7 @@
     "checked": true,
     "district": "Darjeeling",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -1889,10 +1401,7 @@
     "checked": true,
     "district": "Darrang",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -1901,10 +1410,7 @@
     "checked": true,
     "district": "Datia",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -1913,10 +1419,7 @@
     "checked": true,
     "district": "Dausa",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -1925,10 +1428,7 @@
     "checked": true,
     "district": "Davangere",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -1937,10 +1437,7 @@
     "checked": true,
     "district": "Dehradun",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttarakhand"
@@ -1949,10 +1446,7 @@
     "checked": true,
     "district": "Deogarh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -1961,10 +1455,7 @@
     "checked": true,
     "district": "Deoghar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -1973,10 +1464,7 @@
     "checked": true,
     "district": "Deoria",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -1985,10 +1473,7 @@
     "checked": true,
     "district": "Devbhumi Dwarka",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -1997,10 +1482,7 @@
     "checked": true,
     "district": "Dewas",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -2009,10 +1491,7 @@
     "checked": true,
     "district": "Dhalai",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tripura"
@@ -2021,10 +1500,7 @@
     "checked": true,
     "district": "Dhamtari",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -2033,10 +1509,7 @@
     "checked": true,
     "district": "Dhanbad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -2045,10 +1518,7 @@
     "checked": true,
     "district": "Dhar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -2057,10 +1527,7 @@
     "checked": true,
     "district": "Dharmapuri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -2069,10 +1536,7 @@
     "checked": true,
     "district": "Dharwad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -2081,10 +1545,7 @@
     "checked": true,
     "district": "Dhemaji",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -2093,10 +1554,7 @@
     "checked": true,
     "district": "Dhenkanal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -2105,11 +1563,7 @@
     "checked": true,
     "district": "Dholpur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -2118,10 +1572,7 @@
     "checked": true,
     "district": "Dhubri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -2130,10 +1581,7 @@
     "checked": true,
     "district": "Dhule",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -2142,10 +1590,7 @@
     "checked": true,
     "district": "Dibang Valley",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -2154,10 +1599,7 @@
     "checked": true,
     "district": "Dibrugarh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -2166,10 +1608,7 @@
     "checked": true,
     "district": "Dima Hasao",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -2178,10 +1617,7 @@
     "checked": true,
     "district": "Dimapur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Nagaland"
@@ -2190,11 +1626,7 @@
     "checked": true,
     "district": "Dinajpur Dakshin",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -2203,11 +1635,7 @@
     "checked": true,
     "district": "Dinajpur Uttar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -2216,10 +1644,7 @@
     "checked": true,
     "district": "Dindigul",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -2228,11 +1653,7 @@
     "checked": true,
     "district": "Dindori",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -2241,9 +1662,7 @@
     "checked": true,
     "district": "Diu",
     "items": [
-      "diesel",
       "gold",
-      "petrol",
       "silver"
     ],
     "state": "The Dadra And Nagar Haveli And Daman And Diu"
@@ -2252,11 +1671,7 @@
     "checked": true,
     "district": "Doda",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -2265,11 +1680,7 @@
     "checked": true,
     "district": "Dohad",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -2278,10 +1689,7 @@
     "checked": true,
     "district": "Dumka",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -2290,10 +1698,7 @@
     "checked": true,
     "district": "Dungarpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -2302,10 +1707,7 @@
     "checked": true,
     "district": "Durg",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -2314,11 +1716,7 @@
     "checked": true,
     "district": "East",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Delhi"
@@ -2327,10 +1725,7 @@
     "checked": true,
     "district": "East District",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Sikkim"
@@ -2339,10 +1734,7 @@
     "checked": true,
     "district": "East Garo Hills",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Meghalaya"
@@ -2351,10 +1743,7 @@
     "checked": true,
     "district": "East Godavari",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -2363,10 +1752,7 @@
     "checked": true,
     "district": "East Jaintia Hills",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Meghalaya"
@@ -2375,10 +1761,7 @@
     "checked": true,
     "district": "East Kameng",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -2387,10 +1770,7 @@
     "checked": true,
     "district": "East Khasi Hills",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Meghalaya"
@@ -2399,11 +1779,7 @@
     "checked": true,
     "district": "East Nimar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -2412,10 +1788,7 @@
     "checked": true,
     "district": "East Siang",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -2424,11 +1797,7 @@
     "checked": true,
     "district": "East Singhbum",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -2437,10 +1806,7 @@
     "checked": true,
     "district": "Eluru",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -2449,10 +1815,7 @@
     "checked": true,
     "district": "Ernakulam",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Kerala"
@@ -2461,10 +1824,7 @@
     "checked": true,
     "district": "Erode",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -2473,10 +1833,7 @@
     "checked": true,
     "district": "Etah",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -2485,10 +1842,7 @@
     "checked": true,
     "district": "Etawah",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -2497,10 +1851,7 @@
     "checked": true,
     "district": "Faridabad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -2509,10 +1860,7 @@
     "checked": true,
     "district": "Faridkot",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -2521,11 +1869,7 @@
     "checked": true,
     "district": "Farrukhabad",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -2534,10 +1878,7 @@
     "checked": true,
     "district": "Fatehabad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -2546,10 +1887,7 @@
     "checked": true,
     "district": "Fatehgarh Sahib",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -2558,10 +1896,7 @@
     "checked": true,
     "district": "Fatehpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -2570,10 +1905,7 @@
     "checked": true,
     "district": "Fazilka",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -2582,10 +1914,7 @@
     "checked": true,
     "district": "Firozabad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -2594,11 +1923,7 @@
     "checked": true,
     "district": "Firozepur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -2607,10 +1932,7 @@
     "checked": true,
     "district": "Gadag",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -2619,10 +1941,7 @@
     "checked": true,
     "district": "Gadchiroli",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -2631,10 +1950,7 @@
     "checked": true,
     "district": "Gajapati",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -2643,11 +1959,7 @@
     "checked": true,
     "district": "Ganderbal",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -2656,10 +1968,7 @@
     "checked": true,
     "district": "Gandhinagar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -2668,10 +1977,7 @@
     "checked": true,
     "district": "Ganganagar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -2680,10 +1986,7 @@
     "checked": true,
     "district": "Ganjam",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -2692,10 +1995,7 @@
     "checked": true,
     "district": "Garhwa",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -2704,10 +2004,7 @@
     "checked": true,
     "district": "Gariyaband",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -2716,10 +2013,7 @@
     "checked": true,
     "district": "Gaurella Pendra Marwahi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -2728,11 +2022,7 @@
     "checked": true,
     "district": "Gautam Buddha Nagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -2741,10 +2031,7 @@
     "checked": true,
     "district": "Gaya",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -2753,10 +2040,7 @@
     "checked": true,
     "district": "Ghaziabad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -2765,10 +2049,7 @@
     "checked": true,
     "district": "Ghazipur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -2777,10 +2058,7 @@
     "checked": true,
     "district": "Gir Somnath",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -2789,10 +2067,7 @@
     "checked": true,
     "district": "Giridih",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -2801,10 +2076,7 @@
     "checked": true,
     "district": "Goalpara",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -2813,10 +2085,7 @@
     "checked": true,
     "district": "Godda",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -2825,10 +2094,7 @@
     "checked": true,
     "district": "Golaghat",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -2837,10 +2103,7 @@
     "checked": true,
     "district": "Gomati",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tripura"
@@ -2849,10 +2112,7 @@
     "checked": true,
     "district": "Gonda",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -2861,10 +2121,7 @@
     "checked": true,
     "district": "Gondia",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -2873,10 +2130,7 @@
     "checked": true,
     "district": "Gopalganj",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -2885,10 +2139,7 @@
     "checked": true,
     "district": "Gorakhpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -2897,10 +2148,7 @@
     "checked": true,
     "district": "Gumla",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -2909,10 +2157,7 @@
     "checked": true,
     "district": "Guna",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -2921,10 +2166,7 @@
     "checked": true,
     "district": "Guntur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -2933,10 +2175,7 @@
     "checked": true,
     "district": "Gurdaspur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -2945,10 +2184,7 @@
     "checked": true,
     "district": "Gurugram",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -2957,10 +2193,7 @@
     "checked": true,
     "district": "Gwalior",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -2969,10 +2202,7 @@
     "checked": true,
     "district": "Hailakandi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -2981,10 +2211,7 @@
     "checked": true,
     "district": "Hamirpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Himachal Pradesh"
@@ -2993,11 +2220,7 @@
     "checked": true,
     "district": "Hanumakonda",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -3006,10 +2229,7 @@
     "checked": true,
     "district": "Hanumangarh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -3018,10 +2238,7 @@
     "checked": true,
     "district": "Hapur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -3030,10 +2247,7 @@
     "checked": true,
     "district": "Harda",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -3042,10 +2256,7 @@
     "checked": true,
     "district": "Hardoi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -3054,10 +2265,7 @@
     "checked": true,
     "district": "Haridwar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttarakhand"
@@ -3066,10 +2274,7 @@
     "checked": true,
     "district": "Hassan",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -3078,10 +2283,7 @@
     "checked": true,
     "district": "Hathras",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -3090,10 +2292,7 @@
     "checked": true,
     "district": "Haveri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -3102,10 +2301,7 @@
     "checked": true,
     "district": "Hazaribagh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -3114,10 +2310,7 @@
     "checked": true,
     "district": "Hingoli",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -3126,10 +2319,7 @@
     "checked": true,
     "district": "Hisar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -3138,10 +2328,7 @@
     "checked": true,
     "district": "Hnahthial",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Mizoram"
@@ -3150,10 +2337,7 @@
     "checked": true,
     "district": "Hojai",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -3162,10 +2346,7 @@
     "checked": true,
     "district": "Hooghly",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -3174,10 +2355,7 @@
     "checked": true,
     "district": "Hoshangabad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -3186,10 +2364,7 @@
     "checked": true,
     "district": "Hoshiarpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -3198,10 +2373,7 @@
     "checked": true,
     "district": "Howrah",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -3210,10 +2382,7 @@
     "checked": true,
     "district": "Hyderabad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -3222,11 +2391,7 @@
     "checked": true,
     "district": "Idukki",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Kerala"
@@ -3235,10 +2400,7 @@
     "checked": true,
     "district": "Imphal East",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -3247,10 +2409,7 @@
     "checked": true,
     "district": "Imphal West",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -3259,10 +2418,7 @@
     "checked": true,
     "district": "Indore",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -3271,10 +2427,7 @@
     "checked": true,
     "district": "Jabalpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -3283,11 +2436,7 @@
     "checked": true,
     "district": "Jagatsinghapur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -3296,10 +2445,7 @@
     "checked": true,
     "district": "Jagitial",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -3308,10 +2454,7 @@
     "checked": true,
     "district": "Jaipur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -3320,10 +2463,7 @@
     "checked": true,
     "district": "Jaisalmer",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -3332,11 +2472,7 @@
     "checked": true,
     "district": "Jajapur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -3345,10 +2481,7 @@
     "checked": true,
     "district": "Jalandhar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -3357,10 +2490,7 @@
     "checked": true,
     "district": "Jalaun",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -3369,10 +2499,7 @@
     "checked": true,
     "district": "Jalgaon",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -3381,10 +2508,7 @@
     "checked": true,
     "district": "Jalna",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -3393,11 +2517,7 @@
     "checked": true,
     "district": "Jalore",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -3406,10 +2526,7 @@
     "checked": true,
     "district": "Jalpaiguri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -3418,10 +2535,7 @@
     "checked": true,
     "district": "Jammu",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -3430,10 +2544,7 @@
     "checked": true,
     "district": "Jamnagar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -3442,10 +2553,7 @@
     "checked": true,
     "district": "Jamtara",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -3454,10 +2562,7 @@
     "checked": true,
     "district": "Jamui",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -3466,11 +2571,7 @@
     "checked": true,
     "district": "Jangoan",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -3479,10 +2580,7 @@
     "checked": true,
     "district": "Janjgir-Champa",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -3491,10 +2589,7 @@
     "checked": true,
     "district": "Jashpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -3503,10 +2598,7 @@
     "checked": true,
     "district": "Jaunpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -3515,11 +2607,7 @@
     "checked": true,
     "district": "Jayashankar Bhupalapally",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -3528,11 +2616,7 @@
     "checked": true,
     "district": "Jehanabad",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -3541,11 +2625,7 @@
     "checked": true,
     "district": "Jhabua",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -3554,10 +2634,7 @@
     "checked": true,
     "district": "Jhajjar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -3566,10 +2643,7 @@
     "checked": true,
     "district": "Jhalawar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -3578,10 +2652,7 @@
     "checked": true,
     "district": "Jhansi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -3590,10 +2661,7 @@
     "checked": true,
     "district": "Jhargram",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -3602,10 +2670,7 @@
     "checked": true,
     "district": "Jharsuguda",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -3614,11 +2679,7 @@
     "checked": true,
     "district": "Jhunjhunu",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -3627,10 +2688,7 @@
     "checked": true,
     "district": "Jind",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -3639,10 +2697,7 @@
     "checked": true,
     "district": "Jiribam",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -3651,10 +2706,7 @@
     "checked": true,
     "district": "Jodhpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -3663,10 +2715,7 @@
     "checked": true,
     "district": "Jogulamba Gadwal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -3675,10 +2724,7 @@
     "checked": true,
     "district": "Jorhat",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -3687,10 +2733,7 @@
     "checked": true,
     "district": "Junagadh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -3699,10 +2742,7 @@
     "checked": true,
     "district": "Kabirdham",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -3711,11 +2751,7 @@
     "checked": true,
     "district": "Kachchh",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -3724,11 +2760,7 @@
     "checked": true,
     "district": "Kaimur (Bhabua)",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -3737,10 +2769,7 @@
     "checked": true,
     "district": "Kaithal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -3749,10 +2778,7 @@
     "checked": true,
     "district": "Kakching",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -3761,10 +2787,7 @@
     "checked": true,
     "district": "Kakinada",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -3773,11 +2796,7 @@
     "checked": true,
     "district": "Kalaburagi",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -3786,10 +2805,7 @@
     "checked": true,
     "district": "Kalahandi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -3798,11 +2814,7 @@
     "checked": true,
     "district": "Kalimpong",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -3811,10 +2823,7 @@
     "checked": true,
     "district": "Kallakurichi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -3823,10 +2832,7 @@
     "checked": true,
     "district": "Kamareddy",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -3835,10 +2841,7 @@
     "checked": true,
     "district": "Kamjong",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -3847,10 +2850,7 @@
     "checked": true,
     "district": "Kamrup",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -3859,10 +2859,7 @@
     "checked": true,
     "district": "Kamrup Metro",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -3871,10 +2868,7 @@
     "checked": true,
     "district": "Kanchipuram",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -3883,10 +2877,7 @@
     "checked": true,
     "district": "Kandhamal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -3895,10 +2886,7 @@
     "checked": true,
     "district": "Kangpokpi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -3907,10 +2895,7 @@
     "checked": true,
     "district": "Kangra",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Himachal Pradesh"
@@ -3919,10 +2904,7 @@
     "checked": true,
     "district": "Kanker",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -3931,11 +2913,7 @@
     "checked": true,
     "district": "Kannauj",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -3944,10 +2922,7 @@
     "checked": true,
     "district": "Kanniyakumari",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -3956,10 +2931,7 @@
     "checked": true,
     "district": "Kannur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Kerala"
@@ -3968,11 +2940,7 @@
     "checked": true,
     "district": "Kanpur Dehat",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -3981,11 +2949,7 @@
     "checked": true,
     "district": "Kanpur Nagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -3994,10 +2958,7 @@
     "checked": true,
     "district": "Kapurthala",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -4006,10 +2967,7 @@
     "checked": true,
     "district": "Karaikal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Puducherry"
@@ -4018,10 +2976,7 @@
     "checked": true,
     "district": "Karauli",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -4030,10 +2985,7 @@
     "checked": true,
     "district": "Karbi Anglong",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -4042,10 +2994,7 @@
     "checked": true,
     "district": "Kargil",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Ladakh"
@@ -4054,10 +3003,7 @@
     "checked": true,
     "district": "Karimganj",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -4066,11 +3012,7 @@
     "checked": true,
     "district": "Karimnagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -4079,10 +3021,7 @@
     "checked": true,
     "district": "Karnal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -4091,10 +3030,7 @@
     "checked": true,
     "district": "Karur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -4103,10 +3039,7 @@
     "checked": true,
     "district": "Kasaragod",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Kerala"
@@ -4115,11 +3048,7 @@
     "checked": true,
     "district": "Kasganj",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -4128,10 +3057,7 @@
     "checked": true,
     "district": "Kathua",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -4140,10 +3066,7 @@
     "checked": true,
     "district": "Katihar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -4152,11 +3075,7 @@
     "checked": true,
     "district": "Katni",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -4165,10 +3084,7 @@
     "checked": true,
     "district": "Kaushambi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -4177,10 +3093,7 @@
     "checked": true,
     "district": "Kendrapara",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -4189,11 +3102,7 @@
     "checked": true,
     "district": "Kendujhar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -4202,10 +3111,7 @@
     "checked": true,
     "district": "Khagaria",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -4214,10 +3120,7 @@
     "checked": true,
     "district": "Khammam",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -4226,10 +3129,7 @@
     "checked": true,
     "district": "Khargone",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -4238,10 +3138,7 @@
     "checked": true,
     "district": "Khawzawl",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Mizoram"
@@ -4250,10 +3147,7 @@
     "checked": true,
     "district": "Kheda",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -4262,11 +3156,7 @@
     "checked": true,
     "district": "Kheri",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -4275,10 +3165,7 @@
     "checked": true,
     "district": "Khordha",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -4287,10 +3174,7 @@
     "checked": true,
     "district": "Khowai",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tripura"
@@ -4299,10 +3183,7 @@
     "checked": true,
     "district": "Khunti",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -4311,11 +3192,7 @@
     "checked": true,
     "district": "Kinnaur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Himachal Pradesh"
@@ -4324,10 +3201,7 @@
     "checked": true,
     "district": "Kiphire",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Nagaland"
@@ -4336,10 +3210,7 @@
     "checked": true,
     "district": "Kishanganj",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -4348,11 +3219,7 @@
     "checked": true,
     "district": "Kishtwar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -4361,10 +3228,7 @@
     "checked": true,
     "district": "Kodagu",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -4373,10 +3237,7 @@
     "checked": true,
     "district": "Koderma",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -4385,10 +3246,7 @@
     "checked": true,
     "district": "Kohima",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Nagaland"
@@ -4397,10 +3255,7 @@
     "checked": true,
     "district": "Kokrajhar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -4409,10 +3264,7 @@
     "checked": true,
     "district": "Kolar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -4421,10 +3273,7 @@
     "checked": true,
     "district": "Kolasib",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Mizoram"
@@ -4433,10 +3282,7 @@
     "checked": true,
     "district": "Kolhapur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -4445,10 +3291,7 @@
     "checked": true,
     "district": "Kolkata",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -4457,10 +3300,7 @@
     "checked": true,
     "district": "Kollam",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Kerala"
@@ -4469,11 +3309,7 @@
     "checked": true,
     "district": "Konaseema",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -4482,10 +3318,7 @@
     "checked": true,
     "district": "Kondagaon",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -4494,10 +3327,7 @@
     "checked": true,
     "district": "Koppal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -4506,10 +3336,7 @@
     "checked": true,
     "district": "Koraput",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -4518,10 +3345,7 @@
     "checked": true,
     "district": "Korba",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -4530,10 +3354,7 @@
     "checked": true,
     "district": "Korea",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -4542,10 +3363,7 @@
     "checked": true,
     "district": "Kota",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -4554,11 +3372,7 @@
     "checked": true,
     "district": "Kottayam",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Kerala"
@@ -4567,10 +3381,7 @@
     "checked": true,
     "district": "Kozhikode",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Kerala"
@@ -4579,10 +3390,7 @@
     "checked": true,
     "district": "Krishna",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -4591,10 +3399,7 @@
     "checked": true,
     "district": "Krishnagiri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -4603,11 +3408,7 @@
     "checked": true,
     "district": "Kulgam",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -4616,10 +3417,7 @@
     "checked": true,
     "district": "Kullu",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Himachal Pradesh"
@@ -4628,11 +3426,7 @@
     "checked": true,
     "district": "Kumuram Bheem Asifabad",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -4641,11 +3435,7 @@
     "checked": true,
     "district": "Kupwara",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -4654,10 +3444,7 @@
     "checked": true,
     "district": "Kurnool",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -4666,10 +3453,7 @@
     "checked": true,
     "district": "Kurukshetra",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -4678,10 +3462,7 @@
     "checked": true,
     "district": "Kurung Kumey",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -4690,11 +3471,7 @@
     "checked": true,
     "district": "Kushi Nagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -4703,11 +3480,7 @@
     "checked": true,
     "district": "Lahul And Spiti",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Himachal Pradesh"
@@ -4716,10 +3489,7 @@
     "checked": true,
     "district": "Lakhimpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -4728,11 +3498,7 @@
     "checked": true,
     "district": "Lakhisarai",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -4741,10 +3507,7 @@
     "checked": true,
     "district": "Lakshadweep District",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Lakshadweep"
@@ -4753,10 +3516,7 @@
     "checked": true,
     "district": "Lalitpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -4765,10 +3525,7 @@
     "checked": true,
     "district": "Latehar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -4777,10 +3534,7 @@
     "checked": true,
     "district": "Latur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -4789,10 +3543,7 @@
     "checked": true,
     "district": "Lawngtlai",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Mizoram"
@@ -4801,10 +3552,7 @@
     "checked": true,
     "district": "Leh Ladakh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Ladakh"
@@ -4813,10 +3561,7 @@
     "checked": true,
     "district": "Leparada",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -4825,10 +3570,7 @@
     "checked": true,
     "district": "Lohardaga",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -4837,10 +3579,7 @@
     "checked": true,
     "district": "Lohit",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -4849,10 +3588,7 @@
     "checked": true,
     "district": "Longding",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -4861,10 +3597,7 @@
     "checked": true,
     "district": "Longleng",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Nagaland"
@@ -4873,10 +3606,7 @@
     "checked": true,
     "district": "Lower Siang",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -4885,10 +3615,7 @@
     "checked": true,
     "district": "Lower Subansiri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -4897,10 +3624,7 @@
     "checked": true,
     "district": "Lucknow",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -4909,10 +3633,7 @@
     "checked": true,
     "district": "Ludhiana",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -4921,10 +3642,7 @@
     "checked": true,
     "district": "Lunglei",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Mizoram"
@@ -4933,10 +3651,7 @@
     "checked": true,
     "district": "Madhepura",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -4945,10 +3660,7 @@
     "checked": true,
     "district": "Madhubani",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -4957,10 +3669,7 @@
     "checked": true,
     "district": "Madurai",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -4969,10 +3678,7 @@
     "checked": true,
     "district": "Mahabubabad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -4981,11 +3687,7 @@
     "checked": true,
     "district": "Mahabubnagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -4994,10 +3696,7 @@
     "checked": true,
     "district": "Maharajganj",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -5006,10 +3705,7 @@
     "checked": true,
     "district": "Mahasamund",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -5018,9 +3714,7 @@
     "checked": true,
     "district": "Mahe",
     "items": [
-      "diesel",
       "gold",
-      "petrol",
       "silver"
     ],
     "state": "Puducherry"
@@ -5029,10 +3723,7 @@
     "checked": true,
     "district": "Mahendragarh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -5041,11 +3732,7 @@
     "checked": true,
     "district": "Mahesana",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -5054,10 +3741,7 @@
     "checked": true,
     "district": "Mahisagar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -5066,10 +3750,7 @@
     "checked": true,
     "district": "Mahoba",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -5078,10 +3759,7 @@
     "checked": true,
     "district": "Mainpuri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -5090,10 +3768,7 @@
     "checked": true,
     "district": "Majuli",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -5102,10 +3777,7 @@
     "checked": true,
     "district": "Malappuram",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Kerala"
@@ -5114,11 +3786,7 @@
     "checked": true,
     "district": "Maldah",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -5127,10 +3795,7 @@
     "checked": true,
     "district": "Malerkotla",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -5139,10 +3804,7 @@
     "checked": true,
     "district": "Malkangiri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -5151,10 +3813,7 @@
     "checked": true,
     "district": "Mamit",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Mizoram"
@@ -5163,10 +3822,7 @@
     "checked": true,
     "district": "Mancherial",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -5175,10 +3831,7 @@
     "checked": true,
     "district": "Mandi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Himachal Pradesh"
@@ -5187,10 +3840,7 @@
     "checked": true,
     "district": "Mandla",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -5199,10 +3849,7 @@
     "checked": true,
     "district": "Mandsaur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -5211,10 +3858,7 @@
     "checked": true,
     "district": "Mandya",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -5223,10 +3867,7 @@
     "checked": true,
     "district": "Mansa",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -5235,10 +3876,7 @@
     "checked": true,
     "district": "Marigaon",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -5247,10 +3885,7 @@
     "checked": true,
     "district": "Mathura",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -5259,11 +3894,7 @@
     "checked": true,
     "district": "Mau",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -5272,11 +3903,7 @@
     "checked": true,
     "district": "Mayiladuthurai",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -5285,10 +3912,7 @@
     "checked": true,
     "district": "Mayurbhanj",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -5297,10 +3921,7 @@
     "checked": true,
     "district": "Medak",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -5309,10 +3930,7 @@
     "checked": true,
     "district": "Medchal Malkajgiri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -5321,11 +3939,7 @@
     "checked": true,
     "district": "Medinipur East",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -5334,11 +3948,7 @@
     "checked": true,
     "district": "Medinipur West",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -5347,10 +3957,7 @@
     "checked": true,
     "district": "Meerut",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -5359,10 +3966,7 @@
     "checked": true,
     "district": "Mirzapur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -5371,10 +3975,7 @@
     "checked": true,
     "district": "Moga",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -5383,10 +3984,7 @@
     "checked": true,
     "district": "Mokokchung",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Nagaland"
@@ -5395,10 +3993,7 @@
     "checked": true,
     "district": "Mon",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Nagaland"
@@ -5407,10 +4002,7 @@
     "checked": true,
     "district": "Moradabad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -5419,10 +4011,7 @@
     "checked": true,
     "district": "Morbi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -5431,10 +4020,7 @@
     "checked": true,
     "district": "Morena",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -5443,10 +4029,7 @@
     "checked": true,
     "district": "Mulugu",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -5455,10 +4038,7 @@
     "checked": true,
     "district": "Mumbai",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -5467,11 +4047,7 @@
     "checked": true,
     "district": "Mumbai Suburban",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -5480,10 +4056,7 @@
     "checked": true,
     "district": "Mungeli",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -5492,10 +4065,7 @@
     "checked": true,
     "district": "Munger",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -5504,10 +4074,7 @@
     "checked": true,
     "district": "Murshidabad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -5516,10 +4083,7 @@
     "checked": true,
     "district": "Muzaffarnagar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -5528,10 +4092,7 @@
     "checked": true,
     "district": "Muzaffarpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -5540,10 +4101,7 @@
     "checked": true,
     "district": "Mysuru",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -5552,11 +4110,7 @@
     "checked": true,
     "district": "Nabarangpur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -5565,10 +4119,7 @@
     "checked": true,
     "district": "Nadia",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -5577,10 +4128,7 @@
     "checked": true,
     "district": "Nagaon",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -5589,10 +4137,7 @@
     "checked": true,
     "district": "Nagapattinam",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -5601,10 +4146,7 @@
     "checked": true,
     "district": "Nagarkurnool",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -5613,10 +4155,7 @@
     "checked": true,
     "district": "Nagaur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -5625,10 +4164,7 @@
     "checked": true,
     "district": "Nagpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -5637,10 +4173,7 @@
     "checked": true,
     "district": "Nainital",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttarakhand"
@@ -5649,10 +4182,7 @@
     "checked": true,
     "district": "Nalanda",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -5661,10 +4191,7 @@
     "checked": true,
     "district": "Nalbari",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -5673,10 +4200,7 @@
     "checked": true,
     "district": "Nalgonda",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -5685,10 +4209,7 @@
     "checked": true,
     "district": "Namakkal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -5697,10 +4218,7 @@
     "checked": true,
     "district": "Namsai",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -5709,10 +4227,7 @@
     "checked": true,
     "district": "Nanded",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -5721,10 +4236,7 @@
     "checked": true,
     "district": "Nandurbar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -5733,11 +4245,7 @@
     "checked": true,
     "district": "Nandyal",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -5746,9 +4254,7 @@
     "checked": true,
     "district": "Narayanpet",
     "items": [
-      "diesel",
       "gold",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -5757,10 +4263,7 @@
     "checked": true,
     "district": "Narayanpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -5769,10 +4272,7 @@
     "checked": true,
     "district": "Narmada",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -5781,11 +4281,7 @@
     "checked": true,
     "district": "Narsinghpur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -5794,10 +4290,7 @@
     "checked": true,
     "district": "Nashik",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -5806,10 +4299,7 @@
     "checked": true,
     "district": "Navsari",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -5818,10 +4308,7 @@
     "checked": true,
     "district": "Nawada",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -5830,10 +4317,7 @@
     "checked": true,
     "district": "Nayagarh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -5842,11 +4326,7 @@
     "checked": true,
     "district": "Neemuch",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -5855,10 +4335,7 @@
     "checked": true,
     "district": "New Delhi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Delhi"
@@ -5867,10 +4344,7 @@
     "checked": true,
     "district": "Nicobars",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andaman And Nicobar Islands"
@@ -5879,10 +4353,7 @@
     "checked": true,
     "district": "Nirmal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -5891,11 +4362,7 @@
     "checked": true,
     "district": "Niwari",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -5904,10 +4371,7 @@
     "checked": true,
     "district": "Nizamabad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -5916,10 +4380,7 @@
     "checked": true,
     "district": "Noney",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -5928,11 +4389,7 @@
     "checked": true,
     "district": "North",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Delhi"
@@ -5941,10 +4398,7 @@
     "checked": true,
     "district": "North And Middle Andaman",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andaman And Nicobar Islands"
@@ -5953,10 +4407,7 @@
     "checked": true,
     "district": "North District",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Sikkim"
@@ -5965,11 +4416,7 @@
     "checked": true,
     "district": "North East",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Delhi"
@@ -5978,10 +4425,7 @@
     "checked": true,
     "district": "North Garo Hills",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Meghalaya"
@@ -5990,10 +4434,7 @@
     "checked": true,
     "district": "North Goa",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Goa"
@@ -6002,10 +4443,7 @@
     "checked": true,
     "district": "North Tripura",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tripura"
@@ -6014,11 +4452,7 @@
     "checked": true,
     "district": "North West",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Delhi"
@@ -6027,10 +4461,7 @@
     "checked": true,
     "district": "Ntr",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -6039,11 +4470,7 @@
     "checked": true,
     "district": "Nuapada",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -6052,11 +4479,7 @@
     "checked": true,
     "district": "Nuh",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -6065,10 +4488,7 @@
     "checked": true,
     "district": "Osmanabad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -6077,10 +4497,7 @@
     "checked": true,
     "district": "Pakke Kessang",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -6089,10 +4506,7 @@
     "checked": true,
     "district": "Pakur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -6101,10 +4515,7 @@
     "checked": true,
     "district": "Pakyong",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Sikkim"
@@ -6113,10 +4524,7 @@
     "checked": true,
     "district": "Palakkad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Kerala"
@@ -6125,11 +4533,7 @@
     "checked": true,
     "district": "Palamu",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -6138,10 +4542,7 @@
     "checked": true,
     "district": "Palghar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -6150,10 +4551,7 @@
     "checked": true,
     "district": "Pali",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -6162,11 +4560,7 @@
     "checked": true,
     "district": "Palnadu",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -6175,10 +4569,7 @@
     "checked": true,
     "district": "Palwal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -6187,11 +4578,7 @@
     "checked": true,
     "district": "Panch Mahals",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -6200,10 +4587,7 @@
     "checked": true,
     "district": "Panchkula",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -6212,10 +4596,7 @@
     "checked": true,
     "district": "Panipat",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -6224,10 +4605,7 @@
     "checked": true,
     "district": "Panna",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -6236,10 +4614,7 @@
     "checked": true,
     "district": "Papum Pare",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -6248,10 +4623,7 @@
     "checked": true,
     "district": "Parbhani",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -6260,11 +4632,7 @@
     "checked": true,
     "district": "Parvathipuram Manyam",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -6273,11 +4641,7 @@
     "checked": true,
     "district": "Paschim Bardhaman",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -6286,11 +4650,7 @@
     "checked": true,
     "district": "Pashchim Champaran",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -6299,10 +4659,7 @@
     "checked": true,
     "district": "Patan",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -6311,11 +4668,7 @@
     "checked": true,
     "district": "Pathanamthitta",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Kerala"
@@ -6324,10 +4677,7 @@
     "checked": true,
     "district": "Pathankot",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -6336,10 +4686,7 @@
     "checked": true,
     "district": "Patiala",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -6348,10 +4695,7 @@
     "checked": true,
     "district": "Patna",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -6360,11 +4704,7 @@
     "checked": true,
     "district": "Pauri Garhwal",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttarakhand"
@@ -6373,10 +4713,7 @@
     "checked": true,
     "district": "Peddapalli",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -6385,10 +4722,7 @@
     "checked": true,
     "district": "Perambalur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -6397,10 +4731,7 @@
     "checked": true,
     "district": "Peren",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Nagaland"
@@ -6409,10 +4740,7 @@
     "checked": true,
     "district": "Phek",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Nagaland"
@@ -6421,10 +4749,7 @@
     "checked": true,
     "district": "Pherzawl",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -6433,10 +4758,7 @@
     "checked": true,
     "district": "Pilibhit",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -6445,11 +4767,7 @@
     "checked": true,
     "district": "Pithoragarh",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttarakhand"
@@ -6458,10 +4776,7 @@
     "checked": true,
     "district": "Pondicherry",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Puducherry"
@@ -6470,11 +4785,7 @@
     "checked": true,
     "district": "Poonch",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -6483,11 +4794,7 @@
     "checked": true,
     "district": "Porbandar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -6496,10 +4803,7 @@
     "checked": true,
     "district": "Prakasam",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -6508,10 +4812,7 @@
     "checked": true,
     "district": "Pratapgarh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -6520,10 +4821,7 @@
     "checked": true,
     "district": "Prayagraj",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -6532,10 +4830,7 @@
     "checked": true,
     "district": "Pudukkottai",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -6544,11 +4839,7 @@
     "checked": true,
     "district": "Pulwama",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -6557,10 +4848,7 @@
     "checked": true,
     "district": "Pune",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -6569,10 +4857,7 @@
     "checked": true,
     "district": "Purba Bardhaman",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -6581,11 +4866,7 @@
     "checked": true,
     "district": "Purbi Champaran",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -6594,10 +4875,7 @@
     "checked": true,
     "district": "Puri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -6606,10 +4884,7 @@
     "checked": true,
     "district": "Purnia",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -6618,10 +4893,7 @@
     "checked": true,
     "district": "Purulia",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "West Bengal"
@@ -6630,10 +4902,7 @@
     "checked": true,
     "district": "Rae Bareli",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -6642,10 +4911,7 @@
     "checked": true,
     "district": "Raichur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -6654,11 +4920,7 @@
     "checked": true,
     "district": "Raigad",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -6667,10 +4929,7 @@
     "checked": true,
     "district": "Raigarh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -6679,10 +4938,7 @@
     "checked": true,
     "district": "Raipur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -6691,10 +4947,7 @@
     "checked": true,
     "district": "Raisen",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -6703,10 +4956,7 @@
     "checked": true,
     "district": "Rajanna Sircilla",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -6715,10 +4965,7 @@
     "checked": true,
     "district": "Rajgarh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -6727,10 +4974,7 @@
     "checked": true,
     "district": "Rajkot",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -6739,10 +4983,7 @@
     "checked": true,
     "district": "Rajnandgaon",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -6751,11 +4992,7 @@
     "checked": true,
     "district": "Rajouri",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -6764,10 +5001,7 @@
     "checked": true,
     "district": "Rajsamand",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -6776,10 +5010,7 @@
     "checked": true,
     "district": "Ramanagara",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -6788,10 +5019,7 @@
     "checked": true,
     "district": "Ramanathapuram",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -6800,11 +5028,7 @@
     "checked": true,
     "district": "Ramban",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -6813,10 +5037,7 @@
     "checked": true,
     "district": "Ramgarh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -6825,10 +5046,7 @@
     "checked": true,
     "district": "Rampur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -6837,10 +5055,7 @@
     "checked": true,
     "district": "Ranchi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -6849,11 +5064,7 @@
     "checked": true,
     "district": "Ranga Reddy",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -6862,11 +5073,7 @@
     "checked": true,
     "district": "Ranipet",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -6875,10 +5082,7 @@
     "checked": true,
     "district": "Ratlam",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -6887,10 +5091,7 @@
     "checked": true,
     "district": "Ratnagiri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -6899,10 +5100,7 @@
     "checked": true,
     "district": "Rayagada",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -6911,10 +5109,7 @@
     "checked": true,
     "district": "Reasi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -6923,10 +5118,7 @@
     "checked": true,
     "district": "Rewa",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -6935,10 +5127,7 @@
     "checked": true,
     "district": "Rewari",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -6947,10 +5136,7 @@
     "checked": true,
     "district": "Ri Bhoi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Meghalaya"
@@ -6959,10 +5145,7 @@
     "checked": true,
     "district": "Rohtak",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -6971,10 +5154,7 @@
     "checked": true,
     "district": "Rohtas",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -6983,11 +5163,7 @@
     "checked": true,
     "district": "Rudra Prayag",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttarakhand"
@@ -6996,10 +5172,7 @@
     "checked": true,
     "district": "Rupnagar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -7008,11 +5181,7 @@
     "checked": true,
     "district": "S.A.S Nagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -7021,10 +5190,7 @@
     "checked": true,
     "district": "Sabar Kantha",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -7033,10 +5199,7 @@
     "checked": true,
     "district": "Sagar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -7045,10 +5208,7 @@
     "checked": true,
     "district": "Saharanpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -7057,10 +5217,7 @@
     "checked": true,
     "district": "Saharsa",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -7069,11 +5226,7 @@
     "checked": true,
     "district": "Sahebganj",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -7082,10 +5235,7 @@
     "checked": true,
     "district": "Saitual",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Mizoram"
@@ -7094,10 +5244,7 @@
     "checked": true,
     "district": "Salem",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -7106,10 +5253,7 @@
     "checked": true,
     "district": "Samastipur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -7118,10 +5262,7 @@
     "checked": true,
     "district": "Samba",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -7130,10 +5271,7 @@
     "checked": true,
     "district": "Sambalpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -7142,10 +5280,7 @@
     "checked": true,
     "district": "Sambhal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -7154,10 +5289,7 @@
     "checked": true,
     "district": "Sangareddy",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -7166,10 +5298,7 @@
     "checked": true,
     "district": "Sangli",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -7178,10 +5307,7 @@
     "checked": true,
     "district": "Sangrur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -7190,11 +5316,7 @@
     "checked": true,
     "district": "Sant Kabeer Nagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -7203,11 +5325,7 @@
     "checked": true,
     "district": "Saraikela Kharsawan",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -7216,10 +5334,7 @@
     "checked": true,
     "district": "Saran",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -7228,10 +5343,7 @@
     "checked": true,
     "district": "Satara",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -7240,10 +5352,7 @@
     "checked": true,
     "district": "Satna",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -7252,11 +5361,7 @@
     "checked": true,
     "district": "Sawai Madhopur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -7265,10 +5370,7 @@
     "checked": true,
     "district": "Sehore",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -7277,10 +5379,7 @@
     "checked": true,
     "district": "Senapati",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -7289,10 +5388,7 @@
     "checked": true,
     "district": "Seoni",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -7301,10 +5397,7 @@
     "checked": true,
     "district": "Sepahijala",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tripura"
@@ -7313,10 +5406,7 @@
     "checked": true,
     "district": "Serchhip",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Mizoram"
@@ -7325,11 +5415,7 @@
     "checked": true,
     "district": "Shahdara",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Delhi"
@@ -7338,10 +5424,7 @@
     "checked": true,
     "district": "Shahdol",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -7350,11 +5433,7 @@
     "checked": true,
     "district": "Shahid Bhagat Singh Nagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -7363,10 +5442,7 @@
     "checked": true,
     "district": "Shahjahanpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -7375,10 +5451,7 @@
     "checked": true,
     "district": "Shajapur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -7387,10 +5460,7 @@
     "checked": true,
     "district": "Shamli",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -7399,10 +5469,7 @@
     "checked": true,
     "district": "Sheikhpura",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -7411,10 +5478,7 @@
     "checked": true,
     "district": "Sheohar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -7423,10 +5487,7 @@
     "checked": true,
     "district": "Sheopur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -7435,10 +5496,7 @@
     "checked": true,
     "district": "Shi Yomi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -7447,10 +5505,7 @@
     "checked": true,
     "district": "Shimla",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Himachal Pradesh"
@@ -7459,11 +5514,7 @@
     "checked": true,
     "district": "Shivamogga",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -7472,10 +5523,7 @@
     "checked": true,
     "district": "Shivpuri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -7484,11 +5532,7 @@
     "checked": true,
     "district": "Shopian",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -7497,10 +5541,7 @@
     "checked": true,
     "district": "Shravasti",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -7509,11 +5550,7 @@
     "checked": true,
     "district": "Siddharth Nagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -7522,10 +5559,7 @@
     "checked": true,
     "district": "Siddipet",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -7534,10 +5568,7 @@
     "checked": true,
     "district": "Sidhi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -7546,10 +5577,7 @@
     "checked": true,
     "district": "Sikar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -7558,10 +5586,7 @@
     "checked": true,
     "district": "Simdega",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -7570,10 +5595,7 @@
     "checked": true,
     "district": "Sindhudurg",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -7582,10 +5604,7 @@
     "checked": true,
     "district": "Singrauli",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -7594,10 +5613,7 @@
     "checked": true,
     "district": "Sirmaur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Himachal Pradesh"
@@ -7606,10 +5622,7 @@
     "checked": true,
     "district": "Sirohi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -7618,10 +5631,7 @@
     "checked": true,
     "district": "Sirsa",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -7630,10 +5640,7 @@
     "checked": true,
     "district": "Sitamarhi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -7642,10 +5649,7 @@
     "checked": true,
     "district": "Sitapur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -7654,10 +5658,7 @@
     "checked": true,
     "district": "Sivaganga",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -7666,10 +5667,7 @@
     "checked": true,
     "district": "Sivasagar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -7678,11 +5676,7 @@
     "checked": true,
     "district": "Siwan",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -7691,10 +5685,7 @@
     "checked": true,
     "district": "Solan",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Himachal Pradesh"
@@ -7703,10 +5694,7 @@
     "checked": true,
     "district": "Solapur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -7715,10 +5703,7 @@
     "checked": true,
     "district": "Sonbhadra",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -7727,11 +5712,7 @@
     "checked": true,
     "district": "Sonepur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -7740,10 +5721,7 @@
     "checked": true,
     "district": "Sonipat",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -7752,10 +5730,7 @@
     "checked": true,
     "district": "Sonitpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -7764,11 +5739,7 @@
     "checked": true,
     "district": "South",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Delhi"
@@ -7777,10 +5748,7 @@
     "checked": true,
     "district": "South Andamans",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andaman And Nicobar Islands"
@@ -7789,10 +5757,7 @@
     "checked": true,
     "district": "South District",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Sikkim"
@@ -7801,11 +5766,7 @@
     "checked": true,
     "district": "South East",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Delhi"
@@ -7814,10 +5775,7 @@
     "checked": true,
     "district": "South Garo Hills",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Meghalaya"
@@ -7826,10 +5784,7 @@
     "checked": true,
     "district": "South Goa",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Goa"
@@ -7838,10 +5793,7 @@
     "checked": true,
     "district": "South Salmara Mancachar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -7850,10 +5802,7 @@
     "checked": true,
     "district": "South Tripura",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tripura"
@@ -7862,11 +5811,7 @@
     "checked": true,
     "district": "South West",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Delhi"
@@ -7875,10 +5820,7 @@
     "checked": true,
     "district": "South West Garo Hills",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Meghalaya"
@@ -7887,10 +5829,7 @@
     "checked": true,
     "district": "South West Khasi Hills",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Meghalaya"
@@ -7899,11 +5838,7 @@
     "checked": true,
     "district": "Spsr Nellore",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -7912,11 +5847,7 @@
     "checked": true,
     "district": "Sri Muktsar Sahib",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -7925,11 +5856,7 @@
     "checked": true,
     "district": "Sri Sathya Sai",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -7938,10 +5865,7 @@
     "checked": true,
     "district": "Srikakulam",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -7950,11 +5874,7 @@
     "checked": true,
     "district": "Srinagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -7963,10 +5883,7 @@
     "checked": true,
     "district": "Sukma",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -7975,10 +5892,7 @@
     "checked": true,
     "district": "Sultanpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -7987,10 +5901,7 @@
     "checked": true,
     "district": "Sundargarh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Odisha"
@@ -7999,10 +5910,7 @@
     "checked": true,
     "district": "Supaul",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -8011,10 +5919,7 @@
     "checked": true,
     "district": "Surajpur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -8023,10 +5928,7 @@
     "checked": true,
     "district": "Surat",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -8035,10 +5937,7 @@
     "checked": true,
     "district": "Surendranagar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -8047,10 +5946,7 @@
     "checked": true,
     "district": "Surguja",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Chhattisgarh"
@@ -8059,10 +5955,7 @@
     "checked": true,
     "district": "Suryapet",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -8071,10 +5964,7 @@
     "checked": true,
     "district": "Tamenglong",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -8083,10 +5973,7 @@
     "checked": true,
     "district": "Tapi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -8095,10 +5982,7 @@
     "checked": true,
     "district": "Tarn Taran",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Punjab"
@@ -8107,10 +5991,7 @@
     "checked": true,
     "district": "Tawang",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -8119,10 +6000,7 @@
     "checked": true,
     "district": "Tehri Garhwal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttarakhand"
@@ -8131,10 +6009,7 @@
     "checked": true,
     "district": "Tengnoupal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -8143,10 +6018,7 @@
     "checked": true,
     "district": "Tenkasi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -8155,10 +6027,7 @@
     "checked": true,
     "district": "Thane",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -8167,10 +6036,7 @@
     "checked": true,
     "district": "Thanjavur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -8179,11 +6045,7 @@
     "checked": true,
     "district": "The Nilgiris",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -8192,11 +6054,7 @@
     "checked": true,
     "district": "Theni",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -8205,11 +6063,7 @@
     "checked": true,
     "district": "Thiruvallur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -8218,10 +6072,7 @@
     "checked": true,
     "district": "Thiruvarur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -8230,10 +6081,7 @@
     "checked": true,
     "district": "Thoubal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -8242,10 +6090,7 @@
     "checked": true,
     "district": "Thrissur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Kerala"
@@ -8254,10 +6099,7 @@
     "checked": true,
     "district": "Tikamgarh",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -8266,10 +6108,7 @@
     "checked": true,
     "district": "Tinsukia",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -8278,10 +6117,7 @@
     "checked": true,
     "district": "Tirap",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -8290,11 +6126,7 @@
     "checked": true,
     "district": "Tiruchirappalli",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -8303,10 +6135,7 @@
     "checked": true,
     "district": "Tirunelveli",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -8315,11 +6144,7 @@
     "checked": true,
     "district": "Tirupathur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -8328,10 +6153,7 @@
     "checked": true,
     "district": "Tirupati",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -8340,11 +6162,7 @@
     "checked": true,
     "district": "Tiruppur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -8353,10 +6171,7 @@
     "checked": true,
     "district": "Tiruvannamalai",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -8365,10 +6180,7 @@
     "checked": true,
     "district": "Tonk",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -8377,10 +6189,7 @@
     "checked": true,
     "district": "Thiruvananthapuram",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Kerala"
@@ -8389,10 +6198,7 @@
     "checked": true,
     "district": "Tuensang",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Nagaland"
@@ -8401,11 +6207,7 @@
     "checked": true,
     "district": "Tumakuru",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -8414,10 +6216,7 @@
     "checked": true,
     "district": "Tuticorin",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -8426,10 +6225,7 @@
     "checked": true,
     "district": "Udaipur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Rajasthan"
@@ -8438,10 +6234,7 @@
     "checked": true,
     "district": "Udalguri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -8450,11 +6243,7 @@
     "checked": true,
     "district": "Udam Singh Nagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttarakhand"
@@ -8463,10 +6252,7 @@
     "checked": true,
     "district": "Udhampur",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jammu And Kashmir"
@@ -8475,10 +6261,7 @@
     "checked": true,
     "district": "Udupi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -8487,10 +6270,7 @@
     "checked": true,
     "district": "Ujjain",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -8499,10 +6279,7 @@
     "checked": true,
     "district": "Ukhrul",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Manipur"
@@ -8511,11 +6288,7 @@
     "checked": true,
     "district": "Umaria",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -8524,10 +6297,7 @@
     "checked": true,
     "district": "Una",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Himachal Pradesh"
@@ -8536,10 +6306,7 @@
     "checked": true,
     "district": "Unakoti",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tripura"
@@ -8548,10 +6315,7 @@
     "checked": true,
     "district": "Unnao",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -8560,10 +6324,7 @@
     "checked": true,
     "district": "Upper Siang",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -8572,10 +6333,7 @@
     "checked": true,
     "district": "Upper Subansiri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -8584,11 +6342,7 @@
     "checked": true,
     "district": "Uttar Kashi",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttarakhand"
@@ -8597,10 +6351,7 @@
     "checked": true,
     "district": "Uttara Kannada",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -8609,10 +6360,7 @@
     "checked": true,
     "district": "Vadodara",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -8621,10 +6369,7 @@
     "checked": true,
     "district": "Vaishali",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Bihar"
@@ -8633,10 +6378,7 @@
     "checked": true,
     "district": "Valsad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Gujarat"
@@ -8645,10 +6387,7 @@
     "checked": true,
     "district": "Varanasi",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Uttar Pradesh"
@@ -8657,10 +6396,7 @@
     "checked": true,
     "district": "Vellore",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -8669,10 +6405,7 @@
     "checked": true,
     "district": "Vidisha",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Madhya Pradesh"
@@ -8681,11 +6414,7 @@
     "checked": true,
     "district": "Vijayapura",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -8694,11 +6423,7 @@
     "checked": true,
     "district": "Vijaynagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -8707,10 +6432,7 @@
     "checked": true,
     "district": "Vikarabad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -8719,11 +6441,7 @@
     "checked": true,
     "district": "Villupuram",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -8732,11 +6450,7 @@
     "checked": true,
     "district": "Virudhunagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tamil Nadu"
@@ -8745,11 +6459,7 @@
     "checked": true,
     "district": "Visakhapatanam",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -8758,10 +6468,7 @@
     "checked": true,
     "district": "Vizianagaram",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -8770,10 +6477,7 @@
     "checked": true,
     "district": "Wanaparthy",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -8782,10 +6486,7 @@
     "checked": true,
     "district": "Warangal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -8794,10 +6495,7 @@
     "checked": true,
     "district": "Wardha",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -8806,10 +6504,7 @@
     "checked": true,
     "district": "Washim",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -8818,10 +6513,7 @@
     "checked": true,
     "district": "Wayanad",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Kerala"
@@ -8830,11 +6522,7 @@
     "checked": true,
     "district": "West",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Delhi"
@@ -8843,10 +6531,7 @@
     "checked": true,
     "district": "West District",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Sikkim"
@@ -8855,10 +6540,7 @@
     "checked": true,
     "district": "West Garo Hills",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Meghalaya"
@@ -8867,10 +6549,7 @@
     "checked": true,
     "district": "West Godavari",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -8879,10 +6558,7 @@
     "checked": true,
     "district": "West Jaintia Hills",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Meghalaya"
@@ -8891,10 +6567,7 @@
     "checked": true,
     "district": "West Kameng",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -8903,10 +6576,7 @@
     "checked": true,
     "district": "West Karbi Anglong",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Assam"
@@ -8915,10 +6585,7 @@
     "checked": true,
     "district": "West Khasi Hills",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Meghalaya"
@@ -8927,10 +6594,7 @@
     "checked": true,
     "district": "West Siang",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Arunachal Pradesh"
@@ -8939,10 +6603,7 @@
     "checked": true,
     "district": "West Singhbhum",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Jharkhand"
@@ -8951,10 +6612,7 @@
     "checked": true,
     "district": "West Tripura",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Tripura"
@@ -8963,10 +6621,7 @@
     "checked": true,
     "district": "Wokha",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Nagaland"
@@ -8975,11 +6630,7 @@
     "checked": true,
     "district": "Y.S.R.",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Andhra Pradesh"
@@ -8988,10 +6639,7 @@
     "checked": true,
     "district": "Yadadri Bhuvanagiri",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Telangana"
@@ -9000,10 +6648,7 @@
     "checked": true,
     "district": "Yadgir",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Karnataka"
@@ -9012,10 +6657,7 @@
     "checked": true,
     "district": "Yamunanagar",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Haryana"
@@ -9024,10 +6666,7 @@
     "checked": true,
     "district": "Yavatmal",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Maharashtra"
@@ -9036,10 +6675,7 @@
     "checked": true,
     "district": "Zunheboto",
     "items": [
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
     "state": "Nagaland"
