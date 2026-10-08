@@ -93,10 +93,15 @@ class ApiTests(unittest.TestCase):
         self.assertIn("silver", prices)
 
     def test_market_when_source_unavailable(self):
-        with mock.patch.object(app_module, "fetch_prices", return_value=({}, "unavailable", set(), "2026-01-01T00:00:00+00:00")):
+        # Even then the app must not show blank cards: the nearest covered
+        # location fills every item, and says where it came from.
+        cache = {"noida": {"city": "Noida", "prices": {"petrol": 102.12}, "updatedAt": None}}
+        with mock.patch.object(app_module, "fetch_prices", return_value=({}, "unavailable", set(), "2026-01-01T00:00:00+00:00")), \
+                mock.patch.object(app_module, "load_file_cache", return_value=cache):
             payload = self.client.get("/v1/market?lat=28.61&lng=77.20&city=Delhi").json
-        self.assertEqual(payload["prices"], {})
         self.assertEqual(payload["source"], "unavailable")
+        self.assertEqual(payload["prices"]["petrol"], 102.12)
+        self.assertEqual(payload["approximate"]["petrol"], "Noida")
 
     def test_invalid_and_out_of_range_coordinates(self):
         self.assertEqual(self.client.get("/v1/market?lat=nope").status_code, 400)
@@ -129,9 +134,12 @@ class FuelParsingTests(unittest.TestCase):
         self.assertIsNone(parse_fuel_value("cng", CNG_PAGE, "Amethi", "Uttar Pradesh"))
         self.assertEqual(parse_fuel_value("cng", CNG_PAGE, "Delhi", "Delhi"), 86.98)
 
-    def test_headline_used_only_when_nothing_else(self):
+    def test_national_page_headline_is_never_another_city_s_price(self):
+        # The India page's headline is Mumbai's rate. An unknown town must get
+        # nothing from it (the caller then uses a genuinely nearby city),
+        # never Mumbai's figure dressed up as its own.
         text = "Today's petrol price in India (Mumbai) stands at ₹ 111.21 per litre."
-        self.assertEqual(parse_fuel_value("petrol", text, "Nowhere", ""), 111.21)
+        self.assertIsNone(parse_fuel_value("petrol", text, "Nowhere", ""))
 
     def test_town_with_own_page_uses_its_own_headline(self):
         page = (
@@ -297,3 +305,53 @@ class PanIndiaTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class AliasTests(unittest.TestCase):
+    """A renamed place must still find its page under the old name."""
+
+    def test_alias_page_is_tried_after_the_place_s_own_slug(self):
+        urls = candidate_urls("Ayodhya")
+        self.assertIn("https://www.goodreturns.in/lpg-price-in-ayodhya.html", urls["lpg"])
+        self.assertIn("https://www.goodreturns.in/lpg-price-in-faizabad.html", urls["lpg"])
+
+    def test_prayagraj_falls_back_to_allahabad(self):
+        self.assertIn("https://www.goodreturns.in/lpg-price-in-allahabad.html", candidate_urls("Prayagraj")["lpg"])
+
+    def test_a_place_without_an_alias_only_has_its_own_page(self):
+        urls = candidate_urls("Amethi")
+        self.assertEqual([u for u in urls["lpg"] if "lpg-price-in" in u], ["https://www.goodreturns.in/lpg-price-in-amethi.html"])
+
+    def test_headline_names_include_the_alias(self):
+        self.assertEqual(app_module.headline_names("Prayagraj"), ["Prayagraj", "Allahabad"])
+        self.assertEqual(app_module.headline_names("Amethi"), ["Amethi"])
+
+    def test_headline_is_read_under_the_alias_name(self):
+        text = "LPG Price in Faizabad The Domestic LPG (14.2 kg) cylinder price in Faizabad stands at ₹ 1004.50."
+        self.assertEqual(app_module.city_headline_value("lpg", text, "Ayodhya"), 1004.5)
+
+
+class NearestFillTests(unittest.TestCase):
+    """No card is ever blank: a missing item comes from the nearest place."""
+
+    CACHE = {
+        "amethi": {"city": "Amethi", "prices": {"lpg": 979.5}, "updatedAt": None},
+        "lucknow": {"city": "Lucknow", "prices": {"lpg": 979.5, "cng": 90.0}, "updatedAt": None},
+    }
+
+    def test_missing_item_is_filled_from_the_nearest_location(self):
+        with mock.patch.object(app_module, "load_file_cache", return_value=self.CACHE):
+            filled, approximate = app_module.fill_missing_items({"lpg": 979.5}, 26.85, 80.95)
+        self.assertEqual(filled["cng"], 90.0)
+        self.assertEqual(approximate["cng"], "Lucknow")
+
+    def test_a_present_value_is_never_overwritten(self):
+        with mock.patch.object(app_module, "load_file_cache", return_value=self.CACHE):
+            filled, approximate = app_module.fill_missing_items({"lpg": 979.5, "cng": 12.5}, 26.85, 80.95)
+        self.assertEqual(filled["cng"], 12.5)
+        self.assertNotIn("cng", approximate)
+
+    def test_the_source_location_is_never_used_for_itself(self):
+        with mock.patch.object(app_module, "load_file_cache", return_value=self.CACHE):
+            found = app_module.nearest_item_source("lpg", 26.85, 80.95, exclude="lucknow")
+        self.assertEqual(found[0], "Amethi")
