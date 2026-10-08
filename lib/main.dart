@@ -80,12 +80,11 @@ const AppTheme kNeutralTheme = AppTheme(
   tint: Color(0xffeef2f6),
 );
 
-AppTheme themeForTemperature(double temp) {
-  final t = temp.isNaN
+AppTheme themeForTemperature(double? temp) {
+  if (temp == null || temp.isNaN) return kNeutralTheme;
+  final t = temp < _tempStops.first
       ? _tempStops.first
-      : (temp < _tempStops.first
-          ? _tempStops.first
-          : (temp > _tempStops.last ? _tempStops.last : temp));
+      : (temp > _tempStops.last ? _tempStops.last : temp);
 
   var accent = _tempColors.first;
   for (var i = 0; i < _tempStops.length - 1; i++) {
@@ -256,10 +255,16 @@ class BrandMark extends StatelessWidget {
 }
 
 class Home extends StatefulWidget {
-  const Home({super.key, required this.state, required this.ads, required this.theme});
+  const Home({super.key, required this.state, required this.ads, this.theme, this.showAds = true});
   final AppState state;
   final AdService ads;
-  final AppTheme theme;
+
+  /// Only used for the very first paint; the live theme is derived from the
+  /// state on every notification.
+  final AppTheme? theme;
+
+  /// Disabled in widget tests so no platform ad channels are touched.
+  final bool showAds;
   @override
   State<Home> createState() => _HomeState();
 }
@@ -275,7 +280,7 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    _loadBanner();
+    if (widget.showAds) _loadBanner();
   }
 
   void _loadBanner() {
@@ -309,11 +314,21 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    final s = widget.state;
-    final t = widget.theme;
+    // Derive the theme from the state on every notification. Passing it down
+    // through MaterialApp.home did not survive the route being built once, which
+    // is why the header never changed colour with the temperature.
+    return ListenableBuilder(
+      listenable: widget.state,
+      builder: (context, _) => _body(widget.state),
+    );
+  }
+
+  Widget _body(AppState s) {
+    final t = themeForTemperature(s.data?.weather.temperatureC);
     final keys = tab == 1 ? ['gold', 'silver'] : ['petrol', 'diesel', 'lpg', 'cng'];
     return Scaffold(
       body: AnimatedContainer(
+        key: const ValueKey('appBackground'),
         duration: const Duration(milliseconds: 700),
         decoration: BoxDecoration(gradient: LinearGradient(colors: t.gradient, begin: Alignment.topLeft, end: Alignment.bottomRight)),
         child: SafeArea(
@@ -453,7 +468,7 @@ class _HomeState extends State<Home> {
         Expanded(
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Text(
-              '${weather?.temperatureC.toStringAsFixed(0) ?? '--'}°C',
+              '${(weather == null || weather.temperatureC.isNaN) ? '--' : weather.temperatureC.toStringAsFixed(0)}°C',
               style: const TextStyle(color: Colors.white, fontSize: 26, fontWeight: FontWeight.w800, height: 1.05),
             ),
             Text(
@@ -675,7 +690,12 @@ class _HomeState extends State<Home> {
                     child: hasRate
                         ? Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
                             FittedBox(fit: BoxFit.scaleDown, child: Text('₹${rate.toStringAsFixed(2)}', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: color))),
-                            const Text('today', style: TextStyle(fontSize: 10, color: kTextSoft)),
+                            Text(
+                              (s.data?.approximate[key] ?? '').isEmpty
+                                  ? 'today'
+                                  : (s.language == 'hi' ? '≈ नज़दीकी' : '≈ nearest'),
+                              style: const TextStyle(fontSize: 10, color: kTextSoft),
+                            ),
                           ])
                         : Container(
                             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
