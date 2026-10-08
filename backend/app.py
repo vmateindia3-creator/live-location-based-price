@@ -354,6 +354,58 @@ def city_slug(city):
     return re.sub(r"[^a-z0-9]+", "-", name).strip("-")
 
 
+# GoodReturns sometimes still uses the older name of a renamed place (or the
+# newer one). When a district has no page under its own name we try these too.
+DISTRICT_ALIASES = {
+    "ayodhya": "faizabad",
+    "prayagraj": "allahabad",
+    "bengaluru": "bangalore",
+    "bengaluru-urban": "bangalore",
+    "bengaluru-rural": "bangalore",
+    "mysuru": "mysore",
+    "gurugram": "gurgaon",
+    "thiruvananthapuram": "trivandrum",
+    "kanniyakumari": "kanyakumari",
+    "tiruchirappalli": "trichy",
+    "thoothukudi": "tuticorin",
+    "puducherry": "pondicherry",
+    "baleshwar": "balasore",
+    "bardhaman": "burdwan",
+    "kanchipuram": "kancheepuram",
+    "tumakuru": "tumkur",
+    "shivamogga": "shimoga",
+    "ballari": "bellary",
+    "vijayapura": "bijapur",
+    "kalaburagi": "gulbarga",
+    "belagavi": "belgaum",
+    "hosapete": "hospet",
+    "kollam": "quilon",
+    "kannur": "cannanore",
+    "thrissur": "trichur",
+    "palakkad": "palghat",
+    "alappuzha": "alleppey",
+    "kottayam": "kottayam",
+    "chamarajanagar": "chamarajanagara",
+    "dakshina-kannada": "mangalore",
+    "uttara-kannada": "karwar",
+    "davanagere": "davangere",
+}
+
+
+def headline_names(city):
+    """The names a page might use for this place: its own, plus any alias."""
+    name = (city or "").strip()
+    if not name:
+        return []
+    names = [name]
+    alias = DISTRICT_ALIASES.get(city_slug(name))
+    if alias:
+        pretty = alias.replace("-", " ").title()
+        if pretty.lower() != name.lower():
+            names.append(pretty)
+    return names
+
+
 # --------------------------------------------------------------------------- #
 # location resolution (city + state)
 # --------------------------------------------------------------------------- #
@@ -441,20 +493,33 @@ def valid_coords(lat, lng):
 # --------------------------------------------------------------------------- #
 
 def candidate_urls(city):
+    """Page candidates per item: the place's own slug first, then its alias."""
     slug = city_slug(city)
     has_city = bool(slug) and slug != "india"
-    suffix = f"-in-{slug}.html" if has_city else ".html"
-    urls = {
-        "petrol": [f"{GOODRETURNS}/petrol-price{suffix}"],
-        "diesel": [f"{GOODRETURNS}/diesel-price{suffix}"],
-        "lpg": [f"{GOODRETURNS}/lpg-price{suffix}"],
-        "cng": [f"{GOODRETURNS}/cng-price{suffix}"],
-        "gold": [f"{GOODRETURNS}/gold-rates/{slug}.html" if has_city else f"{GOODRETURNS}/gold-rates/"],
-        "silver": [f"{GOODRETURNS}/silver-rates/{slug}.html" if has_city else f"{GOODRETURNS}/silver-rates/"],
-    }
-    if has_city:
+    urls = {key: [] for key in PRICE_RANGES}
+    if not has_city:
+        for key in ("petrol", "diesel", "lpg", "cng"):
+            urls[key].append(f"{GOODRETURNS}/{key}-price.html")
         urls["gold"].append(f"{GOODRETURNS}/gold-rates/")
         urls["silver"].append(f"{GOODRETURNS}/silver-rates/")
+        return urls
+
+    slugs = [slug]
+    alias = DISTRICT_ALIASES.get(slug)
+    if alias and alias != slug:
+        slugs.append(alias)
+
+    for candidate in slugs:
+        urls["petrol"].append(f"{GOODRETURNS}/petrol-price-in-{candidate}.html")
+        urls["diesel"].append(f"{GOODRETURNS}/diesel-price-in-{candidate}.html")
+        urls["lpg"].append(f"{GOODRETURNS}/lpg-price-in-{candidate}.html")
+        urls["cng"].append(f"{GOODRETURNS}/cng-price-in-{candidate}.html")
+        urls["gold"].append(f"{GOODRETURNS}/gold-rates/{candidate}.html")
+        urls["silver"].append(f"{GOODRETURNS}/silver-rates/{candidate}.html")
+
+    # National pages still carry the state-wise table, so they are the last stop.
+    urls["gold"].append(f"{GOODRETURNS}/gold-rates/")
+    urls["silver"].append(f"{GOODRETURNS}/silver-rates/")
     return urls
 
 
@@ -548,12 +613,19 @@ def city_headline_value(key, text, city):
     label_template = CITY_HEADLINE_LABELS.get(key)
     if not label_template:
         return None
-    label = label_template.format(city=re.escape(city.strip()))
-    pattern = label + r"\b.*?₹\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)"
-    match = re.search(pattern, text[:3000], flags=re.I)
-    if not match:
-        return None
-    return normalize_value(key, float(match.group(1).replace(",", "")))
+    # Escape the template too: the literal brackets in "(14.2 kg)" were being
+    # read as a regex group, so the LPG headline never matched at all.
+    escaped_template = re.escape(label_template)
+    for name in headline_names(city):
+        label = escaped_template.replace(r"\{city\}", re.escape(name))
+        pattern = label + r"\b.*?₹\s*([0-9][0-9,]*(?:\.[0-9]{1,2})?)"
+        match = re.search(pattern, text[:3000], flags=re.I)
+        if match:
+            try:
+                return normalize_value(key, float(match.group(1).replace(",", "")))
+            except ValueError:
+                continue
+    return None
 
 
 def parse_fuel_value(key, text, city, state):
@@ -581,6 +653,11 @@ def parse_fuel_value(key, text, city, state):
     # CNG genuinely differs per city; a missing city row must not fall back to
     # another city's rate.
     if key == "cng":
+        return None
+
+    # The national page's headline is Mumbai's rate ("price in India (Mumbai)").
+    # Never pass it off as some other city's, whatever the patterns below find.
+    if re.search(r"price in India\s*\(", text[:1500], flags=re.I):
         return None
 
     for pattern in HEADLINE_PATTERNS[key]:
@@ -855,6 +932,91 @@ def cached_prices(city, state=""):
 
 
 # --------------------------------------------------------------------------- #
+# nearest-location fill - so no card is ever left blank
+# --------------------------------------------------------------------------- #
+
+_LOCATION_COORDS = None
+
+
+def location_coords():
+    """slug -> (lat, lng, display name) for every location we know about."""
+    global _LOCATION_COORDS
+    if _LOCATION_COORDS is not None:
+        return _LOCATION_COORDS
+
+    totals = {}
+    for record in load_pincodes().values():
+        if not isinstance(record, (list, tuple)) or len(record) < 4:
+            continue
+        district, plat, plng = record[0], record[2], record[3]
+        if not isinstance(plat, (int, float)) or not isinstance(plng, (int, float)):
+            continue
+        slug = city_slug(str(district or ""))
+        if not slug:
+            continue
+        acc = totals.setdefault(slug, [0.0, 0.0, 0, str(district or "").strip()])
+        acc[0] += float(plat)
+        acc[1] += float(plng)
+        acc[2] += 1
+
+    coords = {}
+    for slug, (lat_sum, lng_sum, count, name) in totals.items():
+        if count:
+            coords[slug] = (lat_sum / count, lng_sum / count, name)
+    for name, (clat, clng, _state) in CITY_COORDS.items():
+        coords.setdefault(city_slug(name), (clat, clng, name))
+
+    _LOCATION_COORDS = coords
+    return coords
+
+
+def nearest_item_source(item, lat, lng, exclude=None):
+    """(place, value) of the nearest cached location that quotes `item`."""
+    data = load_file_cache()
+    coords = location_coords()
+    best_name, best_value, best_distance = None, None, float("inf")
+    for slug, entry in data.items():
+        if slug.startswith("_") or slug == exclude:
+            continue
+        prices = entry.get("prices") if isinstance(entry, dict) else None
+        if not isinstance(prices, dict) or item not in prices:
+            continue
+        point = coords.get(slug)
+        if not point:
+            continue
+        distance = (point[0] - lat) ** 2 + (point[1] - lng) ** 2
+        if distance < best_distance:
+            value = prices[item]
+            if not isinstance(value, (int, float)):
+                continue
+            best_distance = distance
+            best_name = point[2] or (entry.get("city") if isinstance(entry, dict) else None) or slug
+            best_value = float(value)
+    if best_value is None:
+        return None
+    return best_name, round(best_value, 2)
+
+
+def fill_missing_items(prices, lat, lng, exclude=None):
+    """Give every item a value: the nearest location's rate when this one has none.
+
+    Returns the completed prices plus a map of item -> place, so the UI can say
+    where an approximated figure came from.
+    """
+    filled = dict(prices)
+    approximate = {}
+    for item in PRICE_RANGES:
+        if item in filled:
+            continue
+        found = nearest_item_source(item, lat, lng, exclude=exclude)
+        if found:
+            place, value = found
+            filled[item] = value
+            approximate[item] = place
+    return filled, approximate
+
+
+# --------------------------------------------------------------------------- #
 # routes
 # --------------------------------------------------------------------------- #
 
@@ -904,6 +1066,7 @@ def market():
                 prices, source, observed_keys, observed_at = alt_prices, f"{alt_source}-nearest", alt_keys, alt_at
                 city = fallback[0]
                 state = fallback[1]
+    prices, approximate = fill_missing_items(prices, rlat, rlng, exclude=city_slug(city))
     response = {
         "updatedAt": now_iso(),
         "observedAt": observed_at,
@@ -914,6 +1077,7 @@ def market():
         "source": source,
         "warning": "Indicative rates; verify before purchase" if prices else None,
         "prices": prices,
+        "approximate": approximate,
         "units": {k: PRICE_UNITS[k] for k in prices},
         "observedKeys": sorted(observed_keys),
         "sourceUrls": goodreturns_urls(city),
