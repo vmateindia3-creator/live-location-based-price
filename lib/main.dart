@@ -459,6 +459,9 @@ class _HomeState extends State<Home> {
 
   Widget _weatherCard(AppState s, AppTheme t) {
     final weather = s.data?.weather;
+    // One flag for the whole card: if there is no real temperature there is no
+    // real humidity or wind either, so we show "--" rather than a filler number.
+    final known = weather != null && !weather.temperatureC.isNaN;
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       decoration: BoxDecoration(color: Colors.white24, borderRadius: BorderRadius.circular(18)),
@@ -468,19 +471,19 @@ class _HomeState extends State<Home> {
         Expanded(
           child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Text(
-              '${(weather == null || weather.temperatureC.isNaN) ? '--' : weather.temperatureC.toStringAsFixed(0)}°C',
+              known ? '${weather.temperatureC.toStringAsFixed(0)}°C' : '--',
               style: const TextStyle(color: Colors.white, fontSize: 26, fontWeight: FontWeight.w800, height: 1.05),
             ),
             Text(
-              weather?.condition ?? (s.language == 'hi' ? 'मौसम लोड हो रहा है' : 'Loading weather'),
+              known ? weather.condition : (s.language == 'hi' ? 'मौसम उपलब्ध नहीं' : 'Weather unavailable'),
               style: const TextStyle(color: Colors.white70, fontSize: 13),
             ),
           ]),
         ),
         Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
-          _chip(Icons.water_drop_outlined, '${weather?.humidity ?? '--'}%'),
+          _chip(Icons.water_drop_outlined, known ? '${weather.humidity}%' : '--'),
           const SizedBox(height: 6),
-          _chip(Icons.air, '${weather?.windKph.toStringAsFixed(0) ?? '--'} km/h'),
+          _chip(Icons.air, known ? '${weather.windKph.toStringAsFixed(0)} km/h' : '--'),
         ]),
       ]),
     );
