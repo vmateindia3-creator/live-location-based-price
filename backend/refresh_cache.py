@@ -168,8 +168,8 @@ def main():
     refreshed_at = datetime.now(timezone.utc).isoformat()
 
     refresh_cities(cache, refreshed_at)
-    refresh_districts(cache, pages, refreshed_at)
     refresh_lpg(refreshed_at)
+    refresh_districts(cache, pages, refreshed_at)
 
     # One national page per item carries every state's rate -> pan-India coverage.
     states = fetch_national_state_prices()
