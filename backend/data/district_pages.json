@@ -505,7 +505,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "azamgarh": {
@@ -519,7 +519,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "bagalkot": {
@@ -533,21 +533,20 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "bageshwar": {
     "checked": true,
     "district": "Bageshwar",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttarakhand"
   },
   "baghpat": {
@@ -561,7 +560,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "bahraich": {
@@ -575,7 +574,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "bajali": {
@@ -589,7 +588,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "baksa": {
@@ -603,7 +602,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "balaghat": {
@@ -617,21 +616,17 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "balangir": {
     "checked": true,
     "district": "Balangir",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Odisha"
   },
   "baleshwar": {
@@ -645,7 +640,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Odisha"
   },
   "ballari": {
@@ -659,7 +654,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "ballia": {
@@ -673,35 +668,30 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "balod": {
     "checked": true,
     "district": "Balod",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Chhattisgarh"
   },
   "baloda-bazar": {
     "checked": true,
     "district": "Baloda Bazar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Chhattisgarh"
   },
   "balrampur": {
@@ -715,7 +705,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Chhattisgarh"
   },
   "banas-kantha": {
@@ -729,7 +719,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Gujarat"
   },
   "banda": {
@@ -743,21 +733,20 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "bandipora": {
     "checked": true,
     "district": "Bandipora",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jammu And Kashmir"
   },
   "bangalore": {
@@ -784,7 +773,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Bihar"
   },
   "bankura": {
@@ -798,7 +787,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "West Bengal"
   },
   "banswara": {
@@ -812,21 +801,20 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "bapatla": {
     "checked": true,
     "district": "Bapatla",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Andhra Pradesh"
   },
   "barabanki": {
@@ -840,21 +828,17 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "baramulla": {
     "checked": true,
     "district": "Baramulla",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jammu And Kashmir"
   },
   "baran": {
@@ -868,7 +852,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "bareilly": {
@@ -882,7 +866,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "bargarh": {
@@ -896,7 +880,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Odisha"
   },
   "barmer": {
@@ -910,7 +894,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "barnala": {
@@ -924,7 +908,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Punjab"
   },
   "barpeta": {
@@ -938,21 +922,17 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "barwani": {
     "checked": true,
     "district": "Barwani",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "bastar": {
@@ -966,7 +946,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Chhattisgarh"
   },
   "basti": {
@@ -980,7 +960,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "bathinda": {
@@ -994,21 +974,17 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Punjab"
   },
   "beed": {
     "checked": true,
     "district": "Beed",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Maharashtra"
   },
   "begusarai": {
@@ -1022,7 +998,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Bihar"
   },
   "belagavi": {
@@ -1036,21 +1012,20 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "bemetara": {
     "checked": true,
     "district": "Bemetara",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Chhattisgarh"
   },
   "bengaluru-rural": {
@@ -1064,7 +1039,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "bengaluru-urban": {
@@ -1078,7 +1053,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "betul": {
@@ -1092,7 +1067,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "bhadohi": {
@@ -1106,7 +1081,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "bhadradri-kothagudem": {
@@ -1120,7 +1095,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Telangana"
   },
   "bhadrak": {
@@ -1134,7 +1109,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Odisha"
   },
   "bhagalpur": {
@@ -1148,7 +1123,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Bihar"
   },
   "bhandara": {
@@ -1162,7 +1137,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Maharashtra"
   },
   "bharatpur": {
@@ -1176,7 +1151,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "bharuch": {
@@ -1190,7 +1165,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Gujarat"
   },
   "bhavnagar": {
@@ -1204,7 +1179,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Gujarat"
   },
   "bhilwara": {
@@ -1218,7 +1193,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "bhind": {
@@ -1232,7 +1207,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "bhiwani": {
@@ -1246,7 +1221,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Haryana"
   },
   "bhojpur": {
@@ -1260,7 +1235,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Bihar"
   },
   "bhopal": {
@@ -1274,7 +1249,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "bidar": {
@@ -1288,7 +1263,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "bijapur": {
@@ -1302,7 +1277,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Chhattisgarh"
   },
   "bijnor": {
@@ -1316,7 +1291,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "bikaner": {
@@ -1330,7 +1305,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "bilaspur": {
@@ -1344,7 +1319,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Chhattisgarh"
   },
   "birbhum": {
@@ -1358,35 +1333,33 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "West Bengal"
   },
   "bishnupur": {
     "checked": true,
     "district": "Bishnupur",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Manipur"
   },
   "biswanath": {
     "checked": true,
     "district": "Biswanath",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "bokaro": {
@@ -1400,7 +1373,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jharkhand"
   },
   "bongaigaon": {
@@ -1414,7 +1387,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "botad": {
@@ -1428,7 +1401,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Gujarat"
   },
   "boudh": {
@@ -1442,7 +1415,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Odisha"
   },
   "budaun": {
@@ -1456,21 +1429,17 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "budgam": {
     "checked": true,
     "district": "Budgam",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jammu And Kashmir"
   },
   "bulandshahr": {
@@ -1484,21 +1453,20 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "buldhana": {
     "checked": true,
     "district": "Buldhana",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Maharashtra"
   },
   "bundi": {
@@ -1512,7 +1480,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "burhanpur": {
@@ -1526,7 +1494,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "buxar": {
@@ -1540,7 +1508,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Bihar"
   },
   "cachar": {
@@ -1554,63 +1522,53 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "central": {
     "checked": true,
     "district": "Central",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Delhi"
   },
   "chamarajanagara": {
     "checked": true,
     "district": "Chamarajanagara",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "chamba": {
     "checked": true,
     "district": "Chamba",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Himachal Pradesh"
   },
   "chamoli": {
     "checked": true,
     "district": "Chamoli",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttarakhand"
   },
   "champawat": {
@@ -1624,21 +1582,20 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttarakhand"
   },
   "champhai": {
     "checked": true,
     "district": "Champhai",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Mizoram"
   },
   "chandauli": {
@@ -1652,21 +1609,20 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "chandel": {
     "checked": true,
     "district": "Chandel",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Manipur"
   },
   "chandigarh": {
@@ -1680,7 +1636,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Chandigarh"
   },
   "chandrapur": {
@@ -1694,21 +1650,20 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Maharashtra"
   },
   "changlang": {
     "checked": true,
     "district": "Changlang",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Arunachal Pradesh"
   },
   "charaideo": {
@@ -1722,7 +1677,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "charki-dadri": {
@@ -1736,7 +1691,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Haryana"
   },
   "chatra": {
@@ -1750,7 +1705,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jharkhand"
   },
   "chengalpattu": {
@@ -1764,7 +1719,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Tamil Nadu"
   },
   "chennai": {
@@ -1778,7 +1733,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Tamil Nadu"
   },
   "chhatarpur": {
@@ -1792,21 +1747,17 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "chhindwara": {
     "checked": true,
     "district": "Chhindwara",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "chhotaudepur": {
@@ -1820,7 +1771,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Gujarat"
   },
   "chikkaballapura": {
@@ -1834,21 +1785,17 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "chikkamagaluru": {
     "checked": true,
     "district": "Chikkamagaluru",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "chirang": {
@@ -1862,7 +1809,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "chitradurga": {
@@ -1876,21 +1823,17 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "chitrakoot": {
     "checked": true,
     "district": "Chitrakoot",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "chittoor": {
@@ -1904,35 +1847,30 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Andhra Pradesh"
   },
   "chittorgarh": {
     "checked": true,
     "district": "Chittorgarh",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "churachandpur": {
     "checked": true,
     "district": "Churachandpur",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Manipur"
   },
   "churu": {
@@ -1946,7 +1884,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "coimbatore": {
@@ -1960,21 +1898,17 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Tamil Nadu"
   },
   "coochbehar": {
     "checked": true,
     "district": "Coochbehar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "West Bengal"
   },
   "cuddalore": {
@@ -1988,7 +1922,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Tamil Nadu"
   },
   "cuttack": {
@@ -2002,21 +1936,17 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Odisha"
   },
   "dadra-and-nagar-haveli": {
     "checked": true,
     "district": "Dadra And Nagar Haveli",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "The Dadra And Nagar Haveli And Daman And Diu"
   },
   "dakshina-kannada": {
@@ -2030,7 +1960,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "daman": {
@@ -2044,49 +1974,43 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "The Dadra And Nagar Haveli And Daman And Diu"
   },
   "damoh": {
     "checked": true,
     "district": "Damoh",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "dang": {
     "checked": true,
     "district": "Dang",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Gujarat"
   },
   "dantewada": {
     "checked": true,
     "district": "Dantewada",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Chhattisgarh"
   },
   "darbhanga": {
@@ -2100,7 +2024,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Bihar"
   },
   "darjeeling": {
@@ -2114,21 +2038,20 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "West Bengal"
   },
   "darrang": {
     "checked": true,
     "district": "Darrang",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "datia": {
@@ -2142,7 +2065,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "dausa": {
@@ -2156,7 +2079,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "davangere": {
@@ -2170,7 +2093,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "dehradun": {
@@ -2184,7 +2107,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttarakhand"
   },
   "deogarh": {
@@ -2198,7 +2121,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Odisha"
   },
   "deoghar": {
@@ -2212,7 +2135,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jharkhand"
   },
   "deoria": {
@@ -2226,7 +2149,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "devbhumi-dwarka": {
@@ -2240,7 +2163,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Gujarat"
   },
   "dewas": {
@@ -2254,7 +2177,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "dhalai": {
@@ -2268,21 +2191,20 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Tripura"
   },
   "dhamtari": {
     "checked": true,
     "district": "Dhamtari",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Chhattisgarh"
   },
   "dhanbad": {
@@ -2296,7 +2218,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jharkhand"
   },
   "dhar": {
@@ -2310,7 +2232,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "dharmapuri": {
@@ -2324,7 +2246,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Tamil Nadu"
   },
   "dharwad": {
@@ -2338,7 +2260,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "dhemaji": {
@@ -2352,7 +2274,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "dhenkanal": {
@@ -2366,35 +2288,27 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Odisha"
   },
   "dholpur": {
     "checked": true,
     "district": "Dholpur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "dhubri": {
     "checked": true,
     "district": "Dhubri",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "dhule": {
@@ -2408,21 +2322,20 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Maharashtra"
   },
   "dibang-valley": {
     "checked": true,
     "district": "Dibang Valley",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Arunachal Pradesh"
   },
   "dibrugarh": {
@@ -2436,7 +2349,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "dima-hasao": {
@@ -2450,49 +2363,40 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "dimapur": {
     "checked": true,
     "district": "Dimapur",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Nagaland"
   },
   "dinajpur-dakshin": {
     "checked": true,
     "district": "Dinajpur Dakshin",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "West Bengal"
   },
   "dinajpur-uttar": {
     "checked": true,
     "district": "Dinajpur Uttar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "West Bengal"
   },
   "dindigul": {
@@ -2506,21 +2410,20 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Tamil Nadu"
   },
   "dindori": {
     "checked": true,
     "district": "Dindori",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "diu": {
@@ -2530,39 +2433,33 @@
       "cng",
       "diesel",
       "gold",
-      "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "The Dadra And Nagar Haveli And Daman And Diu"
   },
   "doda": {
     "checked": true,
     "district": "Doda",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jammu And Kashmir"
   },
   "dohad": {
     "checked": true,
     "district": "Dohad",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Gujarat"
   },
   "dumka": {
@@ -2576,7 +2473,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jharkhand"
   },
   "dungarpur": {
@@ -2590,7 +2487,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "durg": {
@@ -2604,49 +2501,42 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Chhattisgarh"
   },
   "east": {
     "checked": true,
     "district": "East",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Delhi"
   },
   "east-district": {
     "checked": true,
     "district": "East District",
     "items": [
-      "cng",
       "diesel",
       "gold",
-      "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Sikkim"
   },
   "east-garo-hills": {
     "checked": true,
     "district": "East Garo Hills",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Meghalaya"
   },
   "east-godavari": {
@@ -2660,91 +2550,75 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Andhra Pradesh"
   },
   "east-jaintia-hills": {
     "checked": true,
     "district": "East Jaintia Hills",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Meghalaya"
   },
   "east-kameng": {
     "checked": true,
     "district": "East Kameng",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Arunachal Pradesh"
   },
   "east-khasi-hills": {
     "checked": true,
     "district": "East Khasi Hills",
     "items": [
-      "cng",
       "diesel",
       "gold",
-      "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Meghalaya"
   },
   "east-nimar": {
     "checked": true,
     "district": "East Nimar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "east-siang": {
     "checked": true,
     "district": "East Siang",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Arunachal Pradesh"
   },
   "east-singhbum": {
     "checked": true,
     "district": "East Singhbum",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jharkhand"
   },
   "eluru": {
@@ -2758,7 +2632,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Andhra Pradesh"
   },
   "ernakulam": {
@@ -2772,7 +2646,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Kerala"
   },
   "erode": {
@@ -2786,7 +2660,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Tamil Nadu"
   },
   "etah": {
@@ -2800,7 +2674,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "etawah": {
@@ -2814,7 +2688,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "faridabad": {
@@ -2828,7 +2702,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Haryana"
   },
   "faridkot": {
@@ -2842,21 +2716,17 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Punjab"
   },
   "farrukhabad": {
     "checked": true,
     "district": "Farrukhabad",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "fatehabad": {
@@ -2870,7 +2740,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Haryana"
   },
   "fatehgarh-sahib": {
@@ -2884,7 +2754,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Punjab"
   },
   "fatehpur": {
@@ -2898,7 +2768,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "fazilka": {
@@ -2912,7 +2782,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Punjab"
   },
   "firozabad": {
@@ -2926,21 +2796,17 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "firozepur": {
     "checked": true,
     "district": "Firozepur",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Punjab"
   },
   "gadag": {
@@ -2950,11 +2816,10 @@
       "cng",
       "diesel",
       "gold",
-      "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "gadchiroli": {
@@ -2968,7 +2833,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Maharashtra"
   },
   "gajapati": {
@@ -2982,21 +2847,20 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Odisha"
   },
   "ganderbal": {
     "checked": true,
     "district": "Ganderbal",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jammu And Kashmir"
   },
   "gandhinagar": {
@@ -3010,7 +2874,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Gujarat"
   },
   "ganganagar": {
@@ -3024,7 +2888,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "ganjam": {
@@ -3038,7 +2902,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Odisha"
   },
   "garhwa": {
@@ -3052,49 +2916,40 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jharkhand"
   },
   "gariyaband": {
     "checked": true,
     "district": "Gariyaband",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Chhattisgarh"
   },
   "gaurella-pendra-marwahi": {
     "checked": true,
     "district": "Gaurella Pendra Marwahi",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Chhattisgarh"
   },
   "gautam-buddha-nagar": {
     "checked": true,
     "district": "Gautam Buddha Nagar",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "gaya": {
@@ -3108,7 +2963,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Bihar"
   },
   "ghaziabad": {
@@ -3122,7 +2977,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "ghazipur": {
@@ -3136,7 +2991,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "gir-somnath": {
@@ -3150,7 +3005,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Gujarat"
   },
   "giridih": {
@@ -3164,7 +3019,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jharkhand"
   },
   "goalpara": {
@@ -3178,7 +3033,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "godda": {
@@ -3192,7 +3047,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jharkhand"
   },
   "golaghat": {
@@ -3206,7 +3061,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "gomati": {
@@ -3220,7 +3075,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Tripura"
   },
   "gonda": {
@@ -3234,7 +3089,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "gondia": {
@@ -3248,7 +3103,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Maharashtra"
   },
   "gopalganj": {
@@ -3262,7 +3117,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Bihar"
   },
   "gorakhpur": {
@@ -3276,7 +3131,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "gumla": {
@@ -3290,7 +3145,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jharkhand"
   },
   "guna": {
@@ -3304,7 +3159,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "guntur": {
@@ -3318,7 +3173,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Andhra Pradesh"
   },
   "gurdaspur": {
@@ -3332,21 +3187,17 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Punjab"
   },
   "gurgaon": {
     "checked": true,
     "district": "Gurugram",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Haryana"
   },
   "gwalior": {
@@ -3360,21 +3211,20 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "hailakandi": {
     "checked": true,
     "district": "Hailakandi",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "hamirpur": {
@@ -3388,21 +3238,17 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Himachal Pradesh"
   },
   "hanumakonda": {
     "checked": true,
     "district": "Hanumakonda",
     "items": [
-      "cng",
-      "diesel",
       "gold",
-      "lpg",
-      "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Telangana"
   },
   "hanumangarh": {
@@ -3416,7 +3262,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "hapur": {
@@ -3430,7 +3276,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "harda": {
@@ -3444,7 +3290,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "hardoi": {
@@ -3458,7 +3304,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "haridwar": {
@@ -3472,7 +3318,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttarakhand"
   },
   "hassan": {
@@ -3486,7 +3332,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "hathras": {
@@ -3500,7 +3346,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "haveri": {
@@ -3514,7 +3360,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Karnataka"
   },
   "hazaribagh": {
@@ -3528,7 +3374,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jharkhand"
   },
   "hingoli": {
@@ -3542,7 +3388,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Maharashtra"
   },
   "hisar": {
@@ -3556,21 +3402,20 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Haryana"
   },
   "hnahthial": {
     "checked": true,
     "district": "Hnahthial",
     "items": [
-      "cng",
       "diesel",
       "gold",
       "lpg",
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Mizoram"
   },
   "hojai": {
@@ -3584,7 +3429,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Assam"
   },
   "hooghly": {
@@ -3598,7 +3443,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T14:35:48.666904+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "West Bengal"
   },
   "hoshangabad": {
@@ -3612,7 +3457,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "hoshiarpur": {
@@ -3626,7 +3471,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Punjab"
   },
   "howrah": {
@@ -3640,7 +3485,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "West Bengal"
   },
   "hyderabad": {
@@ -3654,7 +3499,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Telangana"
   },
   "idukki": {
@@ -3667,7 +3512,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Kerala"
   },
   "imphal-east": {
@@ -3677,7 +3522,7 @@
       "gold",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Manipur"
   },
   "imphal-west": {
@@ -3687,7 +3532,7 @@
       "gold",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Manipur"
   },
   "indore": {
@@ -3701,7 +3546,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "jabalpur": {
@@ -3715,7 +3560,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "jagatsinghapur": {
@@ -3725,7 +3570,7 @@
       "gold",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Odisha"
   },
   "jagitial": {
@@ -3739,7 +3584,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Telangana"
   },
   "jaipur": {
@@ -3753,7 +3598,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "jaisalmer": {
@@ -3767,7 +3612,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "jajapur": {
@@ -3777,7 +3622,7 @@
       "gold",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Odisha"
   },
   "jalandhar": {
@@ -3791,7 +3636,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Punjab"
   },
   "jalaun": {
@@ -3805,7 +3650,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "jalgaon": {
@@ -3819,7 +3664,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Maharashtra"
   },
   "jalna": {
@@ -3833,7 +3678,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Maharashtra"
   },
   "jalore": {
@@ -3843,7 +3688,7 @@
       "gold",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "jalpaiguri": {
@@ -3857,7 +3702,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "West Bengal"
   },
   "jammu": {
@@ -3871,7 +3716,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jammu And Kashmir"
   },
   "jamnagar": {
@@ -3885,7 +3730,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Gujarat"
   },
   "jamtara": {
@@ -3899,7 +3744,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Jharkhand"
   },
   "jamui": {
@@ -3913,7 +3758,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Bihar"
   },
   "jangoan": {
@@ -3923,7 +3768,7 @@
       "gold",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Telangana"
   },
   "janjgir-champa": {
@@ -3933,7 +3778,7 @@
       "gold",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Chhattisgarh"
   },
   "jashpur": {
@@ -3947,7 +3792,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Chhattisgarh"
   },
   "jaunpur": {
@@ -3961,7 +3806,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "jayashankar-bhupalapally": {
@@ -3971,7 +3816,7 @@
       "gold",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Telangana"
   },
   "jehanabad": {
@@ -3981,7 +3826,7 @@
       "gold",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Bihar"
   },
   "jhabua": {
@@ -3991,7 +3836,7 @@
       "gold",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Madhya Pradesh"
   },
   "jhajjar": {
@@ -4005,7 +3850,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Haryana"
   },
   "jhalawar": {
@@ -4019,7 +3864,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "jhansi": {
@@ -4033,7 +3878,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Uttar Pradesh"
   },
   "jhargram": {
@@ -4047,7 +3892,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "West Bengal"
   },
   "jharsuguda": {
@@ -4061,7 +3906,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Odisha"
   },
   "jhunjhunu": {
@@ -4071,7 +3916,7 @@
       "gold",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Rajasthan"
   },
   "jind": {
@@ -4085,7 +3930,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Haryana"
   },
   "jiribam": {
@@ -4098,7 +3943,7 @@
       "petrol",
       "silver"
     ],
-    "lastFetchedAt": "2026-10-08T15:01:57.741559+00:00",
+    "lastFetchedAt": "2026-10-09T06:26:17.892785+00:00",
     "state": "Manipur"
   },
   "jodhpur": {
