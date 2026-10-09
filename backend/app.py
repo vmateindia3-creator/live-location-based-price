@@ -102,6 +102,13 @@ BANKBAZAAR_STATE_SLUGS = [
 ]
 
 
+# BankBazaar uses a few names our slugs do not: map them so a PIN still hits.
+BANKBAZAAR_EXTRA_KEYS = {
+    "new-delhi": ["delhi"],
+    "bangalore": ["bengaluru", "bengaluru-urban", "bengaluru-rural"],
+}
+
+
 def bankbazaar_keys(name):
     """Every slug a BankBazaar row could be known by.
 
@@ -114,6 +121,9 @@ def bankbazaar_keys(name):
         slug = city_slug(part)
         if slug and slug not in keys:
             keys.append(slug)
+    for extra in BANKBAZAAR_EXTRA_KEYS.get(keys[0] if keys else "", []):
+        if extra not in keys:
+            keys.append(extra)
     return keys
 
 
@@ -137,7 +147,8 @@ def parse_bankbazaar_lpg(html_text, anchor="Domestic LPG Price in"):
         cells = re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", row, flags=re.S | re.I)
         if len(cells) < 2:
             continue
-        name = html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", cells[0]))).strip(" |")
+        name = html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", cells[0])))
+        name = name.replace("\xa0", " ").replace("Â", "").strip(" |")
         money = html.unescape(re.sub(r"<[^>]+>", " ", cells[1])).replace(",", "")
         match = re.search(r"([0-9][0-9]*(?:\.[0-9]{1,2})?)", money)
         if not name or not match:
@@ -161,6 +172,7 @@ def fetch_bankbazaar_national():
     url = f"{BANKBAZAAR}/lpg-price-today.html"
     try:
         response = requests.get(url, headers=HEADERS, timeout=10)
+        response.encoding = "utf-8"
         response.raise_for_status()
     except (requests.RequestException, ValueError, TypeError) as exc:
         logger.warning("bankbazaar national failed: %s", exc)
@@ -181,6 +193,7 @@ def fetch_bankbazaar_lpg():
         url = f"{BANKBAZAAR}/lpg-price-in-{slug}.html"
         try:
             response = requests.get(url, headers=HEADERS, timeout=10)
+            response.encoding = "utf-8"
             response.raise_for_status()
         except (requests.RequestException, ValueError, TypeError) as exc:
             logger.warning("bankbazaar %s failed: %s", slug, exc)
