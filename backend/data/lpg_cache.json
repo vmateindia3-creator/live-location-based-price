@@ -1,0 +1,4010 @@
+{
+  "adilabad": {
+    "name": "Adilabad",
+    "price": 990.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "agar": {
+    "name": "Agar",
+    "price": 971.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "agartala": {
+    "name": "Agartala",
+    "price": 1073.5,
+    "state": "Tripura",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tripura.html"
+  },
+  "agra": {
+    "name": "Agra",
+    "price": 925.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "ahmadnagar": {
+    "name": "Ahmadnagar",
+    "price": 926.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "ahmedabad": {
+    "name": "Ahmedabad",
+    "price": 860.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "aizawl": {
+    "name": "Aizawl\u00c2",
+    "price": 1065.0,
+    "state": "Mizoram",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-mizoram.html"
+  },
+  "ajmer": {
+    "name": "Ajmer",
+    "price": 978.0,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "akola": {
+    "name": "Akola",
+    "price": 933.0,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "alappuzha": {
+    "name": "Alappuzha",
+    "price": 920.0,
+    "state": "Kerala",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-kerala.html"
+  },
+  "aligarh": {
+    "name": "Aligarh",
+    "price": 931.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "alipurduar": {
+    "name": "Alipurduar",
+    "price": 966.5,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "alirajpur": {
+    "name": "Alirajpur\u00c2",
+    "price": 956.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "allahabad-prayagraj": {
+    "name": "Allahabad (Prayagraj)",
+    "price": 1015.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "almora": {
+    "name": "Almora",
+    "price": 950.5,
+    "state": "Uttarakhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttarakhand.html"
+  },
+  "alwar": {
+    "name": "Alwar",
+    "price": 993.0,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "ambala": {
+    "name": "Ambala\u00c2",
+    "price": 870.5,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "ambedkarnagar": {
+    "name": "Ambedkarnagar",
+    "price": 993.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "amethi-csm-nagar": {
+    "name": "Amethi/CSM Nagar",
+    "price": 967.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "amravati": {
+    "name": "Amravati",
+    "price": 946.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "amreli": {
+    "name": "Amreli",
+    "price": 872.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "amritsar": {
+    "name": "Amritsar",
+    "price": 954.0,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "amroha": {
+    "name": "Amroha",
+    "price": 942.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "anand": {
+    "name": "Anand",
+    "price": 859.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "anantapur": {
+    "name": "Anantapur",
+    "price": 919.5,
+    "state": "Andhra Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-andhra-pradesh.html"
+  },
+  "angul": {
+    "name": "Angul",
+    "price": 956.5,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "anjaw": {
+    "name": "Anjaw",
+    "price": 868.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "anupur": {
+    "name": "Anupur",
+    "price": 936.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "araria": {
+    "name": "Araria",
+    "price": 952.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "aravalli": {
+    "name": "Aravalli",
+    "price": 867.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "ariyalur": {
+    "name": "Ariyalur",
+    "price": 950.5,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "arwal": {
+    "name": "Arwal \u00c2",
+    "price": 949.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "ashoknagar": {
+    "name": "Ashoknagar\u00c2",
+    "price": 976.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "auraiya": {
+    "name": "Auraiya",
+    "price": 948.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "aurangabad": {
+    "name": "Aurangabad",
+    "price": 921.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "azamgarh": {
+    "name": "Azamgarh",
+    "price": 985.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "badwani": {
+    "name": "Badwani\u00c2",
+    "price": 961.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "bagalkot": {
+    "name": "Bagalkot",
+    "price": 934.0,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "bageshwar": {
+    "name": "Bageshwar",
+    "price": 950.5,
+    "state": "Uttarakhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttarakhand.html"
+  },
+  "baghpat": {
+    "name": "Baghpat",
+    "price": 910.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "bahraich": {
+    "name": "Bahraich",
+    "price": 970.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "baksa": {
+    "name": "Baksa",
+    "price": 970.0,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "balaghat": {
+    "name": "Balaghat",
+    "price": 937.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "baleshwar": {
+    "name": "Baleshwar",
+    "price": 955.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "ballia": {
+    "name": "Ballia",
+    "price": 993.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "balod": {
+    "name": "Balod",
+    "price": 992.5,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "balodabazar": {
+    "name": "Balodabazar",
+    "price": 993.5,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "balrampur": {
+    "name": "Balrampur",
+    "price": 992.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "banaskantha": {
+    "name": "Banaskantha",
+    "price": 876.5,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "banda": {
+    "name": "Banda",
+    "price": 944.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "bangalore": {
+    "name": "Bangalore",
+    "price": 915.5,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "bangalore-rural": {
+    "name": "Bangalore Rural",
+    "price": 915.5,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "banka": {
+    "name": "Banka",
+    "price": 950.5,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "bankura": {
+    "name": "Bankura",
+    "price": 951.5,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "banswara": {
+    "name": "Banswara",
+    "price": 940.5,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "barabanki": {
+    "name": "Barabanki",
+    "price": 950.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "baran": {
+    "name": "Baran",
+    "price": 939.5,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "bareilly": {
+    "name": "Bareilly",
+    "price": 931.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "bargarh": {
+    "name": "Bargarh",
+    "price": 976.5,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "barmer": {
+    "name": "Barmer",
+    "price": 939.0,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "barnala": {
+    "name": "Barnala",
+    "price": 934.0,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "barpeta": {
+    "name": "Barpeta",
+    "price": 955.0,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "bastar": {
+    "name": "Bastar",
+    "price": 937.5,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "basti": {
+    "name": "Basti",
+    "price": 976.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "bathinda": {
+    "name": "Bathinda",
+    "price": 942.0,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "begusarai": {
+    "name": "Begusarai",
+    "price": 932.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "belgaum": {
+    "name": "Belgaum",
+    "price": 928.0,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "bellary": {
+    "name": "Bellary",
+    "price": 933.0,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "bemetara": {
+    "name": "Bemetara",
+    "price": 984.0,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "betul": {
+    "name": "Betul",
+    "price": 937.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "bhadradri-kothagudem": {
+    "name": "Bhadradri Kothagudem",
+    "price": 952.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "bhadrak": {
+    "name": "Bhadrak",
+    "price": 953.5,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "bhagalpur": {
+    "name": "Bhagalpur \u00c2",
+    "price": 950.5,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "bhandara": {
+    "name": "Bhandara\u00c2",
+    "price": 973.0,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "bharatpur": {
+    "name": "Bharatpur",
+    "price": 924.5,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "bharuch": {
+    "name": "Bharuch",
+    "price": 859.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "bhavnagar": {
+    "name": "Bhavnagar",
+    "price": 861.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "bhilwara": {
+    "name": "Bhilwara",
+    "price": 933.0,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "bhind": {
+    "name": "Bhind",
+    "price": 996.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "bhiwani": {
+    "name": "Bhiwani\u00c2",
+    "price": 855.0,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "bhojpur": {
+    "name": "Bhojpur",
+    "price": 953.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "bhopal": {
+    "name": "Bhopal",
+    "price": 918.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "bhubaneswar": {
+    "name": "Bhubaneswar",
+    "price": 939.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "bid": {
+    "name": "Bid",
+    "price": 938.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "bidar": {
+    "name": "Bidar",
+    "price": 924.5,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "bijapur": {
+    "name": "Bijapur",
+    "price": 937.5,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "bijnor": {
+    "name": "Bijnor",
+    "price": 934.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "bikaner": {
+    "name": "Bikaner",
+    "price": 924.5,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "bilaspur": {
+    "name": "Bilaspur",
+    "price": 957.5,
+    "state": "Himachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-himachal-pradesh.html"
+  },
+  "birbhum": {
+    "name": "Birbhum",
+    "price": 970.5,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "bishnupur": {
+    "name": "Bishnupur",
+    "price": 1064.5,
+    "state": "Manipur",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-manipur.html"
+  },
+  "biswanath": {
+    "name": "Biswanath",
+    "price": 978.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "bokaro": {
+    "name": "Bokaro",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "bolangir": {
+    "name": "Bolangir",
+    "price": 940.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "bongaigaon": {
+    "name": "Bongaigaon",
+    "price": 947.0,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "botad": {
+    "name": "Botad",
+    "price": 866.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "boudh": {
+    "name": "Boudh",
+    "price": 951.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "budaun": {
+    "name": "Budaun",
+    "price": 930.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "bulandshahr": {
+    "name": "Bulandshahr",
+    "price": 1029.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "buldhana": {
+    "name": "Buldhana",
+    "price": 927.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "bundi": {
+    "name": "Bundi",
+    "price": 934.0,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "burhanpur": {
+    "name": "Burhanpur\u00c2",
+    "price": 967.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "buxar": {
+    "name": "Buxar \u00c2",
+    "price": 951.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "cachar": {
+    "name": "Cachar",
+    "price": 1047.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "chamba": {
+    "name": "Chamba",
+    "price": 967.0,
+    "state": "Himachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-himachal-pradesh.html"
+  },
+  "chamoli": {
+    "name": "Chamoli",
+    "price": 948.5,
+    "state": "Uttarakhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttarakhand.html"
+  },
+  "champawat": {
+    "name": "Champawat",
+    "price": 950.5,
+    "state": "Uttarakhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttarakhand.html"
+  },
+  "champhai": {
+    "name": "Champhai\u00c2",
+    "price": 1065.0,
+    "state": "Mizoram",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-mizoram.html"
+  },
+  "chamrajnagar": {
+    "name": "Chamrajnagar",
+    "price": 918.5,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "chandauli": {
+    "name": "Chandauli",
+    "price": 977.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "chandel": {
+    "name": "Chandel",
+    "price": 1064.5,
+    "state": "Manipur",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-manipur.html"
+  },
+  "chandrapur": {
+    "name": "Chandrapur",
+    "price": 961.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "changlang": {
+    "name": "Changlang",
+    "price": 860.0,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "charaideo": {
+    "name": "Charaideo",
+    "price": 928.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "charki-dadri": {
+    "name": "Charki Dadri",
+    "price": 861.5,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "chatra": {
+    "name": "Chatra",
+    "price": 909.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "chengalpattu": {
+    "name": "Chengalpattu",
+    "price": 928.5,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "chennai": {
+    "name": "Chennai",
+    "price": 928.5,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "chhatarpur": {
+    "name": "Chhatarpur",
+    "price": 937.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "chhindware": {
+    "name": "Chhindware",
+    "price": 937.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "chhota-udepur": {
+    "name": "Chhota Udepur",
+    "price": 867.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "chikkaballapura": {
+    "name": "Chikkaballapura",
+    "price": 923.0,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "chikmagalur": {
+    "name": "Chikmagalur",
+    "price": 923.5,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "chirang": {
+    "name": "Chirang",
+    "price": 947.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "chitradurga": {
+    "name": "Chitradurga",
+    "price": 926.0,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "chitrakut": {
+    "name": "Chitrakut",
+    "price": 973.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "chittaurgarh": {
+    "name": "Chittaurgarh",
+    "price": 952.5,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "chittoor": {
+    "name": "Chittoor",
+    "price": 947.0,
+    "state": "Andhra Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-andhra-pradesh.html"
+  },
+  "churachandpur": {
+    "name": "Churachandpur",
+    "price": 1065.0,
+    "state": "Manipur",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-manipur.html"
+  },
+  "churu": {
+    "name": "Churu",
+    "price": 943.0,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "city": {
+    "name": "City\u00c2",
+    "price": 2024.0,
+    "state": "Kerala",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-kerala.html"
+  },
+  "coimbatore": {
+    "name": "Coimbatore",
+    "price": 942.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "cooch-bihar": {
+    "name": "Cooch Bihar",
+    "price": 966.5,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "cuddalore": {
+    "name": "Cuddalore",
+    "price": 949.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "cuttack": {
+    "name": "Cuttack",
+    "price": 939.5,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "dahod": {
+    "name": "Dahod",
+    "price": 880.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "dakshin-dinajpur": {
+    "name": "Dakshin Dinajpur",
+    "price": 1011.5,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "dakshina-kannada": {
+    "name": "Dakshina Kannada",
+    "price": 920.5,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "damoh": {
+    "name": "Damoh",
+    "price": 935.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "dantewada": {
+    "name": "Dantewada",
+    "price": 1001.0,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "darbhanga": {
+    "name": "Darbhanga\u00c2",
+    "price": 950.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "darjeeling": {
+    "name": "Darjeeling",
+    "price": 966.0,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "darrang": {
+    "name": "Darrang",
+    "price": 970.0,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "datia": {
+    "name": "Datia\u00c2",
+    "price": 992.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "dausa": {
+    "name": "Dausa",
+    "price": 918.0,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "davangere": {
+    "name": "Davangere",
+    "price": 926.0,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "dehradun": {
+    "name": "Dehradun",
+    "price": 932.0,
+    "state": "Uttarakhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttarakhand.html"
+  },
+  "deogarh": {
+    "name": "Deogarh",
+    "price": 972.5,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "deoria": {
+    "name": "Deoria",
+    "price": 983.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "devbhumi-dwarka": {
+    "name": "Devbhumi Dwarka",
+    "price": 871.5,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "dewas": {
+    "name": "Dewas",
+    "price": 944.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "dhalai": {
+    "name": "Dhalai",
+    "price": 1090.5,
+    "state": "Tripura",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tripura.html"
+  },
+  "dhamtari": {
+    "name": "Dhamtari",
+    "price": 1001.0,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "dhanbad": {
+    "name": "Dhanbad",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "dhar": {
+    "name": "Dhar",
+    "price": 960.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "dharmapuri": {
+    "name": "Dharmapuri",
+    "price": 951.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "dharwad": {
+    "name": "Dharwad",
+    "price": 932.0,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "dhaulpur": {
+    "name": "Dhaulpur",
+    "price": 931.5,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "dhemaji": {
+    "name": "Dhemaji",
+    "price": 978.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "dhenkanal": {
+    "name": "Dhenkanal",
+    "price": 948.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "dhuburi": {
+    "name": "Dhuburi",
+    "price": 963.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "dhule": {
+    "name": "Dhule",
+    "price": 933.0,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "dibrugarh": {
+    "name": "Dibrugarh",
+    "price": 912.0,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "dima-hasao": {
+    "name": "Dima Hasao\u00c2",
+    "price": 1071.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "dimapur": {
+    "name": "Dimapur",
+    "price": 931.5,
+    "state": "Nagaland",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-nagaland.html"
+  },
+  "dindigul": {
+    "name": "Dindigul",
+    "price": 955.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "dindori": {
+    "name": "Dindori\u00c2",
+    "price": 936.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "dumka": {
+    "name": "Dumka",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "dungarpur": {
+    "name": "Dungarpur",
+    "price": 962.5,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "durg": {
+    "name": "Durg",
+    "price": 984.5,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "east-champaran": {
+    "name": "East Champaran\u00c2",
+    "price": 953.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "east-district": {
+    "name": "East District",
+    "price": 1065.5,
+    "state": "Sikkim",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-sikkim.html"
+  },
+  "east-garo-hills": {
+    "name": "East Garo Hills",
+    "price": 978.5,
+    "state": "Meghalaya",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-meghalaya.html"
+  },
+  "east-godavari": {
+    "name": "East Godavari",
+    "price": 941.5,
+    "state": "Andhra Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-andhra-pradesh.html"
+  },
+  "east-imphal": {
+    "name": "East Imphal",
+    "price": 1064.5,
+    "state": "Manipur",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-manipur.html"
+  },
+  "east-jaintia-hills": {
+    "name": "East Jaintia Hills",
+    "price": 1067.0,
+    "state": "Meghalaya",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-meghalaya.html"
+  },
+  "east-kamrup": {
+    "name": "East Kamrup",
+    "price": 984.5,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "east-khameng": {
+    "name": "East Khameng",
+    "price": 918.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "east-khasi-hills": {
+    "name": "East Khasi Hills",
+    "price": 978.0,
+    "state": "Meghalaya",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-meghalaya.html"
+  },
+  "east-siang": {
+    "name": "East Siang\u00c2",
+    "price": 918.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "east-singhbhum": {
+    "name": "East Singhbhum",
+    "price": 892.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "ernakulam": {
+    "name": "Ernakulam",
+    "price": 920.0,
+    "state": "Kerala",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-kerala.html"
+  },
+  "erode": {
+    "name": "Erode",
+    "price": 947.5,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "etah": {
+    "name": "Etah",
+    "price": 1039.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "etawah": {
+    "name": "Etawah",
+    "price": 944.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "faizabad": {
+    "name": "Faizabad",
+    "price": 975.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "faridabad": {
+    "name": "Faridabad",
+    "price": 854.5,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "faridkot": {
+    "name": "Faridkot",
+    "price": 950.5,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "farrukhabad": {
+    "name": "Farrukhabad",
+    "price": 936.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "fatehabad": {
+    "name": "Fatehabad",
+    "price": 882.0,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "fatehgarh-sahib": {
+    "name": "Fatehgarh Sahib",
+    "price": 922.0,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "fatehpur": {
+    "name": "Fatehpur",
+    "price": 938.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "fazilka": {
+    "name": "Fazilka",
+    "price": 954.0,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "firozabad": {
+    "name": "Firozabad",
+    "price": 946.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "firozpur": {
+    "name": "Firozpur",
+    "price": 960.0,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "gadag": {
+    "name": "Gadag",
+    "price": 949.0,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "gadchiroli": {
+    "name": "Gadchiroli\u00c2",
+    "price": 982.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "gajapati": {
+    "name": "Gajapati",
+    "price": 948.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "gandhinagar": {
+    "name": "Gandhinagar",
+    "price": 860.5,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "gangtok": {
+    "name": "Gangtok",
+    "price": 1065.5,
+    "state": "Sikkim",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-sikkim.html"
+  },
+  "ganjam": {
+    "name": "Ganjam",
+    "price": 960.5,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "garhwa": {
+    "name": "Garhwa",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "gariyaband": {
+    "name": "Gariyaband",
+    "price": 1001.0,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "gautam-budh-nagar": {
+    "name": "Gautam Budh Nagar",
+    "price": 1110.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "gaya": {
+    "name": "Gaya",
+    "price": 950.5,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "ghaziabad": {
+    "name": "Ghaziabad",
+    "price": 910.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "ghazipur": {
+    "name": "Ghazipur",
+    "price": 976.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "gir-somnath": {
+    "name": "Gir Somnath",
+    "price": 873.5,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "giridih": {
+    "name": "Giridih",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "goalpara": {
+    "name": "Goalpara",
+    "price": 946.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "godda": {
+    "name": "Godda",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "golaghat": {
+    "name": "Golaghat",
+    "price": 929.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "gomati": {
+    "name": "Gomati",
+    "price": 1082.5,
+    "state": "Tripura",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tripura.html"
+  },
+  "gonda": {
+    "name": "Gonda",
+    "price": 967.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "gondia": {
+    "name": "Gondia",
+    "price": 981.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "gopalganj": {
+    "name": "Gopalganj \u00c2",
+    "price": 950.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "gorakhpur": {
+    "name": "Gorakhpur",
+    "price": 975.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "greater-mumbai": {
+    "name": "Greater Mumbai",
+    "price": 912.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "gulbarga": {
+    "name": "Gulbarga",
+    "price": 939.5,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "gumla": {
+    "name": "Gumla",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "guna": {
+    "name": "Guna\u00c2",
+    "price": 984.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "guntur": {
+    "name": "Guntur",
+    "price": 979.5,
+    "state": "Andhra Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-andhra-pradesh.html"
+  },
+  "gurdaspur": {
+    "name": "Gurdaspur",
+    "price": 944.5,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "gurgaon": {
+    "name": "Gurgaon",
+    "price": 861.5,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "guwahati": {
+    "name": "Guwahati",
+    "price": 962.0,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "gwalior": {
+    "name": "Gwalior\u00c2",
+    "price": 996.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "hailakandi": {
+    "name": "Hailakandi",
+    "price": 1056.0,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "hamirpur": {
+    "name": "Hamirpur",
+    "price": 1046.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "hanumangarh": {
+    "name": "Hanumangarh",
+    "price": 943.0,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "hapur": {
+    "name": "Hapur",
+    "price": 1019.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "harda": {
+    "name": "Harda\u00c2",
+    "price": 937.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "hardoi": {
+    "name": "Hardoi",
+    "price": 948.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "haridwar": {
+    "name": "Haridwar",
+    "price": 932.0,
+    "state": "Uttarakhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttarakhand.html"
+  },
+  "hassan": {
+    "name": "Hassan",
+    "price": 926.0,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "hathras": {
+    "name": "Hathras",
+    "price": 1030.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "haveri": {
+    "name": "Haveri",
+    "price": 950.5,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "hazaribagh": {
+    "name": "Hazaribagh",
+    "price": 912.0,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "hingoli": {
+    "name": "Hingoli",
+    "price": 938.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "hisar": {
+    "name": "Hisar\u00c2",
+    "price": 873.0,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "hojai": {
+    "name": "Hojai",
+    "price": 985.0,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "hooghly": {
+    "name": "Hooghly",
+    "price": 942.0,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "hoshangabad": {
+    "name": "Hoshangabad\u00c2",
+    "price": 935.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "hoshiarpur": {
+    "name": "Hoshiarpur",
+    "price": 953.5,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "howrah": {
+    "name": "Howrah",
+    "price": 940.5,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "hyderabad": {
+    "name": "Hyderabad",
+    "price": 965.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "idukki": {
+    "name": "Idukki",
+    "price": 920.0,
+    "state": "Kerala",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-kerala.html"
+  },
+  "imphal": {
+    "name": "Imphal",
+    "price": 1064.5,
+    "state": "Manipur",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-manipur.html"
+  },
+  "indore": {
+    "name": "Indore",
+    "price": 941.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "itanagar": {
+    "name": "Itanagar",
+    "price": 918.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "jabalpur": {
+    "name": "Jabalpur",
+    "price": 919.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "jagatsinghpur": {
+    "name": "Jagatsinghpur",
+    "price": 956.5,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "jagital": {
+    "name": "Jagital",
+    "price": 985.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "jahanabad": {
+    "name": "Jahanabad \u00c2",
+    "price": 954.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "jahbua": {
+    "name": "Jahbua",
+    "price": 992.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "jaipur": {
+    "name": "Jaipur",
+    "price": 916.5,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "jaisalmer": {
+    "name": "Jaisalmer",
+    "price": 935.0,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "jajpur": {
+    "name": "Jajpur",
+    "price": 970.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "jalandhar": {
+    "name": "Jalandhar",
+    "price": 946.0,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "jalaun": {
+    "name": "Jalaun",
+    "price": 950.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "jalgaon": {
+    "name": "Jalgaon",
+    "price": 918.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "jalna": {
+    "name": "Jalna\u00c2",
+    "price": 921.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "jalor": {
+    "name": "Jalor",
+    "price": 940.0,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "jalpaiguri": {
+    "name": "Jalpaiguri",
+    "price": 966.5,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "jamnagar": {
+    "name": "Jamnagar",
+    "price": 865.5,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "jamtara": {
+    "name": "Jamtara",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "jamui": {
+    "name": "Jamui \u00c2",
+    "price": 934.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "jangaon": {
+    "name": "Jangaon",
+    "price": 976.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "janjgir": {
+    "name": "Janjgir",
+    "price": 1001.0,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "jashpur": {
+    "name": "Jashpur",
+    "price": 1001.0,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "jaunpur": {
+    "name": "Jaunpur",
+    "price": 967.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "jayashankar-bhupalpal": {
+    "name": "Jayashankar Bhupalpal",
+    "price": 985.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "jhajjar": {
+    "name": "Jhajjar\u00c2",
+    "price": 854.0,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "jhansi": {
+    "name": "Jhansi",
+    "price": 947.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "jhargram": {
+    "name": "Jhargram",
+    "price": 931.5,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "jharsuguda": {
+    "name": "Jharsuguda",
+    "price": 969.5,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "jhunjhunun": {
+    "name": "Jhunjhunun",
+    "price": 929.5,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "jind": {
+    "name": "Jind\u00c2",
+    "price": 861.5,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "jiribam": {
+    "name": "Jiribam",
+    "price": 1056.0,
+    "state": "Manipur",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-manipur.html"
+  },
+  "jodhpur": {
+    "name": "Jodhpur",
+    "price": 920.5,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "jogulamba-gadwal": {
+    "name": "Jogulamba Gadwal",
+    "price": 985.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "jorhat": {
+    "name": "Jorhat",
+    "price": 928.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "junagadh": {
+    "name": "Junagadh",
+    "price": 871.5,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "kaithal": {
+    "name": "Kaithal\u00c2",
+    "price": 867.5,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "kakching": {
+    "name": "Kakching",
+    "price": 1064.5,
+    "state": "Manipur",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-manipur.html"
+  },
+  "kalahandi": {
+    "name": "Kalahandi",
+    "price": 940.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "kalimpong": {
+    "name": "Kalimpong",
+    "price": 966.0,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "kallakurichi": {
+    "name": "Kallakurichi",
+    "price": 950.5,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "kamareddy": {
+    "name": "Kamareddy",
+    "price": 987.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "kamle": {
+    "name": "Kamle",
+    "price": 918.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "kamrup": {
+    "name": "Kamrup",
+    "price": 962.0,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "kamrup-metro": {
+    "name": "Kamrup Metro",
+    "price": 962.0,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "kanchipuram": {
+    "name": "Kanchipuram",
+    "price": 881.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "kandhamal": {
+    "name": "Kandhamal",
+    "price": 951.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "kangpokpi": {
+    "name": "Kangpokpi",
+    "price": 1064.5,
+    "state": "Manipur",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-manipur.html"
+  },
+  "kangra": {
+    "name": "Kangra",
+    "price": 965.0,
+    "state": "Himachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-himachal-pradesh.html"
+  },
+  "kanker": {
+    "name": "Kanker",
+    "price": 1001.0,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "kannauj": {
+    "name": "Kannauj",
+    "price": 944.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "kanniyakumari": {
+    "name": "Kanniyakumari",
+    "price": 931.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "kannur": {
+    "name": "Kannur",
+    "price": 933.0,
+    "state": "Kerala",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-kerala.html"
+  },
+  "kanpur-rural": {
+    "name": "Kanpur Rural",
+    "price": 930.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "kanpur-urban": {
+    "name": "Kanpur Urban",
+    "price": 928.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "kapurthala": {
+    "name": "Kapurthala",
+    "price": 942.5,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "karauli": {
+    "name": "Karauli",
+    "price": 931.0,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "karbi-anglong": {
+    "name": "Karbi Anglong",
+    "price": 935.0,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "karim-nagar": {
+    "name": "Karim Nagar",
+    "price": 984.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "karimganj": {
+    "name": "Karimganj",
+    "price": 1047.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "karnal": {
+    "name": "Karnal\u00c2",
+    "price": 862.5,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "karur": {
+    "name": "Karur",
+    "price": 967.5,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "kasaragod": {
+    "name": "Kasaragod",
+    "price": 933.0,
+    "state": "Kerala",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-kerala.html"
+  },
+  "kashi-ram-nagar": {
+    "name": "Kashi Ram Nagar",
+    "price": 939.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "katihar": {
+    "name": "Katihar \u00c2",
+    "price": 951.5,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "katni": {
+    "name": "Katni\u00c2",
+    "price": 936.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "kaushambi": {
+    "name": "Kaushambi",
+    "price": 965.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "kawardha": {
+    "name": "Kawardha",
+    "price": 1001.0,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "kendrapara": {
+    "name": "Kendrapara",
+    "price": 956.5,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "keonjhar": {
+    "name": "Keonjhar",
+    "price": 970.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "khagaria": {
+    "name": "Khagaria \u00c2",
+    "price": 895.5,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "khammam": {
+    "name": "Khammam",
+    "price": 952.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "khandwa": {
+    "name": "Khandwa\u00c2",
+    "price": 960.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "khargone": {
+    "name": "Khargone\u00c2",
+    "price": 950.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "kheda": {
+    "name": "Kheda",
+    "price": 859.5,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "khowai": {
+    "name": "Khowai",
+    "price": 1082.5,
+    "state": "Tripura",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tripura.html"
+  },
+  "khunti": {
+    "name": "Khunti",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "kimaphere": {
+    "name": "Kimaphere",
+    "price": 931.5,
+    "state": "Nagaland",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-nagaland.html"
+  },
+  "kinnaur": {
+    "name": "Kinnaur",
+    "price": 960.0,
+    "state": "Himachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-himachal-pradesh.html"
+  },
+  "kishanganj": {
+    "name": "Kishanganj \u00c2",
+    "price": 955.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "kodagu": {
+    "name": "Kodagu",
+    "price": 931.0,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "koderma": {
+    "name": "Koderma",
+    "price": 912.0,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "kohima": {
+    "name": "Kohima",
+    "price": 932.0,
+    "state": "Nagaland",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-nagaland.html"
+  },
+  "kokrajhar": {
+    "name": "Kokrajhar\u00c2",
+    "price": 978.0,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "kolar": {
+    "name": "Kolar",
+    "price": 915.5,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "kolasib": {
+    "name": "Kolasib\u00c2",
+    "price": 1056.0,
+    "state": "Mizoram",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-mizoram.html"
+  },
+  "kolhapur": {
+    "name": "Kolhapur\u00c2",
+    "price": 915.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "kolkata": {
+    "name": "Kolkata",
+    "price": 939.0,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "kollam": {
+    "name": "Kollam",
+    "price": 933.0,
+    "state": "Kerala",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-kerala.html"
+  },
+  "komram-bheem-asifabad": {
+    "name": "Komram Bheem Asifabad",
+    "price": 987.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "kondagaon": {
+    "name": "Kondagaon",
+    "price": 1001.0,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "koppal": {
+    "name": "Koppal",
+    "price": 949.0,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "koraput": {
+    "name": "Koraput",
+    "price": 941.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "korba": {
+    "name": "Korba",
+    "price": 1001.0,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "kota": {
+    "name": "Kota",
+    "price": 934.0,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "kottayam": {
+    "name": "Kottayam",
+    "price": 920.0,
+    "state": "Kerala",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-kerala.html"
+  },
+  "kozhikode": {
+    "name": "Kozhikode",
+    "price": 921.5,
+    "state": "Kerala",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-kerala.html"
+  },
+  "kra-daadi": {
+    "name": "Kra Daadi",
+    "price": 918.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "krishna": {
+    "name": "Krishna",
+    "price": 936.5,
+    "state": "Andhra Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-andhra-pradesh.html"
+  },
+  "krishnagiri": {
+    "name": "Krishnagiri",
+    "price": 908.5,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "kullu": {
+    "name": "Kullu",
+    "price": 941.5,
+    "state": "Himachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-himachal-pradesh.html"
+  },
+  "kurnool": {
+    "name": "Kurnool",
+    "price": 984.5,
+    "state": "Andhra Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-andhra-pradesh.html"
+  },
+  "kurukshetra": {
+    "name": "Kurukshetra\u00c2",
+    "price": 862.5,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "kurung-kumey": {
+    "name": "Kurung Kumey",
+    "price": 913.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "kushinagar": {
+    "name": "Kushinagar",
+    "price": 983.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "kutch": {
+    "name": "Kutch",
+    "price": 873.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "lahul-spiti": {
+    "name": "Lahul & Spiti",
+    "price": 958.0,
+    "state": "Himachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-himachal-pradesh.html"
+  },
+  "lakhimpur": {
+    "name": "Lakhimpur",
+    "price": 956.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "lalitpur": {
+    "name": "Lalitpur",
+    "price": 959.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "latehar": {
+    "name": "Latehar",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "latur": {
+    "name": "Latur",
+    "price": 937.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "lawngtlai": {
+    "name": "Lawngtlai\u00c2",
+    "price": 1065.0,
+    "state": "Mizoram",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-mizoram.html"
+  },
+  "leparada": {
+    "name": "Leparada",
+    "price": 918.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "lohardaga": {
+    "name": "Lohardaga",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "lohit": {
+    "name": "Lohit",
+    "price": 869.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "longding": {
+    "name": "Longding",
+    "price": 868.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "longleng": {
+    "name": "Longleng",
+    "price": 928.5,
+    "state": "Nagaland",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-nagaland.html"
+  },
+  "lower-dibang-valley": {
+    "name": "Lower Dibang Valley",
+    "price": 869.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "lower-siang": {
+    "name": "Lower Siang",
+    "price": 919.0,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "lower-subansiri": {
+    "name": "Lower Subansiri",
+    "price": 918.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "luckeesarai": {
+    "name": "Luckeesarai \u00c2",
+    "price": 933.5,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "lucknow": {
+    "name": "Lucknow",
+    "price": 950.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "ludhiana": {
+    "name": "Ludhiana",
+    "price": 940.0,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "lunglei": {
+    "name": "Lunglei\u00c2",
+    "price": 1065.0,
+    "state": "Mizoram",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-mizoram.html"
+  },
+  "madhepura": {
+    "name": "Madhepura \u00c2",
+    "price": 955.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "madhubani": {
+    "name": "Madhubani \u00c2",
+    "price": 953.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "madurai": {
+    "name": "Madurai",
+    "price": 954.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "mahabubabad": {
+    "name": "Mahabubabad",
+    "price": 984.5,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "maharajganj": {
+    "name": "Maharajganj",
+    "price": 975.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "mahasamund": {
+    "name": "Mahasamund",
+    "price": 993.5,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "mahendragarh": {
+    "name": "Mahendragarh\u00c2",
+    "price": 861.5,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "mahisagar": {
+    "name": "Mahisagar",
+    "price": 875.5,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "mahoba": {
+    "name": "Mahoba",
+    "price": 966.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "mainpuri": {
+    "name": "Mainpuri",
+    "price": 1036.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "majuli": {
+    "name": "Majuli",
+    "price": 929.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "malappuram": {
+    "name": "Malappuram",
+    "price": 921.5,
+    "state": "Kerala",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-kerala.html"
+  },
+  "malda": {
+    "name": "Malda",
+    "price": 1010.0,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "malkangiri": {
+    "name": "Malkangiri",
+    "price": 942.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "mamit": {
+    "name": "Mamit\u00c2",
+    "price": 1065.0,
+    "state": "Mizoram",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-mizoram.html"
+  },
+  "mancherial": {
+    "name": "Mancherial",
+    "price": 985.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "mandi": {
+    "name": "Mandi",
+    "price": 962.5,
+    "state": "Himachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-himachal-pradesh.html"
+  },
+  "mandla": {
+    "name": "Mandla\u00c2",
+    "price": 936.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "mandsaur": {
+    "name": "Mandsaur\u00c2",
+    "price": 989.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "mandya": {
+    "name": "Mandya",
+    "price": 923.0,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "mansa": {
+    "name": "Mansa",
+    "price": 942.0,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "mathura": {
+    "name": "Mathura",
+    "price": 922.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "maunathbhanjan": {
+    "name": "Maunathbhanjan",
+    "price": 993.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "medak": {
+    "name": "Medak",
+    "price": 983.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "medchal-malkajgiri": {
+    "name": "Medchal Malkajgiri",
+    "price": 965.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "meerut": {
+    "name": "Meerut",
+    "price": 1010.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "mehabubnagar": {
+    "name": "Mehabubnagar",
+    "price": 967.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "mehsana": {
+    "name": "Mehsana",
+    "price": 861.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "mewat": {
+    "name": "Mewat\u00c2",
+    "price": 854.5,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "mirzapur": {
+    "name": "Mirzapur",
+    "price": 987.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "moga": {
+    "name": "Moga",
+    "price": 948.0,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "mokokchung": {
+    "name": "Mokokchung",
+    "price": 928.5,
+    "state": "Nagaland",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-nagaland.html"
+  },
+  "mon": {
+    "name": "Mon",
+    "price": 928.5,
+    "state": "Nagaland",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-nagaland.html"
+  },
+  "moradabad": {
+    "name": "Moradabad",
+    "price": 933.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "morbi": {
+    "name": "Morbi",
+    "price": 863.5,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "morena": {
+    "name": "Morena\u00c2",
+    "price": 997.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "morigaon": {
+    "name": "Morigaon",
+    "price": 872.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "muktsar": {
+    "name": "Muktsar",
+    "price": 952.0,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "mumbai": {
+    "name": "Mumbai",
+    "price": 912.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "mungeli": {
+    "name": "Mungeli",
+    "price": 1001.0,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "munger": {
+    "name": "Munger \u00c2",
+    "price": 950.5,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "murshidabad": {
+    "name": "Murshidabad",
+    "price": 957.0,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "muzaffarnagar": {
+    "name": "Muzaffarnagar",
+    "price": 928.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "muzaffarpur": {
+    "name": "Muzaffarpur \u00c2",
+    "price": 950.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "mysore": {
+    "name": "Mysore",
+    "price": 917.5,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "nabarangapur": {
+    "name": "Nabarangapur",
+    "price": 941.5,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "nadia": {
+    "name": "Nadia",
+    "price": 939.5,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "nagaon": {
+    "name": "Nagaon",
+    "price": 985.0,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "nagapattinam": {
+    "name": "Nagapattinam",
+    "price": 934.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "nagarkurnool": {
+    "name": "Nagarkurnool",
+    "price": 983.5,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "nagaur": {
+    "name": "Nagaur",
+    "price": 924.0,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "nagpur": {
+    "name": "Nagpur",
+    "price": 964.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "nainital": {
+    "name": "Nainital",
+    "price": 933.0,
+    "state": "Uttarakhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttarakhand.html"
+  },
+  "nalanda": {
+    "name": "Nalanda\u00c2 \u00c2",
+    "price": 935.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "nalbari": {
+    "name": "Nalbari",
+    "price": 970.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "nalgonda": {
+    "name": "Nalgonda",
+    "price": 986.5,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "namakkal": {
+    "name": "Namakkal",
+    "price": 959.5,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "namsai": {
+    "name": "Namsai",
+    "price": 868.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "nanded": {
+    "name": "Nanded",
+    "price": 938.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "nandurbar": {
+    "name": "Nandurbar",
+    "price": 935.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "narmada": {
+    "name": "Narmada",
+    "price": 873.5,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "narsimhapur": {
+    "name": "Narsimhapur\u00c2",
+    "price": 938.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "nashik": {
+    "name": "Nashik",
+    "price": 916.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "navsari": {
+    "name": "Navsari",
+    "price": 861.5,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "nawada": {
+    "name": "Nawada \u00c2",
+    "price": 950.5,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "nayagarh": {
+    "name": "Nayagarh",
+    "price": 942.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "neemach": {
+    "name": "Neemach\u00c2",
+    "price": 989.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "nellore": {
+    "name": "Nellore",
+    "price": 950.0,
+    "state": "Andhra Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-andhra-pradesh.html"
+  },
+  "nilgiris": {
+    "name": "Nilgiris",
+    "price": 959.5,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "nirmal": {
+    "name": "Nirmal",
+    "price": 990.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "nizamabad": {
+    "name": "Nizamabad",
+    "price": 988.5,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "noida": {
+    "name": "Noida",
+    "price": 910.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "noney": {
+    "name": "Noney",
+    "price": 1064.5,
+    "state": "Manipur",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-manipur.html"
+  },
+  "north-24-parganas": {
+    "name": "North 24 Parganas",
+    "price": 939.0,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "north-garo-hills": {
+    "name": "North Garo Hills",
+    "price": 978.0,
+    "state": "Meghalaya",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-meghalaya.html"
+  },
+  "north-tripura": {
+    "name": "North Tripura",
+    "price": 1090.5,
+    "state": "Tripura",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tripura.html"
+  },
+  "nuapada": {
+    "name": "Nuapada",
+    "price": 941.5,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "osmanabad": {
+    "name": "Osmanabad \u00c2",
+    "price": 937.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "pakke-kessang": {
+    "name": "Pakke Kessang",
+    "price": 868.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "pakur": {
+    "name": "Pakur",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "pakyong": {
+    "name": "Pakyong\u00c2",
+    "price": 1065.5,
+    "state": "Sikkim",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-sikkim.html"
+  },
+  "palakkad": {
+    "name": "Palakkad",
+    "price": 931.5,
+    "state": "Kerala",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-kerala.html"
+  },
+  "palamu": {
+    "name": "Palamu",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "palghar": {
+    "name": "Palghar",
+    "price": 924.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "pali": {
+    "name": "Pali",
+    "price": 923.5,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "palwal": {
+    "name": "Palwal\u00c2",
+    "price": 856.5,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "panchkula": {
+    "name": "Panchkula\u00c2",
+    "price": 879.5,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "panchmahal": {
+    "name": "Panchmahal",
+    "price": 868.5,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "panipat": {
+    "name": "Panipat\u00c2",
+    "price": 859.0,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "panjim": {
+    "name": "Panjim",
+    "price": 867.0,
+    "state": "Goa",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-goa.html"
+  },
+  "panna": {
+    "name": "Panna\u00c2",
+    "price": 936.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "parbhani": {
+    "name": "Parbhani\u00c2",
+    "price": 913.0,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "paschim-bardhaman": {
+    "name": "Paschim Bardhaman",
+    "price": 952.5,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "paschim-medinipur": {
+    "name": "Paschim Medinipur",
+    "price": 932.0,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "patan": {
+    "name": "Patan",
+    "price": 877.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "pathanamthitta": {
+    "name": "Pathanamthitta",
+    "price": 925.0,
+    "state": "Kerala",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-kerala.html"
+  },
+  "pathankot": {
+    "name": "Pathankot",
+    "price": 964.5,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "patiala": {
+    "name": "Patiala",
+    "price": 922.5,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "patna": {
+    "name": "Patna",
+    "price": 942.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "pauri": {
+    "name": "Pauri",
+    "price": 948.5,
+    "state": "Uttarakhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttarakhand.html"
+  },
+  "peddapalli": {
+    "name": "Peddapalli",
+    "price": 987.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "perambalur": {
+    "name": "Perambalur",
+    "price": 968.5,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "peren": {
+    "name": "Peren",
+    "price": 928.5,
+    "state": "Nagaland",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-nagaland.html"
+  },
+  "phek": {
+    "name": "Phek",
+    "price": 928.5,
+    "state": "Nagaland",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-nagaland.html"
+  },
+  "pherzawl": {
+    "name": "Pherzawl",
+    "price": 1064.5,
+    "state": "Manipur",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-manipur.html"
+  },
+  "pilibhit": {
+    "name": "Pilibhit",
+    "price": 956.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "pithoragarh": {
+    "name": "Pithoragarh",
+    "price": 950.5,
+    "state": "Uttarakhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttarakhand.html"
+  },
+  "porbandar": {
+    "name": "Porbandar",
+    "price": 874.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "prakasam": {
+    "name": "Prakasam",
+    "price": 958.0,
+    "state": "Andhra Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-andhra-pradesh.html"
+  },
+  "pratapgarh": {
+    "name": "Pratapgarh",
+    "price": 967.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "pudukottai": {
+    "name": "Pudukottai",
+    "price": 959.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "pune": {
+    "name": "Pune",
+    "price": 916.0,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "purba-bardhaman": {
+    "name": "Purba Bardhaman",
+    "price": 952.5,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "purba-medinipur": {
+    "name": "Purba Medinipur",
+    "price": 915.0,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "puri": {
+    "name": "Puri",
+    "price": 941.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "purnia": {
+    "name": "Purnia",
+    "price": 953.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "purulia": {
+    "name": "Purulia",
+    "price": 968.0,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "rae-bareli": {
+    "name": "Rae Bareli",
+    "price": 954.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "raichur": {
+    "name": "Raichur",
+    "price": 939.5,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "raigarh": {
+    "name": "Raigarh",
+    "price": 923.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "raipur": {
+    "name": "Raipur",
+    "price": 984.5,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "raisen": {
+    "name": "Raisen\u00c2",
+    "price": 937.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "rajanna-sircilla": {
+    "name": "Rajanna Sircilla",
+    "price": 985.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "rajgarh": {
+    "name": "Rajgarh",
+    "price": 979.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "rajkot": {
+    "name": "Rajkot",
+    "price": 858.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "rajnandgaon": {
+    "name": "Rajnandgaon",
+    "price": 996.5,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "ramanagara": {
+    "name": "Ramanagara",
+    "price": 920.5,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "ramanathapuram": {
+    "name": "Ramanathapuram",
+    "price": 962.5,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "ramgarh": {
+    "name": "Ramgarh",
+    "price": 912.0,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "rampur": {
+    "name": "Rampur",
+    "price": 939.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "ranchi": {
+    "name": "Ranchi",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "rangareddi": {
+    "name": "Rangareddi",
+    "price": 965.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "ranipet": {
+    "name": "Ranipet",
+    "price": 932.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "ratlam": {
+    "name": "Ratlam\u00c2",
+    "price": 991.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "ratnagiri": {
+    "name": "Ratnagiri",
+    "price": 927.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "rayagada": {
+    "name": "Rayagada",
+    "price": 941.5,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "rewa": {
+    "name": "Rewa",
+    "price": 937.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "rewari": {
+    "name": "Rewari\u00c2",
+    "price": 854.0,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "ri-bhoi": {
+    "name": "Ri Bhoi",
+    "price": 961.5,
+    "state": "Meghalaya",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-meghalaya.html"
+  },
+  "rohtak": {
+    "name": "Rohtak\u00c2",
+    "price": 855.0,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "rohtas": {
+    "name": "Rohtas",
+    "price": 953.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "rudraprayag": {
+    "name": "Rudraprayag",
+    "price": 948.5,
+    "state": "Uttarakhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttarakhand.html"
+  },
+  "rupnagar": {
+    "name": "Rupnagar",
+    "price": 941.5,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "sabarkantha": {
+    "name": "Sabarkantha",
+    "price": 879.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "sagar": {
+    "name": "Sagar\u00c2",
+    "price": 935.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "saharanpur": {
+    "name": "Saharanpur",
+    "price": 928.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "saharsa": {
+    "name": "Saharsa \u00c2",
+    "price": 954.5,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "sahibganj": {
+    "name": "Sahibganj",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "saiha": {
+    "name": "Saiha\u00c2",
+    "price": 1065.0,
+    "state": "Mizoram",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-mizoram.html"
+  },
+  "salem": {
+    "name": "Salem",
+    "price": 946.5,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "samastipur": {
+    "name": "Samastipur \u00c2",
+    "price": 932.5,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "sambalpur": {
+    "name": "Sambalpur",
+    "price": 974.5,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "sambhal": {
+    "name": "Sambhal",
+    "price": 942.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "sangareddy": {
+    "name": "Sangareddy",
+    "price": 965.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "sangli": {
+    "name": "Sangli",
+    "price": 915.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "sangrur": {
+    "name": "Sangrur",
+    "price": 933.0,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "sant-kabir-nagar": {
+    "name": "Sant Kabir Nagar",
+    "price": 975.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "sant-ravi-nagar": {
+    "name": "Sant Ravi Nagar",
+    "price": 976.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "santhal-pargan": {
+    "name": "Santhal Pargan",
+    "price": 984.5,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "saraikela-kharsawan": {
+    "name": "Saraikela-Kharsawan",
+    "price": 892.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "saran": {
+    "name": "Saran \u00c2",
+    "price": 951.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "sas-nagar": {
+    "name": "Sas Nagar",
+    "price": 922.5,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "satara": {
+    "name": "Satara",
+    "price": 917.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "satna": {
+    "name": "Satna\u00c2",
+    "price": 938.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "sawai-madhopur": {
+    "name": "Sawai Madhopur",
+    "price": 925.5,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "sehore": {
+    "name": "Sehore\u00c2",
+    "price": 918.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "senapati": {
+    "name": "Senapati",
+    "price": 1014.5,
+    "state": "Manipur",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-manipur.html"
+  },
+  "seoni": {
+    "name": "Seoni\u00c2",
+    "price": 930.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "sepahijhala": {
+    "name": "Sepahijhala",
+    "price": 1073.5,
+    "state": "Tripura",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tripura.html"
+  },
+  "serchhip": {
+    "name": "Serchhip\u00c2",
+    "price": 1065.0,
+    "state": "Mizoram",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-mizoram.html"
+  },
+  "sewan": {
+    "name": "Sewan \u00c2",
+    "price": 951.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "shahdol": {
+    "name": "Shahdol\u00c2",
+    "price": 937.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "shaheed-bhagat-singh-nagar": {
+    "name": "Shaheed Bhagat Singh Nagar",
+    "price": 941.5,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "shahjahanpur": {
+    "name": "Shahjahanpur",
+    "price": 939.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "shajapur": {
+    "name": "Shajapur\u00c2",
+    "price": 918.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "shamli": {
+    "name": "Shamli",
+    "price": 918.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "sheikhpura": {
+    "name": "Sheikhpura \u00c2",
+    "price": 934.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "sheohar": {
+    "name": "Sheohar",
+    "price": 952.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "sheopur": {
+    "name": "Sheopur\u00c2",
+    "price": 992.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "shi-yomi": {
+    "name": "Shi-yomi",
+    "price": 868.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "shillong": {
+    "name": "Shillong",
+    "price": 980.0,
+    "state": "Meghalaya",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-meghalaya.html"
+  },
+  "shimla": {
+    "name": "Shimla",
+    "price": 958.5,
+    "state": "Himachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-himachal-pradesh.html"
+  },
+  "shimoga": {
+    "name": "Shimoga",
+    "price": 926.0,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "shivpuri": {
+    "name": "Shivpuri\u00c2",
+    "price": 992.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "shravasti": {
+    "name": "Shravasti",
+    "price": 967.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "siang": {
+    "name": "Siang",
+    "price": 868.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "sibsagar": {
+    "name": "Sibsagar",
+    "price": 920.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "siddipet": {
+    "name": "Siddipet",
+    "price": 982.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "sidharthnagar": {
+    "name": "Sidharthnagar",
+    "price": 983.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "sidhi": {
+    "name": "Sidhi\u00c2",
+    "price": 876.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "sikar": {
+    "name": "Sikar",
+    "price": 918.0,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "simdega": {
+    "name": "Simdega",
+    "price": 910.5,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "sindhudurg": {
+    "name": "Sindhudurg\u00c2",
+    "price": 927.0,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "singrauli": {
+    "name": "Singrauli",
+    "price": 938.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "sirmaur": {
+    "name": "Sirmaur",
+    "price": 960.0,
+    "state": "Himachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-himachal-pradesh.html"
+  },
+  "sirohi": {
+    "name": "Sirohi",
+    "price": 942.0,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "sirsa": {
+    "name": "Sirsa\u00c2",
+    "price": 893.0,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "sitamarhi": {
+    "name": "Sitamarhi \u00c2",
+    "price": 950.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "sitapur": {
+    "name": "Sitapur",
+    "price": 956.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "sivaganga": {
+    "name": "Sivaganga",
+    "price": 968.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "solan": {
+    "name": "Solan",
+    "price": 941.5,
+    "state": "Himachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-himachal-pradesh.html"
+  },
+  "solapur": {
+    "name": "Solapur",
+    "price": 920.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "sonapur": {
+    "name": "Sonapur",
+    "price": 942.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "sonbhadra": {
+    "name": "Sonbhadra",
+    "price": 982.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "sonipat": {
+    "name": "Sonipat\u00c2",
+    "price": 862.0,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "sonitpur": {
+    "name": "Sonitpur",
+    "price": 978.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "soreng": {
+    "name": "Soreng\u00c2",
+    "price": 1065.5,
+    "state": "Sikkim",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-sikkim.html"
+  },
+  "south-24-parganas": {
+    "name": "South 24 Parganas",
+    "price": 947.5,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "south-district": {
+    "name": "South District",
+    "price": 1065.5,
+    "state": "Sikkim",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-sikkim.html"
+  },
+  "south-garo-hills": {
+    "name": "South Garo Hills",
+    "price": 978.5,
+    "state": "Meghalaya",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-meghalaya.html"
+  },
+  "south-goa": {
+    "name": "South Goa",
+    "price": 867.0,
+    "state": "Goa",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-goa.html"
+  },
+  "south-kamrup": {
+    "name": "South Kamrup",
+    "price": 984.5,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "south-west-garo-hills": {
+    "name": "South West Garo Hills",
+    "price": 978.5,
+    "state": "Meghalaya",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-meghalaya.html"
+  },
+  "srikakulam": {
+    "name": "Srikakulam",
+    "price": 944.5,
+    "state": "Andhra Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-andhra-pradesh.html"
+  },
+  "sukma": {
+    "name": "Sukma",
+    "price": 1001.0,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "sultanpur": {
+    "name": "Sultanpur",
+    "price": 992.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "sundargarh": {
+    "name": "Sundargarh",
+    "price": 972.0,
+    "state": "Odisha",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-odisha.html"
+  },
+  "supaul": {
+    "name": "Supaul \u00c2",
+    "price": 957.5,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "surajpur": {
+    "name": "Surajpur",
+    "price": 1001.0,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "surat": {
+    "name": "Surat",
+    "price": 858.5,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "surendranagar": {
+    "name": "Surendranagar",
+    "price": 865.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "surguja": {
+    "name": "Surguja",
+    "price": 1001.0,
+    "state": "Chhattisgarh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-chhattisgarh.html"
+  },
+  "suryapet": {
+    "name": "Suryapet",
+    "price": 986.5,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "tamenglong": {
+    "name": "Tamenglong",
+    "price": 1064.5,
+    "state": "Manipur",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-manipur.html"
+  },
+  "tapi": {
+    "name": "Tapi",
+    "price": 872.5,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "tarn-taran": {
+    "name": "Tarn Taran",
+    "price": 953.0,
+    "state": "Punjab",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-punjab.html"
+  },
+  "tawang": {
+    "name": "Tawang",
+    "price": 868.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "tehri-garhwal": {
+    "name": "Tehri Garhwal",
+    "price": 948.5,
+    "state": "Uttarakhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttarakhand.html"
+  },
+  "tengnoupal": {
+    "name": "Tengnoupal",
+    "price": 1064.5,
+    "state": "Manipur",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-manipur.html"
+  },
+  "tenkasi": {
+    "name": "Tenkasi",
+    "price": 983.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "thane": {
+    "name": "Thane",
+    "price": 912.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "thanjavur": {
+    "name": "Thanjavur",
+    "price": 934.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "the-dangs": {
+    "name": "The Dangs",
+    "price": 870.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "theni": {
+    "name": "Theni",
+    "price": 954.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "thiruvarur": {
+    "name": "Thiruvarur",
+    "price": 934.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "thoubal": {
+    "name": "Thoubal",
+    "price": 1065.0,
+    "state": "Manipur",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-manipur.html"
+  },
+  "thrissur": {
+    "name": "Thrissur",
+    "price": 925.0,
+    "state": "Kerala",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-kerala.html"
+  },
+  "tikamgarh": {
+    "name": "Tikamgarh\u00c2",
+    "price": 993.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "tinsukia": {
+    "name": "Tinsukia",
+    "price": 852.0,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "tirap": {
+    "name": "Tirap",
+    "price": 860.0,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "tiruchchirapalli": {
+    "name": "Tiruchchirapalli",
+    "price": 959.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "tirunelveli": {
+    "name": "Tirunelveli",
+    "price": 978.5,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "tirupathar": {
+    "name": "Tirupathar",
+    "price": 951.5,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "tiruvallur": {
+    "name": "Tiruvallur",
+    "price": 934.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "tiruvannamalai": {
+    "name": "Tiruvannamalai",
+    "price": 959.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "tonk": {
+    "name": "Tonk",
+    "price": 924.5,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "trivandrum": {
+    "name": "Trivandrum",
+    "price": 922.0,
+    "state": "Kerala",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-kerala.html"
+  },
+  "tuensang": {
+    "name": "Tuensang",
+    "price": 928.5,
+    "state": "Nagaland",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-nagaland.html"
+  },
+  "tumkur": {
+    "name": "Tumkur",
+    "price": 923.5,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "tuticorin": {
+    "name": "Tuticorin",
+    "price": 977.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "udaipur": {
+    "name": "Udaipur",
+    "price": 944.5,
+    "state": "Rajasthan",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-rajasthan.html"
+  },
+  "udalguri": {
+    "name": "Udalguri",
+    "price": 918.5,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "udham-singh-nagar": {
+    "name": "Udham Singh Nagar",
+    "price": 942.0,
+    "state": "Uttarakhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttarakhand.html"
+  },
+  "udupi": {
+    "name": "Udupi",
+    "price": 915.5,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "ujjain": {
+    "name": "Ujjain\u00c2",
+    "price": 972.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "ukhrul": {
+    "name": "Ukhrul",
+    "price": 1064.5,
+    "state": "Manipur",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-manipur.html"
+  },
+  "umaria": {
+    "name": "Umaria\u00c2",
+    "price": 936.0,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "una": {
+    "name": "Una",
+    "price": 946.5,
+    "state": "Himachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-himachal-pradesh.html"
+  },
+  "unnao": {
+    "name": "Unnao",
+    "price": 1049.0,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "upper-dibang-valley": {
+    "name": "Upper Dibang Valley",
+    "price": 918.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "upper-siang": {
+    "name": "Upper Siang",
+    "price": 918.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "upper-sibansiri": {
+    "name": "Upper Sibansiri",
+    "price": 918.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "uttar-dinajpur": {
+    "name": "Uttar Dinajpur",
+    "price": 1011.5,
+    "state": "West Bengal",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-west-bengal.html"
+  },
+  "uttara-kannada": {
+    "name": "Uttara Kannada",
+    "price": 932.0,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "uttarkashi": {
+    "name": "Uttarkashi",
+    "price": 948.5,
+    "state": "Uttarakhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttarakhand.html"
+  },
+  "vadodara": {
+    "name": "Vadodara",
+    "price": 859.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "vaishali": {
+    "name": "Vaishali",
+    "price": 941.5,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "valsad": {
+    "name": "Valsad",
+    "price": 872.0,
+    "state": "Gujarat",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-gujarat.html"
+  },
+  "varanasi": {
+    "name": "Varanasi",
+    "price": 976.5,
+    "state": "Uttar Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-uttar-pradesh.html"
+  },
+  "vellore": {
+    "name": "Vellore",
+    "price": 950.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "vidisha": {
+    "name": "Vidisha\u00c2",
+    "price": 935.5,
+    "state": "Madhya Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-madhya-pradesh.html"
+  },
+  "vikarabad": {
+    "name": "Vikarabad",
+    "price": 982.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "viluppuram": {
+    "name": "Viluppuram",
+    "price": 930.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "virudunagar": {
+    "name": "Virudunagar",
+    "price": 963.0,
+    "state": "Tamil Nadu",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-tamil-nadu.html"
+  },
+  "visakhapatnam": {
+    "name": "Visakhapatnam",
+    "price": 921.0,
+    "state": "Andhra Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-andhra-pradesh.html"
+  },
+  "vizianagaram": {
+    "name": "Vizianagaram",
+    "price": 922.0,
+    "state": "Andhra Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-andhra-pradesh.html"
+  },
+  "wanaparthy": {
+    "name": "Wanaparthy",
+    "price": 985.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "warangal": {
+    "name": "Warangal",
+    "price": 984.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "warangal-rural": {
+    "name": "Warangal Rural",
+    "price": 984.0,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "wardha": {
+    "name": "Wardha",
+    "price": 973.0,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "washim": {
+    "name": "Washim",
+    "price": 933.0,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "wayanad": {
+    "name": "Wayanad",
+    "price": 926.5,
+    "state": "Kerala",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-kerala.html"
+  },
+  "west-champaran": {
+    "name": "West Champaran",
+    "price": 953.0,
+    "state": "Bihar",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-bihar.html"
+  },
+  "west-district": {
+    "name": "West District",
+    "price": 1074.5,
+    "state": "Sikkim",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-sikkim.html"
+  },
+  "west-garo-hills": {
+    "name": "West Garo Hills",
+    "price": 978.5,
+    "state": "Meghalaya",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-meghalaya.html"
+  },
+  "west-godavari": {
+    "name": "West Godavari",
+    "price": 952.0,
+    "state": "Andhra Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-andhra-pradesh.html"
+  },
+  "west-jaintia-hills": {
+    "name": "West Jaintia Hills",
+    "price": 981.0,
+    "state": "Meghalaya",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-meghalaya.html"
+  },
+  "west-kameng": {
+    "name": "West Kameng",
+    "price": 918.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "west-karbi-anglong": {
+    "name": "West Karbi Anglong",
+    "price": 925.0,
+    "state": "Assam",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-assam.html"
+  },
+  "west-khasi-hills": {
+    "name": "West Khasi Hills",
+    "price": 980.0,
+    "state": "Meghalaya",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-meghalaya.html"
+  },
+  "west-siang": {
+    "name": "West Siang\u00c2",
+    "price": 918.5,
+    "state": "Arunachal Pradesh",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-arunachal-pradesh.html"
+  },
+  "west-singhbhum": {
+    "name": "West Singhbhum",
+    "price": 902.0,
+    "state": "Jharkhand",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-jharkhand.html"
+  },
+  "wokha": {
+    "name": "Wokha",
+    "price": 928.5,
+    "state": "Nagaland",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-nagaland.html"
+  },
+  "yadadri-bhuvanagiri": {
+    "name": "Yadadri Bhuvanagiri",
+    "price": 967.5,
+    "state": "Telangana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-telangana.html"
+  },
+  "yadgir": {
+    "name": "Yadgir",
+    "price": 939.0,
+    "state": "Karnataka",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-karnataka.html"
+  },
+  "yamunanagar": {
+    "name": "Yamunanagar",
+    "price": 879.5,
+    "state": "Haryana",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-haryana.html"
+  },
+  "yavatmal": {
+    "name": "Yavatmal\u00c2",
+    "price": 954.5,
+    "state": "Maharashtra",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-maharashtra.html"
+  },
+  "zunheboto": {
+    "name": "Zunheboto",
+    "price": 928.5,
+    "state": "Nagaland",
+    "url": "https://www.bankbazaar.com/gas-connection/lpg-price-in-nagaland.html"
+  }
+}
