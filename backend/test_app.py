@@ -312,15 +312,15 @@ class AliasTests(unittest.TestCase):
 
     def test_alias_page_is_tried_after_the_place_s_own_slug(self):
         urls = candidate_urls("Ayodhya")
-        self.assertIn("https://www.goodreturns.in/lpg-price-in-ayodhya.html", urls["lpg"])
-        self.assertIn("https://www.goodreturns.in/lpg-price-in-faizabad.html", urls["lpg"])
+        self.assertIn("https://www.goodreturns.in/petrol-price-in-ayodhya.html", urls["petrol"])
+        self.assertIn("https://www.goodreturns.in/petrol-price-in-faizabad.html", urls["petrol"])
 
     def test_prayagraj_falls_back_to_allahabad(self):
-        self.assertIn("https://www.goodreturns.in/lpg-price-in-allahabad.html", candidate_urls("Prayagraj")["lpg"])
+        self.assertIn("https://www.goodreturns.in/petrol-price-in-allahabad.html", candidate_urls("Prayagraj")["petrol"])
 
     def test_a_place_without_an_alias_only_has_its_own_page(self):
         urls = candidate_urls("Amethi")
-        self.assertEqual([u for u in urls["lpg"] if "lpg-price-in" in u], ["https://www.goodreturns.in/lpg-price-in-amethi.html"])
+        self.assertEqual([u for u in urls["petrol"] if "petrol-price-in" in u], ["https://www.goodreturns.in/petrol-price-in-amethi.html"])
 
     def test_headline_names_include_the_alias(self):
         self.assertEqual(app_module.headline_names("Prayagraj"), ["Prayagraj", "Allahabad"])
@@ -373,3 +373,81 @@ class RealPageShapeTests(unittest.TestCase):
     def test_a_distant_number_is_not_mistaken_for_the_headline(self):
         page = "The Domestic LPG (14.2 kg) cylinder price in Gorakhpur stands at ₹ 1004.00. " + ("filler " * 400) + "₹ 9999.00"
         self.assertEqual(parse_fuel_value("lpg", page, "Gorakhpur", "Uttar Pradesh"), 1004.0)
+
+
+class BankBazaarLpgTests(unittest.TestCase):
+    """LPG now comes from BankBazaar's district tables, not GoodReturns."""
+
+    TABLE = (
+        "<h2>Domestic LPG Price in Test State</h2><table>"
+        "<tr><th>City</th><th>Price</th></tr>"
+        "<tr><td>Amethi/CSM Nagar</td><td>Rs.967.00</td></tr>"
+        "<tr><td>Allahabad (Prayagraj)</td><td>Rs.1,015.00</td></tr>"
+        "<tr><td>Gorakhpur</td><td>₹975.00</td></tr>"
+        "</table><p>Elsewhere the price is Rs 1140.50 for a cylinder.</p>"
+    )
+
+    def test_district_table_is_parsed(self):
+        table = app_module.parse_bankbazaar_lpg(self.TABLE)
+        self.assertEqual(table["Gorakhpur"], 975.0)
+        self.assertEqual(table["Amethi/CSM Nagar"], 967.0)
+        self.assertEqual(table["Allahabad (Prayagraj)"], 1015.0)
+
+    def test_the_header_row_is_skipped(self):
+        self.assertNotIn("City", app_module.parse_bankbazaar_lpg(self.TABLE))
+
+    def test_prose_elsewhere_is_not_taken_as_a_rate(self):
+        self.assertNotIn(1140.5, app_module.parse_bankbazaar_lpg(self.TABLE).values())
+
+    def test_no_table_means_no_data(self):
+        self.assertEqual(app_module.parse_bankbazaar_lpg("<p>no table here</p>"), {})
+
+    def test_lpg_is_no_longer_fetched_from_goodreturns(self):
+        self.assertNotIn("lpg", candidate_urls("Amethi"))
+        self.assertNotIn("lpg", app_module.GOODRETURNS_KEYS)
+
+    def test_lpg_lookup_prefers_the_place_itself(self):
+        with mock.patch.object(app_module, "load_lpg_cache", return_value={
+            "amethi": {"name": "Amethi/CSM Nagar", "state": "Uttar Pradesh", "price": 967.0, "url": "u1"},
+            "lucknow": {"name": "Lucknow", "state": "Uttar Pradesh", "price": 950.5, "url": "u2"},
+        }):
+            price, place, _ = app_module.bankbazaar_lpg("Amethi", 26.15, 81.80)
+        self.assertEqual(price, 967.0)
+        self.assertEqual(place, "Amethi/CSM Nagar")
+
+    def test_lpg_lookup_falls_back_to_the_nearest(self):
+        with mock.patch.object(app_module, "load_lpg_cache", return_value={
+            "lucknow": {"name": "Lucknow", "state": "Uttar Pradesh", "price": 950.5, "url": "u2"},
+        }):
+            price, place, _ = app_module.bankbazaar_lpg("Nowhere", 26.85, 80.95)
+        self.assertEqual(price, 950.5)
+        self.assertEqual(place, "Lucknow")
+
+    def test_no_lpg_cache_means_no_value(self):
+        with mock.patch.object(app_module, "load_lpg_cache", return_value={}):
+            self.assertEqual(app_module.bankbazaar_lpg("Amethi", 26.15, 81.80), (None, None, None))
+
+
+class WeatherTests(unittest.TestCase):
+    """The weather must be real, or honestly absent - never a made-up 29 C."""
+
+    def test_first_provider_that_answers_wins(self):
+        with mock.patch.object(app_module, "_weather_open_meteo", return_value=None), \
+                mock.patch.object(app_module, "_weather_wttr",
+                                  return_value={"temperatureC": 16.0, "condition": "Clear", "humidity": 40, "windKph": 5.0}):
+            value = app_module.fetch_weather(31.1, 77.17)
+        self.assertEqual(value["temperatureC"], 16.0)
+        self.assertFalse(value["estimated"])
+
+    def test_all_providers_failing_is_reported_not_invented(self):
+        with mock.patch.object(app_module, "_weather_open_meteo", side_effect=ValueError("nope")), \
+                mock.patch.object(app_module, "_weather_wttr", side_effect=ValueError("nope")):
+            value = app_module.fetch_weather(31.1, 77.17)
+        self.assertIsNone(value["temperatureC"])
+        self.assertTrue(value["estimated"])
+
+    def test_different_coordinates_give_different_weather(self):
+        with mock.patch.object(app_module, "_weather_open_meteo",
+                               side_effect=lambda lat, lng: {"temperatureC": lat, "condition": "Clear", "humidity": 1, "windKph": 1}):
+            self.assertNotEqual(app_module.fetch_weather(13.0, 80.0)["temperatureC"],
+                                app_module.fetch_weather(31.0, 77.0)["temperatureC"])
