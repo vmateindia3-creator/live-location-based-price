@@ -451,3 +451,15 @@ class WeatherTests(unittest.TestCase):
                                side_effect=lambda lat, lng: {"temperatureC": lat, "condition": "Clear", "humidity": 1, "windKph": 1}):
             self.assertNotEqual(app_module.fetch_weather(13.0, 80.0)["temperatureC"],
                                 app_module.fetch_weather(31.0, 77.0)["temperatureC"])
+
+    def test_a_slash_or_bracket_name_registers_under_every_part(self):
+        self.assertEqual(app_module.bankbazaar_keys("Amethi/CSM Nagar"),
+                         ["amethi-csm-nagar", "amethi", "csm-nagar"])
+        self.assertEqual(app_module.bankbazaar_keys("Allahabad (Prayagraj)"),
+                         ["allahabad-prayagraj", "allahabad", "prayagraj"])
+
+    def test_amethi_resolves_through_its_bankbazaar_name(self):
+        with mock.patch.object(app_module, "load_lpg_cache", return_value={
+            "amethi": {"name": "Amethi/CSM Nagar", "state": "Uttar Pradesh", "price": 967.0, "url": "u"},
+        }):
+            self.assertEqual(app_module.bankbazaar_lpg("Amethi", 26.15, 81.80)[0], 967.0)
