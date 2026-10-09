@@ -102,18 +102,31 @@ BANKBAZAAR_STATE_SLUGS = [
 ]
 
 
-def parse_bankbazaar_lpg(html_text):
-    """{city: price} from a BankBazaar state page's district table.
+def bankbazaar_keys(name):
+    """Every slug a BankBazaar row could be known by.
+
+    Rows are written the way people say them locally: "Amethi/CSM Nagar",
+    "Allahabad (Prayagraj)", "Greater Mumbai". A PIN's district may match any
+    part, so register the whole name and each part.
+    """
+    keys = []
+    for part in [name, *re.split(r"[/()]", name)]:
+        slug = city_slug(part)
+        if slug and slug not in keys:
+            keys.append(slug)
+    return keys
+
+
+def parse_bankbazaar_lpg(html_text, anchor="Domestic LPG Price in"):
+    """{city: price} from a BankBazaar table.
 
     Reads the real <table> rather than flattened text, so prose elsewhere on the
     page can never be mistaken for a rate.
     """
-    anchor = html_text.find("Domestic LPG Price in")
-    if anchor < 0:
-        anchor = html_text.find("LPG Price in")
-    if anchor < 0:
+    start = html_text.find(anchor)
+    if start < 0:
         return {}
-    start = html_text.find("<table", anchor)
+    start = html_text.find("<table", start)
     if start < 0:
         return {}
     end = html_text.find("</table>", start)
@@ -139,8 +152,29 @@ def parse_bankbazaar_lpg(html_text):
     return out
 
 
+def fetch_bankbazaar_national():
+    """BankBazaar's national page: today's price for the main cities.
+
+    The per-state district tables are updated only now and then, so these
+    current figures override them wherever they overlap.
+    """
+    url = f"{BANKBAZAAR}/lpg-price-today.html"
+    try:
+        response = requests.get(url, headers=HEADERS, timeout=10)
+        response.raise_for_status()
+    except (requests.RequestException, ValueError, TypeError) as exc:
+        logger.warning("bankbazaar national failed: %s", exc)
+        return {}
+
+    out = {}
+    for city, price in parse_bankbazaar_lpg(response.text, anchor="Current LPG Gas Price List").items():
+        for key in bankbazaar_keys(city):
+            out[key] = {"name": city, "state": "", "price": price, "url": url}
+    return out
+
+
 def fetch_bankbazaar_lpg():
-    """Every district's LPG price in India, from BankBazaar's state pages."""
+    """Every district's LPG price in India, from BankBazaar."""
     out = {}
 
     def read(slug):
@@ -157,9 +191,11 @@ def fetch_bankbazaar_lpg():
         for slug, table, url in pool.map(read, BANKBAZAAR_STATE_SLUGS):
             state = slug.replace("-", " ").title()
             for city, price in table.items():
-                key = city_slug(city)
-                if key:
+                for key in bankbazaar_keys(city):
                     out[key] = {"name": city, "state": state, "price": price, "url": url}
+
+    # Current city prices win over the older per-state tables.
+    out.update(fetch_bankbazaar_national())
     return out
 
 
