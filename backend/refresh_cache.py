@@ -32,6 +32,7 @@ from app import (
     CITY_STATE,
     city_slug,
     district_list,
+    fetch_bankbazaar_lpg,
     fetch_district_prices,
     fetch_goodreturns_prices,
     fetch_national_state_prices,
@@ -40,6 +41,7 @@ from app import (
 ROOT = Path(__file__).resolve().parent
 CACHE_FILE = ROOT / "data" / "price_cache.json"
 DISTRICT_PAGES_FILE = ROOT / "data" / "district_pages.json"
+LPG_CACHE_FILE = ROOT / "data" / "lpg_cache.json"
 
 # Spread the load: only this many districts per run, oldest first.
 MAX_DISTRICTS_PER_RUN = int(os.getenv("MAX_DISTRICTS_PER_RUN", "260"))
@@ -147,6 +149,18 @@ def refresh_districts(cache, pages, refreshed_at):
     return added
 
 
+def refresh_lpg(refreshed_at):
+    """LPG comes from BankBazaar: one page per state lists every district."""
+    table = fetch_bankbazaar_lpg()
+    if not table:
+        print("lpg: BankBazaar returned nothing - keeping the previous file")
+        return 0
+    LPG_CACHE_FILE.write_text(json.dumps(table, indent=2, sort_keys=True) + "\n")
+    states = {v.get("state") for v in table.values() if isinstance(v, dict)}
+    print(f"lpg: {len(table)} districts across {len(states)} states (BankBazaar)")
+    return len(table)
+
+
 def main():
     CACHE_FILE.parent.mkdir(parents=True, exist_ok=True)
     cache = _load(CACHE_FILE)
@@ -155,6 +169,7 @@ def main():
 
     refresh_cities(cache, refreshed_at)
     refresh_districts(cache, pages, refreshed_at)
+    refresh_lpg(refreshed_at)
 
     # One national page per item carries every state's rate -> pan-India coverage.
     states = fetch_national_state_prices()
