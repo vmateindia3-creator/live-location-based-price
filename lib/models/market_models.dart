@@ -99,8 +99,8 @@ class WeatherData {
         // can show a neutral theme instead of pretending it is warm.
         temperatureC: (json['temperatureC'] as num? ?? double.nan).toDouble(),
         condition: json['condition']?.toString() ?? 'Clear',
-        humidity: (json['humidity'] as num? ?? 45).toInt(),
-        windKph: (json['windKph'] as num? ?? 10).toDouble(),
+        humidity: (json['humidity'] as num? ?? 0).toInt(),
+        windKph: (json['windKph'] as num? ?? 0).toDouble(),
       );
 }
 
