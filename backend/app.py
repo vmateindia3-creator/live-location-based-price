@@ -68,6 +68,7 @@ FETCH_CONCURRENCY = int(os.getenv("FETCH_CONCURRENCY", "3"))
 WEATHER_URL = os.getenv("WEATHER_PROVIDER_URL", "https://api.open-meteo.com/v1/forecast")
 GOODRETURNS = "https://www.goodreturns.in"
 CACHE_FILE = Path(__file__).resolve().parent / "data" / "price_cache.json"
+LPG_CACHE_FILE = Path(__file__).resolve().parent / "data" / "lpg_cache.json"
 PINCODES_FILE = Path(__file__).resolve().parent / "data" / "pincodes.json"
 
 HEADERS = {
@@ -83,6 +84,124 @@ PRICE_RANGES = {
     "gold": (5000.0, 30000.0),    # INR per gram
     "silver": (50.0, 1000.0),     # INR per gram
 }
+# What we still take from GoodReturns. LPG is NOT here: it comes from
+# BankBazaar, whose state pages carry a district-wise LPG table.
+GOODRETURNS_KEYS = ("petrol", "diesel", "cng", "gold", "silver")
+
+BANKBAZAAR = "https://www.bankbazaar.com/gas-connection"
+
+# BankBazaar's state LPG pages: each lists every district of that state.
+BANKBAZAAR_STATE_SLUGS = [
+    "andhra-pradesh", "arunachal-pradesh", "assam", "bihar", "chhattisgarh", "goa",
+    "gujarat", "haryana", "himachal-pradesh", "jharkhand", "karnataka", "kerala",
+    "madhya-pradesh", "maharashtra", "manipur", "meghalaya", "mizoram", "nagaland",
+    "odisha", "punjab", "rajasthan", "sikkim", "tamil-nadu", "telangana", "tripura",
+    "uttar-pradesh", "uttarakhand", "west-bengal", "delhi", "chandigarh", "puducherry",
+    "jammu-and-kashmir", "ladakh", "andaman-and-nicobar-islands",
+    "dadra-and-nagar-haveli-and-daman-and-diu",
+]
+
+
+def parse_bankbazaar_lpg(html_text):
+    """{city: price} from a BankBazaar state page's district table.
+
+    Reads the real <table> rather than flattened text, so prose elsewhere on the
+    page can never be mistaken for a rate.
+    """
+    anchor = html_text.find("Domestic LPG Price in")
+    if anchor < 0:
+        anchor = html_text.find("LPG Price in")
+    if anchor < 0:
+        return {}
+    start = html_text.find("<table", anchor)
+    if start < 0:
+        return {}
+    end = html_text.find("</table>", start)
+    table = html_text[start:end if end > 0 else len(html_text)]
+
+    out = {}
+    for row in re.findall(r"<tr[^>]*>(.*?)</tr>", table, flags=re.S | re.I):
+        cells = re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", row, flags=re.S | re.I)
+        if len(cells) < 2:
+            continue
+        name = html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", cells[0]))).strip(" |")
+        money = html.unescape(re.sub(r"<[^>]+>", " ", cells[1])).replace(",", "")
+        match = re.search(r"([0-9][0-9]*(?:\.[0-9]{1,2})?)", money)
+        if not name or not match:
+            continue
+        try:
+            value = float(match.group(1))
+        except ValueError:
+            continue
+        if name.lower() in {"city", "cities", "district"} or not (300.0 <= value <= 2500.0):
+            continue
+        out[name] = round(value, 2)
+    return out
+
+
+def fetch_bankbazaar_lpg():
+    """Every district's LPG price in India, from BankBazaar's state pages."""
+    out = {}
+
+    def read(slug):
+        url = f"{BANKBAZAAR}/lpg-price-in-{slug}.html"
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=10)
+            response.raise_for_status()
+        except (requests.RequestException, ValueError, TypeError) as exc:
+            logger.warning("bankbazaar %s failed: %s", slug, exc)
+            return slug, {}, url
+        return slug, parse_bankbazaar_lpg(response.text), url
+
+    with ThreadPoolExecutor(max_workers=FETCH_CONCURRENCY) as pool:
+        for slug, table, url in pool.map(read, BANKBAZAAR_STATE_SLUGS):
+            state = slug.replace("-", " ").title()
+            for city, price in table.items():
+                key = city_slug(city)
+                if key:
+                    out[key] = {"name": city, "state": state, "price": price, "url": url}
+    return out
+
+
+_LPG_CACHE = {"data": None, "at": 0.0}
+
+
+def load_lpg_cache():
+    global _LPG_CACHE
+    if _LPG_CACHE["data"] is not None and time.time() - _LPG_CACHE["at"] < 300:
+        return _LPG_CACHE["data"]
+    try:
+        data = json.loads(LPG_CACHE_FILE.read_text())
+        data = data if isinstance(data, dict) else {}
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        data = {}
+    _LPG_CACHE = {"data": data, "at": time.time()}
+    return data
+
+
+def bankbazaar_lpg(city, lat, lng):
+    """(price, place, url) for LPG: this district, else the nearest one."""
+    data = load_lpg_cache()
+    if not data:
+        return None, None, None
+    entry = data.get(city_slug(city))
+    if entry:
+        return entry.get("price"), entry.get("name"), entry.get("url")
+
+    coords = location_coords()
+    best, best_distance = None, float("inf")
+    for slug, item in data.items():
+        point = coords.get(slug)
+        if not point:
+            continue
+        distance = (point[0] - lat) ** 2 + (point[1] - lng) ** 2
+        if distance < best_distance:
+            best_distance, best = distance, item
+    if best:
+        return best.get("price"), best.get("name"), best.get("url")
+    return None, None, None
+
+
 PRICE_UNITS = {
     "petrol": "INR/L",
     "diesel": "INR/L",
@@ -297,38 +416,74 @@ def rate_limited(ip):
     return False
 
 
-def demo_weather():
-    return {"temperatureC": 29.0, "condition": "Partly cloudy", "humidity": 48, "windKph": 11.0}
+def _weather_open_meteo(lat, lng):
+    """Primary provider: Open-Meteo (no key needed)."""
+    params = {
+        "latitude": lat,
+        "longitude": lng,
+        "current": "temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code",
+        "timezone": "auto",
+    }
+    response = requests.get(WEATHER_URL, params=params, headers=HEADERS, timeout=8)
+    response.raise_for_status()
+    current = response.json().get("current", {})
+    if current.get("temperature_2m") is None:
+        return None
+    code = int(current.get("weather_code", 3))
+    conditions = {
+        0: "Clear", 1: "Mainly clear", 2: "Partly cloudy", 3: "Overcast",
+        45: "Fog", 48: "Fog", 51: "Drizzle", 53: "Drizzle", 55: "Drizzle",
+        61: "Light rain", 63: "Rain", 65: "Heavy rain", 71: "Snow", 73: "Snow",
+        80: "Showers", 81: "Showers", 82: "Heavy showers", 95: "Thunderstorm",
+        96: "Thunderstorm", 99: "Thunderstorm",
+    }
+    return {
+        "temperatureC": float(current["temperature_2m"]),
+        "condition": conditions.get(code, "Current weather"),
+        "humidity": int(current.get("relative_humidity_2m") or 0),
+        "windKph": float(current.get("wind_speed_10m") or 0),
+    }
+
+
+def _weather_wttr(lat, lng):
+    """Backup provider, also keyless. Used when Open-Meteo is unreachable
+    from the host (it works from GitHub runners but not from every host)."""
+    response = requests.get(f"https://wttr.in/{lat},{lng}?format=j1", headers=HEADERS, timeout=8)
+    response.raise_for_status()
+    current = (response.json().get("current_condition") or [{}])[0]
+    temp = current.get("temp_C", current.get("tempC"))
+    if temp in (None, ""):
+        return None
+    return {
+        "temperatureC": float(temp),
+        "condition": ((current.get("weatherDesc") or [{}])[0].get("value") or "Current weather"),
+        "humidity": int(current.get("humidity") or 0),
+        "windKph": float(current.get("windspeedKmph") or 0),
+    }
+
+
+def weather_providers():
+    """Resolved per call, so a test (or a future config) can swap one out."""
+    return (_weather_open_meteo, _weather_wttr)
 
 
 def fetch_weather(lat, lng):
-    try:
-        params = {
-            "latitude": lat,
-            "longitude": lng,
-            "current": "temperature_2m,relative_humidity_2m,wind_speed_10m,weather_code",
-            "timezone": "auto",
-        }
-        response = requests.get(WEATHER_URL, params=params, timeout=6)
-        response.raise_for_status()
-        current = response.json().get("current", {})
-        code = int(current.get("weather_code", 3))
-        conditions = {
-            0: "Clear", 1: "Mainly clear", 2: "Partly cloudy", 3: "Overcast",
-            45: "Fog", 48: "Fog", 51: "Drizzle", 53: "Drizzle", 55: "Drizzle",
-            61: "Light rain", 63: "Rain", 65: "Heavy rain", 71: "Snow", 73: "Snow",
-            80: "Showers", 81: "Showers", 82: "Heavy showers", 95: "Thunderstorm",
-            96: "Thunderstorm", 99: "Thunderstorm",
-        }
-        return {
-            "temperatureC": float(current.get("temperature_2m", 29)),
-            "condition": conditions.get(code, "Current weather"),
-            "humidity": int(current.get("relative_humidity_2m", 48)),
-            "windKph": float(current.get("wind_speed_10m", 11)),
-        }
-    except (requests.RequestException, ValueError, TypeError) as exc:
-        logger.warning("weather fetch failed: %s", exc)
-        return demo_weather()
+    """Real weather for these coordinates, from the first provider that answers.
+
+    Never invents a temperature: if every provider fails we say so, so the app
+    shows a neutral theme rather than a made-up warm one.
+    """
+    for provider in weather_providers():
+        try:
+            value = provider(lat, lng)
+        except (requests.RequestException, ValueError, TypeError, KeyError, IndexError) as exc:
+            logger.warning("weather via %s failed: %s", getattr(provider, "__name__", provider), exc)
+            continue
+        if value:
+            value["estimated"] = False
+            return value
+    logger.warning("no weather provider answered for %s,%s", lat, lng)
+    return {"temperatureC": None, "condition": "Unavailable", "humidity": None, "windKph": None, "estimated": True}
 
 
 def weather_for(lat, lng):
@@ -337,7 +492,8 @@ def weather_for(lat, lng):
     if hit is not None:
         return hit
     value = fetch_weather(lat, lng)
-    cache_put(key, value, ttl=WEATHER_TTL)
+    # A miss is cached only briefly, so a wobble recovers in a minute, not 15.
+    cache_put(key, value, ttl=60 if value.get("estimated") else WEATHER_TTL)
     return value
 
 
@@ -499,9 +655,9 @@ def candidate_urls(city):
     """Page candidates per item: the place's own slug first, then its alias."""
     slug = city_slug(city)
     has_city = bool(slug) and slug != "india"
-    urls = {key: [] for key in PRICE_RANGES}
+    urls = {key: [] for key in GOODRETURNS_KEYS}
     if not has_city:
-        for key in ("petrol", "diesel", "lpg", "cng"):
+        for key in ("petrol", "diesel", "cng"):
             urls[key].append(f"{GOODRETURNS}/{key}-price.html")
         urls["gold"].append(f"{GOODRETURNS}/gold-rates/")
         urls["silver"].append(f"{GOODRETURNS}/silver-rates/")
@@ -515,7 +671,6 @@ def candidate_urls(city):
     for candidate in slugs:
         urls["petrol"].append(f"{GOODRETURNS}/petrol-price-in-{candidate}.html")
         urls["diesel"].append(f"{GOODRETURNS}/diesel-price-in-{candidate}.html")
-        urls["lpg"].append(f"{GOODRETURNS}/lpg-price-in-{candidate}.html")
         urls["cng"].append(f"{GOODRETURNS}/cng-price-in-{candidate}.html")
         urls["gold"].append(f"{GOODRETURNS}/gold-rates/{candidate}.html")
         urls["silver"].append(f"{GOODRETURNS}/silver-rates/{candidate}.html")
@@ -1078,6 +1233,20 @@ def market():
                 city = fallback[0]
                 state = fallback[1]
     prices, approximate = fill_missing_items(prices, rlat, rlng, exclude=city_slug(city))
+
+    # LPG comes from BankBazaar (whose state pages list every district);
+    # petrol, diesel, CNG, gold and silver come from GoodReturns.
+    source_urls = goodreturns_urls(city)
+    lpg_value, lpg_place, lpg_url = bankbazaar_lpg(city, rlat, rlng)
+    if lpg_value is not None:
+        prices["lpg"] = lpg_value
+        if lpg_url:
+            source_urls["lpg"] = lpg_url
+        if lpg_place and city_slug(lpg_place) != city_slug(city):
+            approximate["lpg"] = lpg_place
+        else:
+            approximate.pop("lpg", None)
+
     response = {
         "updatedAt": now_iso(),
         "observedAt": observed_at,
@@ -1091,7 +1260,7 @@ def market():
         "approximate": approximate,
         "units": {k: PRICE_UNITS[k] for k in prices},
         "observedKeys": sorted(observed_keys),
-        "sourceUrls": goodreturns_urls(city),
+        "sourceUrls": source_urls,
         "weather": weather_for(rlat, rlng),
     }
     return jsonify(response)
