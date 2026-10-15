@@ -40,16 +40,16 @@
       "Karnataka": 98.0,
       "Kerala": 99.0,
       "Madhya Pradesh": 97.5,
-      "Maharashtra": 88.0,
+      "Maharashtra": 89.0,
       "Odisha": 93.5,
       "Pondicherry": 79.5,
       "Punjab": 91.33,
       "Rajasthan": 99.5,
       "Tamil Nadu": 99.5,
       "Telangana": 112.0,
-      "Uttar Pradesh": 95.75,
+      "Uttar Pradesh": 107.0,
       "Uttarakhand": 99.5,
-      "West Bengal": 93.5
+      "West Bengal": 103.0
     },
     "diesel": {
       "Andaman & Nicobar": 84.56,
@@ -66,7 +66,7 @@
       "Himachal Pradesh": 95.28,
       "Jammu & Kashmir": 92.81,
       "Jharkhand": 101.31,
-      "Karnataka": 99.56,
+      "Karnataka": 98.77,
       "Kerala": 104.4,
       "Ladakh": 94.73,
       "Lakshadweep": 102.8,
@@ -139,7 +139,7 @@
       "Himachal Pradesh": 103.15,
       "Jammu & Kashmir": 104.13,
       "Jharkhand": 106.19,
-      "Karnataka": 111.68,
+      "Karnataka": 110.82,
       "Kerala": 115.49,
       "Ladakh": 110.01,
       "Lakshadweep": 107.5,
@@ -210,14 +210,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 95.75,
+      "cng": 107.0,
       "diesel": 95.14,
       "gold": 14759.0,
       "petrol": 101.66,
       "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "ahmadabad": {
     "city": "Ahmadabad",
@@ -249,7 +249,7 @@
       "silver": 230.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "ahmednagar": {
     "city": "Ahmednagar",
@@ -479,15 +479,21 @@
   "amethi": {
     "city": "Amethi",
     "observedKeys": [
+      "cng",
+      "diesel",
       "gold",
+      "petrol",
       "silver"
     ],
     "prices": {
+      "cng": 107.0,
+      "diesel": 95.36,
       "gold": 14744.0,
+      "petrol": 101.86,
       "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "amravati": {
     "city": "Amravati",
@@ -544,7 +550,7 @@
       "silver": 230.0
     },
     "state": "Punjab",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "amroha": {
     "city": "Amroha",
@@ -815,8 +821,8 @@
       "petrol": 112.08,
       "silver": 230.0
     },
-    "state": "Bihar",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "state": "Maharashtra",
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "ayodhya": {
     "city": "Ayodhya",
@@ -828,14 +834,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 97.0,
+      "cng": 105.0,
       "diesel": 95.8,
-      "gold": 14841.0,
+      "gold": 14759.0,
       "petrol": 102.3,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "azamgarh": {
     "city": "Azamgarh",
@@ -849,12 +855,12 @@
     "prices": {
       "cng": 103.0,
       "diesel": 96.54,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 103.18,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bagalkot": {
     "city": "Bagalkot",
@@ -868,12 +874,12 @@
     "prices": {
       "cng": 97.0,
       "diesel": 98.94,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 111.01,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bageshwar": {
     "city": "Bageshwar",
@@ -885,12 +891,12 @@
     ],
     "prices": {
       "diesel": 96.62,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 101.17,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttarakhand",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "baghpat": {
     "city": "Baghpat",
@@ -904,12 +910,12 @@
     "prices": {
       "cng": 93.5,
       "diesel": 95.27,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 101.78,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bahraich": {
     "city": "Bahraich",
@@ -923,12 +929,12 @@
     "prices": {
       "cng": 107.98,
       "diesel": 95.67,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.16,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bajali": {
     "city": "Bajali",
@@ -942,12 +948,12 @@
     "prices": {
       "cng": 91.0,
       "diesel": 97.64,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.16,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "baksa": {
     "city": "Baksa",
@@ -961,12 +967,12 @@
     "prices": {
       "cng": 91.0,
       "diesel": 97.64,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.16,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "balaghat": {
     "city": "Balaghat",
@@ -980,12 +986,12 @@
     "prices": {
       "cng": 106.5,
       "diesel": 101.15,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 116.02,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "balangir": {
     "city": "Balangir",
@@ -994,11 +1000,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "baleshwar": {
     "city": "Baleshwar",
@@ -1012,12 +1018,12 @@
     "prices": {
       "cng": 101.79,
       "diesel": 101.23,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 109.52,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "ballari": {
     "city": "Ballari",
@@ -1031,12 +1037,12 @@
     "prices": {
       "cng": 97.38,
       "diesel": 100.0,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 112.02,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "ballia": {
     "city": "Ballia",
@@ -1050,12 +1056,12 @@
     "prices": {
       "cng": 103.0,
       "diesel": 96.02,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.6,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "balod": {
     "city": "Balod",
@@ -1067,12 +1073,12 @@
     ],
     "prices": {
       "diesel": 101.65,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 108.4,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "baloda-bazar": {
     "city": "Baloda Bazar",
@@ -1081,11 +1087,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "balrampur": {
     "city": "Balrampur",
@@ -1099,12 +1105,12 @@
     "prices": {
       "cng": 107.98,
       "diesel": 95.77,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.27,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "banas-kantha": {
     "city": "Banas Kantha",
@@ -1118,12 +1124,12 @@
     "prices": {
       "cng": 94.02,
       "diesel": 97.94,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 101.8,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "banda": {
     "city": "Banda",
@@ -1137,12 +1143,12 @@
     "prices": {
       "cng": 93.31,
       "diesel": 96.25,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.89,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bandipora": {
     "city": "Bandipora",
@@ -1154,12 +1160,12 @@
     ],
     "prices": {
       "diesel": 96.42,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 108.41,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Jammu And Kashmir",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bangalore": {
     "city": "Bengaluru",
@@ -1170,13 +1176,13 @@
       "silver"
     ],
     "prices": {
-      "diesel": 99.56,
+      "diesel": 98.77,
       "gold": 14744.0,
-      "petrol": 111.68,
+      "petrol": 110.82,
       "silver": 230.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "banka": {
     "city": "Banka",
@@ -1190,12 +1196,12 @@
     "prices": {
       "cng": 93.0,
       "diesel": 100.46,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 114.54,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bankura": {
     "city": "Bankura",
@@ -1209,12 +1215,12 @@
     "prices": {
       "cng": 102.49,
       "diesel": 99.82,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 113.47,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "West Bengal",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "banswara": {
     "city": "Banswara",
@@ -1228,12 +1234,12 @@
     "prices": {
       "cng": 88.94,
       "diesel": 99.21,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 114.16,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Rajasthan",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bapatla": {
     "city": "Bapatla",
@@ -1244,13 +1250,13 @@
       "silver"
     ],
     "prices": {
-      "diesel": 105.36,
-      "gold": 14826.0,
-      "petrol": 117.68,
-      "silver": 235.0
+      "diesel": 104.96,
+      "gold": 14744.0,
+      "petrol": 117.25,
+      "silver": 230.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "barabanki": {
     "city": "Barabanki",
@@ -1264,12 +1270,12 @@
     "prices": {
       "cng": 104.0,
       "diesel": 96.1,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.68,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "baramulla": {
     "city": "Baramulla",
@@ -1278,11 +1284,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Jammu And Kashmir",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "baran": {
     "city": "Baran",
@@ -1296,12 +1302,12 @@
     "prices": {
       "cng": 102.0,
       "diesel": 97.78,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 112.68,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Rajasthan",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bareilly": {
     "city": "Bareilly",
@@ -1315,12 +1321,12 @@
     "prices": {
       "cng": 100.9,
       "diesel": 95.27,
-      "gold": 14841.0,
+      "gold": 14759.0,
       "petrol": 101.78,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bargarh": {
     "city": "Bargarh",
@@ -1334,12 +1340,12 @@
     "prices": {
       "cng": 98.7,
       "diesel": 101.54,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 109.84,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "barmer": {
     "city": "Barmer",
@@ -1353,12 +1359,12 @@
     "prices": {
       "cng": 98.5,
       "diesel": 99.09,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 114.11,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Rajasthan",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "barnala": {
     "city": "Barnala",
@@ -1372,12 +1378,12 @@
     "prices": {
       "cng": 92.75,
       "diesel": 94.95,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 105.02,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Punjab",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "barpeta": {
     "city": "Barpeta",
@@ -1391,12 +1397,12 @@
     "prices": {
       "cng": 91.0,
       "diesel": 97.77,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.33,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "barwani": {
     "city": "Barwani",
@@ -1405,11 +1411,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bastar": {
     "city": "Bastar",
@@ -1423,12 +1429,12 @@
     "prices": {
       "cng": 94.0,
       "diesel": 103.0,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 109.73,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "basti": {
     "city": "Basti",
@@ -1442,12 +1448,12 @@
     "prices": {
       "cng": 103.0,
       "diesel": 96.07,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.66,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bathinda": {
     "city": "Bathinda",
@@ -1461,12 +1467,12 @@
     "prices": {
       "cng": 91.33,
       "diesel": 95.28,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 105.37,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Punjab",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "beed": {
     "city": "Beed",
@@ -1475,11 +1481,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "begusarai": {
     "city": "Begusarai",
@@ -1493,12 +1499,12 @@
     "prices": {
       "cng": 95.0,
       "diesel": 99.9,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 113.94,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "belagavi": {
     "city": "Belagavi",
@@ -1512,12 +1518,12 @@
     "prices": {
       "cng": 103.0,
       "diesel": 98.67,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 110.71,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bemetara": {
     "city": "Bemetara",
@@ -1528,13 +1534,13 @@
       "silver"
     ],
     "prices": {
-      "diesel": 101.79,
-      "gold": 14826.0,
-      "petrol": 108.54,
-      "silver": 235.0
+      "diesel": 101.3,
+      "gold": 14744.0,
+      "petrol": 108.04,
+      "silver": 230.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-14T17:30:30.404833+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bengaluru-rural": {
     "city": "Bengaluru Rural",
@@ -1760,7 +1766,7 @@
       "silver": 230.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bhilwara": {
     "city": "Bhilwara",
@@ -1855,7 +1861,7 @@
       "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bhubaneswar": {
     "city": "Bhubaneswar",
@@ -1874,7 +1880,7 @@
       "silver": 240.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "bidar": {
     "city": "Bidar",
@@ -2393,7 +2399,7 @@
       "silver": 230.0
     },
     "state": "Chandigarh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "chandrapur": {
     "city": "Chandrapur",
@@ -2524,7 +2530,7 @@
       "silver": 240.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "chhatarpur": {
     "city": "Chhatarpur",
@@ -2745,7 +2751,7 @@
       "silver": 240.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "coochbehar": {
     "city": "Coochbehar",
@@ -2796,7 +2802,7 @@
       "silver": 240.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "dadra-and-nagar-haveli": {
     "city": "Dadra And Nagar Haveli",
@@ -3025,7 +3031,7 @@
       "silver": 230.0
     },
     "state": "Uttarakhand",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "delhi": {
     "city": "Delhi",
@@ -3044,7 +3050,7 @@
       "silver": 230.0
     },
     "state": "Delhi",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "deogarh": {
     "city": "Deogarh",
@@ -3194,7 +3200,7 @@
       "silver": 230.0
     },
     "state": "Jharkhand",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "dhar": {
     "city": "Dhar",
@@ -3844,7 +3850,7 @@
       "silver": 230.0
     },
     "state": "Haryana",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "faridkot": {
     "city": "Faridkot",
@@ -4196,7 +4202,7 @@
       "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "ghaziabad": {
     "city": "Ghaziabad",
@@ -4215,7 +4221,7 @@
       "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "ghazipur": {
     "city": "Ghazipur",
@@ -4424,7 +4430,7 @@
       "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "gumla": {
     "city": "Gumla",
@@ -4481,7 +4487,7 @@
       "silver": 240.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "gurdaspur": {
     "city": "Gurdaspur",
@@ -4505,15 +4511,19 @@
   "gurgaon": {
     "city": "Gurugram",
     "observedKeys": [
+      "diesel",
       "gold",
+      "petrol",
       "silver"
     ],
     "prices": {
+      "diesel": 95.64,
       "gold": 14759.0,
+      "petrol": 102.97,
       "silver": 230.0
     },
     "state": "Haryana",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "guwahati": {
     "city": "Guwahati",
@@ -4530,7 +4540,7 @@
       "silver": 230.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "gwalior": {
     "city": "Gwalior",
@@ -4549,7 +4559,7 @@
       "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "hailakandi": {
     "city": "Hailakandi",
@@ -4686,14 +4696,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 89.8,
+      "cng": 104.5,
       "diesel": 95.04,
       "gold": 14744.0,
       "petrol": 101.55,
       "silver": 230.0
     },
     "state": "Uttarakhand",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "hassan": {
     "city": "Hassan",
@@ -4932,13 +4942,13 @@
     ],
     "prices": {
       "cng": 98.0,
-      "diesel": 99.56,
+      "diesel": 98.77,
       "gold": 14744.0,
-      "petrol": 111.68,
+      "petrol": 110.82,
       "silver": 230.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "hyderabad": {
     "city": "Hyderabad",
@@ -4957,7 +4967,7 @@
       "silver": 240.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "idukki": {
     "city": "Idukki",
@@ -5019,7 +5029,7 @@
       "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "jabalpur": {
     "city": "Jabalpur",
@@ -5038,7 +5048,7 @@
       "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "jagatsinghapur": {
     "city": "Jagatsinghapur",
@@ -5089,7 +5099,7 @@
       "silver": 230.0
     },
     "state": "Rajasthan",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "jaisalmer": {
     "city": "Jaisalmer",
@@ -5140,7 +5150,7 @@
       "silver": 230.0
     },
     "state": "Punjab",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "jalaun": {
     "city": "Jalaun",
@@ -5247,8 +5257,8 @@
       "petrol": 104.13,
       "silver": 230.0
     },
-    "state": "Jammu And Kashmir",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "state": "Jammu & Kashmir",
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "jamnagar": {
     "city": "Jamnagar",
@@ -5286,7 +5296,7 @@
       "silver": 230.0
     },
     "state": "Jharkhand",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "jamtara": {
     "city": "Jamtara",
@@ -5588,7 +5598,7 @@
       "silver": 230.0
     },
     "state": "Rajasthan",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "jogulamba-gadwal": {
     "city": "Jogulamba Gadwal",
@@ -5602,12 +5612,12 @@
     "prices": {
       "cng": 112.0,
       "diesel": 105.23,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 117.07,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "jorhat": {
     "city": "Jorhat",
@@ -5621,12 +5631,12 @@
     "prices": {
       "cng": 77.08,
       "diesel": 97.74,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.29,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "junagadh": {
     "city": "Junagadh",
@@ -5640,12 +5650,12 @@
     "prices": {
       "cng": 93.5,
       "diesel": 98.19,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.05,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kabirdham": {
     "city": "Kabirdham",
@@ -5654,11 +5664,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kachchh": {
     "city": "Kachchh",
@@ -5667,11 +5677,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kaimur-bhabua": {
     "city": "Kaimur (Bhabua)",
@@ -5680,11 +5690,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kaithal": {
     "city": "Kaithal",
@@ -5698,12 +5708,12 @@
     "prices": {
       "cng": 92.32,
       "diesel": 95.61,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.96,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Haryana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kakching": {
     "city": "Kakching",
@@ -5715,12 +5725,12 @@
     ],
     "prices": {
       "diesel": 92.87,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 107.21,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Manipur",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kakinada": {
     "city": "Kakinada",
@@ -5734,12 +5744,12 @@
     "prices": {
       "cng": 102.0,
       "diesel": 105.7,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 118.1,
-      "silver": 245.0
+      "silver": 240.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kalaburagi": {
     "city": "Kalaburagi",
@@ -5753,12 +5763,12 @@
     "prices": {
       "cng": 97.0,
       "diesel": 98.7,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 110.75,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kalahandi": {
     "city": "Kalahandi",
@@ -5772,12 +5782,12 @@
     "prices": {
       "cng": 95.0,
       "diesel": 102.2,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 110.49,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kalimpong": {
     "city": "Kalimpong",
@@ -5789,12 +5799,12 @@
     ],
     "prices": {
       "diesel": 100.41,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 114.29,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "West Bengal",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kallakurichi": {
     "city": "Kallakurichi",
@@ -5808,12 +5818,12 @@
     "prices": {
       "cng": 99.5,
       "diesel": 101.39,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 109.62,
-      "silver": 245.0
+      "silver": 240.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kamareddy": {
     "city": "Kamareddy",
@@ -5827,12 +5837,12 @@
     "prices": {
       "cng": 92.75,
       "diesel": 104.82,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 116.77,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kamjong": {
     "city": "Kamjong",
@@ -5844,12 +5854,12 @@
     ],
     "prices": {
       "diesel": 93.27,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 107.65,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Manipur",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kamrup": {
     "city": "Kamrup",
@@ -5861,12 +5871,12 @@
     ],
     "prices": {
       "diesel": 97.23,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 105.73,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kamrup-metro": {
     "city": "Kamrup Metro",
@@ -5878,12 +5888,12 @@
     ],
     "prices": {
       "diesel": 97.23,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 105.73,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kanchipuram": {
     "city": "Kanchipuram",
@@ -5897,12 +5907,12 @@
     "prices": {
       "cng": 98.5,
       "diesel": 99.65,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 107.87,
-      "silver": 245.0
+      "silver": 240.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kandhamal": {
     "city": "Kandhamal",
@@ -5916,12 +5926,12 @@
     "prices": {
       "cng": 94.0,
       "diesel": 102.26,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 110.55,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kangpokpi": {
     "city": "Kangpokpi",
@@ -5933,12 +5943,12 @@
     ],
     "prices": {
       "diesel": 93.47,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 107.87,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Manipur",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kangra": {
     "city": "Kangra",
@@ -5952,12 +5962,12 @@
     "prices": {
       "cng": 91.75,
       "diesel": 93.98,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 101.93,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Himachal Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kanker": {
     "city": "Kanker",
@@ -5969,12 +5979,12 @@
     ],
     "prices": {
       "diesel": 102.15,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 108.9,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kannauj": {
     "city": "Kannauj",
@@ -5983,11 +5993,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kanniyakumari": {
     "city": "Kanniyakumari",
@@ -6001,12 +6011,12 @@
     "prices": {
       "cng": 98.4,
       "diesel": 100.54,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 108.68,
-      "silver": 245.0
+      "silver": 240.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kannur": {
     "city": "Kannur",
@@ -6020,12 +6030,12 @@
     "prices": {
       "cng": 102.5,
       "diesel": 103.47,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 114.59,
-      "silver": 245.0
+      "silver": 240.0
     },
     "state": "Kerala",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kanpur": {
     "city": "Kanpur",
@@ -6037,14 +6047,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 95.75,
+      "cng": 107.0,
       "diesel": 95.36,
       "gold": 14759.0,
       "petrol": 101.86,
       "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kanpur-dehat": {
     "city": "Kanpur Dehat",
@@ -6053,11 +6063,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kanpur-nagar": {
     "city": "Kanpur Nagar",
@@ -6066,11 +6076,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kapurthala": {
     "city": "Kapurthala",
@@ -6084,12 +6094,12 @@
     "prices": {
       "cng": 92.75,
       "diesel": 94.73,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 104.79,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Punjab",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "karaikal": {
     "city": "Karaikal",
@@ -6103,12 +6113,12 @@
     "prices": {
       "cng": 86.5,
       "diesel": 93.59,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 103.32,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Puducherry",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "karauli": {
     "city": "Karauli",
@@ -6122,12 +6132,12 @@
     "prices": {
       "cng": 92.5,
       "diesel": 98.17,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 113.13,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Rajasthan",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "karbi-anglong": {
     "city": "Karbi Anglong",
@@ -6141,12 +6151,12 @@
     "prices": {
       "cng": 87.0,
       "diesel": 97.76,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.32,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kargil": {
     "city": "Kargil",
@@ -6158,12 +6168,12 @@
     ],
     "prices": {
       "diesel": 92.16,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 107.0,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Ladakh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "karimganj": {
     "city": "Karimganj",
@@ -6175,12 +6185,12 @@
     ],
     "prices": {
       "diesel": 98.47,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 107.01,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "karimnagar": {
     "city": "Karimnagar",
@@ -6189,11 +6199,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "karnal": {
     "city": "Karnal",
@@ -6207,12 +6217,12 @@
     "prices": {
       "cng": 91.32,
       "diesel": 94.89,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.22,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Haryana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "karur": {
     "city": "Karur",
@@ -6226,12 +6236,12 @@
     "prices": {
       "cng": 99.5,
       "diesel": 100.92,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 109.1,
-      "silver": 245.0
+      "silver": 240.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kasaragod": {
     "city": "Kasaragod",
@@ -6245,12 +6255,12 @@
     "prices": {
       "cng": 102.5,
       "diesel": 104.37,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 115.5,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Kerala",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kasganj": {
     "city": "Kasganj",
@@ -6259,11 +6269,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kathua": {
     "city": "Kathua",
@@ -6276,13 +6286,13 @@
     ],
     "prices": {
       "cng": 105.8,
-      "diesel": 93.41,
-      "gold": 14826.0,
-      "petrol": 104.75,
-      "silver": 235.0
+      "diesel": 93.46,
+      "gold": 14744.0,
+      "petrol": 104.8,
+      "silver": 230.0
     },
     "state": "Jammu And Kashmir",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "katihar": {
     "city": "Katihar",
@@ -6296,12 +6306,12 @@
     "prices": {
       "cng": 97.9,
       "diesel": 100.26,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 114.32,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "katni": {
     "city": "Katni",
@@ -6313,12 +6323,12 @@
     ],
     "prices": {
       "diesel": 100.41,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 115.35,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kaushambi": {
     "city": "Kaushambi",
@@ -6332,12 +6342,12 @@
     "prices": {
       "cng": 103.0,
       "diesel": 95.81,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.31,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kendrapara": {
     "city": "Kendrapara",
@@ -6351,12 +6361,12 @@
     "prices": {
       "cng": 98.7,
       "diesel": 100.48,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 108.78,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kendujhar": {
     "city": "Kendujhar",
@@ -6365,11 +6375,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "khagaria": {
     "city": "Khagaria",
@@ -6383,12 +6393,12 @@
     "prices": {
       "cng": 96.9,
       "diesel": 99.63,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 113.65,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "khammam": {
     "city": "Khammam",
@@ -6402,12 +6412,12 @@
     "prices": {
       "cng": 112.0,
       "diesel": 103.82,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 115.72,
-      "silver": 245.0
+      "silver": 240.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "khargone": {
     "city": "Khargone",
@@ -6421,12 +6431,12 @@
     "prices": {
       "cng": 103.9,
       "diesel": 101.03,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 116.02,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "khawzawl": {
     "city": "Khawzawl",
@@ -6438,12 +6448,12 @@
     ],
     "prices": {
       "diesel": 95.79,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.99,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Mizoram",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kheda": {
     "city": "Kheda",
@@ -6457,12 +6467,12 @@
     "prices": {
       "cng": 93.11,
       "diesel": 97.91,
-      "gold": 14826.0,
-      "petrol": 101.79,
-      "silver": 235.0
+      "gold": 14744.0,
+      "petrol": 101.8,
+      "silver": 230.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kheri": {
     "city": "Kheri",
@@ -6471,11 +6481,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "khordha": {
     "city": "Khordha",
@@ -6489,12 +6499,12 @@
     "prices": {
       "cng": 93.26,
       "diesel": 100.68,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 108.97,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "khowai": {
     "city": "Khowai",
@@ -6508,12 +6518,12 @@
     "prices": {
       "cng": 86.32,
       "diesel": 93.9,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 105.0,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Tripura",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "khunti": {
     "city": "Khunti",
@@ -6527,12 +6537,12 @@
     "prices": {
       "cng": 102.01,
       "diesel": 101.31,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.19,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Jharkhand",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kinnaur": {
     "city": "Kinnaur",
@@ -6544,12 +6554,12 @@
     ],
     "prices": {
       "diesel": 95.29,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 103.19,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Himachal Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kiphire": {
     "city": "Kiphire",
@@ -6558,11 +6568,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Nagaland",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kishanganj": {
     "city": "Kishanganj",
@@ -6576,12 +6586,12 @@
     "prices": {
       "cng": 97.9,
       "diesel": 101.07,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 115.06,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kishtwar": {
     "city": "Kishtwar",
@@ -6592,13 +6602,13 @@
       "silver"
     ],
     "prices": {
-      "diesel": 93.06,
-      "gold": 14826.0,
-      "petrol": 104.37,
-      "silver": 235.0
+      "diesel": 94.21,
+      "gold": 14744.0,
+      "petrol": 105.81,
+      "silver": 230.0
     },
     "state": "Jammu And Kashmir",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kochi": {
     "city": "Kochi",
@@ -6617,7 +6627,7 @@
       "silver": 240.0
     },
     "state": "Kerala",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kodagu": {
     "city": "Kodagu",
@@ -6630,13 +6640,13 @@
     ],
     "prices": {
       "cng": 97.0,
-      "diesel": 99.94,
-      "gold": 14826.0,
-      "petrol": 112.1,
-      "silver": 235.0
+      "diesel": 100.05,
+      "gold": 14744.0,
+      "petrol": 112.09,
+      "silver": 230.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "koderma": {
     "city": "Koderma",
@@ -6650,12 +6660,12 @@
     "prices": {
       "cng": 97.9,
       "diesel": 101.39,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.31,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Jharkhand",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kohima": {
     "city": "Kohima",
@@ -6667,12 +6677,12 @@
     ],
     "prices": {
       "diesel": 96.18,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 104.9,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Nagaland",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kokrajhar": {
     "city": "Kokrajhar",
@@ -6686,12 +6696,12 @@
     "prices": {
       "cng": 91.0,
       "diesel": 98.0,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.58,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kolar": {
     "city": "Kolar",
@@ -6705,12 +6715,12 @@
     "prices": {
       "cng": 97.0,
       "diesel": 99.25,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 111.37,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kolasib": {
     "city": "Kolasib",
@@ -6722,12 +6732,12 @@
     ],
     "prices": {
       "diesel": 94.1,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 105.29,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Mizoram",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kolhapur": {
     "city": "Kolhapur",
@@ -6746,7 +6756,7 @@
       "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kolkata": {
     "city": "Kolkata",
@@ -6758,14 +6768,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 93.5,
+      "cng": 103.0,
       "diesel": 99.82,
       "gold": 14744.0,
       "petrol": 113.51,
       "silver": 230.0
     },
     "state": "West Bengal",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kollam": {
     "city": "Kollam",
@@ -6779,12 +6789,12 @@
     "prices": {
       "cng": 99.0,
       "diesel": 103.64,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 114.8,
-      "silver": 245.0
+      "silver": 240.0
     },
     "state": "Kerala",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "konaseema": {
     "city": "Konaseema",
@@ -6796,12 +6806,12 @@
     ],
     "prices": {
       "diesel": 104.43,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 116.7,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kondagaon": {
     "city": "Kondagaon",
@@ -6815,12 +6825,12 @@
     "prices": {
       "cng": 86.7,
       "diesel": 103.0,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 109.74,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "koppal": {
     "city": "Koppal",
@@ -6834,12 +6844,12 @@
     "prices": {
       "cng": 97.0,
       "diesel": 99.58,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 111.71,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "koraput": {
     "city": "Koraput",
@@ -6853,12 +6863,12 @@
     "prices": {
       "cng": 102.46,
       "diesel": 102.2,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 110.49,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "korba": {
     "city": "Korba",
@@ -6871,13 +6881,13 @@
     ],
     "prices": {
       "cng": 95.32,
-      "diesel": 101.33,
-      "gold": 14826.0,
-      "petrol": 108.06,
-      "silver": 235.0
+      "diesel": 101.01,
+      "gold": 14744.0,
+      "petrol": 107.74,
+      "silver": 230.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "korea": {
     "city": "Korea",
@@ -6886,11 +6896,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kota": {
     "city": "Kota",
@@ -6909,7 +6919,7 @@
       "silver": 230.0
     },
     "state": "Rajasthan",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kottayam": {
     "city": "Kottayam",
@@ -6921,12 +6931,12 @@
     ],
     "prices": {
       "diesel": 102.88,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 114.0,
-      "silver": 245.0
+      "silver": 240.0
     },
     "state": "Kerala",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kozhikode": {
     "city": "Kozhikode",
@@ -6945,7 +6955,7 @@
       "silver": 240.0
     },
     "state": "Kerala",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "krishna": {
     "city": "Krishna",
@@ -6959,12 +6969,12 @@
     "prices": {
       "cng": 103.0,
       "diesel": 104.34,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 116.64,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "krishnagiri": {
     "city": "Krishnagiri",
@@ -6978,12 +6988,12 @@
     "prices": {
       "cng": 97.9,
       "diesel": 101.26,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 109.45,
-      "silver": 245.0
+      "silver": 240.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kulgam": {
     "city": "Kulgam",
@@ -6995,12 +7005,12 @@
     ],
     "prices": {
       "diesel": 94.86,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.17,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Jammu And Kashmir",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kullu": {
     "city": "Kullu",
@@ -7014,12 +7024,12 @@
     "prices": {
       "cng": 124.75,
       "diesel": 95.22,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 103.2,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Himachal Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kumuram-bheem-asifabad": {
     "city": "Kumuram Bheem Asifabad",
@@ -7028,11 +7038,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kupwara": {
     "city": "Kupwara",
@@ -7043,13 +7053,13 @@
       "silver"
     ],
     "prices": {
-      "diesel": 97.11,
-      "gold": 14826.0,
-      "petrol": 109.17,
-      "silver": 235.0
+      "diesel": 97.04,
+      "gold": 14744.0,
+      "petrol": 109.09,
+      "silver": 230.0
     },
     "state": "Jammu And Kashmir",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kurnool": {
     "city": "Kurnool",
@@ -7063,12 +7073,12 @@
     "prices": {
       "cng": 99.8,
       "diesel": 105.61,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 117.95,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kurukshetra": {
     "city": "Kurukshetra",
@@ -7082,12 +7092,12 @@
     "prices": {
       "cng": 94.95,
       "diesel": 95.41,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.75,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Haryana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kurung-kumey": {
     "city": "Kurung Kumey",
@@ -7099,12 +7109,12 @@
     ],
     "prices": {
       "diesel": 88.94,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 99.67,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Arunachal Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "kushi-nagar": {
     "city": "Kushi Nagar",
@@ -7113,11 +7123,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "lahul-and-spiti": {
     "city": "Lahul And Spiti",
@@ -7126,11 +7136,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Himachal Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "lakhimpur": {
     "city": "Lakhimpur",
@@ -7144,12 +7154,12 @@
     "prices": {
       "cng": 107.98,
       "diesel": 95.98,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.54,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "lakhisarai": {
     "city": "Lakhisarai",
@@ -7158,11 +7168,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "lakshadweep-district": {
     "city": "Lakshadweep District",
@@ -7171,11 +7181,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Lakshadweep",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "lalitpur": {
     "city": "Lalitpur",
@@ -7189,12 +7199,12 @@
     "prices": {
       "cng": 102.08,
       "diesel": 96.26,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.9,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "latehar": {
     "city": "Latehar",
@@ -7207,13 +7217,13 @@
     ],
     "prices": {
       "cng": 102.01,
-      "diesel": 102.15,
-      "gold": 14826.0,
-      "petrol": 106.95,
-      "silver": 235.0
+      "diesel": 101.95,
+      "gold": 14744.0,
+      "petrol": 106.83,
+      "silver": 230.0
     },
     "state": "Jharkhand",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "latur": {
     "city": "Latur",
@@ -7225,14 +7235,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 88.0,
+      "cng": 94.0,
       "diesel": 99.66,
-      "gold": 14829.0,
+      "gold": 14747.0,
       "petrol": 113.03,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "lawngtlai": {
     "city": "Lawngtlai",
@@ -7244,12 +7254,12 @@
     ],
     "prices": {
       "diesel": 95.78,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.96,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Mizoram",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "leh-ladakh": {
     "city": "Leh Ladakh",
@@ -7258,11 +7268,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Ladakh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "leparada": {
     "city": "Leparada",
@@ -7274,12 +7284,12 @@
     ],
     "prices": {
       "diesel": 89.11,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 99.69,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Arunachal Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "lohardaga": {
     "city": "Lohardaga",
@@ -7293,12 +7303,12 @@
     "prices": {
       "cng": 102.01,
       "diesel": 101.37,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.24,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Jharkhand",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "lohit": {
     "city": "Lohit",
@@ -7310,12 +7320,12 @@
     ],
     "prices": {
       "diesel": 89.11,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 99.69,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Arunachal Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "longding": {
     "city": "Longding",
@@ -7327,12 +7337,12 @@
     ],
     "prices": {
       "diesel": 89.09,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 99.7,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Arunachal Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "longleng": {
     "city": "Longleng",
@@ -7344,12 +7354,12 @@
     ],
     "prices": {
       "diesel": 96.99,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 105.53,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Nagaland",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "lower-siang": {
     "city": "Lower Siang",
@@ -7361,12 +7371,12 @@
     ],
     "prices": {
       "diesel": 89.11,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 99.69,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Arunachal Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "lower-subansiri": {
     "city": "Lower Subansiri",
@@ -7378,12 +7388,12 @@
     ],
     "prices": {
       "diesel": 88.19,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 99.08,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Arunachal Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "lucknow": {
     "city": "Lucknow",
@@ -7395,14 +7405,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 95.75,
+      "cng": 107.0,
       "diesel": 95.36,
       "gold": 14759.0,
       "petrol": 101.86,
       "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "ludhiana": {
     "city": "Ludhiana",
@@ -7421,7 +7431,7 @@
       "silver": 230.0
     },
     "state": "Punjab",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "lunglei": {
     "city": "Lunglei",
@@ -7433,12 +7443,12 @@
     ],
     "prices": {
       "diesel": 95.76,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.93,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Mizoram",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "madhepura": {
     "city": "Madhepura",
@@ -7452,12 +7462,12 @@
     "prices": {
       "cng": 97.9,
       "diesel": 100.63,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 114.72,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "madhubani": {
     "city": "Madhubani",
@@ -7470,13 +7480,13 @@
     ],
     "prices": {
       "cng": 104.28,
-      "diesel": 100.32,
-      "gold": 14826.0,
-      "petrol": 114.39,
-      "silver": 235.0
+      "diesel": 100.42,
+      "gold": 14744.0,
+      "petrol": 114.5,
+      "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "madurai": {
     "city": "Madurai",
@@ -7495,7 +7505,7 @@
       "silver": 240.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mahabubabad": {
     "city": "Mahabubabad",
@@ -7509,12 +7519,12 @@
     "prices": {
       "cng": 112.0,
       "diesel": 103.98,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 115.87,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mahabubnagar": {
     "city": "Mahabubnagar",
@@ -7523,11 +7533,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "maharajganj": {
     "city": "Maharajganj",
@@ -7541,12 +7551,12 @@
     "prices": {
       "cng": 107.98,
       "diesel": 95.95,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.51,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mahasamund": {
     "city": "Mahasamund",
@@ -7559,13 +7569,13 @@
     ],
     "prices": {
       "cng": 93.07,
-      "diesel": 102.18,
-      "gold": 14826.0,
-      "petrol": 108.94,
-      "silver": 235.0
+      "diesel": 102.58,
+      "gold": 14744.0,
+      "petrol": 109.33,
+      "silver": 230.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mahe": {
     "city": "Mahe",
@@ -7579,12 +7589,12 @@
     "prices": {
       "cng": 102.5,
       "diesel": 93.79,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 103.58,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Puducherry",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mahendragarh": {
     "city": "Mahendragarh",
@@ -7598,12 +7608,12 @@
     "prices": {
       "cng": 98.54,
       "diesel": 95.41,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.74,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Haryana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mahesana": {
     "city": "Mahesana",
@@ -7612,11 +7622,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mahisagar": {
     "city": "Mahisagar",
@@ -7630,12 +7640,12 @@
     "prices": {
       "cng": 81.36,
       "diesel": 99.09,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.96,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mahoba": {
     "city": "Mahoba",
@@ -7649,12 +7659,12 @@
     "prices": {
       "cng": 93.31,
       "diesel": 96.37,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 103.02,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mainpuri": {
     "city": "Mainpuri",
@@ -7668,12 +7678,12 @@
     "prices": {
       "cng": 101.9,
       "diesel": 95.67,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.21,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "majuli": {
     "city": "Majuli",
@@ -7685,12 +7695,12 @@
     ],
     "prices": {
       "diesel": 97.74,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.29,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "malappuram": {
     "city": "Malappuram",
@@ -7704,12 +7714,12 @@
     "prices": {
       "cng": 102.5,
       "diesel": 102.94,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 114.03,
-      "silver": 245.0
+      "silver": 240.0
     },
     "state": "Kerala",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "maldah": {
     "city": "Maldah",
@@ -7718,11 +7728,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "West Bengal",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "malerkotla": {
     "city": "Malerkotla",
@@ -7736,12 +7746,12 @@
     "prices": {
       "cng": 98.0,
       "diesel": 94.95,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 105.02,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Punjab",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "malkangiri": {
     "city": "Malkangiri",
@@ -7755,12 +7765,12 @@
     "prices": {
       "cng": 96.46,
       "diesel": 102.37,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 110.67,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mamit": {
     "city": "Mamit",
@@ -7772,12 +7782,12 @@
     ],
     "prices": {
       "diesel": 95.78,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.95,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Mizoram",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mancherial": {
     "city": "Mancherial",
@@ -7791,12 +7801,12 @@
     "prices": {
       "cng": 92.75,
       "diesel": 104.74,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 116.69,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mandi": {
     "city": "Mandi",
@@ -7810,12 +7820,12 @@
     "prices": {
       "cng": 124.75,
       "diesel": 95.29,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 103.19,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Himachal Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mandla": {
     "city": "Mandla",
@@ -7829,12 +7839,12 @@
     "prices": {
       "cng": 106.5,
       "diesel": 100.94,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 115.93,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mandsaur": {
     "city": "Mandsaur",
@@ -7848,12 +7858,12 @@
     "prices": {
       "cng": 102.0,
       "diesel": 101.1,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 116.02,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mandya": {
     "city": "Mandya",
@@ -7867,12 +7877,12 @@
     "prices": {
       "cng": 97.0,
       "diesel": 98.66,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 110.73,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mangaluru": {
     "city": "Mangaluru",
@@ -7885,13 +7895,13 @@
     ],
     "prices": {
       "cng": 98.0,
-      "diesel": 99.56,
+      "diesel": 98.77,
       "gold": 14744.0,
-      "petrol": 111.68,
+      "petrol": 110.82,
       "silver": 230.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mansa": {
     "city": "Mansa",
@@ -7905,12 +7915,12 @@
     "prices": {
       "cng": 91.33,
       "diesel": 94.95,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 105.02,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Punjab",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "marigaon": {
     "city": "Marigaon",
@@ -7919,11 +7929,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mathura": {
     "city": "Mathura",
@@ -7937,12 +7947,12 @@
     "prices": {
       "cng": 102.0,
       "diesel": 94.91,
-      "gold": 14841.0,
+      "gold": 14759.0,
       "petrol": 101.44,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mau": {
     "city": "Mau",
@@ -7951,11 +7961,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mayiladuthurai": {
     "city": "Mayiladuthurai",
@@ -7967,12 +7977,12 @@
     ],
     "prices": {
       "diesel": 100.98,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 109.16,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mayurbhanj": {
     "city": "Mayurbhanj",
@@ -7986,12 +7996,12 @@
     "prices": {
       "cng": 101.79,
       "diesel": 101.14,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 109.43,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "medak": {
     "city": "Medak",
@@ -8005,12 +8015,12 @@
     "prices": {
       "cng": 106.0,
       "diesel": 103.98,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 115.87,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "medchal-malkajgiri": {
     "city": "Medchal Malkajgiri",
@@ -8024,12 +8034,12 @@
     "prices": {
       "cng": 112.0,
       "diesel": 104.23,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 116.15,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "medinipur-east": {
     "city": "Medinipur East",
@@ -8038,11 +8048,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "West Bengal",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "medinipur-west": {
     "city": "Medinipur West",
@@ -8051,11 +8061,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "West Bengal",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "meerut": {
     "city": "Meerut",
@@ -8074,7 +8084,7 @@
       "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mirzapur": {
     "city": "Mirzapur",
@@ -8088,12 +8098,12 @@
     "prices": {
       "cng": 95.0,
       "diesel": 95.91,
-      "gold": 14841.0,
+      "gold": 14759.0,
       "petrol": 102.45,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "moga": {
     "city": "Moga",
@@ -8107,12 +8117,12 @@
     "prices": {
       "cng": 92.75,
       "diesel": 95.62,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 105.72,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Punjab",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mokokchung": {
     "city": "Mokokchung",
@@ -8124,12 +8134,12 @@
     ],
     "prices": {
       "diesel": 97.43,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 105.92,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Nagaland",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mon": {
     "city": "Mon",
@@ -8141,12 +8151,12 @@
     ],
     "prices": {
       "diesel": 97.22,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 105.8,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Nagaland",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "moradabad": {
     "city": "Moradabad",
@@ -8160,12 +8170,12 @@
     "prices": {
       "cng": 100.5,
       "diesel": 95.59,
-      "gold": 14841.0,
+      "gold": 14759.0,
       "petrol": 102.11,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "morbi": {
     "city": "Morbi",
@@ -8178,13 +8188,13 @@
     ],
     "prices": {
       "cng": 88.76,
-      "diesel": 98.29,
-      "gold": 14826.0,
-      "petrol": 102.16,
-      "silver": 235.0
+      "diesel": 98.35,
+      "gold": 14744.0,
+      "petrol": 102.22,
+      "silver": 230.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "morena": {
     "city": "Morena",
@@ -8198,12 +8208,12 @@
     "prices": {
       "cng": 99.4,
       "diesel": 99.57,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 114.46,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mulugu": {
     "city": "Mulugu",
@@ -8217,12 +8227,12 @@
     "prices": {
       "cng": 112.0,
       "diesel": 103.74,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 115.62,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mumbai": {
     "city": "Mumbai",
@@ -8234,14 +8244,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 88.0,
+      "cng": 89.0,
       "diesel": 97.83,
       "gold": 14744.0,
       "petrol": 111.21,
       "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mumbai-suburban": {
     "city": "Mumbai Suburban",
@@ -8250,11 +8260,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mungeli": {
     "city": "Mungeli",
@@ -8268,12 +8278,12 @@
     "prices": {
       "cng": 94.32,
       "diesel": 102.27,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 109.02,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "munger": {
     "city": "Munger",
@@ -8287,12 +8297,12 @@
     "prices": {
       "cng": 96.9,
       "diesel": 99.57,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 113.59,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "murshidabad": {
     "city": "Murshidabad",
@@ -8306,12 +8316,12 @@
     "prices": {
       "cng": 94.0,
       "diesel": 101.13,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 114.78,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "West Bengal",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "muzaffarnagar": {
     "city": "Muzaffarnagar",
@@ -8325,12 +8335,12 @@
     "prices": {
       "cng": 95.47,
       "diesel": 96.65,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 103.29,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "muzaffarpur": {
     "city": "Muzaffarpur",
@@ -8349,24 +8359,20 @@
       "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "mysore": {
     "city": "Mysuru",
     "observedKeys": [
-      "diesel",
       "gold",
-      "petrol",
       "silver"
     ],
     "prices": {
-      "diesel": 98.39,
       "gold": 14744.0,
-      "petrol": 110.44,
       "silver": 230.0
     },
     "state": "Karnataka",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nabarangpur": {
     "city": "Nabarangpur",
@@ -8375,11 +8381,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nadia": {
     "city": "Nadia",
@@ -8393,12 +8399,12 @@
     "prices": {
       "cng": 94.0,
       "diesel": 99.88,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 113.55,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "West Bengal",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nagaon": {
     "city": "Nagaon",
@@ -8412,12 +8418,12 @@
     "prices": {
       "cng": 91.0,
       "diesel": 98.56,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 107.15,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nagapattinam": {
     "city": "Nagapattinam",
@@ -8431,12 +8437,12 @@
     "prices": {
       "cng": 86.5,
       "diesel": 101.28,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 109.47,
-      "silver": 245.0
+      "silver": 240.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nagarkurnool": {
     "city": "Nagarkurnool",
@@ -8450,12 +8456,12 @@
     "prices": {
       "cng": 112.0,
       "diesel": 105.06,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 117.03,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nagaur": {
     "city": "Nagaur",
@@ -8469,12 +8475,12 @@
     "prices": {
       "cng": 99.7,
       "diesel": 99.14,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 114.17,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Rajasthan",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nagpur": {
     "city": "Nagpur",
@@ -8493,7 +8499,7 @@
       "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nainital": {
     "city": "Nainital",
@@ -8507,12 +8513,12 @@
     "prices": {
       "cng": 104.0,
       "diesel": 95.58,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 100.05,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Uttarakhand",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nalanda": {
     "city": "Nalanda",
@@ -8526,12 +8532,12 @@
     "prices": {
       "cng": 103.5,
       "diesel": 99.77,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 113.78,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nalbari": {
     "city": "Nalbari",
@@ -8545,12 +8551,12 @@
     "prices": {
       "cng": 91.0,
       "diesel": 97.64,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.16,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Assam",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nalgonda": {
     "city": "Nalgonda",
@@ -8564,12 +8570,12 @@
     "prices": {
       "cng": 112.0,
       "diesel": 104.15,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 116.04,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "namakkal": {
     "city": "Namakkal",
@@ -8583,12 +8589,12 @@
     "prices": {
       "cng": 102.47,
       "diesel": 100.53,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 108.7,
-      "silver": 245.0
+      "silver": 240.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "namsai": {
     "city": "Namsai",
@@ -8600,12 +8606,12 @@
     ],
     "prices": {
       "diesel": 89.12,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 99.72,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Arunachal Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nanded": {
     "city": "Nanded",
@@ -8617,14 +8623,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 90.65,
+      "cng": 96.0,
       "diesel": 99.83,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 113.18,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nandurbar": {
     "city": "Nandurbar",
@@ -8638,12 +8644,12 @@
     "prices": {
       "cng": 100.64,
       "diesel": 99.13,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 112.48,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nandyal": {
     "city": "Nandyal",
@@ -8652,11 +8658,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "narayanpet": {
     "city": "Narayanpet",
@@ -8670,12 +8676,12 @@
     "prices": {
       "cng": 112.0,
       "diesel": 105.14,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 117.07,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "narayanpur": {
     "city": "Narayanpur",
@@ -8687,12 +8693,12 @@
     ],
     "prices": {
       "diesel": 103.01,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 109.74,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "narmada": {
     "city": "Narmada",
@@ -8706,12 +8712,12 @@
     "prices": {
       "cng": 88.76,
       "diesel": 97.98,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 101.87,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "narsinghpur": {
     "city": "Narsinghpur",
@@ -8720,11 +8726,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nashik": {
     "city": "Nashik",
@@ -8736,14 +8742,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 93.65,
+      "cng": 98.5,
       "diesel": 99.05,
       "gold": 14747.0,
       "petrol": 112.44,
       "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "navi-mumbai": {
     "city": "Navi Mumbai",
@@ -8755,14 +8761,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 88.0,
+      "cng": 89.0,
       "diesel": 97.83,
       "gold": 14744.0,
       "petrol": 111.21,
       "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "navsari": {
     "city": "Navsari",
@@ -8776,12 +8782,12 @@
     "prices": {
       "cng": 94.7,
       "diesel": 98.55,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.41,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nawada": {
     "city": "Nawada",
@@ -8795,12 +8801,12 @@
     "prices": {
       "cng": 97.9,
       "diesel": 100.11,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 114.14,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nayagarh": {
     "city": "Nayagarh",
@@ -8814,12 +8820,12 @@
     "prices": {
       "cng": 94.5,
       "diesel": 100.86,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 109.15,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "neemuch": {
     "city": "Neemuch",
@@ -8828,11 +8834,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nellore": {
     "city": "Nellore",
@@ -8851,7 +8857,7 @@
       "silver": 240.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "new-delhi": {
     "city": "New Delhi",
@@ -8870,7 +8876,7 @@
       "silver": 230.0
     },
     "state": "Delhi",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nicobars": {
     "city": "Nicobars",
@@ -8879,11 +8885,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Andaman And Nicobar Islands",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nirmal": {
     "city": "Nirmal",
@@ -8897,12 +8903,12 @@
     "prices": {
       "cng": 92.75,
       "diesel": 105.23,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 117.06,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "niwari": {
     "city": "Niwari",
@@ -8914,12 +8920,12 @@
     ],
     "prices": {
       "diesel": 100.6,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 115.58,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nizamabad": {
     "city": "Nizamabad",
@@ -8931,14 +8937,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 92.75,
+      "cng": 99.5,
       "diesel": 105.22,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 117.07,
-      "silver": 245.0
+      "silver": 240.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "noida": {
     "city": "Noida",
@@ -8957,7 +8963,7 @@
       "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "noney": {
     "city": "Noney",
@@ -8969,12 +8975,12 @@
     ],
     "prices": {
       "diesel": 93.89,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 108.33,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Manipur",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "north": {
     "city": "North",
@@ -8983,11 +8989,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Delhi",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "north-and-middle-andaman": {
     "city": "North And Middle Andaman",
@@ -8996,11 +9002,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Andaman And Nicobar Islands",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "north-district": {
     "city": "North District",
@@ -9012,12 +9018,12 @@
     ],
     "prices": {
       "diesel": 95.2,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.12,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Sikkim",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "north-east": {
     "city": "North East",
@@ -9026,11 +9032,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Delhi",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "north-garo-hills": {
     "city": "North Garo Hills",
@@ -9042,12 +9048,12 @@
     ],
     "prices": {
       "diesel": 93.05,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 101.27,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Meghalaya",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "north-goa": {
     "city": "North Goa",
@@ -9061,12 +9067,12 @@
     "prices": {
       "cng": 92.0,
       "diesel": 95.94,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 104.06,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Goa",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "north-tripura": {
     "city": "North Tripura",
@@ -9078,12 +9084,12 @@
     ],
     "prices": {
       "diesel": 92.41,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 103.41,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Tripura",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "north-west": {
     "city": "North West",
@@ -9092,11 +9098,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Delhi",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "ntr": {
     "city": "Ntr",
@@ -9110,12 +9116,12 @@
     "prices": {
       "cng": 103.0,
       "diesel": 104.43,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 116.7,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nuapada": {
     "city": "Nuapada",
@@ -9124,11 +9130,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Odisha",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "nuh": {
     "city": "Nuh",
@@ -9137,11 +9143,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Haryana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "osmanabad": {
     "city": "Osmanabad",
@@ -9153,14 +9159,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 85.5,
+      "cng": 94.0,
       "diesel": 99.11,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 112.45,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "pakke-kessang": {
     "city": "Pakke Kessang",
@@ -9169,11 +9175,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Arunachal Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "pakur": {
     "city": "Pakur",
@@ -9187,12 +9193,12 @@
     "prices": {
       "cng": 93.0,
       "diesel": 101.22,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 106.14,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Jharkhand",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "pakyong": {
     "city": "Pakyong",
@@ -9204,12 +9210,12 @@
     ],
     "prices": {
       "diesel": 97.7,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 110.8,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Sikkim",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "palakkad": {
     "city": "Palakkad",
@@ -9223,12 +9229,12 @@
     "prices": {
       "cng": 102.5,
       "diesel": 103.41,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 114.55,
-      "silver": 245.0
+      "silver": 240.0
     },
     "state": "Kerala",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "palamu": {
     "city": "Palamu",
@@ -9237,11 +9243,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Jharkhand",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "palghar": {
     "city": "Palghar",
@@ -9255,12 +9261,12 @@
     "prices": {
       "cng": 85.75,
       "diesel": 98.66,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 112.04,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "pali": {
     "city": "Pali",
@@ -9274,12 +9280,12 @@
     "prices": {
       "cng": 96.33,
       "diesel": 98.71,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 113.69,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Rajasthan",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "palnadu": {
     "city": "Palnadu",
@@ -9291,12 +9297,12 @@
     ],
     "prices": {
       "diesel": 104.43,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 116.7,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "palwal": {
     "city": "Palwal",
@@ -9310,12 +9316,12 @@
     "prices": {
       "cng": 99.7,
       "diesel": 95.68,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 103.02,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Haryana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "panaji": {
     "city": "Panaji",
@@ -9332,7 +9338,7 @@
       "silver": 230.0
     },
     "state": "Goa",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "panch-mahals": {
     "city": "Panch Mahals",
@@ -9341,11 +9347,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "panchkula": {
     "city": "Panchkula",
@@ -9359,12 +9365,12 @@
     "prices": {
       "cng": 100.5,
       "diesel": 95.78,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 103.14,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Haryana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "panipat": {
     "city": "Panipat",
@@ -9378,12 +9384,12 @@
     "prices": {
       "cng": 97.5,
       "diesel": 94.89,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 102.23,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Haryana",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "panna": {
     "city": "Panna",
@@ -9397,12 +9403,12 @@
     "prices": {
       "cng": 100.32,
       "diesel": 101.16,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 116.03,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "papum-pare": {
     "city": "Papum Pare",
@@ -9411,11 +9417,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Arunachal Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "parbhani": {
     "city": "Parbhani",
@@ -9429,12 +9435,12 @@
     "prices": {
       "cng": 90.65,
       "diesel": 99.83,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 113.17,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "parvathipuram-manyam": {
     "city": "Parvathipuram Manyam",
@@ -9446,12 +9452,12 @@
     ],
     "prices": {
       "diesel": 105.15,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 117.52,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "paschim-bardhaman": {
     "city": "Paschim Bardhaman",
@@ -9463,12 +9469,12 @@
     ],
     "prices": {
       "diesel": 100.01,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 113.68,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "West Bengal",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "pashchim-champaran": {
     "city": "Pashchim Champaran",
@@ -9477,11 +9483,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "patan": {
     "city": "Patan",
@@ -9495,12 +9501,12 @@
     "prices": {
       "cng": 83.19,
       "diesel": 97.74,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 101.6,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "pathanamthitta": {
     "city": "Pathanamthitta",
@@ -9509,11 +9515,11 @@
       "silver"
     ],
     "prices": {
-      "gold": 14826.0,
-      "silver": 235.0
+      "gold": 14744.0,
+      "silver": 230.0
     },
     "state": "Kerala",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "pathankot": {
     "city": "Pathankot",
@@ -9527,12 +9533,12 @@
     "prices": {
       "cng": 98.9,
       "diesel": 95.59,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 105.68,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Punjab",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "patiala": {
     "city": "Patiala",
@@ -9546,12 +9552,12 @@
     "prices": {
       "cng": 100.0,
       "diesel": 94.87,
-      "gold": 14826.0,
+      "gold": 14744.0,
       "petrol": 104.94,
-      "silver": 235.0
+      "silver": 230.0
     },
     "state": "Punjab",
-    "updatedAt": "2026-10-14T12:13:44.469338+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "patna": {
     "city": "Patna",
@@ -9570,7 +9576,7 @@
       "silver": 230.0
     },
     "state": "Bihar",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "pauri-garhwal": {
     "city": "Pauri Garhwal",
@@ -9814,7 +9820,7 @@
       "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "pudukkottai": {
     "city": "Pudukkottai",
@@ -9869,7 +9875,7 @@
       "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "purba-bardhaman": {
     "city": "Purba Bardhaman",
@@ -10045,7 +10051,7 @@
       "silver": 230.0
     },
     "state": "Chhattisgarh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "raisen": {
     "city": "Raisen",
@@ -10121,7 +10127,7 @@
       "silver": 230.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "rajnandgaon": {
     "city": "Rajnandgaon",
@@ -10288,7 +10294,7 @@
       "silver": 230.0
     },
     "state": "Jharkhand",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "ranga-reddy": {
     "city": "Ranga Reddy",
@@ -11162,7 +11168,7 @@
       "silver": 230.0
     },
     "state": "Himachal Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "shivamogga": {
     "city": "Shivamogga",
@@ -11318,14 +11324,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 93.5,
+      "cng": 103.0,
       "diesel": 99.82,
       "gold": 14744.0,
       "petrol": 113.51,
       "silver": 230.0
     },
     "state": "West Bengal",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "simdega": {
     "city": "Simdega",
@@ -11553,14 +11559,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 93.0,
-      "diesel": 98.51,
+      "cng": 105.0,
+      "diesel": 98.52,
       "gold": 14744.0,
-      "petrol": 111.84,
+      "petrol": 111.85,
       "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "sonbhadra": {
     "city": "Sonbhadra",
@@ -11901,14 +11907,14 @@
       "silver"
     ],
     "prices": {
-      "cng": 95.0,
+      "cng": 105.0,
       "diesel": 96.72,
       "gold": 14744.0,
       "petrol": 103.5,
       "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "sundargarh": {
     "city": "Sundargarh",
@@ -11984,7 +11990,7 @@
       "silver": 230.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "surendranagar": {
     "city": "Surendranagar",
@@ -12185,7 +12191,7 @@
       "silver": 230.0
     },
     "state": "Maharashtra",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "thanjavur": {
     "city": "Thanjavur",
@@ -12298,7 +12304,7 @@
       "silver": 240.0
     },
     "state": "Kerala",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "tikamgarh": {
     "city": "Tikamgarh",
@@ -12372,7 +12378,7 @@
       "silver": 240.0
     },
     "state": "Tamil Nadu",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "tirunelveli": {
     "city": "Tirunelveli",
@@ -12427,7 +12433,7 @@
       "silver": 240.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "tiruppur": {
     "city": "Tiruppur",
@@ -12497,7 +12503,7 @@
       "silver": 240.0
     },
     "state": "Kerala",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "tuensang": {
     "city": "Tuensang",
@@ -12571,7 +12577,7 @@
       "silver": 230.0
     },
     "state": "Rajasthan",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "udalguri": {
     "city": "Udalguri",
@@ -12658,7 +12664,7 @@
       "silver": 230.0
     },
     "state": "Madhya Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "ukhrul": {
     "city": "Ukhrul",
@@ -12828,7 +12834,7 @@
       "silver": 230.0
     },
     "state": "Gujarat",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "vaishali": {
     "city": "Vaishali",
@@ -12885,7 +12891,7 @@
       "silver": 230.0
     },
     "state": "Uttar Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "vellore": {
     "city": "Vellore",
@@ -12961,7 +12967,7 @@
       "silver": 240.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "vijaynagar": {
     "city": "Vijaynagar",
@@ -13051,7 +13057,7 @@
       "silver": 240.0
     },
     "state": "Andhra Pradesh",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "vizianagaram": {
     "city": "Vizianagaram",
@@ -13108,7 +13114,7 @@
       "silver": 240.0
     },
     "state": "Telangana",
-    "updatedAt": "2026-10-15T04:57:51.568935+00:00"
+    "updatedAt": "2026-10-15T11:54:25.947004+00:00"
   },
   "wardha": {
     "city": "Wardha",
